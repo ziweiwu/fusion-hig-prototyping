@@ -1,24 +1,26 @@
 {
+  "name": "fusion-production-react-prototypes",
+  "version": "0.1.0",
   "private": true,
-  "name": "hig",
-  "description": "Autodesk design system",
-  "author": "Autodesk Inc.",
-  "license": "Apache-2.0",
-  "homepage": "https://hig.autodesk.com",
-  "version": "1.0.1",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "delay": "^2.0.0",
+    "enzyme": "^3.3.0",
+    "lodash": "^4.17.10",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-draggable": "^3.0.5",
+    "react-lifecycles-compat": "^3.0.4",
+    "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.3.2",
+    "react-virtualized": "^9.19.0",
+    "source-map": "^0.7.3"
+  },
   "scripts": {
-    "build": "lerna run build --stream",
-    "create-dependency-hash": "cat yarn.lock > .dependency-hash && ls ./packages >> .dependency-hash",
-    "lint": "lerna run lint --stream",
-    "publish-canary": "lerna publish --canary --yes --exact",
-    "update-packages": "lerna publish --skip-npm"
-  },
-  "devDependencies": {
-    "lerna": "^2.9.0",
-    "node-fetch": "^1.7.3",
-    "registry-url": "^3.1.0"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }

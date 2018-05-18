@@ -1,7 +1,0 @@
-@import '~@hig/styles/mixins/colors.scss';
-@import '~@hig/styles/mixins/typography.scss';
-
-.hig__timestamp {
-  @include typography-small;
-  color: color(hig-slate-50);
-}
