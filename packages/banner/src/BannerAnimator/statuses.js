@@ -1,6 +1,0 @@
-export default Object.freeze({
-  COLLAPSED: "COLLAPSED",
-  COLLAPSING: "COLLAPSING",
-  EXPANDED: "EXPANDED",
-  EXPANDING: "EXPANDING"
-});
