@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@hig/table": "0.3.0-alpha.fc17111c",
+    "@hig/styles": "0.2.0-alpha.fc17111c",
     "delay": "^2.0.0",
     "enzyme": "^3.3.0",
     "hig-react": "~0.28.36",
