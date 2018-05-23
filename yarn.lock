@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@hig/styles@0.2.0-alpha.fc17111c":
+  version "0.2.0-alpha.fc17111c"
+  resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.0-alpha.fc17111c.tgz#abbba51ebcfab51510bc0bc4e14552268242e453"
+
 "@hig/table@0.3.0-alpha.fc17111c":
   version "0.3.0-alpha.fc17111c"
   resolved "https://registry.yarnpkg.com/@hig/table/-/table-0.3.0-alpha.fc17111c.tgz#1dc43069142224c6f9231f57fba102804be237ac"
