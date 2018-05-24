@@ -2,41 +2,43 @@ import React, {Component} from 'react';
 import Table from '@hig/table';
 import '@hig/table/build/index.css';
 import Headline from './Headline';
-// function generateColumns(count = 4) {
-//   return new Array(count).fill(0).map((column, columnIndex) => ({
-//     key: `column-${columnIndex}`,
-//     dataKey: `column-${columnIndex}`,
-//     title: `Column ${columnIndex}`,
-//     width: 200
-//   }));
-// }
+import '@hig/tabs/build/index.css';
+
 
 //columns for fusion production table
 const columns = [
   {
-    key: `1`,
+    id: `1`,
     dataKey: `1`,
     title: `Status`,
-    width: 200
+    accesor: `status`,
+    alignment: 'left',
+    width: "20%"
   },
 
   {
-    key: `2`,
+    id: `2`,
     dataKey: `2`,
     title: `Workstation`,
-    width: 200
+    accesor: `workstation`,
+    alignment: 'left',
+    width: "20%"
   },
   {
-    key: `3`,
+    id: `3`,
     dataKey: `3`,
     title: `Workcell`,
-    width: 200
+    accesor: `workcell`,
+    alignment: 'left',
+    width: "20%"
   },
   {
-    key: `4`,
+    id: `4`,
     dataKey: `4`,
     title: `Queue`,
-    width: 200
+    accessor: `queue`,
+    alignment: 'left',
+    width: "20%"
   },
 ];
 
@@ -67,17 +69,17 @@ function createRowGenerator(columns) {
   return function generateRow(row, rowIndex) {
     return columns.reduce(
       (rowData, column) => {
-        if (column.key === '1') {
-          rowData[column.key] = generateRandomStatus();
+        if (column.id === '1') {
+          rowData[column.id] = generateRandomStatus();
         }
-        if (column.key === '2') {
-          rowData[column.key] = generateRandomWorkStation();
+        if (column.id === '2') {
+          rowData[column.id] = generateRandomWorkStation();
         }
-        if (column.key === '3') {
-          rowData[column.key] = generateRandomWorkCell();
+        if (column.id === '3') {
+          rowData[column.id] = generateRandomWorkCell();
         }
-        if (column.key === '4') {
-          rowData[column.key] = generateRandomQueue();
+        if (column.id === '4') {
+          rowData[column.id] = generateRandomQueue();
         }
         return rowData;
       },
@@ -96,25 +98,15 @@ const generateData = (columns, count = 200) => {
 
 
 class TableView extends Component {
-  constructor(props) {
-    super(props);
-    this.handleHovering = this.handleHovering.bind(this);
-  };
-
-  handleHovering = () => {
-    console.log('row hovering over')
-  }
-
   render() {
     return (
       <div>
         <Headline title="Table using Hig-Table component"/>
         <Table
-          width={800}
-          height={500}
+          width={1024}
+          height={600}
           columns={columns}
-          rowEventHandlers={this.handleHovering()}
-          data={generateData(columns, 10)}/>
+          data={generateData(columns, 14)}/>
       </div>
     )
   };

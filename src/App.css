@@ -1,6 +1,10 @@
 @import "~@hig/styles/build/index.css";
 
 .App {
-  font-family: ArtifaktElement;
+  font-family: "ArtifaktElement";
+}
+
+.side-area{
+  background-color:#0696D7
 }
 
