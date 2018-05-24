@@ -21,7 +21,7 @@ class PickDate extends Component {
     const startDate = this.state.startDate;
     return (
       <div>
-        <Headline title="Date Picker Prototype based on React-datepicker library"/>
+        <Headline title="Date Picker Prototype based on React-Date-Picker library"/>
         <DatePicker
           selected={startDate}
           onChange={this.handleChangeDate}
