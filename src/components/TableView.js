@@ -13,7 +13,7 @@ const columns = [
     title: `Status`,
     accesor: `status`,
     alignment: 'left',
-    width: "20%"
+    width: "10%"
   },
 
   {
@@ -38,7 +38,7 @@ const columns = [
     title: `Queue`,
     accessor: `queue`,
     alignment: 'left',
-    width: "20%"
+    width: "10%"
   },
 ];
 
@@ -103,7 +103,7 @@ class TableView extends Component {
       <div>
         <Headline title="Table using Hig-Table component"/>
         <Table
-          width={1024}
+          width={800}
           height={600}
           columns={columns}
           data={generateData(columns, 14)}/>
