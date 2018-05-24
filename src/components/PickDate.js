@@ -1,37 +1,33 @@
 import React, {Component} from 'react';
-import DatePicker from 'react-datepicker'
-import moment from 'moment';
-import 'react-datepicker/dist/react-datepicker-cssmodules.css'
+import Moment from 'moment'
+import DatePicker from './DatePicker/index';
+import './DatePicker/stylesheets/datePicker.css';
 import Headline from './Headline';
 
 class PickDate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: moment(),
-      chosenDate: undefined
+      startDate: Moment()
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
   }
 
   handleChangeDate(date) {
-    const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-    this.setState({
-      startDate: date,
-      chosenDate: date.toLocaleString('en-US', options)
-    });
-    console.log(this.state.chosenDate)
+    this.setState({startDate: date});
   };
 
   render() {
+    const startDate = this.state.startDate;
     return (
       <div>
-        <Headline title="Date Picker using React-date-picker library"/>
+        <Headline title="Date Picker Prototype based on React-datepicker library"/>
         <DatePicker
-          selected={this.state.startDate}
+          selected={startDate}
           onChange={this.handleChangeDate}
+          dateFormat="YYYY/MM/DD"
         />
-        {this.state.chosenDate && <p>{this.state.chosenDate}</p>}
+        {startDate && <p>Date: {startDate.local('en-US').format('YYYY-MM-DD').toString()}</p>}
       </div>
     );
   }
