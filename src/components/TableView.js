@@ -13,7 +13,7 @@ const columns = [
     title: `Status`,
     accesor: `status`,
     alignment: 'left',
-    width: "10%"
+    width: "30%"
   },
 
   {
@@ -38,7 +38,7 @@ const columns = [
     title: `Queue`,
     accessor: `queue`,
     alignment: 'left',
-    width: "10%"
+    width: "20%"
   },
 ];
 
