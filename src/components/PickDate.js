@@ -5,7 +5,6 @@ import './DatePicker/stylesheets/datePicker.css';
 import Headline from './Headline';
 import Timestamp from '@hig/timestamp';
 
-
 class PickDate extends Component {
   constructor(props) {
     super(props);
