@@ -25,6 +25,7 @@ class PickDate extends Component {
       <div>
         <Headline title="Date Picker Prototype based on React-Date-Picker library"/>
         <DatePicker
+          placeholderText={"Please Choose a Date"}
           selected={startDate}
           onChange={this.handleChangeDate}
           dateFormat="YYYY/MM/DD"

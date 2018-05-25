@@ -7,6 +7,8 @@
     "@hig/table": "0.3.0-alpha.fc17111c",
     "@hig/tabs": "0.1.0-alpha.fc17111c",
     "@hig/timestamp": "0.1.0-alpha.04e0f0a0",
+    "@storybook/react": "^3.4.5",
+    "@storybook/storybook-deployer": "^2.3.0",
     "delay": "^2.0.0",
     "enzyme": "^3.3.0",
     "lodash": "^4.17.10",
@@ -25,9 +27,12 @@
     "webpack": "^4.8.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "start-storybook -p 9001 -c .storybook",
+    "start-react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   }
 }
