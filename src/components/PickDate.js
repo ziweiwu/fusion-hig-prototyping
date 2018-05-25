@@ -29,8 +29,8 @@ class PickDate extends Component {
           onChange={this.handleChangeDate}
           dateFormat="YYYY/MM/DD"
         />
-        <Timestamp timestamp={startDate}/>
         {startDate && <p>Date: {startDate.local('en-US').format('YYYY-MM-DD').toString()}</p>}
+        <Timestamp timestamp={startDate}/>
       </div>
     );
   }

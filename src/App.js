@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container fluid/>
+        <Container height={800}/>
         <Row>
           <Col sm={2} className="side-area"></Col>
           <Col sm={8}>
