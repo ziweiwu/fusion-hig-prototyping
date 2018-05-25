@@ -23,17 +23,13 @@ class PickDate extends Component {
     const startDate = this.state.startDate;
     return (
       <div>
-        <Headline title="Time Stamp from Hig"/>
-        <span>
-          <p>Base on the time at 2018-05-25T13:53:51+00:00</p>
-          <Timestamp timestamp="2018-05-25T13:53:51+00:00"/>
-        </span>
         <Headline title="Date Picker Prototype based on React-Date-Picker library"/>
         <DatePicker
           selected={startDate}
           onChange={this.handleChangeDate}
           dateFormat="YYYY/MM/DD"
         />
+        <Timestamp timestamp={startDate}/>
         {startDate && <p>Date: {startDate.local('en-US').format('YYYY-MM-DD').toString()}</p>}
       </div>
     );
