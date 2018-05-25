@@ -27,8 +27,7 @@
     "webpack": "^4.8.3"
   },
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook",
-    "start-react": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
