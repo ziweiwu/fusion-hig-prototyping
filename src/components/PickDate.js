@@ -24,7 +24,10 @@ class PickDate extends Component {
     return (
       <div>
         <Headline title="Time Stamp from Hig"/>
-        <Timestamp timestamp={text("Timestamp", now.toISOString)}/>
+        <span>
+          <p>Base on the time at 2018-05-25T13:53:51+00:00</p>
+          <Timestamp timestamp="2018-05-25T13:53:51+00:00"/>
+        </span>
         <Headline title="Date Picker Prototype based on React-Date-Picker library"/>
         <DatePicker
           selected={startDate}
