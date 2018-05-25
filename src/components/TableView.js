@@ -103,6 +103,7 @@ class TableView extends Component {
       <div>
         <Headline title="Table using Hig-Table component"/>
         <Table
+
           width={800}
           height={600}
           columns={columns}

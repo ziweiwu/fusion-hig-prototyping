@@ -3,6 +3,8 @@ import Moment from 'moment'
 import DatePicker from './DatePicker/index';
 import './DatePicker/stylesheets/datePicker.css';
 import Headline from './Headline';
+import Timestamp from '@hig/timestamp';
+
 
 class PickDate extends Component {
   constructor(props) {
@@ -21,6 +23,8 @@ class PickDate extends Component {
     const startDate = this.state.startDate;
     return (
       <div>
+        <Headline title="Time Stamp from Hig"/>
+        <Timestamp timestamp={text("Timestamp", now.toISOString)}/>
         <Headline title="Date Picker Prototype based on React-Date-Picker library"/>
         <DatePicker
           selected={startDate}
