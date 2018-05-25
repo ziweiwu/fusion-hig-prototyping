@@ -2,9 +2,14 @@
 
 .App {
   font-family: "ArtifaktElement";
+  padding-bottom: 25px;
 }
 
 .side-area{
-  background-color:#0696D7
+  background-color:#0696D7;
+  padding-bottom: 25px;
 }
 
+.myCal{
+  background: grey;
+}

@@ -28,6 +28,7 @@ class PickDate extends Component {
           selected={startDate}
           onChange={this.handleChangeDate}
           dateFormat="YYYY/MM/DD"
+          calendarClassName="myCal"
         />
         {startDate && <p>Date: {startDate.local('en-US').format('YYYY-MM-DD').toString()}</p>}
         <Timestamp timestamp={startDate}/>
