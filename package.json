@@ -33,5 +33,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages"
+  },
+  "devDependencies": {
+    "@storybook/addon-notes": "^3.4.5",
+    "@storybook/addon-viewport": "^3.4.5"
   }
 }

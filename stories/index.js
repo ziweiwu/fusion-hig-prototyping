@@ -1,9 +1,6 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import {action} from '@storybook/addon-actions';
-import PickDate from '../src/components/PickDate';
+import PickDate from '../src/components/PickDate.js';
 
 storiesOf('Date Picker', module)
-  .add('Default Date Input', () => (
-    <PickDate/>
-  ));
+  .add('Default Date Input', () =>(<PickDate />), {notes: 'A daypicker component'});
