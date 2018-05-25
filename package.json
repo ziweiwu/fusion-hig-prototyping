@@ -6,6 +6,7 @@
     "@hig/styles": "0.2.0-alpha.fc17111c",
     "@hig/table": "0.3.0-alpha.fc17111c",
     "@hig/tabs": "0.1.0-alpha.fc17111c",
+    "@hig/timestamp": "0.1.0-alpha.04e0f0a0",
     "delay": "^2.0.0",
     "enzyme": "^3.3.0",
     "lodash": "^4.17.10",

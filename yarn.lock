@@ -47,6 +47,12 @@
   version "0.1.0-alpha.fc17111c"
   resolved "https://registry.yarnpkg.com/@hig/themes/-/themes-0.1.0-alpha.fc17111c.tgz#74945a86986aefe4cfb706e4c4363c90b4c5f897"
 
+"@hig/timestamp@0.1.0-alpha.04e0f0a0":
+  version "0.1.0-alpha.04e0f0a0"
+  resolved "https://registry.yarnpkg.com/@hig/timestamp/-/timestamp-0.1.0-alpha.04e0f0a0.tgz#73485f0cc74eba0dec20fcc04e8152e10ca1a54d"
+  dependencies:
+    classnames "^2.2.5"
+
 "@hig/typography@0.1.0-alpha.fc17111c":
   version "0.1.0-alpha.fc17111c"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.1.0-alpha.fc17111c.tgz#10bb0fc26196f87034a609f6a453fb35fcfffe25"
