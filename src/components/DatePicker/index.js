@@ -2,6 +2,8 @@ import Calendar from "./calendar";
 import React from "react";
 import PropTypes from "prop-types";
 import PopperComponent, { popperPlacementPositions } from "./popper_component";
+import TextField from '@hig/text-field';
+import '@hig/text-field/build/index.css';
 import classnames from "classnames";
 import {
   newDate,
@@ -574,7 +576,8 @@ export default class DatePicker extends React.Component {
       [outsideClickIgnoreClass]: this.state.open
     });
 
-    const customInput = this.props.customInput || <input type="text" />;
+    //use of Hig TextField as input box instead <input>
+    const customInput = this.props.customInput || <TextField />;
     const customInputRef = this.props.customInputRef || "ref";
     const inputValue =
       typeof this.props.value === "string"

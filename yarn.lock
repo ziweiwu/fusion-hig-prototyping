@@ -2,11 +2,25 @@
 # yarn lockfile v1
 
 
+"@hig/icon-button@0.1.0-alpha.8656cb28":
+  version "0.1.0-alpha.8656cb28"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.0-alpha.8656cb28.tgz#355ba72ae6846f769757ab0c05c74c973674d0dd"
+  dependencies:
+    "@hig/icon" "0.1.0-alpha.8656cb28"
+    classnames "^2.2.5"
+
 "@hig/icon-button@0.1.0-alpha.fc17111c":
   version "0.1.0-alpha.fc17111c"
   resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.0-alpha.fc17111c.tgz#03fd65dedf98b4db05d19c3fa0c1be85c5f00c45"
   dependencies:
     "@hig/icon" "0.1.0-alpha.fc17111c"
+    classnames "^2.2.5"
+
+"@hig/icon@0.1.0-alpha.8656cb28":
+  version "0.1.0-alpha.8656cb28"
+  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.1.0-alpha.8656cb28.tgz#bbaaa3e494d89163cdc3e3cf03545ffdbc1e2ba5"
+  dependencies:
+    "@hig/icons" "0.1.0-alpha.8656cb28"
     classnames "^2.2.5"
 
 "@hig/icon@0.1.0-alpha.fc17111c":
@@ -15,6 +29,10 @@
   dependencies:
     "@hig/icons" "0.1.0-alpha.fc17111c"
     classnames "^2.2.5"
+
+"@hig/icons@0.1.0-alpha.8656cb28":
+  version "0.1.0-alpha.8656cb28"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0-alpha.8656cb28.tgz#c896d16542ec7a899cafb4a1e312b064d42e191b"
 
 "@hig/icons@0.1.0-alpha.fc17111c":
   version "0.1.0-alpha.fc17111c"
@@ -43,6 +61,21 @@
     hig-react "0.29.0-alpha.fc17111c"
     react-lifecycles-compat "^3.0.2"
 
+"@hig/text-area@0.1.0-alpha.8656cb28":
+  version "0.1.0-alpha.8656cb28"
+  resolved "https://registry.yarnpkg.com/@hig/text-area/-/text-area-0.1.0-alpha.8656cb28.tgz#b0778fc1903531f7e2233989ff3f7833b63a2a0a"
+  dependencies:
+    classnames "^2.2.5"
+    hig-react "0.29.0-alpha.8656cb28"
+
+"@hig/text-field@0.1.0-alpha.8656cb28":
+  version "0.1.0-alpha.8656cb28"
+  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.1.0-alpha.8656cb28.tgz#ff055930613d703b53c13b0ae484cfb253ec5700"
+  dependencies:
+    classnames "^2.2.5"
+    hig-react "0.29.0-alpha.8656cb28"
+    react-lifecycles-compat "^3.0.2"
+
 "@hig/themes@0.1.0-alpha.fc17111c":
   version "0.1.0-alpha.fc17111c"
   resolved "https://registry.yarnpkg.com/@hig/themes/-/themes-0.1.0-alpha.fc17111c.tgz#74945a86986aefe4cfb706e4c4363c90b4c5f897"
@@ -50,6 +83,12 @@
 "@hig/timestamp@0.1.0-alpha.04e0f0a0":
   version "0.1.0-alpha.04e0f0a0"
   resolved "https://registry.yarnpkg.com/@hig/timestamp/-/timestamp-0.1.0-alpha.04e0f0a0.tgz#73485f0cc74eba0dec20fcc04e8152e10ca1a54d"
+  dependencies:
+    classnames "^2.2.5"
+
+"@hig/typography@0.1.0-alpha.8656cb28":
+  version "0.1.0-alpha.8656cb28"
+  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.1.0-alpha.8656cb28.tgz#36cad34216c7a3de73c9140a6258f97cd63294c1"
   dependencies:
     classnames "^2.2.5"
 
@@ -4409,9 +4448,25 @@ he@1.1.x:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
+hig-interface@0.2.0-alpha.8656cb28:
+  version "0.2.0-alpha.8656cb28"
+  resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.2.0-alpha.8656cb28.tgz#30dfe9cb09a2b1a6a6e31dfaa934575137fff7b2"
+
 hig-interface@0.2.0-alpha.fc17111c:
   version "0.2.0-alpha.fc17111c"
   resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.2.0-alpha.fc17111c.tgz#9188637dbb48ac5549fdb20c0f02612850a9a6fc"
+
+hig-react@0.29.0-alpha.8656cb28:
+  version "0.29.0-alpha.8656cb28"
+  resolved "https://registry.yarnpkg.com/hig-react/-/hig-react-0.29.0-alpha.8656cb28.tgz#1cbe30819be57d20cc6c11839b330fb81c42e14f"
+  dependencies:
+    "@hig/icon" "0.1.0-alpha.8656cb28"
+    "@hig/icon-button" "0.1.0-alpha.8656cb28"
+    "@hig/icons" "0.1.0-alpha.8656cb28"
+    "@hig/typography" "0.1.0-alpha.8656cb28"
+    hig-vanilla "0.2.0-alpha.8656cb28"
+    react-flip-move "^3.0.1"
+    react-transition-group "^2.3.0"
 
 hig-react@0.29.0-alpha.fc17111c:
   version "0.29.0-alpha.fc17111c"
@@ -4424,6 +4479,12 @@ hig-react@0.29.0-alpha.fc17111c:
     hig-vanilla "0.2.0-alpha.fc17111c"
     react-flip-move "^3.0.1"
     react-transition-group "^2.3.0"
+
+hig-vanilla@0.2.0-alpha.8656cb28:
+  version "0.2.0-alpha.8656cb28"
+  resolved "https://registry.yarnpkg.com/hig-vanilla/-/hig-vanilla-0.2.0-alpha.8656cb28.tgz#1d58c8108dc23bd04133175468420a3cd95b9063"
+  dependencies:
+    hig-interface "0.2.0-alpha.8656cb28"
 
 hig-vanilla@0.2.0-alpha.fc17111c:
   version "0.2.0-alpha.fc17111c"

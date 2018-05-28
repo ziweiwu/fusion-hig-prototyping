@@ -4,6 +4,8 @@ import "@hig/styles/build/index.css";
 import TableView from './components/TableView';
 import PickDate from './components/PickDate'
 import {Container, Row, Col} from 'react-grid-system'
+import TextField from '@hig/text-field';
+import '@hig/text-field/build/index.css';
 
 class App extends Component {
   render() {
@@ -13,6 +15,10 @@ class App extends Component {
         <Row>
           <Col sm={2} className="side-area"></Col>
           <Col sm={8}>
+            <TextField label="Select Date"
+            placeholder = "Select Date"
+            require = "Enter something"
+            />
             <PickDate/>
             {/*<TableView/>*/}
           </Col>

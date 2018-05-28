@@ -4,6 +4,7 @@ import DatePicker from './DatePicker/index';
 import './DatePicker/stylesheets/datePicker.css';
 import Headline from './Headline';
 import Timestamp from '@hig/timestamp';
+
 //import DatePicker from 'react-datepicker';
 //import 'react-datepicker/dist/react-datepicker.css';
 
@@ -14,10 +15,12 @@ class PickDate extends Component {
     this.state = {
       startDate: moment(),
       endDate: moment(),
+      error: undefined
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
+    this.handleCheckDate = this.handleChangeEnd.bind(this);
   }
 
   handleChangeDate(date) {
@@ -31,6 +34,16 @@ class PickDate extends Component {
   handleChangeEnd(date) {
     this.setState({endDate: date});
   };
+
+  handleCheckDate(date){
+    if(this.state.startDate>=moment().add(3, 'months')){
+      this.setState({error: "Please select a date within 3 months."});
+    }else{
+      this.setState({error: undefined});
+      this.handleChangeStart(date);
+    }
+
+  }
 
   render() {
     const startDate = this.state.startDate;
@@ -47,6 +60,20 @@ class PickDate extends Component {
         {startDate && <p>Date: {startDate.local('en-US').format('YYYY-MM-DD').toString()}</p>}
         <Headline title="Use of Timstamp component from HIG to show time lapsed"/>
         <Timestamp timestamp={startDate}/>
+
+        <Headline title="Display error if pick a date greater than 3 months"/>
+        <DatePicker
+          placeholderText={"Please Choose a Date"}
+          selected={startDate}
+          onChange={this.handleCheckDate}
+          dateFormat="YYYY/MM/DD"
+          calendarClassName="myCal"
+          shouldCloseOnSelect={false}
+        >
+          <p>Pick a date greater than 3 months.</p>
+        </DatePicker>
+
+
         <Headline title="Select Time and Date"/>
         <DatePicker
           selected={this.state.startDate}
@@ -57,6 +84,8 @@ class PickDate extends Component {
           dateFormat="LLL"
           timeCaption="time"
         />
+
+
         <Headline title="Specific Date Range"/>
         <DatePicker
           selected={this.state.startDate}
@@ -117,6 +146,19 @@ class PickDate extends Component {
           isClearable={true}
           placeholderText="I have been cleared!"
         />
+
+
+        <Headline title="With Year and Month Dropdown"/>
+        <DatePicker
+          selected={this.state.startDate}
+          onChange={this.handleChangeStart}
+          peekNextMonth
+          showMonthDropdown
+          showYearDropdown
+          dropdownMode="select"
+        />
+
+
 
       </div>
 
