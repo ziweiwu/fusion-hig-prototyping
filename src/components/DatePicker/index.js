@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import PopperComponent, { popperPlacementPositions } from "./popper_component";
 import TextField from '@hig/text-field';
 import '@hig/text-field/build/index.css';
+import Button from '@hig/button';
+import '@hig/button/build/index.css';
 import classnames from "classnames";
 import {
   newDate,
@@ -577,7 +579,12 @@ export default class DatePicker extends React.Component {
     });
 
     //use of Hig TextField as input box instead <input>
-    const customInput = this.props.customInput || <TextField />;
+    //display clear button if clearbutton option is true
+    const customInput = this.props.customInput ||
+    <TextField
+      showClearButton = {!!this.props.isClearable && this.props.selected != null}
+      onClearButtonClick = {this.onClearClick}
+    />;
     const customInputRef = this.props.customInputRef || "ref";
     const inputValue =
       typeof this.props.value === "string"
@@ -610,22 +617,6 @@ export default class DatePicker extends React.Component {
     });
   };
 
-  renderClearButton = () => {
-    if (this.props.isClearable && this.props.selected != null) {
-      return (
-        <button
-          type="button"
-          className="react-datepicker__close-icon"
-          onClick={this.onClearClick}
-          title={this.props.clearButtonTitle}
-          tabIndex={-1}
-        />
-      );
-    } else {
-      return null;
-    }
-  };
-
   render() {
     const calendar = this.renderCalendar();
 
@@ -639,7 +630,6 @@ export default class DatePicker extends React.Component {
           {!this.props.inline ? (
             <div className="react-datepicker__input-container">
               {this.renderDateInput()}
-              {this.renderClearButton()}
             </div>
           ) : null}
           {this.state.open || this.props.inline ? (
@@ -657,8 +647,8 @@ export default class DatePicker extends React.Component {
         targetComponent={
           <div className="react-datepicker__input-container">
             {this.renderDateInput()}
-            {this.renderClearButton()}
-          </div>
+            {/*{this.renderClearButton()}*/}
+         </div>
         }
         popperContainer={this.props.popperContainer}
         popperComponent={calendar}

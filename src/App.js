@@ -15,10 +15,6 @@ class App extends Component {
         <Row>
           <Col sm={2} className="side-area"></Col>
           <Col sm={8}>
-            <TextField label="Select Date"
-            placeholder = "Select Date"
-            require = "Enter something"
-            />
             <PickDate/>
             {/*<TableView/>*/}
           </Col>

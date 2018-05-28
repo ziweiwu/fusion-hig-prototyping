@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hig/button": "0.1.0-alpha.8656cb28",
     "@hig/styles": "0.2.0-alpha.fc17111c",
     "@hig/table": "0.3.0-alpha.fc17111c",
     "@hig/tabs": "0.1.0-alpha.fc17111c",
     "@hig/text-area": "0.1.0-alpha.8656cb28",
     "@hig/text-field": "0.1.0-alpha.8656cb28",
     "@hig/timestamp": "0.1.0-alpha.04e0f0a0",
+    "@storybook/addon-actions": "^3.4.6",
+    "@storybook/addon-info": "^3.4.6",
+    "@storybook/addon-knobs": "^3.4.6",
+    "@storybook/addon-options": "^3.4.6",
     "@storybook/react": "^3.4.5",
     "@storybook/storybook-deployer": "^2.3.0",
     "classnames": "^2.2.5",
@@ -40,7 +45,7 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "devDependencies": {
-    "@storybook/addon-notes": "^3.4.5",
+    "@storybook/addon-notes": "^3.4.6",
     "@storybook/addon-viewport": "^3.4.5"
   }
 }
