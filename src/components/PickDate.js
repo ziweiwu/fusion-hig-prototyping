@@ -45,6 +45,7 @@ class PickDate extends Component {
           calendarClassName="myCal"
         />
         {startDate && <p>Date: {startDate.local('en-US').format('YYYY-MM-DD').toString()}</p>}
+        <Headline title="Use of Timstamp component from HIG to show time lapsed"/>
         <Timestamp timestamp={startDate}/>
         <Headline title="Select Time and Date"/>
         <DatePicker
