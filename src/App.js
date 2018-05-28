@@ -13,8 +13,8 @@ class App extends Component {
         <Row>
           <Col sm={2} className="side-area"></Col>
           <Col sm={8}>
-            <TableView/>
             <PickDate/>
+            <TableView/>
           </Col>
           <Col sm={2} className="side-area"></Col>
         </Row>

@@ -14,6 +14,7 @@
     "lodash": "^4.17.10",
     "moment": "^2.22.1",
     "node-sass": "^4.9.0",
+    "node-sass-chokidar": "^1.3.0",
     "prop-types": "^15.6.1",
     "react": "16",
     "react-datepicker": "^1.4.1",
@@ -27,6 +28,7 @@
     "webpack": "^4.8.3"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar ./src/components/DatePicker/stylesheets/datepicker-cssmodules.scss ./src/components/DatePicker/stylesheets/datePicker.css --watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
