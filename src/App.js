@@ -14,7 +14,7 @@ class App extends Component {
           <Col sm={2} className="side-area"></Col>
           <Col sm={8}>
             <PickDate/>
-            <TableView/>
+            {/*<TableView/>*/}
           </Col>
           <Col sm={2} className="side-area"></Col>
         </Row>
