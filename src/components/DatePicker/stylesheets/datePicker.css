@@ -52,12 +52,12 @@
   :global .react-datepicker-wrapper {
     display: inline-block; }
   :global .react-datepicker {
-    font-family: ArtifaktElement, Helvetica, Arial, sans-serif;
+    font-family: ArtifaktElement, Helvetica, Arial;
     font-size: 0.8rem;
     background-color: #fff;
     color: #000;
     border: 1px solid #D4DBE1;
-    border-radius: 0.3rem;
+    border-radius: 0.2rem;
     display: inline-block;
     position: relative; }
   :global .react-datepicker--time-only .react-datepicker__triangle {
@@ -91,8 +91,8 @@
     text-align: center;
     background-color: white;
     border-bottom: 1px solid #D4DBE1;
-    border-top-left-radius: 0.3rem;
-    border-top-right-radius: 0.3rem;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
     padding-top: 8px;
     position: relative; }
     :global .react-datepicker__header--time {
@@ -191,9 +191,9 @@
           margin: 0;
           height: calc(195px + (1.7rem / 2));
           overflow-y: scroll;
-          padding-right: 30px;
           width: 100%;
-          box-sizing: content-box; }
+          box-sizing: content-box;
+          padding-left: 0; }
           :global .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item {
             padding: 5px 10px; }
             :global .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item:hover {
@@ -220,7 +220,7 @@
     :global .react-datepicker__week-number.react-datepicker__week-number--clickable {
       cursor: pointer; }
       :global .react-datepicker__week-number.react-datepicker__week-number--clickable:hover {
-        border-radius: 0.3rem;
+        border-radius: 0.2rem;
         background-color: white; }
   :global .react-datepicker__day-names,
   :global .react-datepicker__week {
@@ -237,28 +237,28 @@
   :global .react-datepicker__day {
     cursor: pointer; }
     :global .react-datepicker__day:hover {
-      border-radius: 0.3rem;
+      border-radius: 0.2rem;
       background-color: white; }
     :global .react-datepicker__day--today {
       font-weight: bold; }
     :global .react-datepicker__day--highlighted {
-      border-radius: 0.3rem;
+      border-radius: 0.2rem;
       background-color: #87BC40;
       color: #fff; }
       :global .react-datepicker__day--highlighted:hover {
         background-color: #79a93a; }
       :global .react-datepicker__day--highlighted-custom-1 {
-        color: magenta; }
+        color: #A76EF5; }
       :global .react-datepicker__day--highlighted-custom-2 {
-        color: green; }
+        color: #87BC40; }
     :global .react-datepicker__day--selected, :global .react-datepicker__day--in-selecting-range, :global .react-datepicker__day--in-range {
-      border-radius: 0.3rem;
+      border-radius: 0.2rem;
       background-color: #0696D7;
       color: #fff; }
       :global .react-datepicker__day--selected:hover, :global .react-datepicker__day--in-selecting-range:hover, :global .react-datepicker__day--in-range:hover {
         background-color: #0585be; }
     :global .react-datepicker__day--keyboard-selected {
-      border-radius: 0.3rem;
+      border-radius: 0.2rem;
       background-color: #17b3f9;
       color: #fff; }
       :global .react-datepicker__day--keyboard-selected:hover {
@@ -280,7 +280,7 @@
   :global .react-datepicker__month-read-view,
   :global .react-datepicker__month-year-read-view {
     border: 1px solid transparent;
-    border-radius: 0.3rem; }
+    border-radius: 0.2rem; }
     :global .react-datepicker__year-read-view:hover,
     :global .react-datepicker__month-read-view:hover,
     :global .react-datepicker__month-year-read-view:hover {
@@ -311,7 +311,7 @@
     top: 30px;
     z-index: 1;
     text-align: center;
-    border-radius: 0.3rem;
+    border-radius: 0.2rem;
     border: 1px solid #D4DBE1; }
     :global .react-datepicker__year-dropdown:hover,
     :global .react-datepicker__month-dropdown:hover,
@@ -333,8 +333,8 @@
     :global .react-datepicker__year-option:first-of-type,
     :global .react-datepicker__month-option:first-of-type,
     :global .react-datepicker__month-year-option:first-of-type {
-      border-top-left-radius: 0.3rem;
-      border-top-right-radius: 0.3rem; }
+      border-top-left-radius: 0.2rem;
+      border-top-right-radius: 0.2rem; }
     :global .react-datepicker__year-option:last-of-type,
     :global .react-datepicker__month-option:last-of-type,
     :global .react-datepicker__month-year-option:last-of-type {
@@ -342,8 +342,8 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-      border-bottom-left-radius: 0.3rem;
-      border-bottom-right-radius: 0.3rem; }
+      border-bottom-left-radius: 0.2rem;
+      border-bottom-right-radius: 0.2rem; }
     :global .react-datepicker__year-option:hover,
     :global .react-datepicker__month-option:hover,
     :global .react-datepicker__month-year-option:hover {
