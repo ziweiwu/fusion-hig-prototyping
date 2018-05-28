@@ -1,15 +1,11 @@
 @import "~@hig/styles/build/index.css";
 
 .App {
-  font-family: "ArtifaktElement";
+  font-family: ArtifaktElement;
   padding-bottom: 25px;
 }
 
-.side-area{
-  background-color:#0696D7;
+.side-area {
+  background-color: #0696D7;
   padding-bottom: 25px;
-}
-
-.myCal{
-  background: grey;
 }

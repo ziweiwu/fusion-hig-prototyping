@@ -226,9 +226,9 @@
         margin: 0;
         height: calc(195px + (#{$datepicker__item-size} / 2));
         overflow-y: scroll;
-        padding-right: 30px;
         width: 100%;
         box-sizing: content-box;
+        padding-left: 0;
 
         li.react-datepicker__time-list-item {
           padding: 5px 10px;
@@ -312,11 +312,11 @@
     }
 
     &-custom-1 {
-      color: magenta;
+      color: #A76EF5;
     }
 
     &-custom-2 {
-      color: green;
+      color: #87BC40;
     }
   }
 
