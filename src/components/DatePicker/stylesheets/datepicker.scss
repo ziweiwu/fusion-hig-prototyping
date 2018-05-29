@@ -15,8 +15,9 @@
   display: inline-block;
   position: relative;
 }
- //hig text field clear button position fix
-.hig__text-field__clear-button{
+
+//hig text field clear button position fix
+.hig__text-field__clear-button {
   top: 0;
 }
 
@@ -367,9 +368,11 @@
   }
 }
 
+//height can adjust the space between input text and calender
 .react-datepicker__input-container {
   position: relative;
   display: inline-block;
+  height: 85px;
 }
 
 .react-datepicker__year-read-view,
