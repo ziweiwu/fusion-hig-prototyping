@@ -13,8 +13,7 @@ import {
   cloneDate,
   isMoment,
   isDate,
-  isBefore,
-  isAfter,
+  isBefore, isAfter,
   setTime,
   getSecond,
   getMinute,
@@ -109,6 +108,7 @@ export default class DatePicker extends React.Component {
     openToDate: PropTypes.object,
     peekNextMonth: PropTypes.bool,
     placeholderText: PropTypes.string,
+    label: PropTypes.string,
     popperContainer: PropTypes.func,
     popperClassName: PropTypes.string, // <PopperComponent/> props
     popperModifiers: PropTypes.object, // <PopperComponent/> props
@@ -574,7 +574,7 @@ export default class DatePicker extends React.Component {
   };
 
   renderDateInput = () => {
-    var className = classnames(this.props.className, {
+    const className = classnames(this.props.className, {
       [outsideClickIgnoreClass]: this.state.open
     });
 
@@ -582,8 +582,9 @@ export default class DatePicker extends React.Component {
     //display clear button if clearbutton option is true
     const customInput = this.props.customInput ||
     <TextField
-      showClearButton = {!!this.props.isClearable && this.props.selected != null}
+      showClearButton = {this.props.isClearable && this.props.selected != null}
       onClearButtonClick = {this.onClearClick}
+      label = {this.props.label}
     />;
     const customInputRef = this.props.customInputRef || "ref";
     const inputValue =
@@ -607,6 +608,7 @@ export default class DatePicker extends React.Component {
       name: this.props.name,
       autoFocus: this.props.autoFocus,
       placeholder: this.props.placeholderText,
+      label: this.props.label,
       disabled: this.props.disabled,
       autoComplete: this.props.autoComplete,
       className: className,

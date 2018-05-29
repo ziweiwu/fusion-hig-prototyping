@@ -7,10 +7,8 @@ import Timestamp from '@hig/timestamp';
 
 //import DatePicker from 'react-datepicker';
 //import 'react-datepicker/dist/react-datepicker.css';
-
-
 class PickDate extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
     this.state = {
       startDate: moment(),
@@ -35,14 +33,15 @@ class PickDate extends Component {
     this.setState({endDate: date});
   };
 
-  handleCheckDate(date){
-    if(this.state.startDate>=moment().add(3, 'months')){
+  handleCheckDate(date) {
+    this.handleChangeStart(date);
+    console.log(moment().add(3,'month'));
+    if (this.state.startDate >= moment().add(3, 'months')) {
       this.setState({error: "Please select a date within 3 months."});
-    }else{
+      console.log(this.state.error)
+    } else {
       this.setState({error: undefined});
-      this.handleChangeStart(date);
     }
-
   }
 
   render() {
@@ -51,10 +50,10 @@ class PickDate extends Component {
       <div>
         <Headline title="Date Picker Prototype based on React-Date-Picker library"/>
         <DatePicker
-          placeholderText={"Please Choose a Date"}
+          placeholderText={"do something  Date"}
           selected={startDate}
           onChange={this.handleChangeDate}
-          dateFormat="YYYY/MM/DD"
+          dateFormat="MM/DD/YYYY"
           calendarClassName="myCal"
         />
         {startDate && <p>Date: {startDate.local('en-US').format('YYYY-MM-DD').toString()}</p>}
@@ -66,7 +65,7 @@ class PickDate extends Component {
           placeholderText={"Please Choose a Date"}
           selected={startDate}
           onChange={this.handleCheckDate}
-          dateFormat="YYYY/MM/DD"
+          dateFormat="MM, DD, YYYY"
           calendarClassName="myCal"
           shouldCloseOnSelect={false}
         >
@@ -147,7 +146,6 @@ class PickDate extends Component {
           placeholderText="I have been cleared!"
         />
 
-
         <Headline title="With Year and Month Dropdown"/>
         <DatePicker
           selected={this.state.startDate}
@@ -158,10 +156,7 @@ class PickDate extends Component {
           dropdownMode="select"
         />
 
-
-
       </div>
-
 
     );
   }

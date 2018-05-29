@@ -15,6 +15,10 @@
   display: inline-block;
   position: relative;
 }
+ //hig text field clear button position fix
+.hig__text-field__clear-button{
+  top: 0;
+}
 
 .react-datepicker--time-only {
   .react-datepicker__triangle {

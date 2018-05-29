@@ -1,7 +1,16 @@
-## fusion-production-react-prototypes
+### Fusion-Production-Hig Prototypes
 
-Prototypes of fusion production web application using React.js and Hig Components.
-1. A table view page to showcase the table layout in fusion production
-2. A date picker
+Prototype for new Hig Components
+- A date picker component (in progress) 
+
+
+To start the prototype page
+
+``yarn run start`` @project root
+
+
+To start the storybook page
+
+``yarn run storybook`` @project root
 
 Storybook link: [https://ziweiwu.github.io/fusion-hig-prototyping]

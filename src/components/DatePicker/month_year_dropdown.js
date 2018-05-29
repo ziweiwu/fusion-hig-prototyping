@@ -13,7 +13,7 @@ import {
   newDate
 } from "./date_utils";
 
-var WrappedMonthYearDropdownOptions = onClickOutside(MonthYearDropdownOptions);
+const WrappedMonthYearDropdownOptions = onClickOutside(MonthYearDropdownOptions);
 
 export default class MonthYearDropdown extends React.Component {
   static propTypes = {
