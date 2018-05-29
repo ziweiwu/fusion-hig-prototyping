@@ -4,12 +4,13 @@
   "private": true,
   "dependencies": {
     "@hig/button": "0.1.0-alpha.8656cb28",
-    "@hig/styles": "0.2.0-alpha.fc17111c",
+    "@hig/styles": "0.2.0-alpha.8656cb28",
     "@hig/table": "0.3.0-alpha.fc17111c",
     "@hig/tabs": "0.1.0-alpha.fc17111c",
     "@hig/text-area": "0.1.0-alpha.8656cb28",
     "@hig/text-field": "0.1.0-alpha.8656cb28",
     "@hig/timestamp": "0.1.0-alpha.04e0f0a0",
+    "@hig/typography": "0.1.0-alpha.8656cb28",
     "@storybook/addon-actions": "^3.4.6",
     "@storybook/addon-info": "^3.4.6",
     "@storybook/addon-knobs": "^3.4.6",
@@ -46,6 +47,8 @@
   },
   "devDependencies": {
     "@storybook/addon-notes": "^3.4.6",
-    "@storybook/addon-viewport": "^3.4.5"
+    "@storybook/addon-viewport": "^3.4.5",
+    "flow-bin": "^0.73.0",
+    "jest": "^23.0.1"
   }
 }

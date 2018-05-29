@@ -63,7 +63,7 @@ export default class Month extends React.Component {
 
   renderWeeks = () => {
     const weeks = [];
-    var isFixedHeight = this.props.fixedHeight;
+    const isFixedHeight = this.props.fixedHeight;
     let currentWeekStart = utils.getStartOfWeek(
       utils.getStartOfMonth(utils.cloneDate(this.props.day))
     );
@@ -125,10 +125,10 @@ export default class Month extends React.Component {
   };
 
   getClassNames = () => {
-    const { selectingDate, selectsStart, selectsEnd } = this.props;
+    const {selectingDate, selectsStart, selectsEnd} = this.props;
     return classnames("react-datepicker__month", {
       "react-datepicker__month--selecting-range":
-        selectingDate && (selectsStart || selectsEnd)
+      selectingDate && (selectsStart || selectsEnd)
     });
   };
 
