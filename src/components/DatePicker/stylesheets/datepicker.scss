@@ -296,8 +296,10 @@
 }
 
 //style the color of days outside month
+//pointer-events makes the outside month non-selectable
 .react-datepicker__day--outside-month{
-  color: #0696D7;
+  color: transparent;
+  pointer-events: none;
 }
 
 .react-datepicker__day {

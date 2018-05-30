@@ -238,7 +238,8 @@
     text-align: center;
     margin: 0.166rem; }
   :global .react-datepicker__day--outside-month {
-    color: #0696D7; }
+    color: transparent;
+    pointer-events: none; }
   :global .react-datepicker__day {
     cursor: pointer; }
     :global .react-datepicker__day:hover {

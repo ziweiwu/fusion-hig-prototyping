@@ -11,7 +11,7 @@ const Headline = (props) => {
 
 Headline.defaultProps = {
   title: 'Title'
-}
+};
 
 export default Headline
 
