@@ -5,8 +5,6 @@ import './DatePicker/stylesheets/datePicker.css';
 import Headline from './Headline';
 import Timestamp from '@hig/timestamp';
 
-//import DatePicker from 'react-datepicker';
-//import 'react-datepicker/dist/react-datepicker.css';
 class PickDate extends Component {
   constructor(props){
     super(props);
@@ -33,19 +31,9 @@ class PickDate extends Component {
     this.setState({endDate: date});
   };
 
-  handleCheckDate(date) {
-    this.handleChangeStart(date);
-    console.log(moment().add(3,'month'));
-    if (this.state.startDate >= moment().add(3, 'months')) {
-      this.setState({error: "Please select a date within 3 months."});
-      console.log(this.state.error)
-    } else {
-      this.setState({error: undefined});
-    }
-  }
-
   render() {
     const startDate = this.state.startDate;
+    const endDate = this.state.endDate;
     return (
       <div>
         <Headline title="Date Picker Prototype based on React-Date-Picker library"/>
@@ -60,19 +48,6 @@ class PickDate extends Component {
         <Headline title="Use of Timstamp component from HIG to show time lapsed"/>
         <Timestamp timestamp={startDate}/>
 
-        <Headline title="Display error if pick a date greater than 3 months"/>
-        <DatePicker
-          placeholderText={"Please Choose a Date"}
-          selected={startDate}
-          onChange={this.handleCheckDate}
-          dateFormat="MM, DD, YYYY"
-          calendarClassName="myCal"
-          shouldCloseOnSelect={false}
-        >
-          <p>Pick a date greater than 3 months.</p>
-        </DatePicker>
-
-
         <Headline title="Select Time and Date"/>
         <DatePicker
           selected={this.state.startDate}
@@ -83,7 +58,6 @@ class PickDate extends Component {
           dateFormat="LLL"
           timeCaption="time"
         />
-
 
         <Headline title="Specific Date Range"/>
         <DatePicker
