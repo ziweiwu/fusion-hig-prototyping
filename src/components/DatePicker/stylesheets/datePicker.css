@@ -137,7 +137,7 @@
       :global .react-datepicker__navigation--previous:hover {
         border-right-color: gray; }
       :global .react-datepicker__navigation--previous--disabled, :global .react-datepicker__navigation--previous--disabled:hover {
-        border-right-color: #b3b3b3;
+        border-right-color: #cccccc;
         cursor: default; }
     :global .react-datepicker__navigation--next {
       right: 10px;
@@ -147,7 +147,7 @@
       :global .react-datepicker__navigation--next:hover {
         border-left-color: gray; }
       :global .react-datepicker__navigation--next--disabled, :global .react-datepicker__navigation--next--disabled:hover {
-        border-left-color: #b3b3b3;
+        border-left-color: #cccccc;
         cursor: default; }
     :global .react-datepicker__navigation--years {
       position: relative;
@@ -237,11 +237,13 @@
     line-height: 1.7rem;
     text-align: center;
     margin: 0.166rem; }
+  :global .react-datepicker__day--outside-month {
+    color: #0696D7; }
   :global .react-datepicker__day {
     cursor: pointer; }
     :global .react-datepicker__day:hover {
       border-radius: 0.2rem;
-      background-color: white; }
+      background-color: #9BD5EF; }
     :global .react-datepicker__day--today {
       font-weight: bold; }
     :global .react-datepicker__day--highlighted {
@@ -432,12 +434,12 @@
       :global .react-datepicker__portal .react-datepicker__navigation--previous:hover {
         border-right-color: gray; }
       :global .react-datepicker__portal .react-datepicker__navigation--previous--disabled, :global .react-datepicker__portal .react-datepicker__navigation--previous--disabled:hover {
-        border-right-color: #b3b3b3;
+        border-right-color: #cccccc;
         cursor: default; }
     :global .react-datepicker__portal .react-datepicker__navigation--next {
       border-left-color: #999999; }
       :global .react-datepicker__portal .react-datepicker__navigation--next:hover {
         border-left-color: gray; }
       :global .react-datepicker__portal .react-datepicker__navigation--next--disabled, :global .react-datepicker__portal .react-datepicker__navigation--next--disabled:hover {
-        border-left-color: #b3b3b3;
+        border-left-color: #cccccc;
         cursor: default; }

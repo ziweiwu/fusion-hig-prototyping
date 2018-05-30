@@ -295,12 +295,17 @@
   margin: $datepicker__day-margin;
 }
 
+//style the color of days outside month
+.react-datepicker__day--outside-month{
+  color: #0696D7;
+}
+
 .react-datepicker__day {
   cursor: pointer;
 
   &:hover {
     border-radius: $datepicker__border-radius;
-    background-color: $datepicker__background-color;
+    background-color: #9BD5EF;
   }
 
   &--today {
