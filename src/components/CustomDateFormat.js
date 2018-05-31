@@ -36,9 +36,10 @@ class CustomDateFormat extends Component {
         <DatePicker
           selected={startDate}
           label={this.props.label}
+          dateFormatCalendar={this.props.dateFormat}
           dateFormat={this.props.dateFormat}
           startDate={startDate}
-          onChange={this.handleChangeStart}
+          onChange={this.handleChangeDate}
         />
       </div>
     );
