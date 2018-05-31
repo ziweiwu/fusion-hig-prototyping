@@ -16,6 +16,13 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@hig/avatar@0.2.0-alpha.7efcea38":
+  version "0.2.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-0.2.0-alpha.7efcea38.tgz#e990ebadec8147a2a6110b9c4f289764fcfd968a"
+  dependencies:
+    classnames "^2.2.5"
+    react-lifecycles-compat "^3.0.2"
+
 "@hig/button@0.1.0-alpha.8656cb28":
   version "0.1.0-alpha.8656cb28"
   resolved "https://registry.yarnpkg.com/@hig/button/-/button-0.1.0-alpha.8656cb28.tgz#f684a5ccc1e12118fb083b7e5bd1767046dc5cc2"
@@ -37,6 +44,13 @@
     "@hig/icon" "0.1.0-alpha.fc17111c"
     classnames "^2.2.5"
 
+"@hig/icon-button@0.2.0-alpha.7efcea38":
+  version "0.2.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.2.0-alpha.7efcea38.tgz#404578e0b48b0378f08fdfad62461e4c40ec83ac"
+  dependencies:
+    "@hig/icon" "0.2.0-alpha.7efcea38"
+    classnames "^2.2.5"
+
 "@hig/icon@0.1.0-alpha.8656cb28":
   version "0.1.0-alpha.8656cb28"
   resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.1.0-alpha.8656cb28.tgz#bbaaa3e494d89163cdc3e3cf03545ffdbc1e2ba5"
@@ -51,6 +65,13 @@
     "@hig/icons" "0.1.0-alpha.fc17111c"
     classnames "^2.2.5"
 
+"@hig/icon@0.2.0-alpha.7efcea38":
+  version "0.2.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.2.0-alpha.7efcea38.tgz#58039deea736f0582982556daf0d63e64698d83a"
+  dependencies:
+    "@hig/icons" "0.2.0-alpha.7efcea38"
+    classnames "^2.2.5"
+
 "@hig/icons@0.1.0-alpha.8656cb28":
   version "0.1.0-alpha.8656cb28"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0-alpha.8656cb28.tgz#c896d16542ec7a899cafb4a1e312b064d42e191b"
@@ -58,6 +79,10 @@
 "@hig/icons@0.1.0-alpha.fc17111c":
   version "0.1.0-alpha.fc17111c"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0-alpha.fc17111c.tgz#d6cec1d3a0fb8df646b4e11c0618da680a89977a"
+
+"@hig/icons@0.2.0-alpha.7efcea38":
+  version "0.2.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.2.0-alpha.7efcea38.tgz#aadf8c0760c365d518dfb4c4a75d7b6f115c9151"
 
 "@hig/styles@0.2.0-alpha.8656cb28":
   version "0.2.0-alpha.8656cb28"
@@ -89,12 +114,13 @@
     classnames "^2.2.5"
     hig-react "0.29.0-alpha.8656cb28"
 
-"@hig/text-field@0.1.0-alpha.8656cb28":
-  version "0.1.0-alpha.8656cb28"
-  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.1.0-alpha.8656cb28.tgz#ff055930613d703b53c13b0ae484cfb253ec5700"
+"@hig/text-field@0.2.0-alpha.7efcea38":
+  version "0.2.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.2.0-alpha.7efcea38.tgz#76dddd40bd4c66b549756ce34ee994b3c2c65d94"
   dependencies:
+    "@hig/icon-button" "0.2.0-alpha.7efcea38"
     classnames "^2.2.5"
-    hig-react "0.29.0-alpha.8656cb28"
+    hig-react "0.30.0-alpha.7efcea38"
     react-lifecycles-compat "^3.0.2"
 
 "@hig/themes@0.1.0-alpha.8656cb28":
@@ -111,6 +137,12 @@
   dependencies:
     classnames "^2.2.5"
 
+"@hig/timestamp@0.2.0-alpha.7efcea38":
+  version "0.2.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/@hig/timestamp/-/timestamp-0.2.0-alpha.7efcea38.tgz#1bd183f23846d36ef573a26d0546bebd7d627e74"
+  dependencies:
+    classnames "^2.2.5"
+
 "@hig/typography@0.1.0-alpha.8656cb28":
   version "0.1.0-alpha.8656cb28"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.1.0-alpha.8656cb28.tgz#36cad34216c7a3de73c9140a6258f97cd63294c1"
@@ -120,6 +152,12 @@
 "@hig/typography@0.1.0-alpha.fc17111c":
   version "0.1.0-alpha.fc17111c"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.1.0-alpha.fc17111c.tgz#10bb0fc26196f87034a609f6a453fb35fcfffe25"
+  dependencies:
+    classnames "^2.2.5"
+
+"@hig/typography@0.2.0-alpha.7efcea38":
+  version "0.2.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.2.0-alpha.7efcea38.tgz#7548acc6c9a107fb54752d8c8c403e5b7da7715e"
   dependencies:
     classnames "^2.2.5"
 
@@ -4632,6 +4670,10 @@ he@1.1.x, he@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
+hig-interface@0.2.0-alpha.7efcea38:
+  version "0.2.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.2.0-alpha.7efcea38.tgz#e5f356e354c6a11ac8ab1f13df9429362bc6066b"
+
 hig-interface@0.2.0-alpha.8656cb28:
   version "0.2.0-alpha.8656cb28"
   resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.2.0-alpha.8656cb28.tgz#30dfe9cb09a2b1a6a6e31dfaa934575137fff7b2"
@@ -4663,6 +4705,26 @@ hig-react@0.29.0-alpha.fc17111c:
     hig-vanilla "0.2.0-alpha.fc17111c"
     react-flip-move "^3.0.1"
     react-transition-group "^2.3.0"
+
+hig-react@0.30.0-alpha.7efcea38:
+  version "0.30.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/hig-react/-/hig-react-0.30.0-alpha.7efcea38.tgz#2b122373ed0a0369c7e95aa2b31276c6aab74084"
+  dependencies:
+    "@hig/avatar" "0.2.0-alpha.7efcea38"
+    "@hig/icon" "0.2.0-alpha.7efcea38"
+    "@hig/icon-button" "0.2.0-alpha.7efcea38"
+    "@hig/icons" "0.2.0-alpha.7efcea38"
+    "@hig/timestamp" "0.2.0-alpha.7efcea38"
+    "@hig/typography" "0.2.0-alpha.7efcea38"
+    hig-vanilla "0.2.0-alpha.7efcea38"
+    react-flip-move "^3.0.1"
+    react-transition-group "^2.3.0"
+
+hig-vanilla@0.2.0-alpha.7efcea38:
+  version "0.2.0-alpha.7efcea38"
+  resolved "https://registry.yarnpkg.com/hig-vanilla/-/hig-vanilla-0.2.0-alpha.7efcea38.tgz#35e2f2faf5a2bf10577ca13985ee990b9115dcd3"
+  dependencies:
+    hig-interface "0.2.0-alpha.7efcea38"
 
 hig-vanilla@0.2.0-alpha.8656cb28:
   version "0.2.0-alpha.8656cb28"

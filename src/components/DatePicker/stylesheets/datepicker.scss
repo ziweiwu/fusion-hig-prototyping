@@ -5,6 +5,7 @@
   display: inline-block;
 }
 
+
 .react-datepicker {
   font-family: $datepicker__font-family;
   font-size: $datepicker__font-size;
@@ -14,6 +15,11 @@
   border-radius: $datepicker__border-radius;
   display: inline-block;
   position: relative;
+}
+
+//set the position of label text of input box to be at the top all the time
+.hig__text-field__label-v1{
+  position: static;
 }
 
 //hig text field clear button position fix

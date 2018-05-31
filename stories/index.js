@@ -57,8 +57,8 @@ stories.add('Locale', () => {
 //custom date format
 stories.add('Custom Date Format', () => {
   const label = 'Date Format';
-  const options = ['L', 'ddd,MMM', 'YYYY-MM-DD', 'DD-MM-YY'];
-  const defaultValue = 'L';
+  const options = ['ddd, d MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'];
+  const defaultValue = 'ddd, d MMM, YYYY';
   const dateFormat = select(label, options, defaultValue);
 
   return (

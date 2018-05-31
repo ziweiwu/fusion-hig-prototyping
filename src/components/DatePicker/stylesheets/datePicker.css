@@ -61,6 +61,8 @@
     border-radius: 0.2rem;
     display: inline-block;
     position: relative; }
+  :global .hig__text-field__label-v1 {
+    position: static; }
   :global .hig__text-field__clear-button {
     top: 0; }
   :global .react-datepicker--time-only .react-datepicker__triangle {
