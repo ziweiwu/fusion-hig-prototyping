@@ -3,7 +3,6 @@ import './App.css';
 import "@hig/styles/build/index.css";
 import {Container, Row, Col} from 'react-grid-system'
 import Calendar from "./components/DatePickerFromScatch/Calender";
-import '@hig/text-field/build/index.css';
 
 class App extends Component {
   render() {
