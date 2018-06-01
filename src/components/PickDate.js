@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import moment from 'moment'
-import DatePicker from './DatePicker/index';
+import DatePicker from './DatePicker/DatePicker';
 import './DatePicker/stylesheets/datePicker.css';
 import Headline from './Headline';
-import Timestamp from '@hig/timestamp';
 
 class PickDate extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       startDate: moment(),
@@ -16,7 +15,6 @@ class PickDate extends Component {
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
-    this.handleCheckDate = this.handleChangeEnd.bind(this);
   }
 
   handleChangeDate(date) {
@@ -33,7 +31,6 @@ class PickDate extends Component {
 
   render() {
     const startDate = this.state.startDate;
-    const endDate = this.state.endDate;
     return (
       <div>
         <Headline title="Date Picker Prototype based on React-Date-Picker library"/>

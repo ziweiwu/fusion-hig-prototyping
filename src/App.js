@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import "@hig/styles/build/index.css";
-import TableView from './components/TableView';
-import PickDate from './components/PickDate'
 import {Container, Row, Col} from 'react-grid-system'
 import Calendar from "./components/DatePickerFromScatch/Calender";
-import TextField from '@hig/text-field';
 import '@hig/text-field/build/index.css';
 
 class App extends Component {
@@ -17,8 +14,6 @@ class App extends Component {
           <Col sm={2} className="side-area"></Col>
           <Col sm={8}>
             <Calendar/>
-            {/*<PickDate/>*/}
-            {/*<TableView/>*/}
           </Col>
           <Col sm={2} className="side-area"></Col>
         </Row>
