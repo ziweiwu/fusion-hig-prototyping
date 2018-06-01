@@ -1,10 +1,94 @@
-@import "variables.scss";
-@import "mixins.scss";
+//@import "variables.scss";
+//@import "mixins.scss";
 
+/* Dimensions */
+$datepicker__border-radius: 0.2rem !default;
+$datepicker__day-margin: 0.166rem !default;
+$datepicker__font-family: ArtifaktElement, Helvetica, Arial !default;
+$datepicker__font-size: 0.8rem !default;
+$datepicker__item-size: 1.7rem !default;
+$datepicker__margin: 0.4rem !default;
+$datepicker__navigation-size: 0.45rem !default;
+$datepicker__triangle-size: 8px !default;
+
+/* Colors */
+$datepicker__background-color: white !default;
+$datepicker__border-color: #D4DBE1 !default;
+$datepicker__highlighted-color: #87BC40 !default;
+$datepicker__muted-color: #999999 !default;
+$datepicker__outsideMonth-color: #999999 !default;
+$datepicker__selected-color: #0696d7 !default;
+$datepicker__text-color: #000 !default;
+$datepicker__header-color: #000 !default;
+$datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%) !default;
+
+/* mixins */
+%triangle-arrow {
+  margin-left: -$datepicker__triangle-size;
+  position: absolute;
+
+  &,
+  &::before {
+    box-sizing: content-box;
+    position: absolute;
+    border: $datepicker__triangle-size solid transparent;
+
+    height: 0;
+    width: 1px;
+  }
+
+  &::before {
+    content: "";
+    z-index: -1;
+    border-width: $datepicker__triangle-size;
+
+    left: -$datepicker__triangle-size;
+    border-bottom-color: $datepicker__border-color;
+  }
+}
+
+%triangle-arrow-up {
+  @extend %triangle-arrow;
+
+  top: 0;
+  margin-top: -$datepicker__triangle-size;
+
+  &,
+  &::before {
+    border-top: none;
+    border-bottom-color: $datepicker__background-color;
+  }
+
+  &::before {
+    top: -1px;
+    border-bottom-color: $datepicker__border-color;
+  }
+}
+
+%triangle-arrow-down {
+  @extend %triangle-arrow;
+
+  bottom: 0;
+  margin-bottom: -$datepicker__triangle-size;
+
+  &,
+  &::before {
+    border-bottom: none;
+    border-top-color: #fff;
+  }
+
+  &::before {
+    bottom: -1px;
+    border-top-color: $datepicker__border-color;
+  }
+}
+
+/****************************************************
+          Component Styles
+****************************************************/
 .react-datepicker-wrapper {
   display: inline-block;
 }
-
 
 .react-datepicker {
   font-family: $datepicker__font-family;
@@ -17,14 +101,15 @@
   position: relative;
 }
 
-//set the position of label text of input box to be at the top all the time
-.hig__text-field__label{
+//static set the position of label text of input to remain on top
+//reflective set the position of label text to be dynamically positioned
+.hig__text-field__label {
   position: static;
 }
 
-//hig text field clear button position fix
+//set the height of clear-button
 .hig__text-field__clear-button {
-  top:22px
+  top: 22px
 }
 
 .react-datepicker--time-only {
@@ -303,7 +388,7 @@
 
 //style the color of days outside month
 //pointer-events makes the outside month non-selectable
-.react-datepicker__day--outside-month{
+.react-datepicker__day--outside-month {
   color: transparent;
   pointer-events: none;
 }
