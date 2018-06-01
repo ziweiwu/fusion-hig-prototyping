@@ -37,7 +37,9 @@ import {
 } from "./date_utils";
 import onClickOutside from "react-onclickoutside";
 
+//make CalendarContainer consumable
 export {default as CalendarContainer} from "./calendar_container";
+
 
 const outsideClickIgnoreClass = "react-datepicker-ignore-onclickoutside";
 const WrappedCalendar = onClickOutside(Calendar);
@@ -54,9 +56,8 @@ function hasPreSelectionChanged(date1, date2) {
 }
 
 /**
- * General datepicker component.
+ DatePicker Component
  */
-
 export default class DatePicker extends React.Component {
   static propTypes = {
     adjustDateOnChange: PropTypes.bool,
@@ -634,7 +635,6 @@ export default class DatePicker extends React.Component {
         targetComponent={
           <div className="react-datepicker__input-container">
             {this.renderDateInput()}
-            {/*{this.renderClearButton()}*/}
           </div>
         }
         popperContainer={this.props.popperContainer}
