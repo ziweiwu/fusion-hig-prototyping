@@ -580,7 +580,8 @@ export default class DatePicker extends React.Component {
       shouldCloseOnSelect: true,
       showTimeSelect: false,
       timeIntervals: 30,
-      timeCaption: "Time"
+      timeCaption: "Time",
+      fixedHeight: true
     };
   }
 
