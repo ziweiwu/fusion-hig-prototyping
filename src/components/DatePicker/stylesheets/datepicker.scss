@@ -18,13 +18,13 @@
 }
 
 //set the position of label text of input box to be at the top all the time
-.hig__text-field__label-v1{
+.hig__text-field__label{
   position: static;
 }
 
 //hig text field clear button position fix
 .hig__text-field__clear-button {
-  top: 0;
+  top:22px
 }
 
 .react-datepicker--time-only {

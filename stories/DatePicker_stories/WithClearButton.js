@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
-import moment from 'moment';
-import DatePicker from './DatePicker/index';
-import './DatePicker/stylesheets/datePicker.css';
+import DatePicker from '../../src/components/DatePicker/DatePicker';
+import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
-export default class DateRangePicker extends Component {
+export default class WithClearButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: moment(),
-      endDate: moment()
+      startDate: this.props.selected,
+      endDate: undefined,
     };
+    this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
   }
+
+  handleChangeDate(date) {
+    this.setState({startDate: date});
+  };
 
   handleChangeStart(date) {
     this.setState({startDate: date});
@@ -27,17 +31,10 @@ export default class DateRangePicker extends Component {
       <div>
         <DatePicker
           selected={this.state.startDate}
-          label="Pick a start date"
           startDate={this.state.startDate}
-          endDate={this.state.endDate}
           onChange={this.handleChangeStart}
-        />
-        <DatePicker
-          selected={this.state.endDate}
-          label="Pick an end date"
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-          onChange={this.handleChangeEnd}
+          label={this.props.label}
+          isClearable={this.props.isClearable}
         />
       </div>
     );

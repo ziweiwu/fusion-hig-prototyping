@@ -4,7 +4,7 @@ import DatePicker from './DatePicker/DatePicker';
 import './DatePicker/stylesheets/datePicker.css';
 import Headline from './Headline';
 
-class PickDate extends Component {
+export default class PickDate extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -133,4 +133,3 @@ class PickDate extends Component {
   }
 }
 
-export default PickDate;
