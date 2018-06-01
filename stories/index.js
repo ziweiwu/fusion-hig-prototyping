@@ -3,8 +3,8 @@ import moment from 'moment'
 import {storiesOf} from '@storybook/react';
 import {withKnobs, text, boolean, number, select} from '@storybook/addon-knobs';
 
-import DatePicker from "../src/components/DatePicker";
-import PickDateRange from "../src/components/PickDateRange";
+import DatePicker from "../src/components/DatePicker/index";
+import DateRangePicker from "../src/components/DateRangePicker";
 import DisableDates from "../src/components/DisableDates";
 import Locale from "../src/components/Locale";
 import CustomDateFormat from "../src/components/CustomDateFormat";
@@ -37,7 +37,12 @@ stories.add('With Placeholder Text', () => (
   {notes: 'With Place Holder Text'});
 
 //select a range of dates
-stories.add('Select a Range of Dates', () => (<PickDateRange/>), {notes: 'Select a Range of Dates'});
+stories.add('Select a Range of Dates', () => (<DateRangePicker
+  startDateLabel={"Pick your start date"}
+  endDateLabel={"Pick your end date"}
+
+
+  startDate={moment()} />), {notes: 'Select a Range of Dates'});
 
 //disable certain days
 stories.add('Disable Certain Days', () => (<DisableDates/>), {notes: 'Disable Certain Days'});

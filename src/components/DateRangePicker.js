@@ -1,24 +1,18 @@
 import React, {Component} from 'react';
-import moment from 'moment'
-import DatePicker from './DatePicker/DatePicker';
+import moment from 'moment';
+import DatePicker from './DatePicker/index';
 import './DatePicker/stylesheets/datePicker.css';
 
-class Locale extends Component {
+export default class DateRangePicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
       startDate: moment(),
-      endDate: moment(),
-      error: undefined
+      endDate: moment()
     };
-    this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
   }
-
-  handleChangeDate(date) {
-    this.setState({startDate: date});
-  };
 
   handleChangeStart(date) {
     this.setState({startDate: date});
@@ -29,20 +23,24 @@ class Locale extends Component {
   };
 
   render() {
-    const startDate = this.state.startDate;
     return (
-
       <div>
         <DatePicker
-          selected={startDate}
-          label={this.props.label}
-          locale={this.props.locale}
-          startDate={startDate}
+          selected={this.state.startDate}
+          label="Pick a start date"
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
           onChange={this.handleChangeStart}
+        />
+        <DatePicker
+          selected={this.state.endDate}
+          label="Pick an end date"
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          onChange={this.handleChangeEnd}
         />
       </div>
     );
   }
 }
 
-export default Locale;

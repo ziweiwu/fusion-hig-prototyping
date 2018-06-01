@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 import moment from 'moment'
-import DatePicker from './DatePicker/index';
+import DatePicker from './DatePicker/DatePicker';
 import './DatePicker/stylesheets/datePicker.css';
-import Headline from './Headline';
 
 export default class DisableDates extends Component {
   constructor(props) {
     super(props);
     this.state = {
       startDate: moment(),
-      endDate: moment(),
       error: undefined
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
