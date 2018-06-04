@@ -29,7 +29,7 @@ export default class DisableDates extends Component {
 
   render() {
     const startDate = this.state.startDate;
-    const endDate = this.state.endDate;
+    const maxDate = this.props.maxDate;
     return (
       <div>
         <DatePicker
@@ -37,7 +37,7 @@ export default class DisableDates extends Component {
           onChange={this.handleChangeDate}
           label = "Please select between today and next ten days"
           minDate={moment()}
-          maxDate={moment().add(10, "days")}
+          maxDate={moment().add(maxDate, "days")}
         />
       </div>
 

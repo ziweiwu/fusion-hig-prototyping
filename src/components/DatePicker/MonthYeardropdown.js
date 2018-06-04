@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import MonthYearDropdownOptions from "./month_year_dropdown_options";
+import MonthYearDropdownOptions from "./MonthYearDropdownOptions";
 import onClickOutside from "react-onclickoutside";
 import {
   addMonths,
@@ -15,7 +15,7 @@ import {
 
 const WrappedMonthYearDropdownOptions = onClickOutside(MonthYearDropdownOptions);
 
-export default class MonthYearDropdown extends React.Component {
+export default class MonthYeardropdown extends React.Component {
   static propTypes = {
     dropdownMode: PropTypes.oneOf(["scroll", "select"]).isRequired,
     dateFormat: PropTypes.string.isRequired,

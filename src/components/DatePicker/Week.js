@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Day from "./day";
-import WeekNumber from "./week_number";
+import Day from "./Day";
+import WeekNumber from "./WeekNumber";
 import * as utils from "./date_utils";
 
 export default class Week extends React.Component {
