@@ -18,19 +18,19 @@ import PlaceHolder from "./DatePicker_stories/PlaceHolder";
 const stories = storiesOf('Date Picker', module);
 stories.addDecorator(withKnobs);
 
-/*************************************************************************************************
+/**
  default view
- *************************************************************************************************/
-stories.add('Default View', () => (<Default label="Pick a date"/>), {notes: 'Default View'});
+ */
+stories.add('Default View', () => (<Default label="Pick a date"/>));
 
-/*************************************************************************************************
+/**
  portal view
- *************************************************************************************************/
-stories.add('Portal View', () => (<Portal label="Pick a date"/>), {notes: 'Portal View'});
+ */
+stories.add('Portal View', () => (<Portal label="Pick a date"/>));
 
-/*************************************************************************************************
+/**
  with Clear Button
- *************************************************************************************************/
+ */
 stories.add('With Clear Button', () => {
     const defaultValue = true;
     const isClearable = boolean('Clearable', defaultValue);
@@ -42,9 +42,9 @@ stories.add('With Clear Button', () => {
   }
 );
 
-/*************************************************************************************************
+/**
  disable state
- *************************************************************************************************/
+ */
 stories.add('Disabled', () => {
     const disable_label = 'Disable State';
     const enable_label = 'Enabled';
@@ -57,42 +57,41 @@ stories.add('Disabled', () => {
   }
 );
 
-/*************************************************************************************************
+/**
  with placeholder text
- *************************************************************************************************/
+ */
 stories.add('With Placeholder Text', () => {
     const label = 'PlaceHolder';
     const defaultValue = 'Your placeholder text';
-    const placeHolderText = text(label, defaultValue)
+    const placeHolderText = text(label, defaultValue);
     return (
       <DatePicker label="With Placeholder Text" placeholderText={placeHolderText}/>
     )
   }
 );
 
-/*************************************************************************************************
+/**
  Select a range of dates
- *************************************************************************************************/
+ */
 stories.add('Select a Range of Dates', () => (<DateRangePicker
-    startDateLabel={"Pick your start date"}
-    endDateLabel={"Pick your end date"}/>)
-  , {notes: 'Select a Range of Dates'});
+  startDateLabel={"Pick your start date"}
+  endDateLabel={"Pick your end date"}/>));
 
-/*************************************************************************************************
+/**
  disable certain days
- **************************************************************************************************/
+ */
 stories.add('Disable Certain Days', () => {
- const label = 'Num of future days to be selectable';
- const defaultValue = 7;
-  const maxDate=number(label, defaultValue);
+  const label = 'Num of future days to be selectable';
+  const defaultValue = 7;
+  const maxDate = number(label, defaultValue);
   return (
-    (<DisableDates maxDate = {maxDate}/>)
+    (<DisableDates maxDate={maxDate}/>)
   )
 });
 
-/*************************************************************************************************
+/**
  calender locale
- **************************************************************************************************/
+ */
 stories.add('Locale', () => {
   const label = 'Locale';
   const options = ['fr-ca', 'en-us', 'zh-cn', 'ja'];
@@ -104,9 +103,9 @@ stories.add('Locale', () => {
   )
 });
 
-/*************************************************************************************************
+/**
  customize date format
- **************************************************************************************************/
+ */
 stories.add('Custom Date Format', () => {
   const label = 'Date Format';
   const options = ['ddd, d MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'];
