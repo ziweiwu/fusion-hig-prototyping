@@ -1,17 +1,21 @@
 import React, {Component} from 'react';
-import DatePicker from '../../src/components/DatePicker/Index';
+import DatePicker from '../../src/components/DatePicker/DatePicker';
 import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
-export default class DateRangePicker extends Component {
+export default class PlaceHolder extends Component {
   constructor(props) {
     super(props);
     this.state = {
       startDate: undefined,
-      endDate: undefined
     };
+    this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
   }
+
+  handleChangeDate(date) {
+    this.setState({startDate: date});
+  };
 
   handleChangeStart(date) {
     this.setState({startDate: date});
@@ -22,24 +26,17 @@ export default class DateRangePicker extends Component {
   };
 
   render() {
+    const startDate = this.state.startDate;
     return (
       <div>
         <DatePicker
-          selected={this.state.startDate}
-          label="Pick a start date"
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
+          selected={startDate}
+          label={this.props.label}
+          placeholderText={this.props.placeholderText}
+          startDate={startDate}
           onChange={this.handleChangeStart}
-        />
-        <DatePicker
-          selected={this.state.endDate}
-          label="Pick an end date"
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-          onChange={this.handleChangeEnd}
         />
       </div>
     );
   }
 }
-

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import MonthDropdownOptions from "./month_dropdown_options";
+import MonthDropdownOptions from "./MonthDropdownOptions";
 import onClickOutside from "react-onclickoutside";
 import * as utils from "./date_utils";
 

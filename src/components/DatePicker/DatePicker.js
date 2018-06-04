@@ -1,7 +1,7 @@
-import Calendar from "./calendar";
+import Calendar from "./Calendar";
 import React from "react";
 import PropTypes from "prop-types";
-import PopperComponent, {popperPlacementPositions} from "./popper_component";
+import PopperComponent, {popperPlacementPositions} from "./Popper";
 import TextField from '@hig/text-field';
 import '@hig/text-field/build/index.css';
 import classnames from "classnames";
@@ -38,7 +38,7 @@ import {
 import onClickOutside from "react-onclickoutside";
 
 //make CalendarContainer consumable
-export {default as CalendarContainer} from "./calendar_container";
+export {default as CalendarContainer} from "./CalenderContainer";
 
 
 const outsideClickIgnoreClass = "react-datepicker-ignore-onclickoutside";
