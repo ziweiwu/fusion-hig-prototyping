@@ -45,7 +45,7 @@ describe("DatePicker", () => {
   it("Show the calendar when focusing on the date input", () => {
     const wrapper = mount(<DatePicker/>);
     wrapper.simulate("focus");
-    expect(wrapper.find("Calender")).toHaveLength(1);
+    expect(wrapper.find("Calender").exists()).toEqual(true);
   });
 
   it("Calender does not show if disable is selected", () => {
