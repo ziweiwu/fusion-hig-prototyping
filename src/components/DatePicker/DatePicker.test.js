@@ -1,12 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom"
-import TestUtils from "react-dom/test-utils";
 import {mount, shallow} from "enzyme";
+import moment from "moment";
 import DatePicker from "./DatePicker";
 import sinon from "sinon";
 import TestWrapper from "./TestWrapper"
 import propagateToGlobal from "./test_setup"
 
+//propagate DOM for testing with mount
 propagateToGlobal();
 
 describe("DatePicker", () => {
@@ -20,39 +20,39 @@ describe("DatePicker", () => {
     sandbox.restore();
   });
 
-  it("Render the DayPicker Component.", () => {
-    const datePicker = shallow(<DatePicker/>);
-    expect(datePicker).toHaveLength(1);
+  //snapshot testing
+  test('Date Picker passes snapshot testing', () => {
+    const wrapper = shallow(<DatePicker selected={moment("2017-09-15 09:30:00")}/>);
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it("Render the Props Correctly.", () => {
-    const datePicker = shallow(<DatePicker label="foo"/>);
-    expect(datePicker.instance().props.label).toEqual("foo");
+  //interaction testing
+  it("Render the dayPicker component correctly.", () => {
+    const wrapper = shallow(<DatePicker/>);
+    expect(wrapper).toHaveLength(1);
+  });
+
+  it("Render the label Correctly.", () => {
+    const wrapper = shallow(<DatePicker label="foo"/>);
+    expect(wrapper.instance().props.label).toEqual("foo");
+  });
+
+  it("Render the placeholder text Correctly.", () => {
+    const wrapper = shallow(<DatePicker placeholderText="foo"/>);
+    expect(wrapper.instance().props.placeholderText).toEqual("foo");
   });
 
   it("Show the calendar when focusing on the date input", () => {
-    const datePicker = TestUtils.renderIntoDocument(<DatePicker />);
-    const dateInput = datePicker.input;
-    TestUtils.Simulate.focus(ReactDOM.findDOMNode(dateInput));
-    expect(datePicker.Calender).exists;
+    const wrapper = mount(<DatePicker/>);
+    wrapper.simulate("focus");
+    expect(wrapper.find("Calender")).toHaveLength(1);
   });
 
-  it("Does not show calender when Disable props is selected", ()=> {
-    const datePicker = TestUtils.renderIntoDocument(<DatePicker disabled/>);
-    const dateInput = datePicker.input;
-    TestUtils.Simulate.click(ReactDOM.findDOMNode(dateInput));
-    expect(datePicker.state.open).toBe(false)
-  });
-
-  it("keep the calendar shown when clicking the calendar", () => {
-    const datePicker = mount(<DatePicker/>);
-    datePicker.find("input").simulate("focus");
-    datePicker.find("Calender").simulate("click");
-    const calender = datePicker.find("Calender");
-    expect(calender).exists;
-  });
-
-
+  it("Calender does not show if disable is selected", () => {
+    const wrapper = mount(<DatePicker disabled/>);
+    wrapper.simulate("focus");
+    expect(wrapper.find("Calender").exists()).toEqual(false);
+    });
 });
 
 

@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker Date Picker passes snapshot testing 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <PopperComponent
+    className={undefined}
+    hidePopper={true}
+    popperComponent={null}
+    popperContainer={undefined}
+    popperModifiers={
+        Object {
+            "preventOverflow": Object {
+              "boundariesElement": "viewport",
+              "enabled": true,
+              "escapeWithReference": true,
+            },
+          }
+    }
+    popperPlacement="bottom-start"
+    targetComponent={
+        <div
+            className="react-datepicker__input-container"
+        >
+            <TextField
+                autoComplete={undefined}
+                autoFocus={undefined}
+                className=""
+                disabled={false}
+                id={undefined}
+                label={undefined}
+                name={undefined}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClearButtonClick={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={undefined}
+                showClearButton={undefined}
+                tabIndex={undefined}
+                title={undefined}
+                type="text"
+                value="09/15/2017"
+            />
+        </div>
+    }
+/>,
+  "nodes": Array [
+    <PopperComponent
+      className={undefined}
+      hidePopper={true}
+      popperComponent={null}
+      popperContainer={undefined}
+      popperModifiers={
+            Object {
+                  "preventOverflow": Object {
+                    "boundariesElement": "viewport",
+                    "enabled": true,
+                    "escapeWithReference": true,
+                  },
+                }
+      }
+      popperPlacement="bottom-start"
+      targetComponent={
+            <div
+                  className="react-datepicker__input-container"
+            >
+                  <TextField
+                        autoComplete={undefined}
+                        autoFocus={undefined}
+                        className=""
+                        disabled={false}
+                        id={undefined}
+                        label={undefined}
+                        name={undefined}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onClearButtonClick={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder={undefined}
+                        readOnly={undefined}
+                        required={undefined}
+                        showClearButton={undefined}
+                        tabIndex={undefined}
+                        title={undefined}
+                        type="text"
+                        value="09/15/2017"
+                  />
+            </div>
+      }
+/>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <DatePicker
+        allowSameDay={false}
+        dateFormat="L"
+        dateFormatCalendar="MMMM YYYY"
+        disabled={false}
+        disabledKeyboardNavigation={false}
+        dropdownMode="scroll"
+        fixedHeight={true}
+        monthsShown={1}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClickOutside={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMonthChange={[Function]}
+        onSelect={[Function]}
+        onYearChange={[Function]}
+        preventOpenOnFocus={false}
+        selected={"2017-09-15T13:30:00.000Z"}
+        shouldCloseOnSelect={true}
+        showTimeSelect={false}
+        timeCaption="Time"
+        timeIntervals={30}
+        withPortal={false}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": DatePicker {
+        "_reactInternalInstance": [Circular],
+        "calcInitialState": [Function],
+        "cancelFocusInput": [Function],
+        "clear": [Function],
+        "clearPreventFocusTimeout": [Function],
+        "context": Object {},
+        "deferFocusInput": [Function],
+        "getPreSelection": [Function],
+        "handleBlur": [Function],
+        "handleCalendarClickOutside": [Function],
+        "handleChange": [Function],
+        "handleDropdownFocus": [Function],
+        "handleFocus": [Function],
+        "handleSelect": [Function],
+        "handleTimeChange": [Function],
+        "onClearClick": [Function],
+        "onInputClick": [Function],
+        "onInputKeyDown": [Function],
+        "props": Object {
+          "allowSameDay": false,
+          "dateFormat": "L",
+          "dateFormatCalendar": "MMMM YYYY",
+          "disabled": false,
+          "disabledKeyboardNavigation": false,
+          "dropdownMode": "scroll",
+          "fixedHeight": true,
+          "monthsShown": 1,
+          "onBlur": [Function],
+          "onChange": [Function],
+          "onClickOutside": [Function],
+          "onFocus": [Function],
+          "onKeyDown": [Function],
+          "onMonthChange": [Function],
+          "onSelect": [Function],
+          "onYearChange": [Function],
+          "preventOpenOnFocus": false,
+          "selected": "2017-09-15T13:30:00.000Z",
+          "shouldCloseOnSelect": true,
+          "showTimeSelect": false,
+          "timeCaption": "Time",
+          "timeIntervals": 30,
+          "withPortal": false,
+        },
+        "refs": Object {},
+        "renderCalendar": [Function],
+        "renderDateInput": [Function],
+        "setFocus": [Function],
+        "setOpen": [Function],
+        "setPreSelection": [Function],
+        "setSelected": [Function],
+        "state": Object {
+          "focused": false,
+          "highlightDates": Map {},
+          "open": false,
+          "preSelection": "2017-09-15T13:30:00.000Z",
+          "preventFocus": false,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <PopperComponent
+          className={undefined}
+          hidePopper={true}
+          popperComponent={null}
+          popperContainer={undefined}
+          popperModifiers={
+                    Object {
+                              "preventOverflow": Object {
+                                "boundariesElement": "viewport",
+                                "enabled": true,
+                                "escapeWithReference": true,
+                              },
+                            }
+          }
+          popperPlacement="bottom-start"
+          targetComponent={
+                    <div
+                              className="react-datepicker__input-container"
+                    >
+                              <TextField
+                                        autoComplete={undefined}
+                                        autoFocus={undefined}
+                                        className=""
+                                        disabled={false}
+                                        id={undefined}
+                                        label={undefined}
+                                        name={undefined}
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClearButtonClick={[Function]}
+                                        onClick={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={undefined}
+                                        readOnly={undefined}
+                                        required={undefined}
+                                        showClearButton={undefined}
+                                        tabIndex={undefined}
+                                        title={undefined}
+                                        type="text"
+                                        value="09/15/2017"
+                              />
+                    </div>
+          }
+/>,
+        "_debugID": 2,
+        "_renderedOutput": <PopperComponent
+          className={undefined}
+          hidePopper={true}
+          popperComponent={null}
+          popperContainer={undefined}
+          popperModifiers={
+                    Object {
+                              "preventOverflow": Object {
+                                "boundariesElement": "viewport",
+                                "enabled": true,
+                                "escapeWithReference": true,
+                              },
+                            }
+          }
+          popperPlacement="bottom-start"
+          targetComponent={
+                    <div
+                              className="react-datepicker__input-container"
+                    >
+                              <TextField
+                                        autoComplete={undefined}
+                                        autoFocus={undefined}
+                                        className=""
+                                        disabled={false}
+                                        id={undefined}
+                                        label={undefined}
+                                        name={undefined}
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClearButtonClick={[Function]}
+                                        onClick={[Function]}
+                                        onFocus={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={undefined}
+                                        readOnly={undefined}
+                                        required={undefined}
+                                        showClearButton={undefined}
+                                        tabIndex={undefined}
+                                        title={undefined}
+                                        type="text"
+                                        value="09/15/2017"
+                              />
+                    </div>
+          }
+/>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <DatePicker
+    allowSameDay={false}
+    dateFormat="L"
+    dateFormatCalendar="MMMM YYYY"
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="scroll"
+    fixedHeight={true}
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClickOutside={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMonthChange={[Function]}
+    onSelect={[Function]}
+    onYearChange={[Function]}
+    preventOpenOnFocus={false}
+    selected={"2017-09-15T13:30:00.000Z"}
+    shouldCloseOnSelect={true}
+    showTimeSelect={false}
+    timeCaption="Time"
+    timeIntervals={30}
+    withPortal={false}
+/>,
+}
+`;
