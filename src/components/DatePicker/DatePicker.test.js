@@ -51,14 +51,21 @@ describe("DatePicker", () => {
   it("Show the calendar when focusing on the date input", () => {
     const wrapper = mount(<DatePicker/>);
     const input = wrapper.find("TextField");
-    input.props().onClick();
+    input.props().onFocus();
+    expect(wrapper.find(".react-datepicker-popper").length).toBe(1);
+  });
+
+  it("Show the calendar when focusing on the date input using simulate", () => {
+    const wrapper = mount(<DatePicker/>);
+    const input = wrapper.find("input");
+    input.simulate("focus");
     expect(wrapper.find(".react-datepicker-popper").length).toBe(1);
   });
 
   it("Disable calender popper when disable is selected", () => {
     const wrapper = mount(<DatePicker disabled/>);
     const input = wrapper.find("TextField");
-    input.props().onClick();
+    input.props().onFocus();
     expect(wrapper.find(".react-datepicker-popper").length).toBe(0);
   });
 
