@@ -55,6 +55,7 @@ describe("DatePicker", () => {
     expect(wrapper.find(".react-datepicker-popper").length).toBe(1);
   });
 
+  //somehow cannot find input element
   it("Show the calendar when focusing on the date input using simulate", () => {
     const wrapper = mount(<DatePicker/>);
     const input = wrapper.find("input");
