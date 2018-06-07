@@ -8,14 +8,13 @@ const DatePicker = (props) => {
   return <ReactDatePicker
     {...props}
     fixedHeight
-    readOnly
+    readOnly={true}
 
     //use TextField as inputField
     customInput={<TextField
       label={props.label}
       placeholderText={props.placeholderText}
     />}
-
 
     //settings for calender popper
     popperPlacement="bottom-start"
