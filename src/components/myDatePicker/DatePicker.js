@@ -7,10 +7,18 @@ import './stylesheets/datePicker.css';
 const DatePicker = (props) => {
   return <ReactDatePicker
     {...props}
-    fixedHeight={true}
-    customInput={<TextField label={props.label} placeholderText={props.placeholderText}/>}
-    popperPlacement="bottom-start"
+    fixedHeight
+    readOnly
 
+    //use TextField as inputField
+    customInput={<TextField
+      label={props.label}
+      placeholderText={props.placeholderText}
+    />}
+
+
+    //settings for calender popper
+    popperPlacement="bottom-start"
     popperModifiers={{
       //adjust position of calender popper, (horizontal, vertical)
       offset: {
@@ -28,8 +36,6 @@ const DatePicker = (props) => {
         escapeWithReference: false
       }
     }}
-
-
   />
 };
 

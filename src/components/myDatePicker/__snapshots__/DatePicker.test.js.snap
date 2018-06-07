@@ -48,6 +48,7 @@ ShallowWrapper {
     }
     popperPlacement="bottom-start"
     preventOpenOnFocus={false}
+    readOnly={true}
     selected={"2017-09-15T13:30:00.000Z"}
     shouldCloseOnSelect={true}
     showTimeSelect={false}
@@ -96,6 +97,7 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
+      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -154,6 +156,7 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
+      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -225,6 +228,7 @@ ShallowWrapper {
     }
     popperPlacement="bottom-start"
     preventOpenOnFocus={false}
+    readOnly={true}
     selected={"2017-09-15T13:30:00.000Z"}
     shouldCloseOnSelect={true}
     showTimeSelect={false}
@@ -273,6 +277,7 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
+      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -331,6 +336,7 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
+      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -402,6 +408,7 @@ ShallowWrapper {
     }
     popperPlacement="bottom-start"
     preventOpenOnFocus={false}
+    readOnly={true}
     selected={"2017-09-15T13:30:00.000Z"}
     shouldCloseOnSelect={true}
     showTimeSelect={false}
@@ -450,6 +457,7 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
+      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -507,6 +515,7 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
+      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
