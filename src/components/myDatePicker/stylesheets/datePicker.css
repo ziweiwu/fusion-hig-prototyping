@@ -6,7 +6,7 @@
   /****************************************************
           Component Styles
 ****************************************************/
-  /** clear button */ }
+  /** Hig TextField Style */ }
   :global .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, :global .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, :global .react-datepicker__year-read-view--down-arrow,
   :global .react-datepicker__month-read-view--down-arrow,
   :global .react-datepicker__month-year-read-view--down-arrow {
@@ -431,7 +431,7 @@
         line-height: 2rem; } }
     :global .react-datepicker__portal .react-datepicker__current-month,
     :global .react-datepicker__portal .react-datepicker-time__header {
-      font-size: 1.44rem; }
+      font-size: 1.2rem; }
     :global .react-datepicker__portal .react-datepicker__navigation {
       border: 0.81rem solid transparent; }
     :global .react-datepicker__portal .react-datepicker__navigation--previous {
@@ -448,5 +448,10 @@
       :global .react-datepicker__portal .react-datepicker__navigation--next--disabled, :global .react-datepicker__portal .react-datepicker__navigation--next--disabled:hover {
         border-left-color: #cccccc;
         cursor: default; }
-  :global .hig__text-field__clear-button {
-    background-color: white; }
+  :global react-datepicker__close-icon {
+    padding-bottom: 20px; }
+  :global .hig__text-field {
+    min-width: 120px;
+    max-width: 125px; }
+  :global .hig__text-field__input {
+    padding-bottom: 0px; }

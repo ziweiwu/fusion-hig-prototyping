@@ -35,7 +35,7 @@ export default class DisableDates extends Component {
         <DatePicker
           selected={startDate}
           onChange={this.handleChangeDate}
-          label = "Please select between today and next ten days"
+          label = "Select Date"
           minDate={moment()}
           maxDate={moment().add(maxDate, "days")}
         />

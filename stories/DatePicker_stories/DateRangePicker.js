@@ -24,22 +24,27 @@ export default class DateRangePicker extends Component {
   render() {
     return (
       <div>
+        <span style={{float: "left"}}>
         <DatePicker
           selected={this.state.startDate}
-          label="Pick a start date"
+          label="From"
           selectsStart
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           onChange={this.handleChangeStart}
         />
+          <div style={{padding: "80px", float:"left"}} />
+        </span>
+        <span style={{float: "left"}}>
         <DatePicker
           selected={this.state.endDate}
-          label="Pick an end date"
+          label="To"
           selectsEnd
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           onChange={this.handleChangeEnd}
         />
+        </span>
       </div>
     );
   }

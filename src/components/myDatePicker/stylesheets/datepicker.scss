@@ -106,11 +106,6 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%) !
   position: static;
 }
 
-//set the height of clear-button
-//.hig__text-field__clear-button {
-//  top: 22px;
-//}
-
 .react-datepicker--time-only {
   .react-datepicker__triangle {
     left: 35px;
@@ -635,7 +630,7 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%) !
 
   .react-datepicker__current-month,
   .react-datepicker-time__header {
-    font-size: $datepicker__font-size * 1.8;
+    font-size: $datepicker__font-size * 1.5;
   }
 
   .react-datepicker__navigation {
@@ -671,7 +666,18 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%) !
   }
 }
 
-/** clear button */
-.hig__text-field__clear-button {
-  background-color: white;
+react-datepicker__close-icon{
+  padding-bottom: 20px;
 }
+
+/** Hig TextField Style */
+.hig__text-field {
+  min-width: 120px;
+  max-width: 125px
+}
+
+.hig__text-field__input{
+  padding-bottom: 0px;
+}
+
+
