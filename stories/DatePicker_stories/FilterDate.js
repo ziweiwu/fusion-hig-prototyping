@@ -13,6 +13,7 @@ export default class FilterDates extends Component {
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
+    this.weekDay = this.weekDay.bind(this);
   }
 
   handleChangeDate(date) {
@@ -27,6 +28,10 @@ export default class FilterDates extends Component {
     this.setState({endDate: date});
   };
 
+  weekDay(date){
+    return date.weekDay();
+  }
+
   render() {
     const startDate = this.state.startDate;
     return (
@@ -34,7 +39,7 @@ export default class FilterDates extends Component {
         <DatePicker
           selected={startDate}
           onChange={this.handleChangeDate}
-          filterDate={this.props.filterDates}
+          filterDate={this.weekDay}
           label={this.props.label}
         />
       </div>

@@ -433,7 +433,7 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%) !
 
   &--keyboard-selected {
     border-radius: $datepicker__border-radius;
-    background-color: lighten($datepicker__selected-color, 10%);
+    background-color: $datepicker__selected-color;
     color: #fff;
 
     &:hover {
@@ -611,6 +611,12 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%) !
   display: flex;
   z-index: 2147483647;
 
+  //font size for portal view day
+  .react-datepicker__day
+  {
+    font-size: $datepicker__font-size * 1.0;
+  }
+
   .react-datepicker__day-name,
   .react-datepicker__day,
   .react-datepicker__time-name {
@@ -628,6 +634,7 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%) !
     }
   }
 
+  //font size for portal view header
   .react-datepicker__current-month,
   .react-datepicker-time__header {
     font-size: $datepicker__font-size * 1.5;
@@ -666,21 +673,27 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%) !
   }
 }
 
-button.react-datepicker__close-icon{
+/** Close icon button */
+button.react-datepicker__close-icon::after{
+  margin: -10px auto 0;
 }
 
 /** Hig TextField Style */
+hig__text-field__input-wrapper{
+  margin-bottom: 0px;
+}
+
 .hig__text-field {
-  min-width: 120px;
-  max-width: 125px
+  min-width: 240px;
+  max-width: 240px
 }
 
 .hig__text-field__input{
-  padding-bottom: 0px;
+  padding-bottom: 2px;
 }
 
 .hig__text-field__label{
-  padding-bottom: 0px;
+  padding-bottom: 8px;
 }
 
 
