@@ -20,12 +20,12 @@ stories.addDecorator(withKnobs);
 /**
  default view
  */
-stories.add('Default View', () => (<Default label="Pick a date"/>));
+stories.add('Default View', () => (<Default label="Select Date"/>));
 
 /**
  portal view
  */
-stories.add('Portal View', () => (<Portal label="Pick a date"/>));
+stories.add('Portal View', () => (<Portal label="Select Date"/>));
 
 /**
  with Clear Button
@@ -35,7 +35,7 @@ stories.add('With Clear Button', () => {
     const isClearable = boolean('Clearable', defaultValue);
 
     return (
-      (<WithClearButton selected={moment()} label={isClearable ? "Clearable" : "Not Clearable"}
+      (<WithClearButton selected={moment()} label="Select Date"
                         isClearable={isClearable}/>)
     )
   }
@@ -59,15 +59,13 @@ stories.add('Disabled', () => {
 /**
  Select a range of dates
  */
-stories.add('Select a Range of Dates', () => (<DateRangePicker
-  startDateLabel={"Pick your start date"}
-  endDateLabel={"Pick your end date"}/>));
+stories.add('Select a Range of Dates', () => (<DateRangePicker/>));
 
 /**
  disable certain days
  */
 stories.add('Disable Certain Days', () => {
-  const label = 'Num of future days to be selectable';
+  const label = 'Restricted Range';
   const defaultValue = 7;
   const maxDate = number(label, defaultValue);
   return (
@@ -85,7 +83,7 @@ stories.add('Locale', () => {
   const locale = select(label, options, defaultValue);
 
   return (
-    (<Locale label="Calender with Locale Setting" locale={locale}/>)
+    (<Locale label="Select Date" locale={locale}/>)
   )
 });
 
@@ -99,6 +97,6 @@ stories.add('Custom Date Format', () => {
   const dateFormat = select(label, options, defaultValue);
 
   return (
-    (<CustomDateFormat label="Input with Custom Date Format" dateFormat={dateFormat}/>)
+    (<CustomDateFormat label="Select Date" dateFormat={dateFormat}/>)
   )
 });
