@@ -27,6 +27,7 @@ export default class DateRangePicker extends Component {
         <span style={{float: "left"}}>
         <DatePicker
           selected={this.state.startDate}
+          shouldCloseOnSelect={false}
           label="From"
           selectsStart
           startDate={this.state.startDate}
