@@ -1,10 +1,12 @@
+@import url(~@hig/styles/build/index.css);
 :global {
   /* Dimensions */
   /* Colors */
   /* mixins */
   /****************************************************
           Component Styles
-****************************************************/ }
+****************************************************/
+  /** clear button */ }
   :global .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, :global .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, :global .react-datepicker__year-read-view--down-arrow,
   :global .react-datepicker__month-read-view--down-arrow,
   :global .react-datepicker__month-year-read-view--down-arrow {
@@ -67,8 +69,6 @@
     position: relative; }
   :global .hig__text-field__label {
     position: static; }
-  :global .hig__text-field__clear-button {
-    top: 22px; }
   :global .react-datepicker--time-only .react-datepicker__triangle {
     left: 35px; }
   :global .react-datepicker--time-only .react-datepicker__time-container {
@@ -244,8 +244,7 @@
     text-align: center;
     margin: 0.166rem; }
   :global .react-datepicker__day--outside-month {
-    color: transparent;
-    pointer-events: none; }
+    visibility: hidden; }
   :global .react-datepicker__day {
     cursor: pointer; }
     :global .react-datepicker__day:hover {
@@ -287,8 +286,7 @@
         background-color: transparent; }
   :global .react-datepicker__input-container {
     position: relative;
-    display: inline-block;
-    height: 85px; }
+    display: inline-block; }
   :global .react-datepicker__year-read-view,
   :global .react-datepicker__month-read-view,
   :global .react-datepicker__month-year-read-view {
@@ -450,3 +448,5 @@
       :global .react-datepicker__portal .react-datepicker__navigation--next--disabled, :global .react-datepicker__portal .react-datepicker__navigation--next--disabled:hover {
         border-left-color: #cccccc;
         cursor: default; }
+  :global .hig__text-field__clear-button {
+    background-color: white; }

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import DatePicker from '../../src/components/DatePicker/DatePicker';
-import '../../src/components/DatePicker/stylesheets/datePicker.css';
+import DatePicker from '../../src/components/myDatePicker/index';
+import '../../src/components/myDatePicker/stylesheets/datePicker.css';
 
 export default class Default extends Component {
   constructor(props) {

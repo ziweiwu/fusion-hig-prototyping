@@ -5,6 +5,10 @@
   padding-bottom: 25px;
 }
 
+body {
+  width: 1054px;
+  height: 1054px;
+}
 .side-area {
   background-color: #0696D7;
   padding-bottom: 25px;

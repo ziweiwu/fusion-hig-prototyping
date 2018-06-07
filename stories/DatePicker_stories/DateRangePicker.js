@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import DatePicker from '../../src/components/DatePicker/Index';
-import '../../src/components/DatePicker/stylesheets/datePicker.css';
+import DatePicker from '../../src/components/myDatePicker/index';
+import '../../src/components/myDatePicker/stylesheets/datePicker.css';
 
 export default class DateRangePicker extends Component {
   constructor(props) {
@@ -27,6 +27,7 @@ export default class DateRangePicker extends Component {
         <DatePicker
           selected={this.state.startDate}
           label="Pick a start date"
+          selectsStart
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           onChange={this.handleChangeStart}
@@ -34,6 +35,7 @@ export default class DateRangePicker extends Component {
         <DatePicker
           selected={this.state.endDate}
           label="Pick an end date"
+          selectsEnd
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           onChange={this.handleChangeEnd}

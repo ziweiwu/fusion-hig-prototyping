@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import moment from 'moment'
-import DatePicker from '../../src/components/DatePicker/DatePicker';
-import '../../src/components/DatePicker/stylesheets/datePicker.css';
+import DatePicker from '../../src/components/myDatePicker/index';
+import '../../src/components/myDatePicker/stylesheets/datePicker.css';
 
 export default class Locale extends Component {
   constructor(props) {
@@ -27,14 +27,13 @@ export default class Locale extends Component {
   };
 
   render() {
-    const startDate = this.state.startDate;
     return (
       <div>
         <DatePicker
-          selected={startDate}
+          selected={this.state.startDate}
           label={this.props.label}
           locale={this.props.locale}
-          startDate={startDate}
+          startDate={this.state.startDate}
           onChange={this.handleChangeStart}
         />
       </div>
