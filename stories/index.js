@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment'
 import {storiesOf} from '@storybook/react';
 import {withKnobs, text, boolean, number, select} from '@storybook/addon-knobs';
-import DatePicker from "../src/components/DatePicker/Index";
+import DatePicker from "../src/components/myDatePicker/index";
 
 //import stories
 import Default from "./DatePicker_stories/Default";
@@ -12,7 +12,6 @@ import DateRangePicker from "./DatePicker_stories/DateRangePicker";
 import DisableDates from "./DatePicker_stories/DisableDates";
 import Locale from "./DatePicker_stories/Locale";
 import CustomDateFormat from "./DatePicker_stories/CustomDateFormat";
-import PlaceHolder from "./DatePicker_stories/PlaceHolder";
 
 //storybook module
 const stories = storiesOf('Date Picker', module);
@@ -53,19 +52,6 @@ stories.add('Disabled', () => {
 
     return (
       (<DatePicker label={disable ? disable_label : enable_label} disabled={disable}/>)
-    )
-  }
-);
-
-/**
- with placeholder text
- */
-stories.add('With Placeholder Text', () => {
-    const label = 'PlaceHolder';
-    const defaultValue = 'Your placeholder text';
-    const placeHolderText = text(label, defaultValue);
-    return (
-      <DatePicker label="With Placeholder Text" placeholderText={placeHolderText}/>
     )
   }
 );

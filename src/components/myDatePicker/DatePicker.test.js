@@ -1,7 +1,7 @@
 import React from "react";
 import {mount, shallow} from "enzyme";
 import moment from "moment";
-import DatePicker from "./DatePicker";
+import DatePicker from "./index";
 import propagateToGlobal from "./test_setup"
 import sinon from 'sinon';
 
@@ -52,14 +52,6 @@ describe("DatePicker", () => {
     const wrapper = mount(<DatePicker/>);
     const input = wrapper.find("TextField");
     input.props().onFocus();
-    expect(wrapper.find(".react-datepicker-popper").length).toBe(1);
-  });
-
-  //somehow cannot find input element
-  it("Show the calendar when focusing on the date input using simulate", () => {
-    const wrapper = mount(<DatePicker/>);
-    const input = wrapper.find("input");
-    input.simulate("focus");
     expect(wrapper.find(".react-datepicker-popper").length).toBe(1);
   });
 
