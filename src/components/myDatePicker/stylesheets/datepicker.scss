@@ -666,8 +666,7 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%) !
   }
 }
 
-react-datepicker__close-icon{
-  padding-bottom: 20px;
+button.react-datepicker__close-icon{
 }
 
 /** Hig TextField Style */
@@ -677,6 +676,10 @@ react-datepicker__close-icon{
 }
 
 .hig__text-field__input{
+  padding-bottom: 0px;
+}
+
+.hig__text-field__label{
   padding-bottom: 0px;
 }
 

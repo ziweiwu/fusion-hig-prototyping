@@ -26,7 +26,7 @@ describe("DatePicker", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  //component testing
+  //component render testing
   it("Render the dayPicker component correctly.", () => {
     const wrapper = shallow(<DatePicker/>);
     expect(wrapper).toHaveLength(1);

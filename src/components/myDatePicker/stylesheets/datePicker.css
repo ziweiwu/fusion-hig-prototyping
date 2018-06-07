@@ -448,10 +448,10 @@
       :global .react-datepicker__portal .react-datepicker__navigation--next--disabled, :global .react-datepicker__portal .react-datepicker__navigation--next--disabled:hover {
         border-left-color: #cccccc;
         cursor: default; }
-  :global react-datepicker__close-icon {
-    padding-bottom: 20px; }
   :global .hig__text-field {
     min-width: 120px;
     max-width: 125px; }
   :global .hig__text-field__input {
+    padding-bottom: 0px; }
+  :global .hig__text-field__label {
     padding-bottom: 0px; }

@@ -10,6 +10,7 @@ import Portal from "./DatePicker_stories/Portal";
 import WithClearButton from "./DatePicker_stories/WithClearButton";
 import DateRangePicker from "./DatePicker_stories/DateRangePicker";
 import DisableDates from "./DatePicker_stories/DisableDates";
+import FilterDates from "./DatePicker_stories/FilterDate";
 import Locale from "./DatePicker_stories/Locale";
 import CustomDateFormat from "./DatePicker_stories/CustomDateFormat";
 
@@ -62,14 +63,26 @@ stories.add('Disabled', () => {
 stories.add('Select a Range of Dates', () => (<DateRangePicker/>));
 
 /**
- disable certain days
+ Restricted Date Range
  */
-stories.add('Disable Certain Days', () => {
-  const label = 'Restricted Range';
+stories.add('Restricted Date Range', () => {
+  const label = 'Restricted Date Range';
   const defaultValue = 7;
   const maxDate = number(label, defaultValue);
   return (
     (<DisableDates maxDate={maxDate}/>)
+  )
+});
+
+/**
+ Filter Dates
+ */
+stories.add('Filter Dates', () => {
+  const label = 'Filter Dates';
+  const options = ['this.isWeekday', 'this.isWeekend'];
+  const filterDate = select(label, options);
+  return (
+    (<FilterDates filterDate = {filterDate} label={"Select Date"}/>)
   )
 });
 
