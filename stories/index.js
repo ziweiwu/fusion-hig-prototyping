@@ -77,14 +77,14 @@ stories.add('Restricted Date Range', () => {
 /**
  Filter Dates
  */
-stories.add('Filter Dates', () => {
-  const label = 'Filter Dates';
-  const options = ['this.isWeekday', 'this.isWeekend'];
-  const filterDate = select(label, options);
-  return (
-    (<FilterDates filterDate = {filterDate} label={"Select Date"}/>)
-  )
-});
+// stories.add('Filter Dates', () => {
+//   const label = 'Filter Dates';
+//   const options = ['this.isWeekday', 'this.isWeekend'];
+//   const filterDate = select(label, options);
+//   return (
+//     (<FilterDates filterDate = {filterDate} label={"Select Date"}/>)
+//   )
+// });
 
 /**
  calender locale

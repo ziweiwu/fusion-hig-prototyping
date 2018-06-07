@@ -34,8 +34,7 @@ export default class DateRangePicker extends Component {
           endDate={this.state.endDate}
           onChange={this.handleChangeStart}
         />
-          <div style={{padding: "80px", float:"left"}} />
-        </span>
+          <span style={{paddingLeft: "270px", float: "left"}}/></span>
         <span style={{float: "left"}}>
         <DatePicker
           selected={this.state.endDate}
