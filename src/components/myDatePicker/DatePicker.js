@@ -22,7 +22,7 @@ export default class DatePicker extends React.Component {
         //instead of the one comes with ReactDatePicker
         onClearButtonClick={() => {
           this.node.clear();
-         //props.onClearClick();
+          //props.onClearClick();
         }}
         placeholderText={props.placeholderText}
       />}

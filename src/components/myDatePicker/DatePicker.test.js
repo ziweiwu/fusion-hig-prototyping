@@ -63,12 +63,13 @@ describe("DatePicker", () => {
     expect(wrapper.find(".react-datepicker-popper").length).toBe(0);
   });
 
-  // it("Clear input field when clear button is clicked ", () => {
-  //   const wrapper = mount(<DatePicker isClearable/>);
-  //   const clearButton = wrapper.find("hig__text-field__clear-button");
-  //   clearButton.props().onClick();
-  //   expect(wrapper.find.props.value).toBe(null);
-  // });
+  it("Clear input field when clear button is clicked ", () => {
+    const wrapper = mount(<DatePicker ={true}/>);
+    const clearButton = wrapper.find("hig__text-field__clear-button");
+    console.log(clearButton.props());
+    clearButton.props().onClick();
+    expect(wrapper.find.props.value).toBe(null);
+  });
 });
 
 
