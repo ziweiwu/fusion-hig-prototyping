@@ -462,3 +462,5 @@
     padding-bottom: 2px; }
   :global .hig__text-field__label {
     padding-bottom: 8px; }
+  :global .hig__text-field__clear-button {
+    top: 26px; }

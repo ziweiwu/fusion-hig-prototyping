@@ -13,7 +13,9 @@ ShallowWrapper {
     customInput={
         <TextField
             label={undefined}
+            onClearButtonClick={[Function]}
             placeholderText={undefined}
+            showClearButton={undefined}
         />
     }
     dateFormat="L"
@@ -22,6 +24,7 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
+    isClearable={false}
     monthsShown={1}
     onBlur={[Function]}
     onChange={[Function]}
@@ -48,7 +51,6 @@ ShallowWrapper {
     }
     popperPlacement="bottom-start"
     preventOpenOnFocus={false}
-    readOnly={true}
     selected={"2017-09-15T13:30:00.000Z"}
     shouldCloseOnSelect={true}
     showTimeSelect={false}
@@ -62,7 +64,9 @@ ShallowWrapper {
       customInput={
             <TextField
                   label={undefined}
+                  onClearButtonClick={[Function]}
                   placeholderText={undefined}
+                  showClearButton={undefined}
             />
       }
       dateFormat="L"
@@ -71,6 +75,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      isClearable={false}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -97,7 +102,6 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
-      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -114,14 +118,28 @@ ShallowWrapper {
       selected={"2017-09-15T13:30:00.000Z"}
 />,
     "_forcedUpdate": false,
-    "_instance": null,
+    "_instance": DatePicker {
+      "context": Object {},
+      "props": Object {
+        "disabled": true,
+        "selected": "2017-09-15T13:30:00.000Z",
+      },
+      "refs": Object {},
+      "state": null,
+      "updater": Updater {
+        "_callbacks": Array [],
+        "_renderer": [Circular],
+      },
+    },
     "_newState": null,
     "_rendered": <DatePicker
       allowSameDay={false}
       customInput={
             <TextField
                   label={undefined}
+                  onClearButtonClick={[Function]}
                   placeholderText={undefined}
+                  showClearButton={undefined}
             />
       }
       dateFormat="L"
@@ -130,6 +148,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      isClearable={false}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -156,7 +175,6 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
-      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -193,7 +211,9 @@ ShallowWrapper {
     customInput={
         <TextField
             label={undefined}
+            onClearButtonClick={[Function]}
             placeholderText={undefined}
+            showClearButton={undefined}
         />
     }
     dateFormat="L"
@@ -202,6 +222,7 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
+    isClearable={false}
     monthsShown={1}
     onBlur={[Function]}
     onChange={[Function]}
@@ -228,7 +249,6 @@ ShallowWrapper {
     }
     popperPlacement="bottom-start"
     preventOpenOnFocus={false}
-    readOnly={true}
     selected={"2017-09-15T13:30:00.000Z"}
     shouldCloseOnSelect={true}
     showTimeSelect={false}
@@ -242,7 +262,9 @@ ShallowWrapper {
       customInput={
             <TextField
                   label={undefined}
+                  onClearButtonClick={[Function]}
                   placeholderText={undefined}
+                  showClearButton={undefined}
             />
       }
       dateFormat="L"
@@ -251,6 +273,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      isClearable={false}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -277,7 +300,6 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
-      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -294,14 +316,28 @@ ShallowWrapper {
       withPortal={true}
 />,
     "_forcedUpdate": false,
-    "_instance": null,
+    "_instance": DatePicker {
+      "context": Object {},
+      "props": Object {
+        "selected": "2017-09-15T13:30:00.000Z",
+        "withPortal": true,
+      },
+      "refs": Object {},
+      "state": null,
+      "updater": Updater {
+        "_callbacks": Array [],
+        "_renderer": [Circular],
+      },
+    },
     "_newState": null,
     "_rendered": <DatePicker
       allowSameDay={false}
       customInput={
             <TextField
                   label={undefined}
+                  onClearButtonClick={[Function]}
                   placeholderText={undefined}
+                  showClearButton={undefined}
             />
       }
       dateFormat="L"
@@ -310,6 +346,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      isClearable={false}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -336,7 +373,6 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
-      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -373,7 +409,9 @@ ShallowWrapper {
     customInput={
         <TextField
             label={undefined}
+            onClearButtonClick={[Function]}
             placeholderText={undefined}
+            showClearButton={undefined}
         />
     }
     dateFormat="L"
@@ -382,6 +420,7 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
+    isClearable={false}
     monthsShown={1}
     onBlur={[Function]}
     onChange={[Function]}
@@ -408,7 +447,6 @@ ShallowWrapper {
     }
     popperPlacement="bottom-start"
     preventOpenOnFocus={false}
-    readOnly={true}
     selected={"2017-09-15T13:30:00.000Z"}
     shouldCloseOnSelect={true}
     showTimeSelect={false}
@@ -422,7 +460,9 @@ ShallowWrapper {
       customInput={
             <TextField
                   label={undefined}
+                  onClearButtonClick={[Function]}
                   placeholderText={undefined}
+                  showClearButton={undefined}
             />
       }
       dateFormat="L"
@@ -431,6 +471,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      isClearable={false}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -457,7 +498,6 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
-      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
@@ -473,14 +513,27 @@ ShallowWrapper {
       selected={"2017-09-15T13:30:00.000Z"}
 />,
     "_forcedUpdate": false,
-    "_instance": null,
+    "_instance": DatePicker {
+      "context": Object {},
+      "props": Object {
+        "selected": "2017-09-15T13:30:00.000Z",
+      },
+      "refs": Object {},
+      "state": null,
+      "updater": Updater {
+        "_callbacks": Array [],
+        "_renderer": [Circular],
+      },
+    },
     "_newState": null,
     "_rendered": <DatePicker
       allowSameDay={false}
       customInput={
             <TextField
                   label={undefined}
+                  onClearButtonClick={[Function]}
                   placeholderText={undefined}
+                  showClearButton={undefined}
             />
       }
       dateFormat="L"
@@ -489,6 +542,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      isClearable={false}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -515,7 +569,6 @@ ShallowWrapper {
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
-      readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
       showTimeSelect={false}
