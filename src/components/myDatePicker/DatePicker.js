@@ -4,38 +4,51 @@ import TextField from '@hig/text-field';
 import '@hig/text-field/build/index.css';
 import './stylesheets/datePicker.css';
 
-const DatePicker = (props) => {
-  return <ReactDatePicker
-    {...props}
-    fixedHeight
-    readOnly={true}
+export default class DatePicker extends React.Component {
+  render() {
+    const props = this.props;
 
-    //use TextField as inputField
-    customInput={<TextField
-      label={props.label}
-      placeholderText={props.placeholderText}
-    />}
+    return <ReactDatePicker
+      {...props}
+      fixedHeight={true}
+      isClearable={false}
 
-    //settings for calender popper
-    popperPlacement="bottom-start"
-    popperModifiers={{
-      //adjust position of calender popper, (horizontal, vertical)
-      offset: {
-        enabled: true,
-        offset: '0px, -30px'
-      },
+      //use TextField as inputField
+      customInput={<TextField
+        label={props.label}
+        showClearButton={props.isClearable}
 
-      //prevent calender popper to flip
-      flip: {
-        enabled: false
-      },
+        //use ref to allow the use clear button in TextField component
+        //instead of the one comes with ReactDatePicker
+        onClearButtonClick={() => {
+          this.node.clear();
+         //props.onClearClick();
+        }}
+        placeholderText={props.placeholderText}
+      />}
 
-      preventOverflow: {
-        enabled: true,
-        escapeWithReference: false
-      }
-    }}
-  />
-};
+      ref={node => this.node = node}
 
-export default DatePicker;
+      //settings for calender popper
+      popperPlacement="bottom-start"
+      popperModifiers={{
+        //adjust position of calender popper, (horizontal, vertical)
+        offset: {
+          enabled: true,
+          offset: '0px, -30px'
+        },
+
+        //prevent calender popper to flip
+        flip: {
+          enabled: false
+        },
+
+        preventOverflow: {
+          enabled: true,
+          escapeWithReference: false
+        }
+      }}
+    />
+  }
+}
+

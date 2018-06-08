@@ -7,7 +7,7 @@ import sinon from 'sinon';
 
 propagateToGlobal();
 
-const fn= jest.fn();
+const fn = jest.fn();
 
 describe("DatePicker", () => {
   //snapshot testing
@@ -37,15 +37,16 @@ describe("DatePicker", () => {
     expect(wrapper.find("TextField").length).toBe(1);
   });
 
-  it("Render the label Correctly.", () => {
+  it("Render the label correctly.", () => {
     const wrapper = mount(<DatePicker label="foo"/>);
     expect(wrapper.instance().props.label).toBe("foo");
   });
 
-  it("Render the placeholder Correctly.", () => {
+  it("Render the placeholder correctly.", () => {
     const wrapper = mount(<DatePicker placeholderText="bar"/>);
     expect(wrapper.instance().props.placeholderText).toBe("bar");
   });
+
 
   //test interactions
   it("Show the calendar when focusing on the date input", () => {
@@ -62,6 +63,12 @@ describe("DatePicker", () => {
     expect(wrapper.find(".react-datepicker-popper").length).toBe(0);
   });
 
+  // it("Clear input field when clear button is clicked ", () => {
+  //   const wrapper = mount(<DatePicker isClearable/>);
+  //   const clearButton = wrapper.find("hig__text-field__clear-button");
+  //   clearButton.props().onClick();
+  //   expect(wrapper.find.props.value).toBe(null);
+  // });
 });
 
 
