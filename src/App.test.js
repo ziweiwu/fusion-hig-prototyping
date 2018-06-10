@@ -1,9 +1,8 @@
 import App from './App';
 import React from "react";
 import {mount, shallow} from "enzyme";
-import propagateToGlobal from "./components/myDatePicker/test_setup"
-
-propagateToGlobal();
+//import propagateToGlobal from "./components/myDatePicker/test_setup"
+//propagateToGlobal();
 
 describe("App", () => {
   //snapshot testing
