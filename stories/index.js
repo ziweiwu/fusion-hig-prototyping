@@ -2,17 +2,17 @@ import React from 'react';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
-import DatePicker from '../src/components/myDatePicker/index';
+import DatePicker from '../src/components/DatePicker/index';
 
 // import stories
-import Default from './DatePicker_stories/Default';
-import Portal from './DatePicker_stories/Portal';
-import WithClearButton from './DatePicker_stories/WithClearButton';
-import DateRangePicker from './DatePicker_stories/DateRangePicker';
-import DisableDates from './DatePicker_stories/DisableDates';
-// import FilterDates from './DatePicker_stories/FilterDate';
-import Locale from './DatePicker_stories/Locale';
-import CustomDateFormat from './DatePicker_stories/CustomDateFormat';
+import Default from './DatePickerStories/Default';
+import Portal from './DatePickerStories/Portal';
+import WithClearButton from './DatePickerStories/WithClearButton';
+import DateRangePicker from './DatePickerStories/DateRangePicker';
+import DisableDates from './DatePickerStories/DisableDates';
+import FilterDates from './DatePickerStories/FilterDate';
+import Locale from './DatePickerStories/Locale';
+import CustomDateFormat from './DatePickerStories/CustomDateFormat';
 
 // storybook module
 const stories = storiesOf('Date Picker', module);
@@ -78,14 +78,7 @@ stories.add('Restricted Date Range', () => {
 /**
  Filter Dates
  */
-// stories.add('Filter Dates', () => {
-//   const label = 'Filter Dates';
-//   const options = ['this.isWeekday', 'this.isWeekend'];
-//   const filterDate = select(label, options);
-//   return (
-//     (<FilterDates filterDate = {filterDate} label={"Select Date"}/>)
-//   )
-// });
+stories.add('Filter Dates', () => <FilterDates label="Select Date" />);
 
 /**
  calender locale
@@ -110,3 +103,4 @@ stories.add('Custom Date Format', () => {
 
   return <CustomDateFormat label="Select Date" dateFormat={dateFormat} />;
 });
+

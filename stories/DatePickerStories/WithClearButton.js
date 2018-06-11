@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import moment from 'moment';
-import DatePicker from '../../src/components/myDatePicker/index';
-import '../../src/components/myDatePicker/stylesheets/datePicker.css';
+import DatePicker from '../../src/components/DatePicker/index';
+import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
-export default class Locale extends Component {
+export default class WithClearButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: moment(),
+      startDate: this.props.selected,
+      endDate: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
@@ -31,10 +31,10 @@ export default class Locale extends Component {
       <div>
         <DatePicker
           selected={this.state.startDate}
-          label={this.props.label}
-          locale={this.props.locale}
           startDate={this.state.startDate}
           onChange={this.handleChangeStart}
+          label={this.props.label}
+          isClearable={this.props.isClearable}
         />
       </div>
     );

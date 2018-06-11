@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import DatePicker from '../../src/components/myDatePicker/index';
-import '../../src/components/myDatePicker/stylesheets/datePicker.css';
+import DatePicker from '../../src/components/DatePicker/index';
+import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
-export default class DisableDates extends Component {
+class CustomDateFormat extends Component {
   constructor(props) {
     super(props);
     this.state = {
       startDate: moment(),
+      endDate: moment(),
       error: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
@@ -29,19 +30,20 @@ export default class DisableDates extends Component {
 
   render() {
     const startDate = this.state.startDate;
-    const maxDate = this.props.maxDate;
     return (
+
       <div>
         <DatePicker
           selected={startDate}
+          label={this.props.label}
+          dateFormatCalendar={this.props.dateFormat}
+          dateFormat={this.props.dateFormat}
+          startDate={startDate}
           onChange={this.handleChangeDate}
-          label="Select Date"
-          minDate={moment()}
-          maxDate={moment().add(maxDate, 'days')}
         />
       </div>
-
     );
   }
 }
 
+export default CustomDateFormat;
