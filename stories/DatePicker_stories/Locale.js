@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import moment from 'moment'
+import React, { Component } from 'react';
+import moment from 'moment';
 import DatePicker from '../../src/components/myDatePicker/index';
 import '../../src/components/myDatePicker/stylesheets/datePicker.css';
 
@@ -15,16 +15,16 @@ export default class Locale extends Component {
   }
 
   handleChangeDate(date) {
-    this.setState({startDate: date});
-  };
+    this.setState({ startDate: date });
+  }
 
   handleChangeStart(date) {
-    this.setState({startDate: date});
-  };
+    this.setState({ startDate: date });
+  }
 
   handleChangeEnd(date) {
-    this.setState({endDate: date});
-  };
+    this.setState({ endDate: date });
+  }
 
   render() {
     return (
