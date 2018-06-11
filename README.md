@@ -1,8 +1,8 @@
 ### Fusion-Production-Hig Prototypes
 
 Prototype for new Hig Components
-- A date picker component (in progress) 
-- Based on react-datepicker (https://github.com/Hacker0x01/react-datepicker/)
+- A date picker component (looking for reviews) 
+- Based on react-datepicker [https://github.com/Hacker0x01/react-datepicker/]
 
 To start the prototype page
 
