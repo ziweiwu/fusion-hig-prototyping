@@ -31,7 +31,7 @@
     "webpack": "^4.8.3"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar ./src/components/myDatePicker/stylesheets/datepicker.scss ./src/components/myDatePicker/stylesheets/datePicker.css --watch",
+    "build-css": "node-sass-chokidar ./src/components/DatePicker/stylesheets/datepicker.scss ./src/components/DatePicker/stylesheets/datePicker.css --watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
