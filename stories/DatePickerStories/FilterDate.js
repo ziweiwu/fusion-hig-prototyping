@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/myDatePicker/index';
-import '../../src/components/myDatePicker/stylesheets/datePicker.css';
+import DatePicker from '../../src/components/DatePicker/index';
+import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
-export default class WithClearButton extends Component {
+export default class Default extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: this.props.selected,
-      endDate: undefined,
+      startDate: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
-    this.handleChangeEnd = this.handleChangeEnd.bind(this);
+    this.isWeekday = this.isWeekday.bind(this);
   }
 
   handleChangeDate(date) {
@@ -22,22 +21,22 @@ export default class WithClearButton extends Component {
     this.setState({ startDate: date });
   }
 
-  handleChangeEnd(date) {
-    this.setState({ endDate: date });
+  isWeekday(date) {
+    const day = date.day();
+    return day !== 0 && day !== 6;
   }
+
 
   render() {
     return (
       <div>
         <DatePicker
           selected={this.state.startDate}
-          startDate={this.state.startDate}
           onChange={this.handleChangeStart}
           label={this.props.label}
-          isClearable={this.props.isClearable}
+          filterDate={this.isWeekday}
         />
       </div>
     );
   }
 }
-
