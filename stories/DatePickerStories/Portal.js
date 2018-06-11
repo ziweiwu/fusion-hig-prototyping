@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/myDatePicker/index';
-import '../../src/components/myDatePicker/stylesheets/datePicker.css';
+import moment from 'moment';
+import DatePicker from '../../src/components/DatePicker/index';
+import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
-export default class Default extends Component {
+export default class Portal extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,9 +32,12 @@ export default class Default extends Component {
       <div>
         <DatePicker
           selected={this.state.startDate}
+          label={this.props.label}
+          withPortal
+          dateFormatCalendar={this.props.dateFormat}
+          dateFormat={this.props.dateFormat}
           startDate={this.state.startDate}
           onChange={this.handleChangeStart}
-          label={this.props.label}
         />
       </div>
     );

@@ -54,9 +54,7 @@
     bottom: -1px;
     border-top-color: #D4DBE1; }
 
-/****************************************************
-          Component Styles
-****************************************************/
+/* Component Styles */
 .react-datepicker-wrapper {
   display: inline-block; }
 
@@ -480,11 +478,11 @@
       border-left-color: #cccccc;
       cursor: default; }
 
-/** Close icon button */
+/* Clear button icon */
 button.react-datepicker__close-icon::after {
   margin: -10px auto 0; }
 
-/** Hig TextField Style */
+/* Hig TextField Style */
 hig__text-field__input-wrapper {
   margin-bottom: 0px; }
 
