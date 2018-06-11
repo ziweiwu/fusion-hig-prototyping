@@ -1,66 +1,67 @@
 import React from 'react';
-import moment from 'moment'
-import {storiesOf} from '@storybook/react';
-import {withKnobs, text, boolean, number, select} from '@storybook/addon-knobs';
-import DatePicker from "../src/components/myDatePicker/index";
+import moment from 'moment';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
+import DatePicker from '../src/components/myDatePicker/index';
 
-//import stories
-import Default from "./DatePicker_stories/Default";
-import Portal from "./DatePicker_stories/Portal";
-import WithClearButton from "./DatePicker_stories/WithClearButton";
-import DateRangePicker from "./DatePicker_stories/DateRangePicker";
-import DisableDates from "./DatePicker_stories/DisableDates";
-import FilterDates from "./DatePicker_stories/FilterDate";
-import Locale from "./DatePicker_stories/Locale";
-import CustomDateFormat from "./DatePicker_stories/CustomDateFormat";
+// import stories
+import Default from './DatePicker_stories/Default';
+import Portal from './DatePicker_stories/Portal';
+import WithClearButton from './DatePicker_stories/WithClearButton';
+import DateRangePicker from './DatePicker_stories/DateRangePicker';
+import DisableDates from './DatePicker_stories/DisableDates';
+// import FilterDates from './DatePicker_stories/FilterDate';
+import Locale from './DatePicker_stories/Locale';
+import CustomDateFormat from './DatePicker_stories/CustomDateFormat';
 
-//storybook module
+// storybook module
 const stories = storiesOf('Date Picker', module);
 stories.addDecorator(withKnobs);
 
 /**
  default view
  */
-stories.add('Default View', () => (<Default label="Select Date"/>));
+stories.add('Default View', () => (<Default label="Select Date" />));
 
 /**
  portal view
  */
-stories.add('Portal View', () => (<Portal label="Select Date"/>));
+stories.add('Portal View', () => (<Portal label="Select Date" />));
 
 /**
  with Clear Button
  */
 stories.add('With Clear Button', () => {
-    const defaultValue = true;
-    const isClearable = boolean('Clearable', defaultValue);
+  const defaultValue = true;
+  const isClearable = boolean('Clearable', defaultValue);
 
-    return (
-      (<WithClearButton selected={moment()} label="Select Date"
-                        isClearable={isClearable}/>)
-    )
-  }
-);
+  return (
+    (<WithClearButton
+      selected={moment()}
+      label="Select Date"
+      isClearable={isClearable}
+    />)
+  );
+});
 
 /**
  disable state
  */
 stories.add('Disabled', () => {
-    const disable_label = 'Disable State';
-    const enable_label = 'Enabled';
-    const defaultValue = true;
-    const disable = boolean('Disabled State', defaultValue);
+  const disableLabel = 'Disable State';
+  const enableLabel = 'Enabled';
+  const defaultValue = true;
+  const disable = boolean('Disabled State', defaultValue);
 
-    return (
-      (<DatePicker label={disable ? disable_label : enable_label} disabled={disable}/>)
-    )
-  }
-);
+  return (
+    (<DatePicker label={disable ? disableLabel : enableLabel} disabled={disable} />)
+  );
+});
 
 /**
  Select a range of dates
  */
-stories.add('Select a Range of Dates', () => (<DateRangePicker/>));
+stories.add('Select a Range of Dates', () => (<DateRangePicker />));
 
 /**
  Restricted Date Range
@@ -70,8 +71,8 @@ stories.add('Restricted Date Range', () => {
   const defaultValue = 7;
   const maxDate = number(label, defaultValue);
   return (
-    (<DisableDates maxDate={maxDate}/>)
-  )
+    (<DisableDates maxDate={maxDate} />)
+  );
 });
 
 /**
@@ -95,9 +96,7 @@ stories.add('Locale', () => {
   const defaultValue = 'fr-ca';
   const locale = select(label, options, defaultValue);
 
-  return (
-    (<Locale label="Select Date" locale={locale}/>)
-  )
+  return <Locale label="Select Date" locale={locale} />;
 });
 
 /**
@@ -109,7 +108,5 @@ stories.add('Custom Date Format', () => {
   const defaultValue = 'ddd, d MMM, YYYY';
   const dateFormat = select(label, options, defaultValue);
 
-  return (
-    (<CustomDateFormat label="Select Date" dateFormat={dateFormat}/>)
-  )
+  return <CustomDateFormat label="Select Date" dateFormat={dateFormat} />;
 });

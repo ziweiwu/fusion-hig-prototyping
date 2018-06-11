@@ -8,18 +8,18 @@ export default class DatePicker extends React.Component {
   render() {
     const props = this.props;
 
-    return <ReactDatePicker
+    return (<ReactDatePicker
       {...props}
-      fixedHeight={true}
+      fixedHeight
       isClearable={false}
 
-      //use TextField as inputField
+      // use TextField as inputField
       customInput={<TextField
         label={props.label}
         showClearButton={props.isClearable}
 
-        //use ref to allow the use clear button in TextField component
-        //instead of the one comes with ReactDatePicker
+        // use ref to allow the use clear button in TextField component
+        // instead of the one comes with ReactDatePicker
         onClearButtonClick={() => {
           this.node.clear();
           props.onClearClick();
@@ -29,26 +29,26 @@ export default class DatePicker extends React.Component {
 
       ref={node => this.node = node}
 
-      //settings for calender popper
+      // settings for calender popper
       popperPlacement="bottom-start"
       popperModifiers={{
-        //adjust position of calender popper, (horizontal, vertical)
+        // adjust position of calender popper, (horizontal, vertical)
         offset: {
           enabled: true,
-          offset: '0px, -30px'
+          offset: '0px, -30px',
         },
 
-        //prevent calender popper to flip
+        // prevent calender popper to flip
         flip: {
-          enabled: false
+          enabled: false,
         },
 
         preventOverflow: {
           enabled: true,
-          escapeWithReference: false
-        }
+          escapeWithReference: false,
+        },
       }}
-    />
+    />);
   }
 }
 

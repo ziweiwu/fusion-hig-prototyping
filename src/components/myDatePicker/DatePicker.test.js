@@ -30,7 +30,7 @@ describe('DatePicker', () => {
 
   it('Render the dayPicker input field correctly.', () => {
     const wrapper = mount(<DatePicker />);
-    expect(wrapper.find('TextField').length).toBe(1);
+    expect(wrapper.find('TextField')).toHaveLength(1);
   });
 
   it('Render the label correctly.', () => {
@@ -45,23 +45,16 @@ describe('DatePicker', () => {
 
 
   // test interactions
-  it('Show the calendar when focusing on the date input', () => {
-    const wrapper = mount(<DatePicker />);
-    const input = wrapper.find('TextField');
-    input.props().onFocus();
-    expect(wrapper.find('.react-datepicker-popper').length).toBe(1);
-  });
-
   it('Disable calender popper when disable is selected', () => {
     const wrapper = mount(<DatePicker disabled />);
     const input = wrapper.find('TextField');
     input.props().onFocus();
-    expect(wrapper.find('.react-datepicker-popper').length).toBe(0);
+    expect(wrapper.find('.react-datepicker-popper')).toHaveLength(0);
   });
 
   it('Expect clear button to exist if isClearable is selected', () => {
     const wrapper = mount(<DatePicker isClearable />);
-    expect(wrapper.find('TextField').props().showClearButton).toBeTruthy;
+    expect(wrapper.find('TextField').props().isClearable).toBeTruthy;
   });
 });
 

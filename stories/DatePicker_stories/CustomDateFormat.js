@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import moment from 'moment'
+import React, { Component } from 'react';
+import moment from 'moment';
 import DatePicker from '../../src/components/myDatePicker/index';
 import '../../src/components/myDatePicker/stylesheets/datePicker.css';
 
@@ -9,7 +9,7 @@ class CustomDateFormat extends Component {
     this.state = {
       startDate: moment(),
       endDate: moment(),
-      error: undefined
+      error: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
@@ -17,16 +17,16 @@ class CustomDateFormat extends Component {
   }
 
   handleChangeDate(date) {
-    this.setState({startDate: date});
-  };
+    this.setState({ startDate: date });
+  }
 
   handleChangeStart(date) {
-    this.setState({startDate: date});
-  };
+    this.setState({ startDate: date });
+  }
 
   handleChangeEnd(date) {
-    this.setState({endDate: date});
-  };
+    this.setState({ endDate: date });
+  }
 
   render() {
     const startDate = this.state.startDate;

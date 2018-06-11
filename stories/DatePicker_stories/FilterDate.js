@@ -1,49 +1,41 @@
-import React, {Component} from 'react';
-import moment from 'moment'
+import React, {Component, ReactFragment} from 'react';
 import DatePicker from '../../src/components/myDatePicker/index';
 import '../../src/components/myDatePicker/stylesheets/datePicker.css';
 
-export default class FilterDates extends Component {
+export default class Default extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: moment(),
-      error: undefined
+      startDate: undefined,
+      endDate: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
-    this.weekDay = this.weekDay.bind(this);
   }
 
   handleChangeDate(date) {
     this.setState({startDate: date});
-  };
+  }
 
   handleChangeStart(date) {
     this.setState({startDate: date});
-  };
+  }
 
   handleChangeEnd(date) {
     this.setState({endDate: date});
-  };
-
-  weekDay(date){
-    return date.weekDay();
   }
 
   render() {
-    const startDate = this.state.startDate;
     return (
-      <div>
+      <ReactFragment>
         <DatePicker
-          selected={startDate}
-          onChange={this.handleChangeDate}
-          filterDate={this.weekDay}
+          selected={this.state.startDate}
+          startDate={this.state.startDate}
+          onChange={this.handleChangeStart}
           label={this.props.label}
         />
-      </div>
-
+      </ReactFragment>
     );
   }
 }
