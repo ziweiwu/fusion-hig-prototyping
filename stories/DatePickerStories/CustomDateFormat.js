@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import DatePicker from '../../src/components/DatePicker/index';
-import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
 class CustomDateFormat extends Component {
   constructor(props) {

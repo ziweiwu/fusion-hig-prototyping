@@ -1,8 +1,10 @@
 import React from 'react';
-import ReactDatePicker from 'react-datepicker';
-import TextField from '@hig/text-field';
+import "@hig/styles/build/index.css";
 import '@hig/text-field/build/index.css';
-import './stylesheets/datePicker.css';
+import TextField from '@hig/text-field';
+import ReactDatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import './datePicker.css';
 
 export default class DatePicker extends React.Component {
   render() {
