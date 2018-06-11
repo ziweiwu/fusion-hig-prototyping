@@ -3,8 +3,6 @@ import { mount, shallow } from 'enzyme';
 import moment from 'moment';
 import DatePicker from './index';
 
-const fn = jest.fn();
-
 describe('DatePicker', () => {
   // snapshot testing
   test('Snapshot tests regular view', () => {
@@ -22,6 +20,11 @@ describe('DatePicker', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  test('Snapshot tests calender Popper', () => {
+    const wrapper = shallow(<DatePicker selected={moment('2017-09-15 09:30:00')} hidePopper={false} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   // component render testing
   it('Render the dayPicker component correctly.', () => {
     const wrapper = shallow(<DatePicker />);
@@ -33,28 +36,12 @@ describe('DatePicker', () => {
     expect(wrapper.find('TextField')).toHaveLength(1);
   });
 
-  it('Render the label correctly.', () => {
-    const wrapper = mount(<DatePicker label="foo" />);
+  it('Render the label correctly and placeholder correctly', () => {
+    const wrapper = mount(<DatePicker label="foo" placeholderText="bar" />);
     expect(wrapper.instance().props.label).toBe('foo');
-  });
-
-  it('Render the placeholder correctly.', () => {
-    const wrapper = mount(<DatePicker placeholderText="bar" />);
     expect(wrapper.instance().props.placeholderText).toBe('bar');
   });
 
-
   // test interactions
-  it('Disable calender popper when disable is selected', () => {
-    const wrapper = mount(<DatePicker disabled />);
-    const input = wrapper.find('TextField');
-    input.props().onFocus();
-    expect(wrapper.find('.react-datepicker-popper')).toHaveLength(0);
-  });
-
-  it('Expect clear button to exist if isClearable is selected', () => {
-    const wrapper = mount(<DatePicker isClearable />);
-    expect(wrapper.find('TextField').props().isClearable).toBeTruthy;
-  });
 });
 

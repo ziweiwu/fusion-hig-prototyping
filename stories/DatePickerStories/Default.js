@@ -1,6 +1,6 @@
-import React, {Component, ReactFragment} from 'react';
-import DatePicker from '../../src/components/myDatePicker/index';
-import '../../src/components/myDatePicker/stylesheets/datePicker.css';
+import React, { Component } from 'react';
+import DatePicker from '../../src/components/DatePicker/index';
+import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
 export default class Default extends Component {
   constructor(props) {
@@ -15,27 +15,28 @@ export default class Default extends Component {
   }
 
   handleChangeDate(date) {
-    this.setState({startDate: date});
+    this.setState({ startDate: date });
   }
 
   handleChangeStart(date) {
-    this.setState({startDate: date});
+    this.setState({ startDate: date });
   }
 
   handleChangeEnd(date) {
-    this.setState({endDate: date});
+    this.setState({ endDate: date });
   }
 
   render() {
     return (
-      <ReactFragment>
+      <div>
         <DatePicker
           selected={this.state.startDate}
           startDate={this.state.startDate}
           onChange={this.handleChangeStart}
           label={this.props.label}
         />
-      </ReactFragment>
+      </div>
     );
   }
 }
+
