@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from "prop-types";
 import '@hig/styles/build/index.css';
 import '@hig/text-field/build/index.css';
-import TextField from '@hig/text-field';
+import {TextFieldPresenter} from '@hig/text-field';
 import ReactDatePicker from 'react-datepicker';
 import './datePicker.css';
 
 export default class DatePicker extends React.Component {
-// proptypes settings
   static propTypes = {
     adjustDateOnChange: PropTypes.bool,
     allowSameDay: PropTypes.bool,
@@ -24,7 +23,7 @@ export default class DatePicker extends React.Component {
     dayClassName: PropTypes.func,
     disabled: PropTypes.bool,
     disabledKeyboardNavigation: PropTypes.bool,
-    dropdownMode: PropTypes.oneOf(["scroll", "select"]).isRequired,
+    dropdownMode: PropTypes.oneOf(["scroll", "select"]),
     endDate: PropTypes.object,
     excludeDates: PropTypes.array,
     filterDate: PropTypes.func,
@@ -91,34 +90,41 @@ export default class DatePicker extends React.Component {
     maxTime: PropTypes.object,
     excludeTimes: PropTypes.array,
     useShortMonthInDropdown: PropTypes.bool,
-    clearButtonTitle: PropTypes.string
+    clearButtonTitle: PropTypes.string,
+    readOnly: PropTypes.bool
   };
+
+  componentDidMount() {
+  }
 
   render() {
     const props = this.props;
 
     return (<ReactDatePicker
       {...props}
+      readOnly
+      showMonthYearDropdown={false}
+      showMonthDropdown={false}
+      showYearDropdown={false}
+      showTimeSelect={false}
       fixedHeight
       isClearable={false}
 
       // use TextField as inputField
-      customInput={<TextField
-        label={props.label}
+      // use ref to allow the use clear button in TextField component
+      // instead of the one comes with ReactDatePicker
+      ref={node => this.node = node}
+      customInput={<TextFieldPresenter
+        {...props}
+        // label = {props.label}
+        // placeholderText = {props.placeholderText}
         showClearButton={props.isClearable}
-
-        // use ref to allow the use clear button in TextField component
-        // instead of the one comes with ReactDatePicker
         onClearButtonClick={() => {
           this.node.clear();
-          props.onClearClick();
         }}
-        placeholderText={props.placeholderText}
       />}
 
-      ref={node => this.node = node}
-
-      // settings for calender popper
+      // calender popper settings
       popperPlacement="bottom-start"
       popperModifiers={{
         // adjust position of calender popper, (horizontal, vertical)

@@ -8,10 +8,4 @@ describe('App', () => {
     const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
   });
-
-  // component testing
-  it('Render the App component correctly.', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find('h1')).toHaveLength(1);
-  });
 });

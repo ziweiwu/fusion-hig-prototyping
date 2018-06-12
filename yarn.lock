@@ -2,75 +2,65 @@
 # yarn lockfile v1
 
 
-"@hig/icon-button@0.1.0-alpha.8656cb28":
-  version "0.1.0-alpha.8656cb28"
-  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.0-alpha.8656cb28.tgz#355ba72ae6846f769757ab0c05c74c973674d0dd"
+"@hig/avatar@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-0.1.1.tgz#72bd8f91ba07d440fdb963bd80924a7bb4bd6508"
   dependencies:
-    "@hig/icon" "0.1.0-alpha.8656cb28"
-    classnames "^2.2.5"
-
-"@hig/icon@0.1.0-alpha.8656cb28":
-  version "0.1.0-alpha.8656cb28"
-  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.1.0-alpha.8656cb28.tgz#bbaaa3e494d89163cdc3e3cf03545ffdbc1e2ba5"
-  dependencies:
-    "@hig/icons" "0.1.0-alpha.8656cb28"
-    classnames "^2.2.5"
-
-"@hig/icon@0.2.0-alpha.53829c48":
-  version "0.2.0-alpha.53829c48"
-  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.2.0-alpha.53829c48.tgz#1fd77a882252be4fc8ce93523b1d0eb21c44640e"
-  dependencies:
-    "@hig/icons" "0.2.0-alpha.53829c48"
     classnames "^2.2.5"
     prop-types "^15.6.1"
-
-"@hig/icons@0.1.0-alpha.8656cb28":
-  version "0.1.0-alpha.8656cb28"
-  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0-alpha.8656cb28.tgz#c896d16542ec7a899cafb4a1e312b064d42e191b"
-
-"@hig/icons@0.2.0-alpha.53829c48":
-  version "0.2.0-alpha.53829c48"
-  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.2.0-alpha.53829c48.tgz#eb501a0733a497ecf345d5cdc1658ac63aaf0e06"
-
-"@hig/styles@0.2.0-alpha.53829c48":
-  version "0.2.0-alpha.53829c48"
-  resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.0-alpha.53829c48.tgz#9ae5927cae0678bd07d693031ed8c0c2accf2971"
-
-"@hig/table@0.3.0-alpha.53829c48":
-  version "0.3.0-alpha.53829c48"
-  resolved "https://registry.yarnpkg.com/@hig/table/-/table-0.3.0-alpha.53829c48.tgz#d532a266d00a1211e5965e27914f286539077e52"
-  dependencies:
-    "@hig/themes" "0.2.0-alpha.53829c48"
-    classnames "^2.2.3"
-    lodash "^4.17.5"
-    prop-types "^15.6.1"
-    react-draggable "^3.0.5"
-    react-lifecycles-compat "^3.0.2"
-    react-virtualized "^9.19.1"
-
-"@hig/text-field@0.1.0-alpha.8656cb28":
-  version "0.1.0-alpha.8656cb28"
-  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.1.0-alpha.8656cb28.tgz#ff055930613d703b53c13b0ae484cfb253ec5700"
-  dependencies:
-    classnames "^2.2.5"
-    hig-react "0.29.0-alpha.8656cb28"
     react-lifecycles-compat "^3.0.2"
 
-"@hig/themes@0.2.0-alpha.53829c48":
-  version "0.2.0-alpha.53829c48"
-  resolved "https://registry.yarnpkg.com/@hig/themes/-/themes-0.2.0-alpha.53829c48.tgz#1a793a57a89de078ad29a1dfab4dfd975ebb659e"
+"@hig/icon-button@^0.1.0", "@hig/icon-button@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.1.tgz#1d53bc52c91aaffd0fcf0b915199d391213969b6"
   dependencies:
+    "@hig/icon" "^0.1.1"
+    classnames "^2.2.5"
     prop-types "^15.6.1"
 
-"@hig/typography@0.1.0-alpha.8656cb28":
-  version "0.1.0-alpha.8656cb28"
-  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.1.0-alpha.8656cb28.tgz#36cad34216c7a3de73c9140a6258f97cd63294c1"
+"@hig/icon@^0.1.0", "@hig/icon@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.1.1.tgz#56a8edbe96f6070ba75dc76cfab751fc71ac573b"
+  dependencies:
+    "@hig/icons" "^0.1.0"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
+"@hig/icons@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0.tgz#f33de7287675a2b3e9b88658a2221f8e552f81b3"
+
+"@hig/styles@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.1.tgz#c79f797e9273b515a2bac2f6b2ef1fb7f0d12e2c"
+
+"@hig/text-field@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.2.0.tgz#d34c031606a7fe6d51819555bce18097016d4b04"
+  dependencies:
+    "@hig/icon-button" "^0.1.1"
+    classnames "^2.2.5"
+    hig-react "^0.29.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+
+"@hig/timestamp@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/timestamp/-/timestamp-0.1.1.tgz#e43fb3fd9f3f43972362eccb02dd579adb18e4f5"
   dependencies:
     classnames "^2.2.5"
+    prop-types "^15.6.1"
 
 "@hig/typography@0.2.0-alpha.53829c48":
   version "0.2.0-alpha.53829c48"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.2.0-alpha.53829c48.tgz#6b3c50738cdda7622bfb892ea02a9bf518a52ee2"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
+"@hig/typography@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.1.1.tgz#d9419f097831e78e9b29d13301ea77f9abb08226"
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.6.1"
@@ -2424,7 +2414,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.3, classnames@^2.2.5:
+classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -3154,7 +3144,7 @@ dom-converter@~0.1:
   dependencies:
     utila "~0.3"
 
-"dom-helpers@^2.4.0 || ^3.0.0", dom-helpers@^3.3.1:
+dom-helpers@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.3.1.tgz#fc1a4e15ffdf60ddde03a480a9c0fece821dd4a6"
 
@@ -4626,27 +4616,29 @@ he@1.1.x, he@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
-hig-interface@0.2.0-alpha.8656cb28:
-  version "0.2.0-alpha.8656cb28"
-  resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.2.0-alpha.8656cb28.tgz#30dfe9cb09a2b1a6a6e31dfaa934575137fff7b2"
+hig-interface@^0.1.19:
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.1.19.tgz#c171f6327b89aa8a18ddd77a70aac04c65981395"
 
-hig-react@0.29.0-alpha.8656cb28:
-  version "0.29.0-alpha.8656cb28"
-  resolved "https://registry.yarnpkg.com/hig-react/-/hig-react-0.29.0-alpha.8656cb28.tgz#1cbe30819be57d20cc6c11839b330fb81c42e14f"
+hig-react@^0.29.0:
+  version "0.29.0"
+  resolved "https://registry.yarnpkg.com/hig-react/-/hig-react-0.29.0.tgz#f40760f142163aa240af663333d499e4444f3e9c"
   dependencies:
-    "@hig/icon" "0.1.0-alpha.8656cb28"
-    "@hig/icon-button" "0.1.0-alpha.8656cb28"
-    "@hig/icons" "0.1.0-alpha.8656cb28"
-    "@hig/typography" "0.1.0-alpha.8656cb28"
-    hig-vanilla "0.2.0-alpha.8656cb28"
+    "@hig/avatar" "^0.1.0"
+    "@hig/icon" "^0.1.0"
+    "@hig/icon-button" "^0.1.0"
+    "@hig/icons" "^0.1.0"
+    "@hig/timestamp" "^0.1.0"
+    "@hig/typography" "^0.1.0"
+    hig-vanilla "^0.1.27"
     react-flip-move "^3.0.1"
     react-transition-group "^2.3.0"
 
-hig-vanilla@0.2.0-alpha.8656cb28:
-  version "0.2.0-alpha.8656cb28"
-  resolved "https://registry.yarnpkg.com/hig-vanilla/-/hig-vanilla-0.2.0-alpha.8656cb28.tgz#1d58c8108dc23bd04133175468420a3cd95b9063"
+hig-vanilla@^0.1.27:
+  version "0.1.27"
+  resolved "https://registry.yarnpkg.com/hig-vanilla/-/hig-vanilla-0.1.27.tgz#2c467f753e54d2099e46d9aaad19d4990ef84925"
   dependencies:
-    hig-interface "0.2.0-alpha.8656cb28"
+    hig-interface "^0.1.19"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -6093,7 +6085,7 @@ longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.0, loose-envify@^1.3.1:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
@@ -7739,13 +7731,6 @@ react-dom@^15.6.2:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-draggable@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-3.0.5.tgz#c031e0ed4313531f9409d6cd84c8ebcec0ddfe2d"
-  dependencies:
-    classnames "^2.2.5"
-    prop-types "^15.6.0"
-
 react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
@@ -7797,7 +7782,7 @@ react-is@^16.4.0:
   version "16.4.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.0.tgz#cc9fdc855ac34d2e7d9d2eb7059bbc240d35ffcf"
 
-react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
+react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
@@ -7913,17 +7898,6 @@ react-treebeard@^2.1.0:
     radium "^0.19.0"
     shallowequal "^0.2.2"
     velocity-react "^1.3.1"
-
-react-virtualized@^9.19.1:
-  version "9.19.1"
-  resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-9.19.1.tgz#84b53253df2d9df61c85ce037141edccc70a73fd"
-  dependencies:
-    babel-runtime "^6.26.0"
-    classnames "^2.2.3"
-    dom-helpers "^2.4.0 || ^3.0.0"
-    loose-envify "^1.3.0"
-    prop-types "^15.6.0"
-    react-lifecycles-compat "^3.0.4"
 
 react@^15.4.1:
   version "15.6.2"
