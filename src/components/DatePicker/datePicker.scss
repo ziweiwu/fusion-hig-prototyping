@@ -35,7 +35,7 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
 // hover color for calender day
 .react-datepicker__day {
   &:hover {
-    background-color: #E2E2E2 !important;
+    background-color: lighten(#0696D7, 40%) !important;
   }
 }
 
