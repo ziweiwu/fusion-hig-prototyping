@@ -12,7 +12,7 @@ $datepicker__triangle-size: 8px;
 
 /* Colors */
 $datepicker__background-color: white;
-$datepicker__border-color: #D4DBE1 ;
+$datepicker__border-color: #D4DBE1;
 $datepicker__highlighted-color: #87BC40;
 $datepicker__muted-color: #999999;
 $datepicker__outsideMonth-color: #999999;
@@ -21,8 +21,8 @@ $datepicker__text-color: #000;
 $datepicker__header-color: #000;
 $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
 
-// static set the position of label text of input to remain on top
-// reflective set the position of label text to be dynamically positioned
+// static set the position of label text of input to remain on top.
+// reflective set the position of label text to be dynamically positioned.
 .hig__text-field__label {
   position: static;
 }
@@ -32,18 +32,10 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
   visibility: hidden;
 }
 
-.react-datepicker__header{
-  background-color: white;
-}
-
+// hover color for calender day
 .react-datepicker__day {
   &:hover {
-    background-color: #9BD5EF;
-  }
-
-  &--keyboard-selected {
-    background-color: $datepicker__selected-color;
-
+    background-color: #E2E2E2 !important;
   }
 }
 
@@ -84,3 +76,7 @@ hig__text-field__input-wrapper {
 .hig__text-field__clear-button {
   top: 26px;
 }
+
+// The above code will override the stylesheet from react-datepicker library
+@import 'node_modules/react-datepicker/src/stylesheets/datepicker';
+
