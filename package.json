@@ -3,10 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@hig/icon": "0.2.0-alpha.53829c48",
-    "@hig/styles": "0.2.0-alpha.53829c48",
-    "@hig/table": "0.3.0-alpha.53829c48",
-    "@hig/text-field": "0.1.0-alpha.8656cb28",
+    "@hig/styles": "^0.2.1",
+    "@hig/text-field": "^0.2.0",
     "@hig/typography": "0.2.0-alpha.53829c48",
     "@storybook/addon-actions": "^3.4.6",
     "@storybook/addon-info": "^3.4.6",

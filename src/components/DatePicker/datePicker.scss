@@ -21,11 +21,6 @@ $datepicker__text-color: #000;
 $datepicker__header-color: #000;
 $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
 
-// static set the position of label text of input to remain on top.
-// reflective set the position of label text to be dynamically positioned.
-.hig__text-field__label {
-  position: static;
-}
 
 // hide the days from prev and next month
 .react-datepicker__day--outside-month {
@@ -56,8 +51,15 @@ button.react-datepicker__close-icon::after {
 }
 
 /* Hig TextField Style */
-hig__text-field__input-wrapper {
-  margin-bottom: 0px;
+// static set the position of label text of input to remain on top.
+// reflective set the position of label text to be dynamically positioned.
+.hig__text-field__label-v1{
+  position: static;
+}
+.hig__icon-button{
+  background-color: transparent;
+  border: none;
+  padding-top: 5px;
 }
 
 .hig__text-field {
@@ -65,17 +67,21 @@ hig__text-field__input-wrapper {
   max-width: 240px
 }
 
-.hig__text-field__input {
-  padding-bottom: 2px;
-}
+//hig__text-field__input-wrapper {
+//  margin-bottom: 0px;
+//}
 
-.hig__text-field__label {
-  padding-bottom: 8px;
-}
-
-.hig__text-field__clear-button {
-  top: 26px;
-}
+//.hig__text-field__input {
+//  padding-bottom: 2px;
+//}
+//
+//.hig__text-field__label {
+//  padding-bottom: 8px;
+//}
+//
+//.hig__text-field__clear-button {
+//  top: 10px;
+//}
 
 // The above code will override the stylesheet from react-datepicker library
 @import 'node_modules/react-datepicker/src/stylesheets/datepicker';
