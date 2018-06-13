@@ -94,20 +94,17 @@ export default class DatePicker extends React.Component {
     readOnly: PropTypes.bool
   };
 
-  componentDidMount() {
-  }
-
   render() {
     const props = this.props;
 
     return (<ReactDatePicker
       {...props}
       readOnly
+      fixedHeight
       showMonthYearDropdown={false}
       showMonthDropdown={false}
       showYearDropdown={false}
       showTimeSelect={false}
-      fixedHeight
       isClearable={false}
 
       // use TextField as inputField
@@ -116,8 +113,6 @@ export default class DatePicker extends React.Component {
       ref={node => this.node = node}
       customInput={<TextFieldPresenter
         {...props}
-        // label = {props.label}
-        // placeholderText = {props.placeholderText}
         showClearButton={props.isClearable}
         onClearButtonClick={() => {
           this.node.clear();
@@ -132,12 +127,9 @@ export default class DatePicker extends React.Component {
           enabled: true,
           offset: '0px, -30px',
         },
-
-        // prevent calender popper to flip
         flip: {
           enabled: false,
         },
-
         preventOverflow: {
           enabled: true,
           escapeWithReference: false,
