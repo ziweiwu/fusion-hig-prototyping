@@ -1,9 +1,10 @@
 import React from 'react';
 import '@hig/styles/build/index.css';
 import TextField from '@hig/text-field';
-import ToolTip from '@hig/tooltip';
+import ToolTipHig from '@hig/tooltip';
 import '@hig/tooltip/build/index.css';
-import { DatePicker, Tooltip as TooltipAnt } from 'antd';
+import { DatePicker, Button } from 'antd';
+import Tooltip from './components/Tooltip/index';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './App.css';
 
@@ -13,14 +14,14 @@ const App = () => (
     <DatePicker />
     <TextField readOnly />
     <div>
-      <ToolTip anchorPoint="top-center" content="Testing">
-        <button>hig tooltip</button>
-      </ToolTip>
+      <ToolTipHig anchorPoint="top-center" content="Testing" >
+        <Button >hig tooltip</Button>
+      </ToolTipHig>
     </div>
     <div>
-      <TooltipAnt title="prompt text" placement="bottom">
-        <button>ant tooltip</button>
-      </TooltipAnt>
+      <Tooltip title="prompt text" placement="bottom" trigger={"hover"}>
+        <Button >ant tooltip</Button>
+      </Tooltip>
     </div>
   </div>
 );
