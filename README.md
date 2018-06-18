@@ -16,6 +16,7 @@ To start the prototype page
 
 To start the storybook page
 - ``yarn run storybook`` @project root
+
 #### Storybook
 Storybook is used to demonstrate the design and functionalities of the components
 Storybook link: [https://ziweiwu.github.io/fusion-hig-prototyping]

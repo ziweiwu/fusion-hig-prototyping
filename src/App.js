@@ -13,6 +13,7 @@ const opts = {
   width: '640',
   playerVars: { // https://developers.google.com/youtube/player_parameters
     autoplay: 0,
+    rel: 0 //disable relevant videos after playing
   },
 };
 
@@ -32,7 +33,7 @@ const opts = {
     </div>
     <div>
       <Tooltip
-        autoOverflow = {false}
+        autoAdjustOverflow
         overlay={<div><p>Some instruction is written here with picture</p><img
           src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
         /></div>
@@ -46,18 +47,21 @@ const opts = {
         <Button>This is tooltip show text</Button>
       </Tooltip>
       <Tooltip
+        title="this is a prompt"
         overlay={<a href="https://www.google.com">link to google</a>}
       >
         <Button>This is tooltip with some link</Button>
       </Tooltip>
 
       <Tooltip
+        autoAdjustOverflow
         overlay={
+          <div>
           <YouTube
             videoId="sRMRQw4Pu60"
             opts={opts}
-            onReady={this._onReady}
           />
+          </div>
           }
       >
         <Button>This is tooltip with a video</Button>
