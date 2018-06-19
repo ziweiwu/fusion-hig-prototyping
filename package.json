@@ -28,7 +28,9 @@
     "react-datepicker": "^1.5.0",
     "react-dom": "^15.6.2",
     "react-grid-system": "^3.2.3",
+    "react-popper": "^1.0.0-beta.6",
     "react-test-renderer": "^16.4.0",
+    "react-tippy": "^1.2.2",
     "react-youtube": "^7.6.0",
     "sass-loader": "^7.0.1",
     "webpack": "^4.8.3"
