@@ -2,10 +2,13 @@ import React from 'react';
 import '@hig/styles/build/index.css';
 import ToolTipHig from '@hig/tooltip';
 import '@hig/tooltip/build/index.css';
-import {DatePicker, Button, Tooltip as TooltipAnt} from 'antd';
+import {DatePicker, Button, Popover, Tooltip as TooltipAnt} from 'antd';
 import YouTube from 'react-youtube';
 import Tooltip from './components/Tooltip/index';
+import {Tooltip as TippyTooltip} from 'react-tippy';
+import 'react-tippy/dist/tippy.css'
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+
 import './App.css';
 
 const opts = {
@@ -17,12 +20,21 @@ const opts = {
   },
 };
 
-  const App = () => (
+const youtubeVideo = (
+  <div>
+    <YouTube
+      videoId="sRMRQw4Pu60"
+      opts={opts}
+    />
+  </div>
+)
+
+const App = () => (
   <div className="App">
     <h1>App Started </h1>
     <TooltipAnt><Button> ToolTip Ant</Button></TooltipAnt>
     <div>
-      <ToolTipHig anchorPoint="top-center" content="Testing" >
+      <ToolTipHig anchorPoint="top-center" content="Testing">
         <Button>hig tooltip</Button>
       </ToolTipHig>
     </div>
@@ -33,7 +45,7 @@ const opts = {
     </div>
     <div>
       <Tooltip
-        autoAdjustOverflow
+        placement="top"
         overlay={<div><p>Some instruction is written here with picture</p><img
           src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
         /></div>
@@ -41,9 +53,9 @@ const opts = {
       >
         <Button>This is tooltip show picture</Button>
       </Tooltip>
+
       <Tooltip
-        overlay={<p>some text</p>}
-      >
+        overlay={<p>some text</p>}>
         <Button>This is tooltip show text</Button>
       </Tooltip>
       <Tooltip
@@ -54,18 +66,28 @@ const opts = {
       </Tooltip>
 
       <Tooltip
-        autoAdjustOverflow
-        overlay={
-          <div>
-          <YouTube
-            videoId="sRMRQw4Pu60"
-            opts={opts}
-          />
-          </div>
-          }
+        overlay={youtubeVideo}
+        mouseEnterDelay={0.5}
+        mouseLeaveDelay={1000}
+        visible
       >
         <Button>This is tooltip with a video</Button>
-      </Tooltip>
+      </Tooltip
+      >
+
+      <div style={{margin: "500px"}} />
+
+      <TippyTooltip
+        title="Welcome to React"
+        position="bottom"
+        trigger="mouseenter"
+        html={youtubeVideo}
+      >
+        <Button>This is tippytooltip</Button>
+      </TippyTooltip>
+      <Popover title="prompt text" placement="right" content={youtubeVideo} mouseLeaveDelay={1000} >
+        <Button>Ant Popover</Button>
+      </Popover>
     </div>
   </div>
 );
