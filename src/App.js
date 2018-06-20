@@ -5,11 +5,34 @@ import '@hig/tooltip/build/index.css';
 import {DatePicker, Button, Popover, Tooltip as TooltipAnt} from 'antd';
 import YouTube from 'react-youtube';
 import Tooltip from './components/Tooltip/index';
-import {Tooltip as TippyTooltip} from 'react-tippy';
+import Dropdown from '@hig/dropdown';
+import Flyout from "@hig/flyout";
+import "@hig/flyout/build/index.css";
+import '@hig/dropdown/build/index.css';
 import 'react-tippy/dist/tippy.css'
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 import './App.css';
+
+const options = [
+  {
+    label: "apple",
+    value: "apple value"
+  },
+  {
+    label: "orange",
+    value: "orange value"
+  },
+  {
+    label: "pineapple",
+    value: "pineapple value"
+  },
+  {
+    label: "lemon",
+    value: "lemon value"
+  },
+]
+
 
 const opts = {
   height: '390',
@@ -68,26 +91,36 @@ const App = () => (
       <Tooltip
         overlay={youtubeVideo}
         mouseEnterDelay={0.5}
-        mouseLeaveDelay={1000}
-        visible
+        mouseLeaveDelay={1}
       >
         <Button>This is tooltip with a video</Button>
       </Tooltip
       >
 
-      <div style={{margin: "500px"}} />
+      <div style={{margin: "200px"}}/>
 
-      <TippyTooltip
-        title="Welcome to React"
-        position="bottom"
-        trigger="mouseenter"
-        html={youtubeVideo}
-      >
-        <Button>This is tippytooltip</Button>
-      </TippyTooltip>
-      <Popover title="prompt text" placement="right" content={youtubeVideo} mouseLeaveDelay={1000} >
+      <Popover title="prompt text"
+               placement="right"
+               content={youtubeVideo}
+               mouseLeaveDelay={1}>
         <Button>Ant Popover</Button>
       </Popover>
+
+      <Dropdown
+        label="dropdown menu"
+        options={options}
+      />
+
+      <Flyout
+        mountOnEnter
+        unmountOnLExit
+        anchorPoint="top-left"
+        content={youtubeVideo}
+        mouseLeaveDelay={1}
+      >
+        <button>Fly out button</button>
+      </Flyout>
+
     </div>
   </div>
 );

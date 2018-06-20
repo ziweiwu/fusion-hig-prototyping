@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@hig/avatar@0.2.0-alpha.18da9628":
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-0.2.0-alpha.18da9628.tgz#205a29d0d628b469161208cc8cdc7c015e9d0967"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+
 "@hig/avatar@0.2.0-alpha.c84a6e41":
   version "0.2.0-alpha.c84a6e41"
   resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-0.2.0-alpha.c84a6e41.tgz#063139881eccd042853a4708d8d2afe8745ce825"
@@ -18,6 +26,32 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.2"
 
+"@hig/dropdown@0.2.0-alpha.18da9628":
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/@hig/dropdown/-/dropdown-0.2.0-alpha.18da9628.tgz#33be8073dd5a941b65341693b6ec95342fb6cb94"
+  dependencies:
+    classnames "^2.2.5"
+    hig-react "0.30.0-alpha.18da9628"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+
+"@hig/flyout@0.2.0-alpha.18da9628":
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-0.2.0-alpha.18da9628.tgz#e70b897b18e84825da05e03a8deb43334cc6f802"
+  dependencies:
+    classnames "^2.2.5"
+    hig-react "0.30.0-alpha.18da9628"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+
+"@hig/icon-button@0.2.0-alpha.18da9628":
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.2.0-alpha.18da9628.tgz#91942c50fe3763c1e447620ceb70e523a3954100"
+  dependencies:
+    "@hig/icon" "0.2.0-alpha.18da9628"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
 "@hig/icon-button@0.2.0-alpha.c84a6e41":
   version "0.2.0-alpha.c84a6e41"
   resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.2.0-alpha.c84a6e41.tgz#7515a5c9d4b18a7389206f395c50fbc43baf7e41"
@@ -31,6 +65,14 @@
   resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.1.tgz#1d53bc52c91aaffd0fcf0b915199d391213969b6"
   dependencies:
     "@hig/icon" "^0.1.1"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
+"@hig/icon@0.2.0-alpha.18da9628":
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.2.0-alpha.18da9628.tgz#28b78b706109e6ddc45a03317b78cd890e887c9d"
+  dependencies:
+    "@hig/icons" "0.2.0-alpha.18da9628"
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
@@ -49,6 +91,10 @@
     "@hig/icons" "^0.1.0"
     classnames "^2.2.5"
     prop-types "^15.6.1"
+
+"@hig/icons@0.2.0-alpha.18da9628":
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.2.0-alpha.18da9628.tgz#05ba0d35d19ce8bec00d5772f3c43a19f179e505"
 
 "@hig/icons@0.2.0-alpha.c84a6e41":
   version "0.2.0-alpha.c84a6e41"
@@ -72,6 +118,13 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.2"
 
+"@hig/timestamp@0.2.0-alpha.18da9628":
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/@hig/timestamp/-/timestamp-0.2.0-alpha.18da9628.tgz#102e2fa3eaa5f53a31ffe8e2f9615c971e83230c"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
 "@hig/timestamp@0.2.0-alpha.c84a6e41":
   version "0.2.0-alpha.c84a6e41"
   resolved "https://registry.yarnpkg.com/@hig/timestamp/-/timestamp-0.2.0-alpha.c84a6e41.tgz#e51c72a2398f7d63a4a1e2a3a8c07e1a17e57f3d"
@@ -94,6 +147,13 @@
     hig-react "0.30.0-alpha.c84a6e41"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.2"
+
+"@hig/typography@0.2.0-alpha.18da9628":
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.2.0-alpha.18da9628.tgz#66bc8c08698dfee82b69fbf2ba752df04e5120d9"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
 
 "@hig/typography@0.2.0-alpha.53829c48":
   version "0.2.0-alpha.53829c48"
@@ -4818,6 +4878,10 @@ he@1.1.x, he@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
+hig-interface@0.2.0-alpha.18da9628:
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.2.0-alpha.18da9628.tgz#18187d6291a7bf4462be208869185756786fdd02"
+
 hig-interface@0.2.0-alpha.c84a6e41:
   version "0.2.0-alpha.c84a6e41"
   resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.2.0-alpha.c84a6e41.tgz#173a3f2eee364a6588e650d7b51ae36140f8f795"
@@ -4825,6 +4889,19 @@ hig-interface@0.2.0-alpha.c84a6e41:
 hig-interface@^0.1.19:
   version "0.1.19"
   resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.1.19.tgz#c171f6327b89aa8a18ddd77a70aac04c65981395"
+
+hig-react@0.30.0-alpha.18da9628:
+  version "0.30.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/hig-react/-/hig-react-0.30.0-alpha.18da9628.tgz#1e3f808da363b539f4fa7f8c2e9f06c19624cf49"
+  dependencies:
+    "@hig/avatar" "0.2.0-alpha.18da9628"
+    "@hig/icon" "0.2.0-alpha.18da9628"
+    "@hig/icon-button" "0.2.0-alpha.18da9628"
+    "@hig/icons" "0.2.0-alpha.18da9628"
+    "@hig/timestamp" "0.2.0-alpha.18da9628"
+    "@hig/typography" "0.2.0-alpha.18da9628"
+    hig-vanilla "0.2.0-alpha.18da9628"
+    react-transition-group "^2.3.0"
 
 hig-react@0.30.0-alpha.c84a6e41:
   version "0.30.0-alpha.c84a6e41"
@@ -4852,6 +4929,12 @@ hig-react@^0.29.0:
     hig-vanilla "^0.1.27"
     react-flip-move "^3.0.1"
     react-transition-group "^2.3.0"
+
+hig-vanilla@0.2.0-alpha.18da9628:
+  version "0.2.0-alpha.18da9628"
+  resolved "https://registry.yarnpkg.com/hig-vanilla/-/hig-vanilla-0.2.0-alpha.18da9628.tgz#997878a70a0312b9dd0fbba5748bf42c88750ab1"
+  dependencies:
+    hig-interface "0.2.0-alpha.18da9628"
 
 hig-vanilla@0.2.0-alpha.c84a6e41:
   version "0.2.0-alpha.c84a6e41"
