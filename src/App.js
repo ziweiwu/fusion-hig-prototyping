@@ -33,6 +33,14 @@ const options = [
   },
 ]
 
+const picture = (
+  <div>
+    <p>Some instruction is written here with picture</p>
+    <img alt="cat"
+         src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
+    />
+  </div>
+)
 
 const opts = {
   height: '390',
@@ -69,27 +77,25 @@ const App = () => (
     <div>
       <Tooltip
         placement="top"
-        overlay={<div><p>Some instruction is written here with picture</p><img
-          src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
-        /></div>
-        }
+        content={picture}
       >
         <Button>This is tooltip show picture</Button>
       </Tooltip>
 
       <Tooltip
-        overlay={<p>some text</p>}>
+        content={<p>some text</p>}>
         <Button>This is tooltip show text</Button>
       </Tooltip>
       <Tooltip
         title="this is a prompt"
-        overlay={<a href="https://www.google.com">link to google</a>}
+        content={<a href="https://www.google.com">link to google</a>}
+        placement="bottom"
       >
         <Button>This is tooltip with some link</Button>
       </Tooltip>
 
       <Tooltip
-        overlay={youtubeVideo}
+        content={youtubeVideo}
         mouseEnterDelay={0.5}
         mouseLeaveDelay={1}
       >
@@ -122,7 +128,8 @@ const App = () => (
       </Flyout>
 
     </div>
-  </div>
-);
+    <
+    /div>
+    );
 
-export default App;
+    export default App;
