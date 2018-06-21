@@ -60,10 +60,13 @@ export default class Tooltip extends React.Component {
     const props = this.props;
     return (
       < ReactToolTip
+        adjustX
+        adjustY
         {...props}
         prefixCls="hig-tooltip"
         ref={node => this.node = node}
         trigger="hover"
+        overlay={props.content}
         //popupAlign={align}
         //visible
         // builtinPlacements={this.getPlacements()}
