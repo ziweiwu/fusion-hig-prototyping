@@ -2,80 +2,76 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
-import '@hig/styles/build/index.css';
 import getPlacements, {getOverflowOptions} from './placements';
-import './tooltip.css';
-
-// const align = {
-//   points: ['tc', 'bc'],
-//   offset: [0, -4],
-//   targetOffset: [0, 0],
-//   overflow: { adjustY: 0 },
-// };
 
 export default class Tooltip extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  static propTypes = {
+    trigger: PropTypes.any,
+    children: PropTypes.any,
+    defaultVisible: PropTypes.bool,
+    visible: PropTypes.bool,
+    placement: PropTypes.string,
+    transitionName: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object,
+    ]),
+    animation: PropTypes.any,
+    onVisibleChange: PropTypes.func,
+    afterVisibleChange: PropTypes.func,
+    content: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+    ]).isRequired,
+    overlayStyle: PropTypes.object,
+    overlayClassName: PropTypes.string,
+    prefixCls: PropTypes.string,
+    mouseEnterDelay: PropTypes.number,
+    mouseLeaveDelay: PropTypes.number,
+    getTooltipContainer: PropTypes.func,
+    destroyTooltipOnHide: PropTypes.bool,
+    align: PropTypes.object,
+    arrowContent: PropTypes.any,
+    id: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string
+  };
 
-  // onPopupAlign = (domNode: HTMLElement, align: any) => {
-  //   const placements: any = this.getPlacements();
-  //   const placement = Object.keys(placements).filter(
-  //     key => (
-  //       placements[key].points[0] === align.points[0] &&
-  //       placements[key].points[1] === align.points[1]
-  //     ),
-  //   )[0];
-  //   if (!placement) {
-  //     return;
-  //   }
-  //   const rect = domNode.getBoundingClientRect();
-  //   const transformOrigin = {
-  //     top: '50%',
-  //     left: '50%',
-  //   };
-  //   if (placement.indexOf('top') >= 0 || placement.indexOf('Bottom') >= 0) {
-  //     transformOrigin.top = `${rect.height - align.offset[1]}px`;
-  //   } else if (placement.indexOf('Top') >= 0 || placement.indexOf('bottom') >= 0) {
-  //     transformOrigin.top = `${-align.offset[1]}px`;
-  //   }
-  //   if (placement.indexOf('left') >= 0 || placement.indexOf('Right') >= 0) {
-  //     transformOrigin.left = `${rect.width - align.offset[0]}px`;
-  //   } else if (placement.indexOf('right') >= 0 || placement.indexOf('Left') >= 0) {
-  //     transformOrigin.left = `${-align.offset[0]}px`;
-  //   }
-  //   domNode.style.transformOrigin = `${transformOrigin.left} ${transformOrigin.top}`;
-  // };
-  //
-  // getPlacements() {
-  //   const { builtinPlacements, arrowPointAtCenter, autoAdjustOverflow } = this.props;
-  //   return builtinPlacements || getPlacements({
-  //     arrowPointAtCenter,
-  //     verticalArrowShift: 8,
-  //     autoAdjustOverflow,
-  //   });
-  // }
+  static defaultProps = {
+    prefixCls: 'hig-tooltip',
+    mouseEnterDelay: 0,
+    destroyTooltipOnHide: false,
+    mouseLeaveDelay: 0.5,
+    align: {},
+    placement: 'right',
+    trigger: ['hover'],
+    arrowContent: null,
+  };
 
   render() {
     const props = this.props;
+    const tooltipTitleClass = classNames({
+      'hig-tooltip-title': true
+    });
+    const tooltipDescriptionClass = classNames({
+      'hig-tooltip-description': true
+    });
+
     return (
-      < ReactToolTip
-        adjustX
-        adjustY
+      <ReactToolTip
         {...props}
-        prefixCls="hig-tooltip"
+
         ref={node => this.node = node}
-        trigger="hover"
-        overlay={props.content}
-        //popupAlign={align}
-        //visible
-        // builtinPlacements={this.getPlacements()}
-        // onPopupAlign={this.onPopupAlign}
+        overlay={
+          <div>
+            {props.title && <div className={tooltipTitleClass}>{props.title}</div>}
+            {props.description && <div className={tooltipDescriptionClass}>{props.description}</div>}
+            {props.content}
+          </div>
+        }
       />
     );
   }
 }
 
 Tooltip.propTypes = {};
-
 
