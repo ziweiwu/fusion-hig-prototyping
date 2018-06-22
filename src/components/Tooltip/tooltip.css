@@ -1,46 +1,49 @@
-.hig-tooltip {
+@import url(~@hig/styles/build/index.css);
+hig-tooltip {
+  font-family: ArtifaktElement, sans-serif;
   position: absolute;
   z-index: 1060;
   display: block;
   list-style: none;
   visibility: visible;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
+  text-align: left;
   opacity: 0.9;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: ArtifaktElement, sans-serif; }
-
-.hig-tooltip-hidden {
-  display: none; }
+  padding: 0; }
 
 .hig-tooltip-placement-top, .hig-tooltip-placement-topLeft, .hig-tooltip-placement-topRight {
-  padding: 5px 0 9px 0; }
+  padding: 8px 0 8px 0; }
 
 .hig-tooltip-placement-right, .hig-tooltip-placement-rightTop, .hig-tooltip-placement-rightBottom {
-  padding: 0 5px 0 9px; }
+  padding: 0 8px 0 8px; }
 
 .hig-tooltip-placement-bottom, .hig-tooltip-placement-bottomLeft, .hig-tooltip-placement-bottomRight {
-  padding: 9px 0 5px 0; }
+  padding: 8px 0 8px 0; }
 
 .hig-tooltip-placement-left, .hig-tooltip-placement-leftTop, .hig-tooltip-placement-leftBottom {
-  padding: 0 9px 0 5px; }
+  padding: 0 8px 0 8px; }
 
 .hig-tooltip-inner {
   padding: 6px 8px;
-  color: #fff;
+  color: #FFFFFF;
   text-align: left;
   text-decoration: none;
-  background-color: #373737;
-  border-radius: 4px;
-  box-shadow: 2px 3px rgba(0, 0, 0, 0.15);
-  min-height: 32px;
-  max-width: 800px; }
+  background-color: #393939;
+  box-shadow: none;
+  min-height: 34px;
+  max-width: 304px;
+  border-radius: 2px, 2px, 2px, 2px; }
+  .hig-tooltip-inner .hig-tooltip-title {
+    font-weight: bold;
+    border-bottom: 2px; }
   .hig-tooltip-inner img {
-    max-height: 400px; }
+    max-width: 300px; }
   .hig-tooltip-inner a {
     color: #fff; }
+  .hig-tooltip-inner button, .hig-tooltip-inner select {
+    font-family: ArtifaktElement, sans-serif !important; }
 
 .hig-tooltip-arrow {
   position: absolute;
@@ -80,11 +83,27 @@
 .hig-tooltip-placement-rightBottom .hig-tooltip-arrow {
   bottom: 15%; }
 
-.hig-tooltip-placement-left .hig-tooltip-arrow, .hig-tooltip-placement-leftTop .hig-tooltip-arrow, .hig-tooltip-placement-leftBottom .hig-tooltip-arrow {
+.hig-tooltip-placement-left
+.hig-tooltip-arrow
+.hig-tooltip-placement-leftTop
+.hig-tooltip-arrow
+.hig-tooltip-placement-leftBottom
+.hig-tooltip-arrow {
   right: 4px;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
   border-left-color: #373737; }
+
+.hig-tooltip-placement-bottom
+.hig-tooltip-arrow
+.hig-tooltip-placement-bottomLeft
+.hig-tooltip-arrow
+.hig-tooltip-placement-bottomRight
+.hig-tooltip-arrow {
+  top: 4px;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #373737; }
 
 .hig-tooltip-placement-left .hig-tooltip-arrow {
   top: 50%; }
@@ -95,12 +114,6 @@
 
 .hig-tooltip-placement-leftBottom .hig-tooltip-arrow {
   bottom: 15%; }
-
-.hig-tooltip-placement-bottom .hig-tooltip-arrow, .hig-tooltip-placement-bottomLeft .hig-tooltip-arrow, .hig-tooltip-placement-bottomRight .hig-tooltip-arrow {
-  top: 4px;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #373737; }
 
 .hig-tooltip-placement-bottom .hig-tooltip-arrow {
   left: 50%; }

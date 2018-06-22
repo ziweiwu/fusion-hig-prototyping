@@ -1,59 +1,66 @@
-.hig-tooltip {
+@import "~@hig/styles/build/index.css";
+
+$hig-font-family: ArtifaktElement, sans-serif !default;
+
+hig-tooltip {
+  font-family: $hig-font-family;
   position: absolute;
   z-index: 1060;
   display: block;
-  list-style:none;
+  list-style: none;
   visibility: visible;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
+  text-align: left;
   opacity: 0.9;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: ArtifaktElement, sans-serif;
-}
-
-.hig-tooltip-hidden {
-  display: none;
 }
 
 .hig-tooltip-placement-top, .hig-tooltip-placement-topLeft, .hig-tooltip-placement-topRight {
-  padding: 5px 0 9px 0;
+  padding: 8px 0 8px 0
 }
 
 .hig-tooltip-placement-right, .hig-tooltip-placement-rightTop, .hig-tooltip-placement-rightBottom {
-  padding: 0 5px 0 9px;
+  padding: 0 8px 0 8px
 }
 
 .hig-tooltip-placement-bottom, .hig-tooltip-placement-bottomLeft, .hig-tooltip-placement-bottomRight {
-  padding: 9px 0 5px 0;
+  padding: 8px 0 8px 0
 }
 
 .hig-tooltip-placement-left, .hig-tooltip-placement-leftTop, .hig-tooltip-placement-leftBottom {
-  padding: 0 9px 0 5px;
+  padding: 0 8px 0 8px;
 }
 
 .hig-tooltip-inner {
   padding: 6px 8px;
-  color: #fff;
+  color: #FFFFFF;
   text-align: left;
   text-decoration: none;
-  background-color: #373737;
-  border-radius: 4px;
-  box-shadow: 2px 3px rgba(0, 0, 0, 0.15);
-  min-height: 32px;
-  max-width: 800px;
+  background-color: #393939;
+  box-shadow: none;
+  min-height: 34px;
+  max-width: 304px;
+  border-radius: 2px, 2px, 2px, 2px;
 
-  img{
-    max-height: 400px;
+  .hig-tooltip-title {
+    font-weight: bold;
+    border-bottom: 2px;
   }
 
-  a{
+  img {
+    max-width: 300px;
+  }
+  a {
     color: #fff;
   }
 
+  // to override user-agent styling for inputs
+  button,select {
+    font-family: $hig-font-family !important;
+  }
 }
-
 
 .hig-tooltip-arrow {
   position: absolute;
@@ -102,11 +109,28 @@
   bottom: 15%;
 }
 
-.hig-tooltip-placement-left .hig-tooltip-arrow, .hig-tooltip-placement-leftTop .hig-tooltip-arrow, .hig-tooltip-placement-leftBottom .hig-tooltip-arrow {
+.hig-tooltip-placement-left
+.hig-tooltip-arrow
+.hig-tooltip-placement-leftTop
+.hig-tooltip-arrow
+.hig-tooltip-placement-leftBottom
+.hig-tooltip-arrow {
   right: 4px;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
   border-left-color: #373737;
+}
+
+.hig-tooltip-placement-bottom
+.hig-tooltip-arrow
+.hig-tooltip-placement-bottomLeft
+.hig-tooltip-arrow
+.hig-tooltip-placement-bottomRight
+.hig-tooltip-arrow {
+  top: 4px;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #373737;
 }
 
 .hig-tooltip-placement-left .hig-tooltip-arrow {
@@ -122,13 +146,6 @@
   bottom: 15%;
 }
 
-.hig-tooltip-placement-bottom .hig-tooltip-arrow, .hig-tooltip-placement-bottomLeft .hig-tooltip-arrow, .hig-tooltip-placement-bottomRight .hig-tooltip-arrow {
-  top: 4px;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #373737;
-}
-
 .hig-tooltip-placement-bottom .hig-tooltip-arrow {
   left: 50%;
 }
@@ -140,4 +157,3 @@
 .hig-tooltip-placement-bottomRight .hig-tooltip-arrow {
   right: 15%;
 }
-
