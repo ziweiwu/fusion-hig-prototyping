@@ -33,7 +33,9 @@ export default class Tooltip extends React.Component {
     arrowContent: PropTypes.any,
     id: PropTypes.string,
     title: PropTypes.string,
-    description: PropTypes.string
+    description: PropTypes.string,
+    linkTitle: PropTypes.string,
+    linkURL: PropTypes.string
   };
 
   static defaultProps = {
@@ -55,17 +57,29 @@ export default class Tooltip extends React.Component {
     const tooltipDescriptionClass = classNames({
       'hig-tooltip-description': true
     });
+    const tooltipInnerContentClass = classNames({
+      'hig-tooltip-inner-content': true
+    });
+    const tooltipLink = classNames({
+      'hig-tooltip-link': true
+    });
 
     return (
       <ReactToolTip
         {...props}
-
         ref={node => this.node = node}
         overlay={
-          <div>
+          <div className={tooltipInnerContentClass}>
             {props.title && <div className={tooltipTitleClass}>{props.title}</div>}
             {props.description && <div className={tooltipDescriptionClass}>{props.description}</div>}
             {props.content}
+            {props.linkURL && <div className={tooltipLink}>
+              <hr/>
+              <a
+                href={props.linkURL}>
+                {props.linkTitle || props.linkURL}
+              </a>
+            </div>}
           </div>
         }
       />

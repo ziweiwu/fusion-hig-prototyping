@@ -44,23 +44,17 @@ const opts = {
 
 const picture = (
   <div>
-    <p>Some instruction is written here with picture</p>
     <img
       alt="cat"
       src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
     />
-    <a href = "https://www.autodesk.com">Some link</a>
   </div>
 );
-
-const link = (
-  <a href="https://www.google.com">link to google</a>
-)
 
 const youtubeVideo = (
   <div>
     <YouTube
-      videoId="sRMRQw4Pu60"
+      videoId="NSJwq9CVoIk"
       opts={opts}
     />
   </div>
@@ -85,17 +79,7 @@ const App = () => (
     {/*</div>*/}
     <div>
       <Tooltip
-        title="This is a cat picture"
-        placement="top"
-        content={picture}
-      >
-        <Button>Show picture</Button>
-      </Tooltip>
-
-      <div style={{ margin: '200px' }} />
-
-      <Tooltip
-        content={<p>some text</p>}
+        title="Tooltip title"
       >
         <Button>Show some text</Button>
       </Tooltip>
@@ -103,10 +87,26 @@ const App = () => (
       <div style={{ margin: '200px' }} />
 
       <Tooltip
+        title="This is a cat picture"
+        description="This is a description of the button"
+        adjustX
+        adjustY
         placement="bottomRight"
-        title="This is tooltip title."
-        content={link}
+        content={picture}
+        linkTitle={"Learn more"}
+        linkURL={"https://www.autodesk.com"}
+      >
+        <Button>Show picture</Button>
+      </Tooltip>
+
+      <div style={{ margin: '200px' }} />
+
+      <Tooltip
+        placement="top"
+        title="Tooltip title"
         mouseLeaveDelay={1000}
+        linkTitle={"Learn more"}
+        linkURL={"https://www.autodesk.com"}
       >
         <Button>This is tooltip with some link</Button>
       </Tooltip>
@@ -114,9 +114,12 @@ const App = () => (
       <div style={{ margin: '200px' }} />
 
       <Tooltip
+        title={"Tooltip with video"}
         content={youtubeVideo}
         mouseEnterDelay={0.5}
         mouseLeaveDelay={1}
+        linkTitle={"Learn more"}
+        linkURL={"https://www.autodesk.com"}
       >
         <Button>This is tooltip with a video</Button>
       </Tooltip
