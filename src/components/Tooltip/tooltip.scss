@@ -4,15 +4,20 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 
 .hig-tooltip {
   font-family: $hig-font-family;
-  position: absolute;
+  position: relative;
   z-index: 1060;
-  display: block;
+  display: inline-block;
   list-style: none;
   visibility: visible;
   font-size: 12px;
   text-align: left;
   margin: 0;
   padding: 0;
+
+  // to override user-agent styling for inputs
+  button, select {
+    font-family: $hig-font-family;
+  }
 }
 
 .hig-tooltip-placement-top, .hig-tooltip-placement-topLeft, .hig-tooltip-placement-topRight {
@@ -31,6 +36,10 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
   padding: 0 8px 0 8px;
 }
 
+.hig-tooltip-children-wrapper {
+  display: inline-block;
+}
+
 .hig-tooltip-inner {
   padding: 8px 12px 8px 12px;
   color: #FFFFFF;
@@ -43,23 +52,10 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
   max-width: 304px;
   border-radius: 2px;
 
-  .hig-tooltip-title {
-    font-weight: bold;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-  .hig-tooltip-description {
-    font-weight: normal;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
   img {
     max-width: 300px;
     height: auto;
   }
-
   .hig-tooltip-link {
     text-align: right;
 
@@ -74,12 +70,20 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
       border-color: black;
     }
   }
-
-  // to override user-agent styling for inputs
-  button, select {
-    font-family: $hig-font-family;
-  }
 }
+
+.hig-tooltip-title {
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.hig-tooltip-description {
+  font-weight: normal;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 
 //arrow settings
 .hig-tooltip-arrow {

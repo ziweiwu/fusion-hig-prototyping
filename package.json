@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hig/button": "0.1.2",
     "@hig/dropdown": "0.2.0-alpha.18da9628",
     "@hig/flyout": "0.2.0-alpha.18da9628",
     "@hig/styles": "^0.2.1",

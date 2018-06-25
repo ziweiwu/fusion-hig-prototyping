@@ -9,10 +9,10 @@ import Dropdown from '@hig/dropdown';
 import Flyout from '@hig/flyout';
 import '@hig/flyout/build/index.css';
 import '@hig/dropdown/build/index.css';
+import Example from './components/Tooltip/TooltipNew';
 // import 'react-tippy/dist/tippy.css';
 //import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './App.css';
-import './components/Tooltip/tooltip.css';
 
 const options = [
   {
@@ -150,6 +150,10 @@ const App = () => (
       >
         <button>Fly out button</button>
       </Flyout>
+
+      <div style={{ margin: '200px' }} />
+
+      <Example placement="right" content ={youtubeVideo}><button>my button</button></Example>
 
     </div>
   </div>

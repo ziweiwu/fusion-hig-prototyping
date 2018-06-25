@@ -1,15 +1,17 @@
 @import url(~@hig/styles/build/index.css);
 .hig-tooltip {
   font-family: ArtifaktElement, sans-serif;
-  position: absolute;
+  position: relative;
   z-index: 1060;
-  display: block;
+  display: inline-block;
   list-style: none;
   visibility: visible;
   font-size: 12px;
   text-align: left;
   margin: 0;
   padding: 0; }
+  .hig-tooltip button, .hig-tooltip select {
+    font-family: ArtifaktElement, sans-serif; }
 
 .hig-tooltip-placement-top, .hig-tooltip-placement-topLeft, .hig-tooltip-placement-topRight {
   padding: 8px 0 8px 0; }
@@ -23,6 +25,9 @@
 .hig-tooltip-placement-left, .hig-tooltip-placement-leftTop, .hig-tooltip-placement-leftBottom {
   padding: 0 8px 0 8px; }
 
+.hig-tooltip-children-wrapper {
+  display: inline-block; }
+
 .hig-tooltip-inner {
   padding: 8px 12px 8px 12px;
   color: #FFFFFF;
@@ -34,14 +39,6 @@
   min-height: 32px;
   max-width: 304px;
   border-radius: 2px; }
-  .hig-tooltip-inner .hig-tooltip-title {
-    font-weight: bold;
-    padding-top: 8px;
-    padding-bottom: 8px; }
-  .hig-tooltip-inner .hig-tooltip-description {
-    font-weight: normal;
-    padding-top: 8px;
-    padding-bottom: 8px; }
   .hig-tooltip-inner img {
     max-width: 300px;
     height: auto; }
@@ -53,8 +50,16 @@
       background-color: black;
       color: black;
       border-color: black; }
-  .hig-tooltip-inner button, .hig-tooltip-inner select {
-    font-family: ArtifaktElement, sans-serif; }
+
+.hig-tooltip-title {
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
+.hig-tooltip-description {
+  font-weight: normal;
+  padding-top: 8px;
+  padding-bottom: 8px; }
 
 .hig-tooltip-arrow {
   position: absolute;
