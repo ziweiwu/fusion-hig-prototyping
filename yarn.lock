@@ -26,6 +26,14 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.2"
 
+"@hig/button@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@hig/button/-/button-0.1.2.tgz#be0d2384e1419bea57a38b9ce2b2cb665537bf47"
+  dependencies:
+    "@hig/themes" "^0.1.1"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
 "@hig/dropdown@0.2.0-alpha.18da9628":
   version "0.2.0-alpha.18da9628"
   resolved "https://registry.yarnpkg.com/@hig/dropdown/-/dropdown-0.2.0-alpha.18da9628.tgz#33be8073dd5a941b65341693b6ec95342fb6cb94"
@@ -117,6 +125,12 @@
     hig-react "^0.29.0"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.2"
+
+"@hig/themes@^0.1.1":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@hig/themes/-/themes-0.1.2.tgz#f6e8c4041671c4c2e905b4e2d164809bd844c923"
+  dependencies:
+    prop-types "^15.6.1"
 
 "@hig/timestamp@0.2.0-alpha.18da9628":
   version "0.2.0-alpha.18da9628"

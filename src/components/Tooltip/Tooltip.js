@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
+import './tooltip.css';
 import getPlacements, {getOverflowOptions} from './placements';
 
 export default class Tooltip extends React.Component {
@@ -41,13 +42,14 @@ export default class Tooltip extends React.Component {
   static defaultProps = {
     prefixCls: 'hig-tooltip',
     mouseEnterDelay: 0,
-    destroyTooltipOnHide: false,
+    destroyTooltipOnHide: true,
     mouseLeaveDelay: 0.5,
     align: {},
     placement: 'right',
     trigger: ['hover'],
     arrowContent: null,
   };
+
 
   render() {
     const props = this.props;
@@ -64,15 +66,19 @@ export default class Tooltip extends React.Component {
       'hig-tooltip-link': true
     });
 
+    const tooltipChildenWrapper = classNames({
+      'hig-tooltip-children-wrapper': true
+    });
+
     return (
       <ReactToolTip
         {...props}
         ref={node => this.node = node}
+        children={<div className={tooltipChildenWrapper}>{props.children}</div>}
         overlay={
           <div className={tooltipInnerContentClass}>
             {props.title && <div className={tooltipTitleClass}>{props.title}</div>}
             {props.description && <div className={tooltipDescriptionClass}>{props.description}</div>}
-            {props.content}
             {props.linkURL && <div className={tooltipLink}>
               <hr/>
               <a
