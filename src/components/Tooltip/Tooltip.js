@@ -7,8 +7,8 @@ import getPlacements, {getOverflowOptions} from './placements';
 
 export default class Tooltip extends React.Component {
   static propTypes = {
-    trigger: PropTypes.any,
-    children: PropTypes.any,
+    trigger: PropTypes.string,
+    children: PropTypes.node || PropTypes.func,
     defaultVisible: PropTypes.bool,
     visible: PropTypes.bool,
     placement: PropTypes.string,
@@ -46,7 +46,7 @@ export default class Tooltip extends React.Component {
     mouseLeaveDelay: 0.5,
     align: {},
     placement: 'right',
-    trigger: ['hover'],
+    trigger: 'click',
     arrowContent: null,
   };
 
@@ -79,6 +79,7 @@ export default class Tooltip extends React.Component {
           <div className={tooltipInnerContentClass}>
             {props.title && <div className={tooltipTitleClass}>{props.title}</div>}
             {props.description && <div className={tooltipDescriptionClass}>{props.description}</div>}
+            {props.content && <div className={tooltipInnerContentClass}>{props.content}</div>}
             {props.linkURL && <div className={tooltipLink}>
               <hr/>
               <a

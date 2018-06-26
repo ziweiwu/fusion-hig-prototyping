@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
-import { TooltipSmall } from './TooltipStories/index';
+import { TooltipSmall, TooltipMedium, TooltipLarge } from './TooltipStories/index';
 
 /*
   Tooltip stories
@@ -14,11 +14,62 @@ storiesOfTooltip.add('Tooltip Small', () => {
   const placementOptions = ['top', 'bottom', 'left', 'right'];
   const placement = select('Placements', placementOptions, 'bottom');
 
-  const triggerOptions = ['click', 'hover'];
-  const trigger = select('Trigger', triggerOptions, 'hover');
+  const triggerOptions = ['click', 'hover', 'focus'];
+  const trigger = select('Trigger', triggerOptions, 'click');
 
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
   const mouseEnterDelay = number('mouseEnterDelay', 0);
 
-  return <TooltipSmall placement={placement} trigger={trigger} mouseLeaveDelay={mouseLeaveDelay} mouseEnterDelay={mouseEnterDelay}/>;
+  return (<TooltipSmall
+    placement={placement}
+    trigger={trigger}
+    mouseLeaveDelay={mouseLeaveDelay}
+    mouseEnterDelay={mouseEnterDelay}
+  />);
+});
+
+// Medium tooltip
+storiesOfTooltip.add('Tooltip Medium', () => {
+  const placementOptions = ['top', 'bottom', 'left', 'right'];
+  const placement = select('Placements', placementOptions, 'bottom');
+
+  const triggerOptions = ['click', 'hover', 'focus'];
+  const trigger = select('Trigger', triggerOptions, 'click');
+
+  const linkEnableOptions = ['true', 'false'];
+  const linkEnabled = select('link enabled', linkEnableOptions, 'true');
+
+  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
+  const mouseEnterDelay = number('mouseEnterDelay', 0);
+
+  return (<TooltipMedium
+    placement={placement}
+    trigger={trigger}
+    mouseLeaveDelay={mouseLeaveDelay}
+    mouseEnterDelay={mouseEnterDelay}
+    linkEnabled = {linkEnabled}
+  />);
+});
+
+// Large tooltip
+storiesOfTooltip.add('Tooltip Large', () => {
+  const placementOptions = ['top', 'bottom', 'left', 'right'];
+  const placement = select('Placements', placementOptions, 'bottom');
+
+  const triggerOptions = ['click', 'hover', 'focus'];
+  const trigger = select('Trigger', triggerOptions, 'click');
+
+  const linkEnableOptions = ['true', 'false'];
+  const linkEnabled = select('link enabled', linkEnableOptions, 'true');
+
+  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
+  const mouseEnterDelay = number('mouseEnterDelay', 0);
+
+  return (<TooltipLarge
+    placement={placement}
+    trigger={trigger}
+    mouseLeaveDelay={mouseLeaveDelay}
+    mouseEnterDelay={mouseEnterDelay}
+    linkEnabled = {linkEnabled}
+  />);
 });
