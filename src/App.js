@@ -33,6 +33,16 @@ const options = [
   },
 ];
 
+const picture = (
+  <div>
+    <img
+      alt="cat"
+      src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
+    />
+  </div>
+);
+
+//parameters for a youtube video embeddeed
 const opts = {
   height: 'auto',
   width: '300',
@@ -42,14 +52,6 @@ const opts = {
   },
 };
 
-const picture = (
-  <div>
-    <img
-      alt="cat"
-      src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg"
-    />
-  </div>
-);
 
 const youtubeVideo = (
   <div>

@@ -1,21 +1,21 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Button from '@hig/button';
 import Tooltip from '../../src/components/Tooltip/index';
 import '@hig/button/build/index.css';
 
 const TooltipSmall = props => (
   <div>
-    <div style={{margin: '100px'}}/>
+    <div style={{margin: '150px'}}/>
     <span>
-      <div style={{margin: '100px', float: 'left'}}/>
+      <div style={{margin: '180px', float: 'left'}}/>
       <Tooltip
         title="Tooltip small"
         placement={props.placement}
-        trigger="hover"
+        trigger={props.trigger}
         mouseLeaveDelay={props.mouseLeaveDelay}
         mouseEnterDelay={props.mouseEnterDelay}
       >
-          <button>Small Tooltip</button>
+          <Button title="Tooltip small"/>
       </Tooltip>
     </span>
   </div>
