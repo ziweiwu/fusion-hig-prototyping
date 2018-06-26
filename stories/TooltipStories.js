@@ -17,8 +17,8 @@ storiesOfTooltip.add('Tooltip Small', () => {
   const triggerOptions = ['click', 'hover', 'focus'];
   const trigger = select('Trigger', triggerOptions, 'click');
 
-  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
   const mouseEnterDelay = number('mouseEnterDelay', 0);
+  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
 
   return (<TooltipSmall
     placement={placement}
@@ -39,15 +39,15 @@ storiesOfTooltip.add('Tooltip Medium', () => {
   const linkEnableOptions = ['true', 'false'];
   const linkEnabled = select('link enabled', linkEnableOptions, 'true');
 
-  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
   const mouseEnterDelay = number('mouseEnterDelay', 0);
+  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
 
   return (<TooltipMedium
     placement={placement}
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
-    linkEnabled = {linkEnabled}
+    linkEnabled={linkEnabled}
   />);
 });
 
@@ -62,14 +62,14 @@ storiesOfTooltip.add('Tooltip Large', () => {
   const linkEnableOptions = ['true', 'false'];
   const linkEnabled = select('link enabled', linkEnableOptions, 'true');
 
-  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
   const mouseEnterDelay = number('mouseEnterDelay', 0);
+  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
 
   return (<TooltipLarge
     placement={placement}
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
-    linkEnabled = {linkEnabled}
+    linkEnabled={linkEnabled}
   />);
 });
