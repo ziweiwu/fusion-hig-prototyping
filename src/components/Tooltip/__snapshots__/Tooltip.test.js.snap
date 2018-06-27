@@ -25,7 +25,7 @@ ShallowWrapper {
             </div>
         </div>
     }
-    placement="down"
+    placement="right"
     prefixCls="hig-tooltip"
     title="test"
     trigger="click"
@@ -52,7 +52,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
-      placement="down"
+      placement="right"
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
@@ -115,7 +115,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
-      placement="down"
+      placement="right"
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
@@ -466,7 +466,7 @@ ShallowWrapper {
             </div>
         </div>
     }
-    placement="left"
+    placement="right"
     prefixCls="hig-tooltip"
     title="test"
     trigger="click"
@@ -493,7 +493,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
-      placement="left"
+      placement="right"
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
@@ -556,7 +556,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
-      placement="left"
+      placement="right"
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
@@ -760,7 +760,7 @@ ShallowWrapper {
             </div>
         </div>
     }
-    placement="up"
+    placement="right"
     prefixCls="hig-tooltip"
     title="test"
     trigger="click"
@@ -787,7 +787,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
-      placement="up"
+      placement="right"
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
@@ -850,7 +850,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
-      placement="up"
+      placement="right"
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"

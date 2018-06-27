@@ -32,13 +32,13 @@ const linkURL = 'https://www.autodesk.com';
 
 const TooltipLarge = props => (
   <div>
-    <div style={{ margin: '150px' }} />
+    <div style={{ margin: '180' }} />
     <span>
-      <div style={{ margin: '180px', float: 'left' }} />
+      <div style={{ margin: '180', float: 'left' }} />
       <Tooltip
         title="Tooltip large"
         description={description}
-        placement={props.placement}
+        anchorPoint={props.anchorPoint}
         trigger={props.trigger}
         mouseLeaveDelay={props.mouseLeaveDelay}
         mouseEnterDelay={props.mouseEnterDelay}

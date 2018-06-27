@@ -13,18 +13,18 @@ const linkURL = 'https://www.autodesk.com';
 
 const TooltipMedium = props => (
   <div>
-    <div style={{ margin: '150px' }} />
+    <div style={{ margin: '180px' }} />
     <span>
       <div style={{ margin: '180px', float: 'left' }} />
       <Tooltip
         title="Tooltip medium"
         description={description}
-        placement={props.placement}
+        anchorPoint={props.anchorPoint}
         trigger={props.trigger}
         mouseLeaveDelay={props.mouseLeaveDelay}
         mouseEnterDelay={props.mouseEnterDelay}
-        linkTitle={props.linkEnabled && linkTitle}
-        linkURL={props.linkEnabled && linkURL}
+        linkTitle={props.linkTitle}
+        linkURL={props.linkURL}
       >
         <Button title="Tooltip medium" />
       </Tooltip>

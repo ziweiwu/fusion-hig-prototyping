@@ -1,5 +1,5 @@
 import React from 'react';
-//import '@hig/styles/build/index.css';
+// import '@hig/styles/build/index.css';
 import ToolTipHig from '@hig/tooltip';
 import '@hig/tooltip/build/index.css';
 import { DatePicker, Button, Popover, Tooltip as TooltipAnt } from 'antd';
@@ -11,7 +11,7 @@ import '@hig/flyout/build/index.css';
 import '@hig/dropdown/build/index.css';
 import Example from './components/Tooltip/TooltipNew';
 // import 'react-tippy/dist/tippy.css';
-//import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+// import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './App.css';
 
 const options = [
@@ -42,7 +42,7 @@ const picture = (
   </div>
 );
 
-//parameters for a youtube video embeddeed
+// parameters for a youtube video embeddeed
 const opts = {
   height: 'auto',
   width: '300',
@@ -65,20 +65,20 @@ const youtubeVideo = (
 const App = () => (
   <div className="App">
     <h1>App Started </h1>
-    {/*<TooltipAnt><Button> ToolTip Ant</Button></TooltipAnt>*/}
-    {/*<div>*/}
-      {/*<ToolTipHig anchorPoint="top-center" content="Testing">*/}
-        {/*<Button>hig tooltip</Button>*/}
-      {/*</ToolTipHig>*/}
-    {/*</div>*/}
-    {/*<div>*/}
-      {/*<TooltipAnt title="prompt text" placement="right" mouseLeaveDelay={300}>*/}
-        {/*<Button>Ant Tooltip</Button>*/}
-      {/*</TooltipAnt>*/}
-      {/*<TooltipAnt title="prompt text" placement="right" mouseLeaveDelay={300} overlay={youtubeVideo}>*/}
-        {/*<Button>Ant Tooltip</Button>*/}
-      {/*</TooltipAnt>*/}
-    {/*</div>*/}
+    {/* <TooltipAnt><Button> ToolTip Ant</Button></TooltipAnt> */}
+    {/* <div> */}
+    {/* <ToolTipHig anchorPoint="top-center" content="Testing"> */}
+    {/* <Button>hig tooltip</Button> */}
+    {/* </ToolTipHig> */}
+    {/* </div> */}
+    {/* <div> */}
+    {/* <TooltipAnt title="prompt text" placement="right" mouseLeaveDelay={300}> */}
+    {/* <Button>Ant Tooltip</Button> */}
+    {/* </TooltipAnt> */}
+    {/* <TooltipAnt title="prompt text" placement="right" mouseLeaveDelay={300} overlay={youtubeVideo}> */}
+    {/* <Button>Ant Tooltip</Button> */}
+    {/* </TooltipAnt> */}
+    {/* </div> */}
     <div>
       <Tooltip
         title="Tooltip title"
@@ -93,10 +93,10 @@ const App = () => (
         description="This is a description of the button"
         adjustX
         adjustY
-        placement="bottomRight"
+        placement="bottom-center"
         content={picture}
-        linkTitle={"Learn more"}
-        linkURL={"https://www.autodesk.com"}
+        linkTitle="Learn more"
+        linkURL="https://www.autodesk.com"
       >
         <Button>Show picture</Button>
       </Tooltip>
@@ -104,11 +104,11 @@ const App = () => (
       <div style={{ margin: '200px' }} />
 
       <Tooltip
-        placement="top"
+        placement="top-center"
         title="Tooltip title"
         mouseLeaveDelay={1000}
-        linkTitle={"Learn more"}
-        linkURL={"https://www.autodesk.com"}
+        linkTitle="Learn more"
+        linkURL="https://www.autodesk.com"
       >
         <Button>This is tooltip with some link</Button>
       </Tooltip>
@@ -116,12 +116,12 @@ const App = () => (
       <div style={{ margin: '200px' }} />
 
       <Tooltip
-        title={"Tooltip with video"}
+        title="Tooltip with video"
         content={youtubeVideo}
         mouseEnterDelay={0.5}
         mouseLeaveDelay={1}
-        linkTitle={"Learn more"}
-        linkURL={"https://www.autodesk.com"}
+        linkTitle="Learn more"
+        linkURL="https://www.autodesk.com"
       >
         <Button>This is tooltip with a video</Button>
       </Tooltip
@@ -129,14 +129,14 @@ const App = () => (
 
       <div style={{ margin: '200px' }} />
 
-      {/*<Popover*/}
-        {/*title="prompt text"*/}
-        {/*placement="right"*/}
-        {/*content={youtubeVideo}*/}
-        {/*mouseLeaveDelay={1}*/}
-      {/*>*/}
-        {/*<Button>Ant Popover</Button>*/}
-      {/*</Popover>*/}
+      {/* <Popover */}
+      {/* title="prompt text" */}
+      {/* placement="right" */}
+      {/* content={youtubeVideo} */}
+      {/* mouseLeaveDelay={1} */}
+      {/* > */}
+      {/* <Button>Ant Popover</Button> */}
+      {/* </Popover> */}
 
       <Dropdown
         label="dropdown menu"
@@ -155,7 +155,7 @@ const App = () => (
 
       <div style={{ margin: '200px' }} />
 
-      <Example placement="right" content ={youtubeVideo}><button>my button</button></Example>
+      <Example placement="right" content={youtubeVideo}><button>my button</button></Example>
 
     </div>
   </div>
