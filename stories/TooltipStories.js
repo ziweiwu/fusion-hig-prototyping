@@ -11,8 +11,10 @@ storiesOfTooltip.addDecorator(withKnobs);
 
 // Small tooltip
 storiesOfTooltip.add('Tooltip Small', () => {
-  const placementOptions = ['top', 'bottom', 'left', 'right'];
-  const placement = select('Placements', placementOptions, 'bottom');
+  const anchorOptions = ['top-center', 'top-left', 'top-right', 'bottom-center', 'bottom-left', 'bottom-right',
+    'left-center', 'left-top', 'left-bottom', 'right-center', 'right-top', 'right-bottom'];
+
+  const anchorPoint = select('AnchorPoint', anchorOptions, 'bottom-center');
 
   const triggerOptions = ['click', 'hover', 'focus'];
   const trigger = select('Trigger', triggerOptions, 'click');
@@ -21,7 +23,7 @@ storiesOfTooltip.add('Tooltip Small', () => {
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
 
   return (<TooltipSmall
-    placement={placement}
+    anchorPoint={anchorPoint}
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
@@ -30,8 +32,10 @@ storiesOfTooltip.add('Tooltip Small', () => {
 
 // Medium tooltip
 storiesOfTooltip.add('Tooltip Medium', () => {
-  const placementOptions = ['top', 'bottom', 'left', 'right'];
-  const placement = select('Placements', placementOptions, 'bottom');
+  const anchorOptions = ['top-center', 'top-left', 'top-right', 'bottom-center', 'bottom-left', 'bottom-right',
+    'left-center', 'left-top', 'left-bottom', 'right-center', 'right-top', 'right-bottom'];
+
+  const anchorPoint = select('AnchorPoint', anchorOptions, 'bottom-center');
 
   const triggerOptions = ['click', 'hover', 'focus'];
   const trigger = select('Trigger', triggerOptions, 'click');
@@ -43,7 +47,7 @@ storiesOfTooltip.add('Tooltip Medium', () => {
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
 
   return (<TooltipMedium
-    placement={placement}
+    anchorPoint={anchorPoint}
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
@@ -53,8 +57,10 @@ storiesOfTooltip.add('Tooltip Medium', () => {
 
 // Large tooltip
 storiesOfTooltip.add('Tooltip Large', () => {
-  const placementOptions = ['top', 'bottom', 'left', 'right'];
-  const placement = select('Placements', placementOptions, 'bottom');
+  const anchorOptions = ['top-center', 'top-left', 'top-right', 'bottom-center', 'bottom-left', 'bottom-right',
+    'left-center', 'left-top', 'left-bottom', 'right-center', 'right-top', 'right-bottom'];
+
+  const anchorPoint = select('AnchorPoint', anchorOptions, 'bottom-center');
 
   const triggerOptions = ['click', 'hover', 'focus'];
   const trigger = select('Trigger', triggerOptions, 'click');
@@ -66,7 +72,7 @@ storiesOfTooltip.add('Tooltip Large', () => {
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
 
   return (<TooltipLarge
-    placement={placement}
+    anchorPoint={anchorPoint}
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}

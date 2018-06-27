@@ -66,7 +66,7 @@ storiesOfDatePicker.add('Restricted Date Range', () => {
 });
 
 // Filter Dates
-storiesOfDatePicker.add('Filter Dates', () => <FilterDates label="Select Date"/>);
+storiesOfDatePicker.add('Filter Dates', () => <FilterDates label="SelectDate"/>);
 
 // calender locale
 storiesOfDatePicker.add('Locale', () => {
