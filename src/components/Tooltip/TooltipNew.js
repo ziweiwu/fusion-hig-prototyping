@@ -4,8 +4,6 @@ import Button from '@hig/button';
 import classNames from 'classnames';
 import '@hig/button/build/index.css';
 import './tooltip.css';
-
-
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
@@ -75,11 +73,11 @@ export default class Example extends React.Component {
             )}
           </Reference>
           {!this.state.hide &&
-          <Popper placement="left">
+          <Popper placement={props.placement}>
             {({ref, style, placement, arrowProps}) => (
               <div ref={ref} style={style} data-placement={placement}>
                 {props.content}
-                <div ref={arrowProps.ref} style={arrowProps.style} className={tooltipArrowTop}/>
+                <div ref={arrowProps.ref} style={arrowProps.style} />
               </div>
             )}
           </Popper>

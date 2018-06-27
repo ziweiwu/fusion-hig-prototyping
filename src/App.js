@@ -65,6 +65,7 @@ const youtubeVideo = (
 const App = () => (
   <div className="App">
     <h1>App Started </h1>
+    <Example placement="right" content={youtubeVideo}><button>my button</button></Example>
     {/* <TooltipAnt><Button> ToolTip Ant</Button></TooltipAnt> */}
     {/* <div> */}
     {/* <ToolTipHig anchorPoint="top-center" content="Testing"> */}
