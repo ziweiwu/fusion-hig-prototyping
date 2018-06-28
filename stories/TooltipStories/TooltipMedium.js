@@ -23,8 +23,8 @@ const TooltipMedium = props => (
         trigger={props.trigger}
         mouseLeaveDelay={props.mouseLeaveDelay}
         mouseEnterDelay={props.mouseEnterDelay}
-        linkTitle={props.linkEnabled && linkTitle}
-        linkURL={props.linkEnabled && linkURL}
+        linkTitle={linkTitle}
+        linkURL={linkURL}
       >
         <Button title="Tooltip medium" />
       </Tooltip>
