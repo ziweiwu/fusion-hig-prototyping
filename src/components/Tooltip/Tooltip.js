@@ -93,6 +93,8 @@ export default class Tooltip extends React.Component {
         {...props}
         ref={node => this.node = node}
         placement={placementsMap.get(props.anchorPoint)}
+        adjustX
+        adjustY
         children={<div className={tooltipChildenWrapper}>{props.children}</div>}
         overlay={
           <div className={tooltipInnerContentClass}>

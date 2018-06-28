@@ -8,7 +8,7 @@ Build a simple date picker component with HIG element and style
 - Based on react-datepicker [https://github.com/Hacker0x01/react-datepicker/]
 
 #### Tooltip 
-Build a tooltip component with L2 and L3 suppor
+Build a flexible, robust toolitp component
 
 #### Setup
 To start the prototype page

@@ -40,9 +40,6 @@ storiesOfTooltip.add('Tooltip Medium', () => {
   const triggerOptions = ['click', 'hover', 'focus'];
   const trigger = select('Trigger', triggerOptions, 'click');
 
-  const linkEnableOptions = ['true', 'false'];
-  const linkEnabled = select('link enabled', linkEnableOptions, 'true');
-
   const mouseEnterDelay = number('mouseEnterDelay', 0);
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
 
@@ -51,7 +48,6 @@ storiesOfTooltip.add('Tooltip Medium', () => {
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
-    linkEnabled={linkEnabled}
   />);
 });
 
@@ -65,9 +61,6 @@ storiesOfTooltip.add('Tooltip Large', () => {
   const triggerOptions = ['click', 'hover', 'focus'];
   const trigger = select('Trigger', triggerOptions, 'click');
 
-  const linkEnableOptions = ['true', 'false'];
-  const linkEnabled = select('link enabled', linkEnableOptions, 'true');
-
   const mouseEnterDelay = number('mouseEnterDelay', 0);
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
 
@@ -76,6 +69,5 @@ storiesOfTooltip.add('Tooltip Large', () => {
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
-    linkEnabled={linkEnabled}
   />);
 });
