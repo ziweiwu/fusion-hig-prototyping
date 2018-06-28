@@ -17,6 +17,13 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@cypress/react-tooltip@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@cypress/react-tooltip/-/react-tooltip-0.3.2.tgz#0172348ab129241fb7d02f9a64a464b9eead0767"
+  dependencies:
+    popper.js "^1.12.9"
+    prop-types "15.6.0"
+
 "@emotion/babel-utils@^0.6.4":
   version "0.6.4"
   resolved "https://registry.yarnpkg.com/@emotion/babel-utils/-/babel-utils-0.6.4.tgz#2eac69eb31ae944fbe4a2a0e736a35db5f810866"
@@ -3616,6 +3623,10 @@ doctrine@^2.0.0, doctrine@^2.1.0:
 dom-align@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/dom-align/-/dom-align-1.7.0.tgz#95a8f91a8c6aaaef5908366c1c2c6271461bf2c3"
+
+dom-align@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/dom-align/-/dom-align-1.8.0.tgz#c0e89b5b674c6e836cd248c52c2992135f093654"
 
 dom-closest@^0.2.0:
   version "0.2.0"
@@ -8326,6 +8337,14 @@ promise@^7.1.1:
   resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
   dependencies:
     asap "~2.0.3"
+
+prop-types@15.6.0:
+  version "15.6.0"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
 
 prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.3, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.0, prop-types@^15.6.1:
   version "15.6.1"

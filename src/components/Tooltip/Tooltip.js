@@ -62,7 +62,6 @@ export default class Tooltip extends React.Component {
     mouseEnterDelay: 0,
     destroyTooltipOnHide: true,
     mouseLeaveDelay: 0.5,
-    align: {},
     anchorPoint: placementsMap.get(anchorPoints.RIGHT_CENTER),
     trigger: 'click',
     arrowContent: null,
@@ -93,8 +92,6 @@ export default class Tooltip extends React.Component {
         {...props}
         ref={node => this.node = node}
         placement={placementsMap.get(props.anchorPoint)}
-        adjustX
-        adjustY
         children={<div className={tooltipChildenWrapper}>{props.children}</div>}
         overlay={
           <div className={tooltipInnerContentClass}>
@@ -114,6 +111,4 @@ export default class Tooltip extends React.Component {
     );
   }
 }
-
-Tooltip.propTypes = {};
 
