@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cypress/react-tooltip": "^0.3.2",
     "@hig/button": "0.1.2",
     "@hig/dropdown": "0.2.0-alpha.18da9628",
     "@hig/flyout": "0.2.0-alpha.18da9628",
@@ -24,6 +25,7 @@
     "antd": "^3.6.2",
     "classnames": "^2.2.5",
     "delay": "^2.0.0",
+    "dom-align": "^1.8.0",
     "global": "^4.3.2",
     "lodash": "^4.17.10",
     "moment": "^2.22.1",

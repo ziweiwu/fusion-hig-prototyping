@@ -9,7 +9,7 @@ import Dropdown from '@hig/dropdown';
 import Flyout from '@hig/flyout';
 import '@hig/flyout/build/index.css';
 import '@hig/dropdown/build/index.css';
-import Example from './components/Tooltip/TooltipNew';
+import Example from './components/Tooltip/NewTooltip/TooltipNew';
 // import 'react-tippy/dist/tippy.css';
 // import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './App.css';
@@ -65,7 +65,7 @@ const youtubeVideo = (
 const App = () => (
   <div className="App">
     <h1>App Started </h1>
-    <Example placement="right" content={youtubeVideo}><button>my button</button></Example>
+    <Example placement="right" content={<div>tooltip</div>}><button>my button</button></Example>
     {/* <TooltipAnt><Button> ToolTip Ant</Button></TooltipAnt> */}
     {/* <div> */}
     {/* <ToolTipHig anchorPoint="top-center" content="Testing"> */}
@@ -156,7 +156,7 @@ const App = () => (
 
       <div style={{ margin: '200px' }} />
 
-      <Example placement="right" content={youtubeVideo}><button>my button</button></Example>
+      <Example placement="right" content={youtubeVideo} arrow><button>my button</button></Example>
 
     </div>
   </div>
