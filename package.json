@@ -6,7 +6,7 @@
     "@cypress/react-tooltip": "^0.3.2",
     "@hig/button": "0.1.2",
     "@hig/dropdown": "0.2.0-alpha.18da9628",
-    "@hig/flyout": "0.2.0-alpha.18da9628",
+    "@hig/flyout": "^0.1.0",
     "@hig/styles": "^0.2.1",
     "@hig/text-field": "^0.2.0",
     "@hig/tooltip": "0.2.0-alpha.c84a6e41",

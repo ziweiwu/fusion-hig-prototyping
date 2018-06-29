@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
-import Transition from "react-transition-group/Transition";
-import {anchorPoints} from './anchorPoints'
+import {anchorPoints} from "@hig/flyout";
 import './tooltip.css';
 
-//map the placements fromt the anchorPoints
+//map the placements from the anchorPoints
 const placementsMap = new Map([
   [anchorPoints.TOP_CENTER, "top"],
   [anchorPoints.TOP_LEFT, "topLeft"],
@@ -26,30 +25,10 @@ const placementsMap = new Map([
 export default class Tooltip extends React.Component {
   static propTypes = {
     trigger: PropTypes.string,
-    children: PropTypes.node || PropTypes.func,
-    defaultVisible: PropTypes.bool,
-    visible: PropTypes.bool,
-    // placement: PropTypes.string,
-    transitionName: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-    ]),
-    animation: PropTypes.any,
-    onVisibleChange: PropTypes.func,
-    afterVisibleChange: PropTypes.func,
-    content: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.func,
-    ]).isRequired,
-    overlayStyle: PropTypes.object,
-    overlayClassName: PropTypes.string,
-    prefixCls: PropTypes.string,
+    children: PropTypes.oneOfType([PropTypes.node, PropTypes.func,]).isRequired,
+    content: PropTypes.oneOfType([PropTypes.node, PropTypes.func,]).isRequired,
     mouseEnterDelay: PropTypes.number,
     mouseLeaveDelay: PropTypes.number,
-    getTooltipContainer: PropTypes.func,
-    destroyTooltipOnHide: PropTypes.bool,
-    align: PropTypes.object,
-    arrowContent: PropTypes.any,
     id: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
