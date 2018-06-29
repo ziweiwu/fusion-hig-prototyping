@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
+import Transition from "react-transition-group/Transition";
 import {anchorPoints} from './anchorPoints'
 import './tooltip.css';
 
@@ -65,8 +66,8 @@ export default class Tooltip extends React.Component {
     anchorPoint: placementsMap.get(anchorPoints.RIGHT_CENTER),
     trigger: 'click',
     arrowContent: null,
+    transitionName: 'zoom-big-fast'
   };
-
 
   render() {
     const props = this.props;
