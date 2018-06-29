@@ -60,13 +60,12 @@ export default class Tooltip extends React.Component {
 
   static defaultProps = {
     prefixCls: 'hig-tooltip',
-    mouseEnterDelay: 0,
+    mouseEnterDelay: 1,
     destroyTooltipOnHide: true,
-    mouseLeaveDelay: 0.5,
+    mouseLeaveDelay: 0.2,
     anchorPoint: placementsMap.get(anchorPoints.RIGHT_CENTER),
     trigger: 'click',
     arrowContent: null,
-    transitionName: 'zoom-big-fast'
   };
 
   render() {
