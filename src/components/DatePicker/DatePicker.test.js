@@ -33,7 +33,7 @@ describe('DatePicker', () => {
 
   it('Render the dayPicker input field correctly.', () => {
     const wrapper = mount(<DatePicker />);
-    expect(wrapper.find('TextField')).toHaveLength(1);
+    expect(wrapper.find('TextFieldPresenter')).toHaveLength(1);
   });
 
   it('Render the label correctly and placeholder correctly', () => {

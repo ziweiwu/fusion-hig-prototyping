@@ -1,8 +1,11 @@
 @import "~@hig/styles/build/index.css";
 
 .App {
-  font-family: ArtifaktElement;
   padding-bottom: 25px;
+}
+
+.App, button, select {
+  font-family: ArtifaktElement,sans-serif;
 }
 
 body {
