@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import moment from 'moment';
 import DatePicker from '../../src/components/DatePicker/index';
-import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
 export default class Portal extends Component {
   constructor(props) {

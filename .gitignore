@@ -194,6 +194,9 @@ $RECYCLE.BIN/
 # production
 /build
 
+# css build file
+/src/components/DatePicker/datePicker.css
+
 # misc
 .DS_Store
 .env.local

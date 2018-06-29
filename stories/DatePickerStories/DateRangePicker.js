@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DatePicker from '../../src/components/DatePicker/index';
-import '../../src/components/DatePicker/stylesheets/datePicker.css';
 
 export default class DateRangePicker extends Component {
   constructor(props) {
@@ -27,7 +26,7 @@ export default class DateRangePicker extends Component {
         <span style={{ float: 'left' }}>
           <DatePicker
             selected={this.state.startDate}
-            shouldCloseOnSelect={false}
+            shouldCloseOnSelect
             label="From"
             selectsStart
             startDate={this.state.startDate}
