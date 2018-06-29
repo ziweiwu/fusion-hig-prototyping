@@ -1,4 +1,69 @@
 @import url(~@hig/styles/build/index.css);
+/*define animation for inner tooltip and arrow */
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0.5; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
+
+@keyframes fade-arrow-bottom {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0.5; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
+
+@keyframes fade-top {
+  0% {
+    transform: translateY(50%);
+    opacity: 0.5; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
+
+@keyframes fade-arrow-top {
+  0% {
+    transform: translateY(20px);
+    opacity: 0.5; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(50%);
+    opacity: 0.5; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes fade-arrow-left {
+  0% {
+    transform: translateX(20px);
+    opacity: 0.5; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0.5; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes fade-arrow-right {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0.5; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1; } }
+
 .hig-tooltip {
   font-family: ArtifaktElement, sans-serif;
   position: relative;
@@ -9,8 +74,7 @@
   font-size: 12px;
   text-align: left;
   margin: 0;
-  padding: 0;
-  transform: translateX(-50%); }
+  padding: 0; }
   .hig-tooltip button, .hig-tooltip select {
     font-family: ArtifaktElement, sans-serif; }
 
@@ -30,13 +94,20 @@
   display: inline-block;
   position: fixed; }
 
+.hig-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid; }
+
 .hig-tooltip-inner {
-  padding: 8px 12px 8px 12px;
+  padding: 6px 10px;
   color: #FFFFFF;
   text-align: left;
   text-decoration: none;
   background-color: #393939;
-  line-height: 16px;
+  line-height: 12px;
   box-shadow: none;
   min-height: 32px;
   max-width: 304px;
@@ -63,18 +134,14 @@
   padding-top: 8px;
   padding-bottom: 8px; }
 
-.hig-tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid; }
-
 .hig-tooltip-placement-top .hig-tooltip-arrow, .hig-tooltip-placement-topLeft .hig-tooltip-arrow, .hig-tooltip-placement-topRight .hig-tooltip-arrow {
   bottom: 4px;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #373737; }
+  border-top-color: #373737;
+  animation: fade-arrow-top 0.5s; }
+  .hig-tooltip-placement-top .hig-tooltip-arrow .hig-tooltip-inner, .hig-tooltip-placement-topLeft .hig-tooltip-arrow .hig-tooltip-inner, .hig-tooltip-placement-topRight .hig-tooltip-arrow .hig-tooltip-inner {
+    animation: fade-top 0.5s; }
 
 .hig-tooltip-placement-top .hig-tooltip-arrow {
   left: 50%; }
@@ -89,7 +156,11 @@
   left: 4px;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: #373737; }
+  border-right-color: #373737;
+  animation: fade-arrow-right 0.5s; }
+
+.hig-tooltip-placement-right .hig-tooltip-inner, .hig-tooltip-placement-rightTop .hig-tooltip-inner, .hig-tooltip-placement-rightBottom .hig-tooltip-inner {
+  animation: fade-right 0.5s; }
 
 .hig-tooltip-placement-right .hig-tooltip-arrow {
   top: 50%; }
@@ -105,7 +176,11 @@
   right: 4px;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: #373737; }
+  border-left-color: #373737;
+  animation: fade-arrow-left 0.5s; }
+
+.hig-tooltip-placement-left .hig-tooltip-inner, .hig-tooltip-placement-leftTop .hig-tooltip-inner, .hig-tooltip-placement-leftBottom .hig-tooltip-inner {
+  animation: fade-left 0.5s; }
 
 .hig-tooltip-placement-left .hig-tooltip-arrow {
   top: 50%; }
@@ -121,7 +196,11 @@
   top: 4px;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #373737; }
+  border-bottom-color: #373737;
+  animation: fade-arrow-bottom 0.5s; }
+
+.hig-tooltip-placement-bottom .hig-tooltip-inner, .hig-tooltip-placement-bottomLeft .hig-tooltip-inner, .hig-tooltip-placement-bottomRight .hig-tooltip-inner {
+  animation: fade-bottom 0.5s; }
 
 .hig-tooltip-placement-bottom .hig-tooltip-arrow {
   left: 50%; }
