@@ -17,14 +17,14 @@ const TooltipMedium = props => (
     <span>
       <div style={{ margin: '180px', float: 'left' }} />
       <Tooltip
-        title="Tooltip medium"
-        description={description}
+        title={props.title}
+        description={props.description}
         anchorPoint={props.anchorPoint}
         trigger={props.trigger}
         mouseLeaveDelay={props.mouseLeaveDelay}
         mouseEnterDelay={props.mouseEnterDelay}
-        linkTitle={linkTitle}
-        linkURL={linkURL}
+        linkTitle={props.linkTitle}
+        linkURL={props.linkURL}
       >
         <Button title="Tooltip medium" />
       </Tooltip>
