@@ -19,16 +19,29 @@ storiesOfTooltip.add('Tooltip Small', () => {
   const triggerOptions = ['click', 'hover', 'focus'];
   const trigger = select('Trigger', triggerOptions, 'click');
 
-  const mouseEnterDelay = number('mouseEnterDelay', 0);
-  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
+  const mouseEnterDelay = number('mouseEnterDelay', 1);
+  const mouseLeaveDelay = number('mouseLeaveDelay', 0.2);
+
+
+  const title = text('title', 'Tooltip small');
 
   return (<TooltipSmall
     anchorPoint={anchorPoint}
+    title = {title}
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
   />);
 });
+
+
+// some default fields
+const defaultDescription = `Create a generative design with the current parameters, 
+  note: this operation GPU intensive  
+  and may takes anywhere from few minutes up to an hour.`;
+const defaultLinkTitle = 'More detail';
+const defaultLinkURL = 'https://www.autodesk.com';
+
 
 // Medium tooltip
 storiesOfTooltip.add('Tooltip Medium', () => {
@@ -40,14 +53,23 @@ storiesOfTooltip.add('Tooltip Medium', () => {
   const triggerOptions = ['click', 'hover', 'focus'];
   const trigger = select('Trigger', triggerOptions, 'click');
 
-  const mouseEnterDelay = number('mouseEnterDelay', 0);
-  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
+  const mouseEnterDelay = number('mouseEnterDelay', 1);
+  const mouseLeaveDelay = number('mouseLeaveDelay', 0.2);
+  
+  const title = text('title', 'Tooltip small');
+  const description = text('description', defaultDescription);
+  const linkTitle  = text('link title', defaultLinkTitle);
+  const linkURL  = text('link URL', defaultLinkURL);
 
   return (<TooltipMedium
     anchorPoint={anchorPoint}
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
+    title={title}
+    description={description}
+    linkTitle = {linkTitle}
+    linkURL = {linkURL}
   />);
 });
 
@@ -61,13 +83,22 @@ storiesOfTooltip.add('Tooltip Large', () => {
   const triggerOptions = ['click', 'hover', 'focus'];
   const trigger = select('Trigger', triggerOptions, 'click');
 
-  const mouseEnterDelay = number('mouseEnterDelay', 0);
-  const mouseLeaveDelay = number('mouseLeaveDelay', 0.5);
+  const mouseEnterDelay = number('mouseEnterDelay', 1);
+  const mouseLeaveDelay = number('mouseLeaveDelay', 0.2);
+  
+  const title = text('title', 'Tooltip small');
+  const description = text('description', defaultDescription);
+  const linkTitle  = text('link title', defaultLinkTitle);
+  const linkURL  = text('link URL', defaultLinkURL);
 
   return (<TooltipLarge
     anchorPoint={anchorPoint}
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
+    title={title}
+    description={description}
+    linkTitle = {linkTitle}
+    linkURL = {linkURL}
   />);
 });
