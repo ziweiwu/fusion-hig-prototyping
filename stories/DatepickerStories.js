@@ -24,7 +24,7 @@ storiesOfDatePicker.addDecorator(withKnobs);
 storiesOfDatePicker.add('Default View', () => (<Default label="Select Date"/>));
 
 // portal view
-storiesOfDatePicker.add('Portal View', () => (<Portal label="Select Date"/>));
+//storiesOfDatePicker.add('Portal View', () => (<Portal label="Select Date"/>));
 
 // with Clear Button
 storiesOfDatePicker.add('With Clear Button', () => {
