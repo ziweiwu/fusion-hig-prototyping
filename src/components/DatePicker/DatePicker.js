@@ -79,7 +79,7 @@ export default class DatePicker extends React.Component {
     utcOffset: PropTypes.number,
     value: PropTypes.string,
     weekLabel: PropTypes.string,
-    withPortal: PropTypes.bool,
+    //withPortal: PropTypes.bool,
     yearDropdownItemNumber: PropTypes.number,
     shouldCloseOnSelect: PropTypes.bool,
     showTimeSelect: PropTypes.bool,
