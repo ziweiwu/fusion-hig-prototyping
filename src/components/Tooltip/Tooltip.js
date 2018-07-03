@@ -26,7 +26,7 @@ export default class Tooltip extends React.Component {
   static propTypes = {
     trigger: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.func,]).isRequired,
-    content: PropTypes.oneOfType([PropTypes.node, PropTypes.func,]).isRequired,
+    content: PropTypes.oneOfType([PropTypes.node, PropTypes.func,]),
     mouseEnterDelay: PropTypes.number,
     mouseLeaveDelay: PropTypes.number,
     id: PropTypes.string,
