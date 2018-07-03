@@ -22,15 +22,17 @@ storiesOfTooltip.add('Tooltip Small', () => {
   const mouseEnterDelay = number('mouseEnterDelay', 1);
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.2);
 
-
   const title = text('title', 'Tooltip small');
+
+  const width = number('width', 300);
 
   return (<TooltipSmall
     anchorPoint={anchorPoint}
-    title = {title}
+    title={title}
     trigger={trigger}
     mouseLeaveDelay={mouseLeaveDelay}
     mouseEnterDelay={mouseEnterDelay}
+    width={width}
   />);
 });
 
@@ -55,11 +57,13 @@ storiesOfTooltip.add('Tooltip Medium', () => {
 
   const mouseEnterDelay = number('mouseEnterDelay', 1);
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.2);
-  
+
   const title = text('title', 'Tooltip small');
   const description = text('description', defaultDescription);
-  const linkTitle  = text('link title', defaultLinkTitle);
-  const linkURL  = text('link URL', defaultLinkURL);
+  const linkTitle = text('link title', defaultLinkTitle);
+  const linkURL = text('link URL', defaultLinkURL);
+
+  const width = number('width', 300);
 
   return (<TooltipMedium
     anchorPoint={anchorPoint}
@@ -68,8 +72,9 @@ storiesOfTooltip.add('Tooltip Medium', () => {
     mouseEnterDelay={mouseEnterDelay}
     title={title}
     description={description}
-    linkTitle = {linkTitle}
-    linkURL = {linkURL}
+    linkTitle={linkTitle}
+    linkURL={linkURL}
+    width={width}
   />);
 });
 
@@ -85,11 +90,13 @@ storiesOfTooltip.add('Tooltip Large', () => {
 
   const mouseEnterDelay = number('mouseEnterDelay', 1);
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.2);
-  
+
   const title = text('title', 'Tooltip small');
   const description = text('description', defaultDescription);
-  const linkTitle  = text('link title', defaultLinkTitle);
-  const linkURL  = text('link URL', defaultLinkURL);
+  const linkTitle = text('link title', defaultLinkTitle);
+  const linkURL = text('link URL', defaultLinkURL);
+
+  const width = number('width', 300);
 
   return (<TooltipLarge
     anchorPoint={anchorPoint}
@@ -98,7 +105,8 @@ storiesOfTooltip.add('Tooltip Large', () => {
     mouseEnterDelay={mouseEnterDelay}
     title={title}
     description={description}
-    linkTitle = {linkTitle}
-    linkURL = {linkURL}
+    linkTitle={linkTitle}
+    linkURL={linkURL}
+    width={width}
   />);
 });
