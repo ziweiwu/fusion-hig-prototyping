@@ -53,6 +53,7 @@
     "build-datepicker-css": "node-sass-chokidar ./src/components/DatePicker/datePicker.scss ./src/components/DatePicker/datePicker.css",
     "build-tooltip-css": "node-sass-chokidar ./src/components/Tooltip/tooltip.scss ./src/components/Tooltip/tooltip.css",
     "build-css": "yarn build-datepicker-css && yarn build-tooltip-css",
+    "build-css-watch": "yarn build-datepicker-css --watch && yarn build-tooltip-css --watch",
     "fix-tooltip-scss": "./node_modules/sass-lint/bin/sass-lint.js src/components/Tooltip/tooltip.scss --fix",
     "start": "yarn build-css &&  react-scripts start",
     "build": "yarn build-css && react-scripts build",
