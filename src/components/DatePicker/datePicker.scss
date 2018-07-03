@@ -27,12 +27,17 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
 }
 
 .react-datepicker__day {
+  width: 2.5em !important;
+  border-radius: 0!important;
+  margin: 0 !important;
+
+  // strong emphasis on today's date with font weight
   &--today {
-    font-weight: 800;
+    font-weight: 900 !important;
   }
   // hover color for calender day
   &:hover {
-    background-color: lighten(#0696D7, 40%) !important;
+    background-color: lighten(#0696D7, 30%) !important;
   }
 
   &--disabled {
