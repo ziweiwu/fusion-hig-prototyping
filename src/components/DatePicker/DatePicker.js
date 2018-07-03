@@ -81,7 +81,6 @@ export default class DatePicker extends React.Component {
       ref={node => this.node = node}
       customInput={<TextFieldPresenter
         {...props}
-        id={props.selected.toString()} //use selected id to keep input id unique
         showClearButton={props.isClearable}
         onClearButtonClick={() => {
           this.node.clear();

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
 import {anchorPoints} from "@hig/flyout";
+import styled, {css} from 'react-emotion'
 import './tooltip.css';
 
 //map the placements from the anchorPoints
@@ -35,6 +36,7 @@ export default class Tooltip extends React.Component {
     linkTitle: PropTypes.string,
     linkURL: PropTypes.string,
     anchorPoint: PropTypes.string,
+    width: PropTypes.number
   };
 
   static defaultProps = {
@@ -45,10 +47,12 @@ export default class Tooltip extends React.Component {
     anchorPoint: placementsMap.get(anchorPoints.RIGHT_CENTER),
     trigger: 'click',
     arrowContent: null,
+    // width: 1000
   };
 
   render() {
     const props = this.props;
+
     const tooltipTitleClass = classNames({
       'hig-tooltip-title': true
     });
@@ -56,8 +60,9 @@ export default class Tooltip extends React.Component {
       'hig-tooltip-description': true
     });
     const tooltipInnerContentClass = classNames({
-      'hig-tooltip-inner-content': true
+      'hig-tooltip-inner-content ': true
     });
+
     const tooltipLink = classNames({
       'hig-tooltip-link': true
     });
@@ -66,6 +71,11 @@ export default class Tooltip extends React.Component {
       'hig-tooltip-children-wrapper': true
     });
 
+// use react emotion to create a styled wrapper with props.width
+    const tooltipWidth = css`
+      max-width: ${props.width}px;
+    `;
+
     return (
       <ReactToolTip
         {...props}
@@ -73,7 +83,7 @@ export default class Tooltip extends React.Component {
         placement={placementsMap.get(props.anchorPoint)}
         children={<div className={tooltipChildenWrapper}>{props.children}</div>}
         overlay={
-          <div className={tooltipInnerContentClass}>
+          <div className={tooltipWidth}>
             {props.title && <div className={tooltipTitleClass}>{props.title}</div>}
             {props.description && <div className={tooltipDescriptionClass}>{props.description}</div>}
             {props.content && <div className={tooltipInnerContentClass}>{props.content}</div>}

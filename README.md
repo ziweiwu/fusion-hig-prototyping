@@ -20,4 +20,4 @@ To start the storybook page
 
 ### Demo
 [Storybook](https://github.com/storybooks/storybook) is used to demonstrate the design and functionalities of the components
-Storybook link: [https://ziweiwu.github.io/fusion-hig-prototyping]
+demo link: [https://ziweiwu.github.io/fusion-hig-prototyping]
