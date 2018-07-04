@@ -47,7 +47,7 @@ export default class Tooltip extends React.Component {
     anchorPoint: placementsMap.get(anchorPoints.RIGHT_CENTER),
     trigger: 'click',
     arrowContent: null,
-    // width: 1000
+    width: 300
   };
 
   render() {

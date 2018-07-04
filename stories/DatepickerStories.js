@@ -10,7 +10,6 @@ import {
   DisableDates,
   FilterDates,
   Locale,
-  Portal,
   WithClearButton,
 } from './DatePickerStories/index';
 
@@ -21,16 +20,24 @@ const storiesOfDatePicker = storiesOf('Date Picker', module);
 storiesOfDatePicker.addDecorator(withKnobs);
 
 // default view
-storiesOfDatePicker.add('Default View', () => (<Default label="Select Date"/>));
-
-// portal view
-//storiesOfDatePicker.add('Portal View', () => (<Portal label="Select Date"/>));
+storiesOfDatePicker.add('Default View', () => {
+  const label = text('label', 'Date picker ');
+  const placeholderText = text('placeholder', 'select a date');
+  const showIcon = boolean('Icon', true);
+  const isClearable = boolean('Clearable', false);
+  return (
+    (<Default
+      label={label}
+      placeholderText={placeholderText}
+      showIcon={showIcon}
+      isClearable={isClearable}
+    />)
+  );
+});
 
 // with Clear Button
 storiesOfDatePicker.add('With Clear Button', () => {
-  const defaultValue = true;
-  const isClearable = boolean('Clearable', defaultValue);
-
+  const isClearable = boolean('Clearable', true);
   return (
     (<WithClearButton
       selected={moment()}
