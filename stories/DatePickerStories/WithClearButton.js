@@ -33,7 +33,9 @@ export default class WithClearButton extends Component {
           startDate={this.state.startDate}
           onChange={this.handleChangeStart}
           label={this.props.label}
+          showIcon={this.props.showIcon}
           isClearable={this.props.isClearable}
+          disabled={this.props.disabled}
         />
       </div>
     );

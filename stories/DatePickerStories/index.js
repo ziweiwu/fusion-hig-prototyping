@@ -1,5 +1,5 @@
 export Default from './Default';
-export Portal from './Portal';
+export Disabled from './Disabled';
 export WithClearButton from './WithClearButton';
 export DateRangePicker from './DateRangePicker';
 export DisableDates from './DisableDates';
