@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import DatePicker from '../../src/components/DatePicker/index';
 
 export default class Default extends Component {
@@ -11,7 +11,7 @@ export default class Default extends Component {
   }
 
   handleChangeDate(date) {
-    this.setState({startDate: date});
+    this.setState({ startDate: date });
   }
 
   render() {
@@ -23,6 +23,8 @@ export default class Default extends Component {
           selected={this.state.startDate}
           startDate={this.state.startDate}
           onChange={this.handleChangeDate}
+          showIcon={this.props.showIcon}
+          isClearable={this.props.isClearable}
         />
       </div>
     );

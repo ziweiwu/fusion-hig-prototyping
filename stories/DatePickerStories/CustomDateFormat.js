@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import DatePicker from '../../src/components/DatePicker/index';
 
-class CustomDateFormat extends Component {
+export default class CustomDateFormat extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,4 +45,3 @@ class CustomDateFormat extends Component {
   }
 }
 
-export default CustomDateFormat;

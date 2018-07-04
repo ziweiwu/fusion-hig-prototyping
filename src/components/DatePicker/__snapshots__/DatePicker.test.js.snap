@@ -13,7 +13,7 @@ ShallowWrapper {
     customInput={
         <TextFieldPresenter
             hidePopper={false}
-            id="text-field-25871"
+            id="Fri Sep 15 2017 09:30:00 GMT-0400"
             onClearButtonClick={[Function]}
             selected={"2017-09-15T13:30:00.000Z"}
             showClearButton={undefined}
@@ -71,7 +71,7 @@ ShallowWrapper {
       customInput={
             <TextFieldPresenter
                   hidePopper={false}
-                  id="text-field-25871"
+                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
                   onClearButtonClick={[Function]}
                   selected={"2017-09-15T13:30:00.000Z"}
                   showClearButton={undefined}
@@ -151,7 +151,7 @@ ShallowWrapper {
       customInput={
             <TextFieldPresenter
                   hidePopper={false}
-                  id="text-field-25871"
+                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
                   onClearButtonClick={[Function]}
                   selected={"2017-09-15T13:30:00.000Z"}
                   showClearButton={undefined}
@@ -232,7 +232,7 @@ ShallowWrapper {
     customInput={
         <TextFieldPresenter
             disabled={true}
-            id="text-field-25871"
+            id="Fri Sep 15 2017 09:30:00 GMT-0400"
             onClearButtonClick={[Function]}
             selected={"2017-09-15T13:30:00.000Z"}
             showClearButton={undefined}
@@ -289,7 +289,7 @@ ShallowWrapper {
       customInput={
             <TextFieldPresenter
                   disabled={true}
-                  id="text-field-25871"
+                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
                   onClearButtonClick={[Function]}
                   selected={"2017-09-15T13:30:00.000Z"}
                   showClearButton={undefined}
@@ -368,7 +368,7 @@ ShallowWrapper {
       customInput={
             <TextFieldPresenter
                   disabled={true}
-                  id="text-field-25871"
+                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
                   onClearButtonClick={[Function]}
                   selected={"2017-09-15T13:30:00.000Z"}
                   showClearButton={undefined}
@@ -435,222 +435,6 @@ ShallowWrapper {
 }
 `;
 
-exports[`DatePicker Snapshot tests portal view 1`] = `
-ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
-  "length": 1,
-  "node": <DatePicker
-    allowSameDay={false}
-    customInput={
-        <TextFieldPresenter
-            id="text-field-25871"
-            onClearButtonClick={[Function]}
-            selected={"2017-09-15T13:30:00.000Z"}
-            showClearButton={undefined}
-            type="text"
-            withPortal={true}
-        />
-    }
-    dateFormat="L"
-    dateFormatCalendar="MMMM YYYY"
-    disabled={false}
-    disabledKeyboardNavigation={false}
-    dropdownMode="scroll"
-    fixedHeight={true}
-    isClearable={false}
-    monthsShown={1}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClickOutside={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onMonthChange={[Function]}
-    onSelect={[Function]}
-    onYearChange={[Function]}
-    popperModifiers={
-        Object {
-            "flip": Object {
-              "enabled": false,
-            },
-            "offset": Object {
-              "enabled": true,
-              "offset": "0px, -30px",
-            },
-            "preventOverflow": Object {
-              "enabled": true,
-              "escapeWithReference": false,
-            },
-          }
-    }
-    popperPlacement="bottom-start"
-    preventOpenOnFocus={false}
-    readOnly={true}
-    selected={"2017-09-15T13:30:00.000Z"}
-    shouldCloseOnSelect={true}
-    showMonthDropdown={false}
-    showMonthYearDropdown={false}
-    showTimeSelect={false}
-    showYearDropdown={false}
-    timeCaption="Time"
-    timeIntervals={30}
-    withPortal={true}
-/>,
-  "nodes": Array [
-    <DatePicker
-      allowSameDay={false}
-      customInput={
-            <TextFieldPresenter
-                  id="text-field-25871"
-                  onClearButtonClick={[Function]}
-                  selected={"2017-09-15T13:30:00.000Z"}
-                  showClearButton={undefined}
-                  type="text"
-                  withPortal={true}
-            />
-      }
-      dateFormat="L"
-      dateFormatCalendar="MMMM YYYY"
-      disabled={false}
-      disabledKeyboardNavigation={false}
-      dropdownMode="scroll"
-      fixedHeight={true}
-      isClearable={false}
-      monthsShown={1}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClickOutside={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onMonthChange={[Function]}
-      onSelect={[Function]}
-      onYearChange={[Function]}
-      popperModifiers={
-            Object {
-                  "flip": Object {
-                    "enabled": false,
-                  },
-                  "offset": Object {
-                    "enabled": true,
-                    "offset": "0px, -30px",
-                  },
-                  "preventOverflow": Object {
-                    "enabled": true,
-                    "escapeWithReference": false,
-                  },
-                }
-      }
-      popperPlacement="bottom-start"
-      preventOpenOnFocus={false}
-      readOnly={true}
-      selected={"2017-09-15T13:30:00.000Z"}
-      shouldCloseOnSelect={true}
-      showMonthDropdown={false}
-      showMonthYearDropdown={false}
-      showTimeSelect={false}
-      showYearDropdown={false}
-      timeCaption="Time"
-      timeIntervals={30}
-      withPortal={true}
-/>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_context": Object {},
-    "_element": <DatePicker
-      selected={"2017-09-15T13:30:00.000Z"}
-      withPortal={true}
-/>,
-    "_forcedUpdate": false,
-    "_instance": DatePicker {
-      "context": Object {},
-      "props": Object {
-        "selected": "2017-09-15T13:30:00.000Z",
-        "withPortal": true,
-      },
-      "refs": Object {},
-      "state": null,
-      "updater": Updater {
-        "_callbacks": Array [],
-        "_renderer": [Circular],
-      },
-    },
-    "_newState": null,
-    "_rendered": <DatePicker
-      allowSameDay={false}
-      customInput={
-            <TextFieldPresenter
-                  id="text-field-25871"
-                  onClearButtonClick={[Function]}
-                  selected={"2017-09-15T13:30:00.000Z"}
-                  showClearButton={undefined}
-                  type="text"
-                  withPortal={true}
-            />
-      }
-      dateFormat="L"
-      dateFormatCalendar="MMMM YYYY"
-      disabled={false}
-      disabledKeyboardNavigation={false}
-      dropdownMode="scroll"
-      fixedHeight={true}
-      isClearable={false}
-      monthsShown={1}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClickOutside={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onMonthChange={[Function]}
-      onSelect={[Function]}
-      onYearChange={[Function]}
-      popperModifiers={
-            Object {
-                  "flip": Object {
-                    "enabled": false,
-                  },
-                  "offset": Object {
-                    "enabled": true,
-                    "offset": "0px, -30px",
-                  },
-                  "preventOverflow": Object {
-                    "enabled": true,
-                    "escapeWithReference": false,
-                  },
-                }
-      }
-      popperPlacement="bottom-start"
-      preventOpenOnFocus={false}
-      readOnly={true}
-      selected={"2017-09-15T13:30:00.000Z"}
-      shouldCloseOnSelect={true}
-      showMonthDropdown={false}
-      showMonthYearDropdown={false}
-      showTimeSelect={false}
-      showYearDropdown={false}
-      timeCaption="Time"
-      timeIntervals={30}
-      withPortal={true}
-/>,
-    "_rendering": false,
-    "_updater": Updater {
-      "_callbacks": Array [],
-      "_renderer": [Circular],
-    },
-    "getRenderOutput": [Function],
-    "render": [Function],
-  },
-  "root": [Circular],
-  "unrendered": <DatePicker
-    selected={"2017-09-15T13:30:00.000Z"}
-    withPortal={true}
-/>,
-}
-`;
-
 exports[`DatePicker Snapshot tests regular view 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
@@ -663,7 +447,7 @@ ShallowWrapper {
     allowSameDay={false}
     customInput={
         <TextFieldPresenter
-            id="text-field-25871"
+            id="Fri Sep 15 2017 09:30:00 GMT-0400"
             onClearButtonClick={[Function]}
             selected={"2017-09-15T13:30:00.000Z"}
             showClearButton={undefined}
@@ -719,7 +503,7 @@ ShallowWrapper {
       allowSameDay={false}
       customInput={
             <TextFieldPresenter
-                  id="text-field-25871"
+                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
                   onClearButtonClick={[Function]}
                   selected={"2017-09-15T13:30:00.000Z"}
                   showClearButton={undefined}
@@ -795,7 +579,7 @@ ShallowWrapper {
       allowSameDay={false}
       customInput={
             <TextFieldPresenter
-                  id="text-field-25871"
+                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
                   onClearButtonClick={[Function]}
                   selected={"2017-09-15T13:30:00.000Z"}
                   showClearButton={undefined}
