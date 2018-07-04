@@ -36,14 +36,14 @@ const TooltipLarge = props => (
     <span>
       <div style={{ margin: '180', float: 'left' }} />
       <Tooltip
-        title="Tooltip large"
-        description={description}
+        title={props.title}
+        description={props.description}
         anchorPoint={props.anchorPoint}
         trigger={props.trigger}
         mouseLeaveDelay={props.mouseLeaveDelay}
         mouseEnterDelay={props.mouseEnterDelay}
-        linkTitle={linkTitle}
-        linkURL={linkURL}
+        linkTitle={props.linkTitle}
+        linkURL={props.linkURL}
         content={youtubeVideo}
       >
         <Button title="Tooltip large" />

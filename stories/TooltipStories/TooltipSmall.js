@@ -9,7 +9,7 @@ const TooltipSmall = props => (
     <span>
       <div style={{ margin: '180px', float: 'left' }} />
       <Tooltip
-        title="Tooltip small"
+        title={props.title}
         anchorPoint={props.anchorPoint}
         trigger={props.trigger}
         mouseLeaveDelay={props.mouseLeaveDelay}

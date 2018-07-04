@@ -1,164 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DatePicker Snapshot tests down replacement 1`] = `
-ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
-  "length": 1,
-  "node": <Tooltip
-    adjustX={true}
-    adjustY={true}
-    align={Object {}}
-    anchorPoint="right"
-    arrowContent={null}
-    destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
-    overlay={
-        <div
-            className="hig-tooltip-inner-content"
-        >
-            <div
-                className="hig-tooltip-title"
-            >
-                test
-            </div>
-        </div>
-    }
-    placement="right"
-    prefixCls="hig-tooltip"
-    title="test"
-    trigger="click"
->
-    <div
-        className="hig-tooltip-children-wrapper"
-    />
-</Tooltip>,
-  "nodes": Array [
-    <Tooltip
-      adjustX={true}
-      adjustY={true}
-      align={Object {}}
-      anchorPoint="right"
-      arrowContent={null}
-      destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      overlay={
-            <div
-                  className="hig-tooltip-inner-content"
-            >
-                  <div
-                        className="hig-tooltip-title"
-                  >
-                        test
-                  </div>
-            </div>
-      }
-      placement="right"
-      prefixCls="hig-tooltip"
-      title="test"
-      trigger="click"
->
-      <div
-            className="hig-tooltip-children-wrapper"
-      />
-</Tooltip>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_context": Object {},
-    "_element": <Tooltip
-      align={Object {}}
-      anchorPoint="right"
-      arrowContent={null}
-      destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      placement="down"
-      prefixCls="hig-tooltip"
-      title="test"
-      trigger="click"
-/>,
-    "_forcedUpdate": false,
-    "_instance": Tooltip {
-      "context": Object {},
-      "props": Object {
-        "align": Object {},
-        "anchorPoint": "right",
-        "arrowContent": null,
-        "destroyTooltipOnHide": true,
-        "mouseEnterDelay": 0,
-        "mouseLeaveDelay": 0.5,
-        "placement": "down",
-        "prefixCls": "hig-tooltip",
-        "title": "test",
-        "trigger": "click",
-      },
-      "refs": Object {},
-      "state": null,
-      "updater": Updater {
-        "_callbacks": Array [],
-        "_renderer": [Circular],
-      },
-    },
-    "_newState": null,
-    "_rendered": <Tooltip
-      adjustX={true}
-      adjustY={true}
-      align={Object {}}
-      anchorPoint="right"
-      arrowContent={null}
-      destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      overlay={
-            <div
-                  className="hig-tooltip-inner-content"
-            >
-                  <div
-                        className="hig-tooltip-title"
-                  >
-                        test
-                  </div>
-            </div>
-      }
-      placement="right"
-      prefixCls="hig-tooltip"
-      title="test"
-      trigger="click"
->
-      <div
-            className="hig-tooltip-children-wrapper"
-      />
-</Tooltip>,
-    "_rendering": false,
-    "_updater": Updater {
-      "_callbacks": Array [],
-      "_renderer": [Circular],
-    },
-    "getRenderOutput": [Function],
-    "render": [Function],
-  },
-  "root": [Circular],
-  "unrendered": <Tooltip
-    align={Object {}}
-    anchorPoint="right"
-    arrowContent={null}
-    destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
-    placement="down"
-    prefixCls="hig-tooltip"
-    title="test"
-    trigger="click"
-/>,
-}
-`;
-
 exports[`DatePicker Snapshot tests focus 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
@@ -168,14 +9,12 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <Tooltip
-    adjustX={true}
-    adjustY={true}
     align={Object {}}
-    anchorPoint="right"
+    anchorPoint="left"
     arrowContent={null}
     destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
+    mouseEnterDelay={1}
+    mouseLeaveDelay={0.2}
     overlay={
         <div
             className="hig-tooltip-inner-content"
@@ -194,18 +33,20 @@ ShallowWrapper {
 >
     <div
         className="hig-tooltip-children-wrapper"
-    />
+    >
+        <button>
+            tooltip
+        </button>
+    </div>
 </Tooltip>,
   "nodes": Array [
     <Tooltip
-      adjustX={true}
-      adjustY={true}
       align={Object {}}
-      anchorPoint="right"
+      anchorPoint="left"
       arrowContent={null}
       destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
+      mouseEnterDelay={1}
+      mouseLeaveDelay={0.2}
       overlay={
             <div
                   className="hig-tooltip-inner-content"
@@ -224,35 +65,42 @@ ShallowWrapper {
 >
       <div
             className="hig-tooltip-children-wrapper"
-      />
+      >
+            <button>
+                  tooltip
+            </button>
+      </div>
 </Tooltip>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
     "_context": Object {},
     "_element": <Tooltip
-      align={Object {}}
-      anchorPoint="right"
+      anchorPoint="left"
       arrowContent={null}
       destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      placement="right"
+      mouseEnterDelay={1}
+      mouseLeaveDelay={0.2}
       prefixCls="hig-tooltip"
       title="test"
       trigger="focus"
-/>,
+>
+      <button>
+            tooltip
+      </button>
+</Tooltip>,
     "_forcedUpdate": false,
     "_instance": Tooltip {
       "context": Object {},
       "props": Object {
-        "align": Object {},
-        "anchorPoint": "right",
+        "anchorPoint": "left",
         "arrowContent": null,
+        "children": <button>
+          tooltip
+</button>,
         "destroyTooltipOnHide": true,
-        "mouseEnterDelay": 0,
-        "mouseLeaveDelay": 0.5,
-        "placement": "right",
+        "mouseEnterDelay": 1,
+        "mouseLeaveDelay": 0.2,
         "prefixCls": "hig-tooltip",
         "title": "test",
         "trigger": "focus",
@@ -266,14 +114,12 @@ ShallowWrapper {
     },
     "_newState": null,
     "_rendered": <Tooltip
-      adjustX={true}
-      adjustY={true}
       align={Object {}}
-      anchorPoint="right"
+      anchorPoint="left"
       arrowContent={null}
       destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
+      mouseEnterDelay={1}
+      mouseLeaveDelay={0.2}
       overlay={
             <div
                   className="hig-tooltip-inner-content"
@@ -292,7 +138,11 @@ ShallowWrapper {
 >
       <div
             className="hig-tooltip-children-wrapper"
-      />
+      >
+            <button>
+                  tooltip
+            </button>
+      </div>
 </Tooltip>,
     "_rendering": false,
     "_updater": Updater {
@@ -304,17 +154,19 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <Tooltip
-    align={Object {}}
-    anchorPoint="right"
+    anchorPoint="left"
     arrowContent={null}
     destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
-    placement="right"
+    mouseEnterDelay={1}
+    mouseLeaveDelay={0.2}
     prefixCls="hig-tooltip"
     title="test"
     trigger="focus"
-/>,
+>
+    <button>
+        tooltip
+    </button>
+</Tooltip>,
 }
 `;
 
@@ -327,14 +179,12 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <Tooltip
-    adjustX={true}
-    adjustY={true}
     align={Object {}}
-    anchorPoint="right"
+    anchorPoint="left"
     arrowContent={null}
     destroyTooltipOnHide={true}
     mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
+    mouseLeaveDelay={0.2}
     overlay={
         <div
             className="hig-tooltip-inner-content"
@@ -353,18 +203,20 @@ ShallowWrapper {
 >
     <div
         className="hig-tooltip-children-wrapper"
-    />
+    >
+        <button>
+            tooltip
+        </button>
+    </div>
 </Tooltip>,
   "nodes": Array [
     <Tooltip
-      adjustX={true}
-      adjustY={true}
       align={Object {}}
-      anchorPoint="right"
+      anchorPoint="left"
       arrowContent={null}
       destroyTooltipOnHide={true}
       mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
+      mouseLeaveDelay={0.2}
       overlay={
             <div
                   className="hig-tooltip-inner-content"
@@ -383,35 +235,42 @@ ShallowWrapper {
 >
       <div
             className="hig-tooltip-children-wrapper"
-      />
+      >
+            <button>
+                  tooltip
+            </button>
+      </div>
 </Tooltip>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
     "_context": Object {},
     "_element": <Tooltip
-      align={Object {}}
-      anchorPoint="right"
+      anchorPoint="left"
       arrowContent={null}
       destroyTooltipOnHide={true}
       mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      placement="right"
+      mouseLeaveDelay={0.2}
       prefixCls="hig-tooltip"
       title="test"
       trigger="hover"
-/>,
+>
+      <button>
+            tooltip
+      </button>
+</Tooltip>,
     "_forcedUpdate": false,
     "_instance": Tooltip {
       "context": Object {},
       "props": Object {
-        "align": Object {},
-        "anchorPoint": "right",
+        "anchorPoint": "left",
         "arrowContent": null,
+        "children": <button>
+          tooltip
+</button>,
         "destroyTooltipOnHide": true,
         "mouseEnterDelay": 0,
-        "mouseLeaveDelay": 0.5,
-        "placement": "right",
+        "mouseLeaveDelay": 0.2,
         "prefixCls": "hig-tooltip",
         "title": "test",
         "trigger": "hover",
@@ -425,14 +284,12 @@ ShallowWrapper {
     },
     "_newState": null,
     "_rendered": <Tooltip
-      adjustX={true}
-      adjustY={true}
       align={Object {}}
-      anchorPoint="right"
+      anchorPoint="left"
       arrowContent={null}
       destroyTooltipOnHide={true}
       mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
+      mouseLeaveDelay={0.2}
       overlay={
             <div
                   className="hig-tooltip-inner-content"
@@ -451,7 +308,11 @@ ShallowWrapper {
 >
       <div
             className="hig-tooltip-children-wrapper"
-      />
+      >
+            <button>
+                  tooltip
+            </button>
+      </div>
 </Tooltip>,
     "_rendering": false,
     "_updater": Updater {
@@ -463,17 +324,19 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <Tooltip
-    align={Object {}}
-    anchorPoint="right"
+    anchorPoint="left"
     arrowContent={null}
     destroyTooltipOnHide={true}
     mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
-    placement="right"
+    mouseLeaveDelay={0.2}
     prefixCls="hig-tooltip"
     title="test"
     trigger="hover"
-/>,
+>
+    <button>
+        tooltip
+    </button>
+</Tooltip>,
 }
 `;
 
@@ -486,14 +349,12 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <Tooltip
-    adjustX={true}
-    adjustY={true}
     align={Object {}}
-    anchorPoint="right"
+    anchorPoint="left"
     arrowContent={null}
     destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
+    mouseEnterDelay={1}
+    mouseLeaveDelay={0.2}
     overlay={
         <div
             className="hig-tooltip-inner-content"
@@ -512,18 +373,20 @@ ShallowWrapper {
 >
     <div
         className="hig-tooltip-children-wrapper"
-    />
+    >
+        <button>
+            tooltip
+        </button>
+    </div>
 </Tooltip>,
   "nodes": Array [
     <Tooltip
-      adjustX={true}
-      adjustY={true}
       align={Object {}}
-      anchorPoint="right"
+      anchorPoint="left"
       arrowContent={null}
       destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
+      mouseEnterDelay={1}
+      mouseLeaveDelay={0.2}
       overlay={
             <div
                   className="hig-tooltip-inner-content"
@@ -542,35 +405,42 @@ ShallowWrapper {
 >
       <div
             className="hig-tooltip-children-wrapper"
-      />
+      >
+            <button>
+                  tooltip
+            </button>
+      </div>
 </Tooltip>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
     "_context": Object {},
     "_element": <Tooltip
-      align={Object {}}
-      anchorPoint="right"
+      anchorPoint="left"
       arrowContent={null}
       destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      placement="left"
+      mouseEnterDelay={1}
+      mouseLeaveDelay={0.2}
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
-/>,
+>
+      <button>
+            tooltip
+      </button>
+</Tooltip>,
     "_forcedUpdate": false,
     "_instance": Tooltip {
       "context": Object {},
       "props": Object {
-        "align": Object {},
-        "anchorPoint": "right",
+        "anchorPoint": "left",
         "arrowContent": null,
+        "children": <button>
+          tooltip
+</button>,
         "destroyTooltipOnHide": true,
-        "mouseEnterDelay": 0,
-        "mouseLeaveDelay": 0.5,
-        "placement": "left",
+        "mouseEnterDelay": 1,
+        "mouseLeaveDelay": 0.2,
         "prefixCls": "hig-tooltip",
         "title": "test",
         "trigger": "click",
@@ -584,14 +454,12 @@ ShallowWrapper {
     },
     "_newState": null,
     "_rendered": <Tooltip
-      adjustX={true}
-      adjustY={true}
       align={Object {}}
-      anchorPoint="right"
+      anchorPoint="left"
       arrowContent={null}
       destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
+      mouseEnterDelay={1}
+      mouseLeaveDelay={0.2}
       overlay={
             <div
                   className="hig-tooltip-inner-content"
@@ -610,7 +478,11 @@ ShallowWrapper {
 >
       <div
             className="hig-tooltip-children-wrapper"
-      />
+      >
+            <button>
+                  tooltip
+            </button>
+      </div>
 </Tooltip>,
     "_rendering": false,
     "_updater": Updater {
@@ -622,17 +494,19 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <Tooltip
-    align={Object {}}
-    anchorPoint="right"
+    anchorPoint="left"
     arrowContent={null}
     destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
-    placement="left"
+    mouseEnterDelay={1}
+    mouseLeaveDelay={0.2}
     prefixCls="hig-tooltip"
     title="test"
     trigger="click"
-/>,
+>
+    <button>
+        tooltip
+    </button>
+</Tooltip>,
 }
 `;
 
@@ -645,14 +519,12 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <Tooltip
-    adjustX={true}
-    adjustY={true}
     align={Object {}}
     anchorPoint="right"
     arrowContent={null}
     destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
+    mouseEnterDelay={1}
+    mouseLeaveDelay={0.2}
     overlay={
         <div
             className="hig-tooltip-inner-content"
@@ -671,18 +543,20 @@ ShallowWrapper {
 >
     <div
         className="hig-tooltip-children-wrapper"
-    />
+    >
+        <button>
+            tooltip
+        </button>
+    </div>
 </Tooltip>,
   "nodes": Array [
     <Tooltip
-      adjustX={true}
-      adjustY={true}
       align={Object {}}
       anchorPoint="right"
       arrowContent={null}
       destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
+      mouseEnterDelay={1}
+      mouseLeaveDelay={0.2}
       overlay={
             <div
                   className="hig-tooltip-inner-content"
@@ -701,35 +575,42 @@ ShallowWrapper {
 >
       <div
             className="hig-tooltip-children-wrapper"
-      />
+      >
+            <button>
+                  tooltip
+            </button>
+      </div>
 </Tooltip>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
     "_context": Object {},
     "_element": <Tooltip
-      align={Object {}}
       anchorPoint="right"
       arrowContent={null}
       destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      placement="right"
+      mouseEnterDelay={1}
+      mouseLeaveDelay={0.2}
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
-/>,
+>
+      <button>
+            tooltip
+      </button>
+</Tooltip>,
     "_forcedUpdate": false,
     "_instance": Tooltip {
       "context": Object {},
       "props": Object {
-        "align": Object {},
         "anchorPoint": "right",
         "arrowContent": null,
+        "children": <button>
+          tooltip
+</button>,
         "destroyTooltipOnHide": true,
-        "mouseEnterDelay": 0,
-        "mouseLeaveDelay": 0.5,
-        "placement": "right",
+        "mouseEnterDelay": 1,
+        "mouseLeaveDelay": 0.2,
         "prefixCls": "hig-tooltip",
         "title": "test",
         "trigger": "click",
@@ -743,14 +624,12 @@ ShallowWrapper {
     },
     "_newState": null,
     "_rendered": <Tooltip
-      adjustX={true}
-      adjustY={true}
       align={Object {}}
       anchorPoint="right"
       arrowContent={null}
       destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
+      mouseEnterDelay={1}
+      mouseLeaveDelay={0.2}
       overlay={
             <div
                   className="hig-tooltip-inner-content"
@@ -769,7 +648,11 @@ ShallowWrapper {
 >
       <div
             className="hig-tooltip-children-wrapper"
-      />
+      >
+            <button>
+                  tooltip
+            </button>
+      </div>
 </Tooltip>,
     "_rendering": false,
     "_updater": Updater {
@@ -781,175 +664,18 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <Tooltip
-    align={Object {}}
     anchorPoint="right"
     arrowContent={null}
     destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
-    placement="right"
-    prefixCls="hig-tooltip"
-    title="test"
-    trigger="click"
-/>,
-}
-`;
-
-exports[`DatePicker Snapshot tests up replacement 1`] = `
-ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
-  "length": 1,
-  "node": <Tooltip
-    adjustX={true}
-    adjustY={true}
-    align={Object {}}
-    anchorPoint="right"
-    arrowContent={null}
-    destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
-    overlay={
-        <div
-            className="hig-tooltip-inner-content"
-        >
-            <div
-                className="hig-tooltip-title"
-            >
-                test
-            </div>
-        </div>
-    }
-    placement="right"
+    mouseEnterDelay={1}
+    mouseLeaveDelay={0.2}
     prefixCls="hig-tooltip"
     title="test"
     trigger="click"
 >
-    <div
-        className="hig-tooltip-children-wrapper"
-    />
+    <button>
+        tooltip
+    </button>
 </Tooltip>,
-  "nodes": Array [
-    <Tooltip
-      adjustX={true}
-      adjustY={true}
-      align={Object {}}
-      anchorPoint="right"
-      arrowContent={null}
-      destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      overlay={
-            <div
-                  className="hig-tooltip-inner-content"
-            >
-                  <div
-                        className="hig-tooltip-title"
-                  >
-                        test
-                  </div>
-            </div>
-      }
-      placement="right"
-      prefixCls="hig-tooltip"
-      title="test"
-      trigger="click"
->
-      <div
-            className="hig-tooltip-children-wrapper"
-      />
-</Tooltip>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_context": Object {},
-    "_element": <Tooltip
-      align={Object {}}
-      anchorPoint="right"
-      arrowContent={null}
-      destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      placement="up"
-      prefixCls="hig-tooltip"
-      title="test"
-      trigger="click"
-/>,
-    "_forcedUpdate": false,
-    "_instance": Tooltip {
-      "context": Object {},
-      "props": Object {
-        "align": Object {},
-        "anchorPoint": "right",
-        "arrowContent": null,
-        "destroyTooltipOnHide": true,
-        "mouseEnterDelay": 0,
-        "mouseLeaveDelay": 0.5,
-        "placement": "up",
-        "prefixCls": "hig-tooltip",
-        "title": "test",
-        "trigger": "click",
-      },
-      "refs": Object {},
-      "state": null,
-      "updater": Updater {
-        "_callbacks": Array [],
-        "_renderer": [Circular],
-      },
-    },
-    "_newState": null,
-    "_rendered": <Tooltip
-      adjustX={true}
-      adjustY={true}
-      align={Object {}}
-      anchorPoint="right"
-      arrowContent={null}
-      destroyTooltipOnHide={true}
-      mouseEnterDelay={0}
-      mouseLeaveDelay={0.5}
-      overlay={
-            <div
-                  className="hig-tooltip-inner-content"
-            >
-                  <div
-                        className="hig-tooltip-title"
-                  >
-                        test
-                  </div>
-            </div>
-      }
-      placement="right"
-      prefixCls="hig-tooltip"
-      title="test"
-      trigger="click"
->
-      <div
-            className="hig-tooltip-children-wrapper"
-      />
-</Tooltip>,
-    "_rendering": false,
-    "_updater": Updater {
-      "_callbacks": Array [],
-      "_renderer": [Circular],
-    },
-    "getRenderOutput": [Function],
-    "render": [Function],
-  },
-  "root": [Circular],
-  "unrendered": <Tooltip
-    align={Object {}}
-    anchorPoint="right"
-    arrowContent={null}
-    destroyTooltipOnHide={true}
-    mouseEnterDelay={0}
-    mouseLeaveDelay={0.5}
-    placement="up"
-    prefixCls="hig-tooltip"
-    title="test"
-    trigger="click"
-/>,
 }
 `;
