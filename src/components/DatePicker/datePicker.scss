@@ -28,17 +28,18 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
 
 .react-datepicker__day {
   width: 2.5em;
-  border-radius: 0;
-  margin: 0;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  width: 30px !important;
+  height: 30px !important;
 
   // strong emphasis on today's date with font weight
   &--today {
-    font-weight: 900 !important;
+    font-weight: bold !important;
   }
   // hover color for calender day
   &:hover {
-   background-color: lighten($datepicker__selected-color, 20%) !important;
-    color: white;
+    background-color: lighten($datepicker__selected-color, 20%) !important;
   }
 
   &--disabled {
@@ -51,7 +52,7 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
   }
 
   // color for dates in range selection
-  &--in-selecting-range:not(.react-datepicker__day--in--range){
+  &--in-selecting-range:not(&--in--range) {
     background-color: lighten($datepicker__selected-color, 30%) !important;
   }
 }
@@ -117,20 +118,20 @@ button.react-datepicker__navigation {
   padding-top: 5px;
 }
 
-.hig__text-field__clear{
+.hig__text-field__clear {
   top: 15px;
   right: 5px;
 }
 
 .hig__text-field {
-  min-width: 240px;
-  max-width: 240px
+  min-width: 230px;
+  max-width: 230px
 }
 
 //hig__text-field__input-wrapper {
 //  margin-bottom: 0px;
 //}
-
+//
 //.hig__text-field__input {
 //  padding-bottom: 2px;
 //}
@@ -138,7 +139,6 @@ button.react-datepicker__navigation {
 //.hig__text-field__label {
 //  padding-bottom: 8px;
 //}
-//
 
 // The above code will override the stylesheet from react-datepicker library
 @import 'node_modules/react-datepicker/src/stylesheets/datepicker';

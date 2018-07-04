@@ -43,7 +43,6 @@ export default class DatePicker extends React.Component {
     endDate: PropTypes.object,
     excludeDates: PropTypes.array,
     filterDate: PropTypes.func,
-    fixedHeight: PropTypes.bool,
     formatWeekNumber: PropTypes.func,
     highlightDates: PropTypes.array,
     id: PropTypes.string,
@@ -58,7 +57,6 @@ export default class DatePicker extends React.Component {
     onSelect: PropTypes.func,
     onWeekSelect: PropTypes.func,
     openToDate: PropTypes.object,
-    placeholderText: PropTypes.string,
     required: PropTypes.bool,
     selected: PropTypes.object,
     selectsEnd: PropTypes.bool,
@@ -76,15 +74,30 @@ export default class DatePicker extends React.Component {
     shouldCloseOnSelect: PropTypes.bool,
     minTime: PropTypes.object,
     maxTime: PropTypes.object,
+    ///added props
     readOnly: PropTypes.bool,
-    showIcon: PropTypes.bool
+    showIcon: PropTypes.bool,
+    instruction: PropTypes.string,
+    instructionOn: PropTypes.bool,
+    label: PropTypes.string,
+    labelOn: PropTypes.bool,
+    fixedHeight: PropTypes.bool,
   };
 
   static defaultProps = {
     shouldCloseOnSelect: true,
     disabled: false,
-    showIcon: true
+    showIcon: true,
+    label: undefined,
+    labelOn: true,
+    instruction: undefined,
+    instructionOn: false,
+    fixedHeight: true
   };
+
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     const props = this.props;
@@ -92,7 +105,6 @@ export default class DatePicker extends React.Component {
     return (<ReactDatePicker
       {...props}
       readOnly
-      fixedHeight
       showMonthYearDropdown={false}
       showMonthDropdown={false}
       showYearDropdown={false}
@@ -106,7 +118,10 @@ export default class DatePicker extends React.Component {
       ref={node => this.node = node}
       customInput={
         <TextFieldPresenter
-          {...props}
+          readOnly
+          disabled
+          instructions={props.instructionOn ? props.instruction : undefined}
+          label={props.labelOn ? props.label : undefined}
           icon={showIcon}
           showClearButton={props.isClearable}
           onClearButtonClick={() => {

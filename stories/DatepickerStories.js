@@ -2,12 +2,12 @@ import React from 'react';
 import moment from 'moment';
 import {storiesOf} from '@storybook/react';
 import {withKnobs, text, boolean, number, select} from '@storybook/addon-knobs';
-import DatePicker from '../src/components/DatePicker/index';
 import {
   CustomDateFormat,
   DateRangePicker,
   Default,
   DisableDates,
+  Disabled,
   FilterDates,
   Locale,
   WithClearButton,
@@ -21,39 +21,58 @@ storiesOfDatePicker.addDecorator(withKnobs);
 
 // default view
 storiesOfDatePicker.add('Default View', () => {
-  const label = text('label', 'Date picker ');
+  const label = text('Label', 'Date picker ');
+  const labelOn = boolean('Label on', true);
+  const instruction = text('Instruction', 'Please choose a date ');
+  const instructionOn = boolean('Instruction on', false);
   const showIcon = boolean('Icon', true);
   const isClearable = boolean('Clearable', false);
+  const disabled = boolean('Disable', false);
+  const fixedHeight = boolean('Fixed Calender Height', true);
   return (
     (<Default
       label={label}
+      labelOn={labelOn}
+      instruction={instruction}
+      instructionOn={instructionOn}
       showIcon={showIcon}
       isClearable={isClearable}
+      disabled={disabled}
+      fixedHeight={fixedHeight}
     />)
   );
 });
 
 // with Clear Button
 storiesOfDatePicker.add('With Clear Button', () => {
+  const label = text('label', 'Date picker ');
+  const showIcon = boolean('Icon', true);
   const isClearable = boolean('Clearable', true);
+  const disabled = boolean('disable', false);
   return (
     (<WithClearButton
       selected={moment()}
-      label="Select Date"
+      label={label}
+      showIcon={showIcon}
       isClearable={isClearable}
+      disabled={disabled}
     />)
   );
 });
 
 // disable state
 storiesOfDatePicker.add('Disabled', () => {
-  const disableLabel = 'Disable State';
-  const enableLabel = 'Enabled';
-  const defaultValue = true;
-  const disable = boolean('Disabled State', defaultValue);
+  const disabled = boolean('disable', true);
+  const showIcon = boolean('Icon', true);
+  const isClearable = boolean('Clearable', true);
 
   return (
-    (<DatePicker label={disable ? disableLabel : enableLabel} disabled={disable}/>)
+    (<Disabled
+      label={disabled ? 'Disabled' : 'Enabled'}
+      showIcon={showIcon}
+      isClearable={isClearable}
+      disabled={disabled}
+    />)
   );
 });
 
@@ -92,5 +111,4 @@ storiesOfDatePicker.add('Custom Date Format', () => {
 
   return <CustomDateFormat label="Select Date" dateFormat={dateFormat}/>;
 });
-
 
