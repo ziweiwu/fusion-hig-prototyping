@@ -19,7 +19,6 @@ export default class Default extends Component {
       <div>
         <DatePicker
           label={this.props.label}
-          placeholderText={this.props.placeholderText}
           selected={this.state.startDate}
           startDate={this.state.startDate}
           onChange={this.handleChangeDate}
