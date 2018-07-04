@@ -108,7 +108,6 @@ export default class DatePicker extends React.Component {
         <TextFieldPresenter
           {...props}
           icon={showIcon}
-          placeholder={props.placeholderText}
           showClearButton={props.isClearable}
           onClearButtonClick={() => {
             this.node.clear();

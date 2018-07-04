@@ -22,13 +22,11 @@ storiesOfDatePicker.addDecorator(withKnobs);
 // default view
 storiesOfDatePicker.add('Default View', () => {
   const label = text('label', 'Date picker ');
-  const placeholderText = text('placeholder', 'select a date');
   const showIcon = boolean('Icon', true);
   const isClearable = boolean('Clearable', false);
   return (
     (<Default
       label={label}
-      placeholderText={placeholderText}
       showIcon={showIcon}
       isClearable={isClearable}
     />)
