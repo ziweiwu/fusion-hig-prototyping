@@ -23,6 +23,8 @@ export default class Default extends Component {
           selected={this.state.startDate}
           startDate={this.state.startDate}
           onChange={this.handleChangeDate}
+          showIcon={this.props.showIcon}
+          isClearable={this.props.isClearable}
         />
       </div>
     );
