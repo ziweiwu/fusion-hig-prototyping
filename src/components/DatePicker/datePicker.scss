@@ -21,22 +21,39 @@ $datepicker__text-color: #000;
 $datepicker__header-color: #000;
 $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
 
-
 // hide the days from prev and next month
 .react-datepicker__day--outside-month {
   visibility: hidden;
 }
 
-// hover color for calender day
 .react-datepicker__day {
-  &:hover {
-    background-color: lighten(#0696D7, 40%) !important;
-  }
-}
+  width: 2.5em;
+  border-radius: 0;
+  margin: 0;
 
-//font size for portal view day
-.react-datepicker__day {
-  font-size: $datepicker__font-size * 1.0;
+  // strong emphasis on today's date with font weight
+  &--today {
+    font-weight: 900 !important;
+  }
+  // hover color for calender day
+  &:hover {
+   background-color: lighten($datepicker__selected-color, 20%) !important;
+    color: white;
+  }
+
+  &--disabled {
+    border-right-color: $datepicker__navigation-disabled-color;
+
+    // disable hover background color for disable state
+    &:hover {
+      background-color: white !important;
+    }
+  }
+
+  // color for dates in range selection
+  &--in-selecting-range:not(.react-datepicker__day--in--range){
+    background-color: lighten($datepicker__selected-color, 30%) !important;
+  }
 }
 
 // font size for portal view header
@@ -50,16 +67,59 @@ button.react-datepicker__close-icon::after {
   margin: -10px auto 0;
 }
 
+// using hig chevron right and left icon for navigation
+// used svg uri converter to convert svg to background images
+button.react-datepicker__navigation {
+  line-height: 1.7rem;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  //top: 5px;
+  //width: 25px !important;
+  //height: 25px !important;
+  top: 10px;
+  width: 15px !important;
+  height: 15px !important;
+  padding: 0;
+  border: none !important;
+  z-index: 1;
+
+  //&--previous {
+  //  background: url("data:image/svg+xml;charset=utf8,%3Csvg id='assets' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Echevron-left-24%3C/title%3E%3Cpath d='M11.17,12l5.66-5.66a1,1,0,0,0,0-1.41L14.71,2.81a1,1,0,0,0-1.41,0L4.81,11.29a1,1,0,0,0,0,1.41l8.49,8.49a1,1,0,0,0,1.41,0l2.12-2.12a1,1,0,0,0,0-1.41ZM14,20.49,5.51,12,14,3.51l2.12,2.12L9.76,12l6.36,6.36Z'/%3E%3C/svg%3E") !important;
+  //}
+  //&--next {
+  //  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='assets' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Echevron-right-24%3C/title%3E%3Cpath d='M19.19,11.29,10.71,2.81a1,1,0,0,0-1.41,0L7.17,4.93a1,1,0,0,0,0,1.41L12.83,12,7.17,17.66a1,1,0,0,0,0,1.41l2.12,2.12a1,1,0,0,0,1.41,0l8.49-8.49A1,1,0,0,0,19.19,11.29ZM10,20.49,7.88,18.36,14.24,12,7.88,5.64,10,3.51,18.49,12Z'/%3E%3C/svg%3E") !important;
+  //}
+
+  &--previous {
+    background-image: url("data:image/svg+xml,%3Csvg id='assets' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctitle%3Ecaret-left-16%3C/title%3E%3Cpolygon points='3.65 8.09 9.95 1.79 11.72 3.56 7.18 8.09 11.72 12.63 9.95 14.4 3.65 8.09'/%3E%3C/svg%3E");
+  }
+  &--next {
+    background-image: url("data:image/svg+xml,%3Csvg id='assets' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctitle%3Ecaret-right-16%3C/title%3E%3Cpolygon points='4.28 12.63 8.82 8.09 4.28 3.56 6.05 1.79 12.35 8.09 6.05 14.4 4.28 12.63'/%3E%3C/svg%3E");
+  }
+}
+
 /* Hig TextField Style */
 // static set the position of label text of input to remain on top.
 // reflective set the position of label text to be dynamically positioned.
-.hig__text-field__label-v1{
+.hig__text-field__label-v1 {
   position: static;
 }
-.hig__icon-button{
+
+//calender icon
+.hig__text-field__icon-v1 {
+  bottom: 3px
+}
+
+.hig__icon-button {
   background-color: transparent;
   border: none;
   padding-top: 5px;
+}
+
+.hig__text-field__clear{
+  top: 15px;
+  right: 5px;
 }
 
 .hig__text-field {
@@ -79,9 +139,6 @@ button.react-datepicker__close-icon::after {
 //  padding-bottom: 8px;
 //}
 //
-//.hig__text-field__clear-button {
-//  top: 10px;
-//}
 
 // The above code will override the stylesheet from react-datepicker library
 @import 'node_modules/react-datepicker/src/stylesheets/datepicker';

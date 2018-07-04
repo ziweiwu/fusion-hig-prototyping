@@ -6,11 +6,29 @@ import {TextFieldPresenter} from '@hig/text-field';
 import ReactDatePicker from 'react-datepicker';
 import './datePicker.css';
 
+const calenderIcon =
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <title>calendar-24</title>
+    <g id="final">
+      <g id="calendar">
+        <g id="outline">
+          <path d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                fill="#2e4258"/>
+          <path d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                fill="none"/>
+          <rect x="3" y="9" width="17" height="12" fill="none"/>
+          <path
+            d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+            fill="#2e4258"/>
+        </g>
+      </g>
+    </g>
+  </svg>
+
 export default class DatePicker extends React.Component {
   static propTypes = {
     adjustDateOnChange: PropTypes.bool,
     allowSameDay: PropTypes.bool,
-    autoComplete: PropTypes.string,
     autoFocus: PropTypes.bool,
     calendarClassName: PropTypes.string,
     calendarContainer: PropTypes.func,
@@ -22,8 +40,6 @@ export default class DatePicker extends React.Component {
     dateFormatCalendar: PropTypes.string,
     dayClassName: PropTypes.func,
     disabled: PropTypes.bool,
-    disabledKeyboardNavigation: PropTypes.bool,
-    dropdownMode: PropTypes.oneOf(["scroll", "select"]),
     endDate: PropTypes.object,
     excludeDates: PropTypes.array,
     filterDate: PropTypes.func,
@@ -32,46 +48,24 @@ export default class DatePicker extends React.Component {
     highlightDates: PropTypes.array,
     id: PropTypes.string,
     includeDates: PropTypes.array,
-    includeTimes: PropTypes.array,
-    injectTimes: PropTypes.array,
-    inline: PropTypes.bool,
     isClearable: PropTypes.bool,
     locale: PropTypes.string,
     maxDate: PropTypes.object,
     minDate: PropTypes.object,
     monthsShown: PropTypes.number,
     name: PropTypes.string,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func,
     onSelect: PropTypes.func,
     onWeekSelect: PropTypes.func,
-    onClickOutside: PropTypes.func,
-    onChangeRaw: PropTypes.func,
-    onFocus: PropTypes.func,
-    onKeyDown: PropTypes.func,
-    onMonthChange: PropTypes.func,
-    onYearChange: PropTypes.func,
     openToDate: PropTypes.object,
-    peekNextMonth: PropTypes.bool,
     placeholderText: PropTypes.string,
-    preventOpenOnFocus: PropTypes.bool,
-    readOnly: PropTypes.bool,
     required: PropTypes.bool,
-    scrollableYearDropdown: PropTypes.bool,
-    scrollableMonthYearDropdown: PropTypes.bool,
     selected: PropTypes.object,
     selectsEnd: PropTypes.bool,
     selectsStart: PropTypes.bool,
-    showMonthDropdown: PropTypes.bool,
-    showMonthYearDropdown: PropTypes.bool,
     showWeekNumbers: PropTypes.bool,
-    showYearDropdown: PropTypes.bool,
-    forceShowMonthNavigation: PropTypes.bool,
-    showDisabledMonthNavigation: PropTypes.bool,
     startDate: PropTypes.object,
     startOpen: PropTypes.bool,
-    tabIndex: PropTypes.number,
-    timeCaption: PropTypes.string,
     title: PropTypes.string,
     todayButton: PropTypes.string,
     useWeekdaysShort: PropTypes.bool,
@@ -79,50 +73,47 @@ export default class DatePicker extends React.Component {
     utcOffset: PropTypes.number,
     value: PropTypes.string,
     weekLabel: PropTypes.string,
-    withPortal: PropTypes.bool,
-    yearDropdownItemNumber: PropTypes.number,
     shouldCloseOnSelect: PropTypes.bool,
-    showTimeSelect: PropTypes.bool,
-    showTimeSelectOnly: PropTypes.bool,
-    timeFormat: PropTypes.string,
-    timeIntervals: PropTypes.number,
     minTime: PropTypes.object,
     maxTime: PropTypes.object,
-    excludeTimes: PropTypes.array,
-    useShortMonthInDropdown: PropTypes.bool,
-    clearButtonTitle: PropTypes.string,
-    readOnly: PropTypes.bool
+    readOnly: PropTypes.bool,
+    showIcon: PropTypes.bool
   };
 
-  componentDidMount() {
-  }
+  static defaultProps = {
+    shouldCloseOnSelect: true,
+    disabled: false,
+    showIcon: true
+  };
 
   render() {
     const props = this.props;
-
+    const showIcon = this.props.showIcon ? calenderIcon : undefined;
     return (<ReactDatePicker
       {...props}
       readOnly
+      fixedHeight
       showMonthYearDropdown={false}
       showMonthDropdown={false}
       showYearDropdown={false}
       showTimeSelect={false}
-      fixedHeight
       isClearable={false}
+      disabledKeyboardNavigation={false}
 
       // use TextField as inputField
       // use ref to allow the use clear button in TextField component
       // instead of the one comes with ReactDatePicker
       ref={node => this.node = node}
-      customInput={<TextFieldPresenter
-        {...props}
-        // label = {props.label}
-        // placeholderText = {props.placeholderText}
-        showClearButton={props.isClearable}
-        onClearButtonClick={() => {
-          this.node.clear();
-        }}
-      />}
+      customInput={
+        <TextFieldPresenter
+          {...props}
+          icon={showIcon}
+          placeholder={props.placeholderText}
+          showClearButton={props.isClearable}
+          onClearButtonClick={() => {
+            this.node.clear();
+          }}
+        />}
 
       // calender popper settings
       popperPlacement="bottom-start"
@@ -132,12 +123,9 @@ export default class DatePicker extends React.Component {
           enabled: true,
           offset: '0px, -30px',
         },
-
-        // prevent calender popper to flip
         flip: {
           enabled: false,
         },
-
         preventOverflow: {
           enabled: true,
           escapeWithReference: false,

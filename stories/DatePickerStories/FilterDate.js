@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DatePicker from '../../src/components/DatePicker/index';
 
-export default class Default extends Component {
+export default class FilterDate extends Component {
   constructor(props) {
     super(props);
     this.state = {
