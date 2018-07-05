@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from "prop-types";
 import '@hig/styles/build/index.css';
 import '@hig/text-field/build/index.css';
-import {TextFieldPresenter} from '@hig/text-field';
+//import {TextFieldPresenter} from '@hig/text-field';
+import {TextFieldPresenter} from '../TextField/index';
+//import '@hig/text-field/build/index.css';
 import ReactDatePicker from 'react-datepicker';
 import './datePicker.css';
 
@@ -115,6 +117,7 @@ export default class DatePicker extends React.Component {
       customInput={
         <TextFieldPresenter
           readOnly
+          focusAnimation={false}
           disabled
           instructions={props.instructionOn ? props.instruction : undefined}
           label={props.labelOn ? props.label : undefined}

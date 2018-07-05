@@ -144,6 +144,14 @@
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
+"@hig/icon-button@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.2.tgz#b05b4ad7e347fbe1712f0271e865e1ef3df64923"
+  dependencies:
+    "@hig/icon" "^0.1.1"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
 "@hig/icon@0.2.0-alpha.18da9628":
   version "0.2.0-alpha.18da9628"
   resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.2.0-alpha.18da9628.tgz#28b78b706109e6ddc45a03317b78cd890e887c9d"
@@ -184,9 +192,9 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.2.tgz#036bbe336a7e332248e6cd3c6526ee88f7d84f62"
 
-"@hig/text-field@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.2.0.tgz#d34c031606a7fe6d51819555bce18097016d4b04"
+"@hig/text-field@0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.3.1.tgz#2241a4840c1adf9e4f1e7b6f8953cfbe335e9c2b"
   dependencies:
     "@hig/icon-button" "^0.1.1"
     classnames "^2.2.5"
