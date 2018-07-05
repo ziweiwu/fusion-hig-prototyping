@@ -6,3 +6,4 @@ export DisableDates from './DisableDates';
 export FilterDates from './FilterDate';
 export Locale from './Locale';
 export CustomDateFormat from './CustomDateFormat';
+export Portal from './Portal';

@@ -29,6 +29,9 @@ storiesOfDatePicker.add('Default View', () => {
   const isClearable = boolean('Clearable', false);
   const disabled = boolean('Disable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, d MMM, YYYY' );
+  const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+
   return (
     (<Default
       label={label}
@@ -39,16 +42,25 @@ storiesOfDatePicker.add('Default View', () => {
       isClearable={isClearable}
       disabled={disabled}
       fixedHeight={fixedHeight}
+      dateFormat={dateFormat}
+      locale={locale}
     />)
   );
 });
 
 // with Clear Button
 storiesOfDatePicker.add('With Clear Button', () => {
-  const label = text('label', 'Date picker ');
-  const showIcon = boolean('Icon', true);
   const isClearable = boolean('Clearable', true);
+  const label = text('Label', 'Date picker ');
+  const labelOn = boolean('Label on', true);
+  const instruction = text('Instruction', 'Please choose a date ');
+  const instructionOn = boolean('Instruction on', false);
+  const showIcon = boolean('Icon', true);
   const disabled = boolean('disable', false);
+  const fixedHeight = boolean('Fixed Calender Height', true);
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+
   return (
     (<WithClearButton
       selected={moment()}
@@ -56,6 +68,12 @@ storiesOfDatePicker.add('With Clear Button', () => {
       showIcon={showIcon}
       isClearable={isClearable}
       disabled={disabled}
+      labelOn={labelOn}
+      instruction={instruction}
+      instructionOn={instructionOn}
+      fixedHeight={fixedHeight}
+      dateFormat={dateFormat}
+      locale={locale}
     />)
   );
 });
@@ -63,29 +81,93 @@ storiesOfDatePicker.add('With Clear Button', () => {
 // disable state
 storiesOfDatePicker.add('Disabled', () => {
   const disabled = boolean('disable', true);
+  const label = text('Label', 'Date picker ');
+  const labelOn = boolean('Label on', true);
+  const instruction = text('Instruction', 'Please choose a date ');
+  const instructionOn = boolean('Instruction on', false);
   const showIcon = boolean('Icon', true);
   const isClearable = boolean('Clearable', true);
+  const fixedHeight = boolean('Fixed Calender Height', true);
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
 
   return (
     (<Disabled
-      label={disabled ? 'Disabled' : 'Enabled'}
+      label={label}
       showIcon={showIcon}
       isClearable={isClearable}
       disabled={disabled}
+      selected={moment()}
+      labelOn={labelOn}
+      instruction={instruction}
+      instructionOn={instructionOn}
+      fixedHeight={fixedHeight}
+      dateFormat={dateFormat}
+      locale={locale}
     />)
   );
 });
 
 // Select a range of dates
-storiesOfDatePicker.add('Select a Range of Dates', () => (<DateRangePicker/>));
+storiesOfDatePicker.add('Select a Range of Dates', () =>{
+  const label = text('Label', 'Date picker ');
+  const labelOn = boolean('Label on', true);
+  const instruction = text('Instruction', 'Please choose a date ');
+  const instructionOn = boolean('Instruction on', false);
+  const showIcon = boolean('Icon', true);
+  const isClearable = boolean('Clearable', true);
+  const fixedHeight = boolean('Fixed Calender Height', true);
+  const disabled = boolean('disable', false);
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+
+  return (
+    (<DateRangePicker
+      label={label}
+      showIcon={showIcon}
+      isClearable={isClearable}
+      disabled={disabled}
+      selected={moment()}
+      labelOn={labelOn}
+      instruction={instruction}
+      instructionOn={instructionOn}
+      fixedHeight={fixedHeight}
+      dateFormat={dateFormat}
+      locale={locale}
+    />)
+  );
+});
 
 // Restricted Date Range
 storiesOfDatePicker.add('Restricted Date Range', () => {
-  const label = 'Restricted Date Range';
   const defaultValue = 7;
-  const maxDate = number(label, defaultValue);
+  const maxDate = number("Date Range Restriction", defaultValue);
+  const label = text('Label', 'Date picker ');
+  const labelOn = boolean('Label on', true);
+  const instruction = text('Instruction', 'Please choose a date ');
+  const instructionOn = boolean('Instruction on', false);
+  const showIcon = boolean('Icon', true);
+  const isClearable = boolean('Clearable', true);
+  const fixedHeight = boolean('Fixed Calender Height', true);
+  const disabled = boolean('disable', false);
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, d MMM, YYYY' );
+  const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+
   return (
-    (<DisableDates maxDate={maxDate}/>)
+    (<DisableDates
+      maxDate={maxDate}
+      label={label}
+      showIcon={showIcon}
+      isClearable={isClearable}
+      disabled={disabled}
+      selected={moment()}
+      labelOn={labelOn}
+      instruction={instruction}
+      instructionOn={instructionOn}
+      fixedHeight={fixedHeight}
+      dateFormat={dateFormat}
+      locale={locale}
+    />)
   );
 });
 
@@ -94,21 +176,57 @@ storiesOfDatePicker.add('Filter Dates', () => <FilterDates label="SelectDate"/>)
 
 // calender locale
 storiesOfDatePicker.add('Locale', () => {
-  const label = 'Locale';
-  const options = ['fr-ca', 'en-us', 'zh-cn', 'ja'];
-  const defaultValue = 'fr-ca';
-  const locale = select(label, options, defaultValue);
+  const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'fr-ca');
+  const label = text('Label', 'Date picker ');
+  const labelOn = boolean('Label on', true);
+  const instruction = text('Instruction', 'Please choose a date ');
+  const instructionOn = boolean('Instruction on', false);
+  const showIcon = boolean('Icon', true);
+  const isClearable = boolean('Clearable', true);
+  const fixedHeight = boolean('Fixed Calender Height', true);
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const disabled = boolean('disable', false);
 
-  return <Locale label="Select Date" locale={locale}/>;
+  return <Locale
+    label={label}
+    showIcon={showIcon}
+    isClearable={isClearable}
+    disabled={disabled}
+    selected={moment()}
+    labelOn={labelOn}
+    instruction={instruction}
+    instructionOn={instructionOn}
+    fixedHeight={fixedHeight}
+    dateFormat={dateFormat}
+    locale={locale}
+  />;
 });
 
 // customize date format
 storiesOfDatePicker.add('Custom Date Format', () => {
-  const label = 'Date Format';
-  const options = ['ddd, d MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'];
-  const defaultValue = 'ddd, d MMM, YYYY';
-  const dateFormat = select(label, options, defaultValue);
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+  const label = text('Label', 'Date picker ');
+  const labelOn = boolean('Label on', true);
+  const instruction = text('Instruction', 'Please choose a date ');
+  const instructionOn = boolean('Instruction on', false);
+  const showIcon = boolean('Icon', true);
+  const isClearable = boolean('Clearable', true);
+  const fixedHeight = boolean('Fixed Calender Height', true);
+  const disabled = boolean('disable', false);
 
-  return <CustomDateFormat label="Select Date" dateFormat={dateFormat}/>;
+  return <CustomDateFormat
+    dateFormat={dateFormat}
+    locale={locale}
+    label={label}
+    showIcon={showIcon}
+    isClearable={isClearable}
+    disabled={disabled}
+    selected={moment()}
+    labelOn={labelOn}
+    instruction={instruction}
+    instructionOn={instructionOn}
+    fixedHeight={fixedHeight}
+  />;
 });
 

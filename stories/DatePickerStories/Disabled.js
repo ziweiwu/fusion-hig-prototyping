@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import DatePicker from '../../src/components/DatePicker/index';
 
 export default class Disable extends Component {
@@ -11,22 +11,27 @@ export default class Disable extends Component {
   }
 
   handleChangeDate(date) {
-    this.setState({startDate: date});
+    this.setState({ startDate: date });
   }
 
   render() {
     return (
-      <div>
-        <DatePicker
-          label={this.props.label}
-          selected={this.state.startDate}
-          startDate={this.state.startDate}
-          onChange={this.handleChangeDate}
-          showIcon={this.props.showIcon}
-          isClearable={this.props.isClearable}
-          disabled={this.props.disabled}
-        />
-      </div>
+      <DatePicker
+        locale={this.props.locale}
+        dateFormat={this.props.dateFormat}
+        dateFormatCalendar={this.props.dateFormat}
+        label={this.props.label}
+        selected={this.state.startDate}
+        startDate={this.state.startDate}
+        onChange={this.handleChangeDate}
+        showIcon={this.props.showIcon}
+        isClearable={this.props.isClearable}
+        disabled={this.props.disabled}
+        labelOn={this.props.labelOn}
+        instruction={this.props.instruction}
+        instructionOn={this.props.instructionOn}
+        fixedHeight={this.props.fixedHeight}
+      />
     );
   }
 }
