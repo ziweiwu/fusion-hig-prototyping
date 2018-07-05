@@ -29,7 +29,7 @@ storiesOfDatePicker.add('Default View', () => {
   const isClearable = boolean('Clearable', false);
   const disabled = boolean('Disable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
-  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, d MMM, YYYY' );
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'YYYY-MM-DD' );
   const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
 
   return (
@@ -58,7 +58,7 @@ storiesOfDatePicker.add('With Clear Button', () => {
   const showIcon = boolean('Icon', true);
   const disabled = boolean('disable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
-  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'YYYY-MM-DD');
   const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
 
   return (
@@ -88,7 +88,7 @@ storiesOfDatePicker.add('Disabled', () => {
   const showIcon = boolean('Icon', true);
   const isClearable = boolean('Clearable', true);
   const fixedHeight = boolean('Fixed Calender Height', true);
-  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'YYYY-MM-DD' );
   const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
 
   return (
@@ -115,10 +115,10 @@ storiesOfDatePicker.add('Select a Range of Dates', () =>{
   const instruction = text('Instruction', 'Please choose a date ');
   const instructionOn = boolean('Instruction on', false);
   const showIcon = boolean('Icon', true);
-  const isClearable = boolean('Clearable', true);
+  const isClearable = boolean('Clearable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
   const disabled = boolean('disable', false);
-  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'YYYY-MM-DD' );
   const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
 
   return (
@@ -147,10 +147,10 @@ storiesOfDatePicker.add('Restricted Date Range', () => {
   const instruction = text('Instruction', 'Please choose a date ');
   const instructionOn = boolean('Instruction on', false);
   const showIcon = boolean('Icon', true);
-  const isClearable = boolean('Clearable', true);
+  const isClearable = boolean('Clearable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
   const disabled = boolean('disable', false);
-  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, d MMM, YYYY' );
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'YYYY-MM-DD' );
   const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
 
   return (
@@ -182,9 +182,9 @@ storiesOfDatePicker.add('Locale', () => {
   const instruction = text('Instruction', 'Please choose a date ');
   const instructionOn = boolean('Instruction on', false);
   const showIcon = boolean('Icon', true);
-  const isClearable = boolean('Clearable', true);
+  const isClearable = boolean('Clearable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
-  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'YYYY-MM-DD' );
   const disabled = boolean('disable', false);
 
   return <Locale
@@ -204,14 +204,14 @@ storiesOfDatePicker.add('Locale', () => {
 
 // customize date format
 storiesOfDatePicker.add('Custom Date Format', () => {
-  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'ddd, MMM, YYYY' );
+  const dateFormat = select('Date Format',['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'],  'YYYY-MM-DD' );
   const locale = select("Locale", ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
   const label = text('Label', 'Date picker ');
   const labelOn = boolean('Label on', true);
   const instruction = text('Instruction', 'Please choose a date ');
   const instructionOn = boolean('Instruction on', false);
   const showIcon = boolean('Icon', true);
-  const isClearable = boolean('Clearable', true);
+  const isClearable = boolean('Clearable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
   const disabled = boolean('disable', false);
 
