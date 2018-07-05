@@ -100,6 +100,7 @@ export default class DatePicker extends React.Component {
     const showIcon = this.props.showIcon ? calenderIcon : undefined;
     return (<ReactDatePicker
       {...props}
+      ref={node => this.node = node}
       readOnly
       showMonthYearDropdown={false}
       showMonthDropdown={false}
