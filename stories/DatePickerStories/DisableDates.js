@@ -30,16 +30,24 @@ export default class DisableDates extends Component {
     const startDate = this.state.startDate;
     const maxDate = this.props.maxDate;
     return (
-      <div>
-        <DatePicker
-          selected={startDate}
-          onChange={this.handleChangeDate}
-          label="Select Date"
-          minDate={moment()}
-          maxDate={moment().add(maxDate, 'days')}
-        />
-      </div>
-
+      <DatePicker
+        locale={this.props.locale}
+        dateFormat={this.props.dateFormat}
+        dateFormatCalendar={this.props.dateFormat}
+        selected={startDate}
+        onChange={this.handleChangeDate}
+        label="Select Date"
+        minDate={moment()}
+        maxDate={moment().add(maxDate, 'days')}
+        startDate={this.state.startDate}
+        showIcon={this.props.showIcon}
+        isClearable={this.props.isClearable}
+        disabled={this.props.disabled}
+        labelOn={this.props.labelOn}
+        instruction={this.props.instruction}
+        instructionOn={this.props.instructionOn}
+        fixedHeight={this.props.fixedHeight}
+      />
     );
   }
 }

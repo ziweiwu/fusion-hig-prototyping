@@ -16,21 +16,22 @@ export default class Default extends Component {
 
   render() {
     return (
-      <div>
-        <DatePicker
-          selected={this.state.startDate}
-          startDate={this.state.startDate}
-          onChange={this.handleChangeDate}
-          showIcon={this.props.showIcon}
-          isClearable={this.props.isClearable}
-          disabled={this.props.disabled}
-          label={this.props.label}
-          labelOn={this.props.labelOn}
-          instruction={this.props.instruction}
-          instructionOn={this.props.instructionOn}
-          fixedHeight={this.props.fixedHeight}
-        />
-      </div>
+      <DatePicker
+        locale={this.props.locale}
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
+        selected={this.state.startDate}
+        startDate={this.state.startDate}
+        onChange={this.handleChangeDate}
+        showIcon={this.props.showIcon}
+        isClearable={this.props.isClearable}
+        disabled={this.props.disabled}
+        label={this.props.label}
+        labelOn={this.props.labelOn}
+        instruction={this.props.instruction}
+        instructionOn={this.props.instructionOn}
+        fixedHeight={this.props.fixedHeight}
+      />
     );
   }
 }

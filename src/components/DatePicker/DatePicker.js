@@ -95,10 +95,6 @@ export default class DatePicker extends React.Component {
     fixedHeight: true
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const props = this.props;
     const showIcon = this.props.showIcon ? calenderIcon : undefined;
@@ -115,7 +111,6 @@ export default class DatePicker extends React.Component {
       // use TextField as inputField
       // use ref to allow the use clear button in TextField component
       // instead of the one comes with ReactDatePicker
-      ref={node => this.node = node}
       customInput={
         <TextFieldPresenter
           readOnly

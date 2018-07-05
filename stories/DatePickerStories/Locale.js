@@ -27,15 +27,22 @@ export default class Locale extends Component {
 
   render() {
     return (
-      <div>
-        <DatePicker
-          selected={this.state.startDate}
-          label={this.props.label}
-          locale={this.props.locale}
-          startDate={this.state.startDate}
-          onChange={this.handleChangeStart}
-        />
-      </div>
+      <DatePicker
+        selected={this.state.startDate}
+        label={this.props.label}
+        locale={this.props.locale}
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
+        startDate={this.state.startDate}
+        onChange={this.handleChangeStart}
+        showIcon={this.props.showIcon}
+        isClearable={this.props.isClearable}
+        disabled={this.props.disabled}
+        labelOn={this.props.labelOn}
+        instruction={this.props.instruction}
+        instructionOn={this.props.instructionOn}
+        fixedHeight={this.props.fixedHeight}
+      />
     );
   }
 }
