@@ -27,16 +27,22 @@ export default class WithClearButton extends Component {
 
   render() {
     return (
-      <div>
-        <DatePicker
-          selected={this.state.startDate}
-          startDate={this.state.startDate}
-          onChange={this.handleChangeStart}
-          label={this.props.label}
-          isClearable={this.props.isClearable}
-        />
-      </div>
-    );
+      <DatePicker
+        selected={this.state.startDate}
+        startDate={this.state.startDate}
+        onChange={this.handleChangeStart}
+        label={this.props.label}
+        showIcon={this.props.showIcon}
+        isClearable={this.props.isClearable}
+        disabled={this.props.disabled}
+        labelOn={this.props.labelOn}
+        instruction={this.props.instruction}
+        instructionOn={this.props.instructionOn}
+        fixedHeight={this.props.fixedHeight}
+        locale={this.props.locale}
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
+      />);
   }
 }
 

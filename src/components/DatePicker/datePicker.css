@@ -6,13 +6,14 @@
 
 .react-datepicker__day {
   width: 2.5em;
-  border-radius: 0;
-  margin: 0; }
+  border-radius: 0 !important;
+  margin: 0 !important;
+  width: 30px !important;
+  height: 30px !important; }
   .react-datepicker__day--today {
-    font-weight: 900 !important; }
+    font-weight: bold !important; }
   .react-datepicker__day:hover {
-    background-color: #49c3fa !important;
-    color: white; }
+    background-color: #49c3fa !important; }
   .react-datepicker__day--disabled {
     border-right-color: #cccccc; }
     .react-datepicker__day--disabled:hover {
@@ -61,9 +62,12 @@ button.react-datepicker__navigation {
   right: 5px; }
 
 .hig__text-field {
-  min-width: 240px;
-  max-width: 240px; }
+  min-width: 230px;
+  max-width: 230px; }
 
+/***********************************************
+//turn off focus animation of text field
+***********************************************/
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow,
 .react-datepicker__month-read-view--down-arrow,
 .react-datepicker__month-year-read-view--down-arrow {

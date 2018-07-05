@@ -32,6 +32,16 @@ export default class DateRangePicker extends Component {
             startDate={this.state.startDate}
             endDate={this.state.endDate}
             onChange={this.handleChangeStart}
+            showIcon={this.props.showIcon}
+            isClearable={this.props.isClearable}
+            disabled={this.props.disabled}
+            labelOn={this.props.labelOn}
+            instruction={this.props.instruction}
+            instructionOn={this.props.instructionOn}
+            fixedHeight={this.props.fixedHeight}
+            locale={this.props.locale}
+            dateFormatCalendar={this.props.dateFormat}
+            dateFormat={this.props.dateFormat}
           />
           <span style={{ paddingLeft: '270px', float: 'left' }} />
         </span>
@@ -43,6 +53,16 @@ export default class DateRangePicker extends Component {
             startDate={this.state.startDate}
             endDate={this.state.endDate}
             onChange={this.handleChangeEnd}
+            showIcon={this.props.showIcon}
+            isClearable={this.props.isClearable}
+            disabled={this.props.disabled}
+            labelOn={this.props.labelOn}
+            instruction={this.props.instruction}
+            instructionOn={this.props.instructionOn}
+            fixedHeight={this.props.fixedHeight}
+            locale={this.props.locale}
+            dateFormatCalendar={this.props.dateFormat}
+            dateFormat={this.props.dateFormat}
           />
         </span>
       </div>

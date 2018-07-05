@@ -43,7 +43,6 @@ export default class DatePicker extends React.Component {
     endDate: PropTypes.object,
     excludeDates: PropTypes.array,
     filterDate: PropTypes.func,
-    fixedHeight: PropTypes.bool,
     formatWeekNumber: PropTypes.func,
     highlightDates: PropTypes.array,
     id: PropTypes.string,
@@ -58,7 +57,6 @@ export default class DatePicker extends React.Component {
     onSelect: PropTypes.func,
     onWeekSelect: PropTypes.func,
     openToDate: PropTypes.object,
-    placeholderText: PropTypes.string,
     required: PropTypes.bool,
     selected: PropTypes.object,
     selectsEnd: PropTypes.bool,
@@ -76,14 +74,25 @@ export default class DatePicker extends React.Component {
     shouldCloseOnSelect: PropTypes.bool,
     minTime: PropTypes.object,
     maxTime: PropTypes.object,
+    ///added props
     readOnly: PropTypes.bool,
-    showIcon: PropTypes.bool
+    showIcon: PropTypes.bool,
+    instruction: PropTypes.string,
+    instructionOn: PropTypes.bool,
+    label: PropTypes.string,
+    labelOn: PropTypes.bool,
+    fixedHeight: PropTypes.bool,
   };
 
   static defaultProps = {
     shouldCloseOnSelect: true,
     disabled: false,
-    showIcon: true
+    showIcon: true,
+    label: undefined,
+    labelOn: true,
+    instruction: undefined,
+    instructionOn: false,
+    fixedHeight: true
   };
 
   render() {
@@ -91,8 +100,8 @@ export default class DatePicker extends React.Component {
     const showIcon = this.props.showIcon ? calenderIcon : undefined;
     return (<ReactDatePicker
       {...props}
+      ref={node => this.node = node}
       readOnly
-      fixedHeight
       showMonthYearDropdown={false}
       showMonthDropdown={false}
       showYearDropdown={false}
@@ -103,12 +112,13 @@ export default class DatePicker extends React.Component {
       // use TextField as inputField
       // use ref to allow the use clear button in TextField component
       // instead of the one comes with ReactDatePicker
-      ref={node => this.node = node}
       customInput={
         <TextFieldPresenter
-          {...props}
+          readOnly
+          disabled
+          instructions={props.instructionOn ? props.instruction : undefined}
+          label={props.labelOn ? props.label : undefined}
           icon={showIcon}
-          placeholder={props.placeholderText}
           showClearButton={props.isClearable}
           onClearButtonClick={() => {
             this.node.clear();

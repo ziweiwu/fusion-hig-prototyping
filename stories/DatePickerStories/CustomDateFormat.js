@@ -30,17 +30,21 @@ export default class CustomDateFormat extends Component {
   render() {
     const startDate = this.state.startDate;
     return (
-
-      <div>
-        <DatePicker
-          selected={startDate}
-          label={this.props.label}
-          dateFormatCalendar={this.props.dateFormat}
-          dateFormat={this.props.dateFormat}
-          startDate={startDate}
-          onChange={this.handleChangeDate}
-        />
-      </div>
+      <DatePicker
+        selected={startDate}
+        label={this.props.label}
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
+        startDate={startDate}
+        onChange={this.handleChangeDate}
+        showIcon={this.props.showIcon}
+        isClearable={this.props.isClearable}
+        disabled={this.props.disabled}
+        labelOn={this.props.labelOn}
+        instruction={this.props.instruction}
+        instructionOn={this.props.instructionOn}
+        fixedHeight={this.props.fixedHeight}
+      />
     );
   }
 }
