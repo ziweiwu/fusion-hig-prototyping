@@ -1,5 +1,7 @@
 @import "~@hig/styles/build/index.css";
-
+//@import 'node_modules/@hig/styles/mixins/colors.scss';
+//@import "node_modules/@hig/styles/mixins/typography.scss";
+//@import "node_modules/@hig/styles/mixins/placeholder.scss";
 /* Dimensions */
 $datepicker__border-radius: 0.2rem;
 $datepicker__day-margin: 0.166rem;
@@ -28,17 +30,18 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
 
 .react-datepicker__day {
   width: 2.5em;
-  border-radius: 0;
-  margin: 0;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  width: 30px !important;
+  height: 30px !important;
 
   // strong emphasis on today's date with font weight
   &--today {
-    font-weight: 900 !important;
+    font-weight: bold !important;
   }
   // hover color for calender day
   &:hover {
-   background-color: lighten($datepicker__selected-color, 20%) !important;
-    color: white;
+    background-color: lighten($datepicker__selected-color, 20%) !important;
   }
 
   &--disabled {
@@ -51,7 +54,7 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
   }
 
   // color for dates in range selection
-  &--in-selecting-range:not(.react-datepicker__day--in--range){
+  &--in-selecting-range:not(&--in--range) {
     background-color: lighten($datepicker__selected-color, 30%) !important;
   }
 }
@@ -117,20 +120,73 @@ button.react-datepicker__navigation {
   padding-top: 5px;
 }
 
-.hig__text-field__clear{
+.hig__text-field__clear {
   top: 15px;
   right: 5px;
 }
 
-.hig__text-field {
-  min-width: 240px;
-  max-width: 240px
+.hig__text-field{
+  min-width: 230px;
+  max-width: 230px
 }
+
+
+
+
+
+
+
+/***********************************************
+//turn off focus animation of text field
+***********************************************/
+//.hig__text-field-v1__input {
+//  display: block;
+//  padding: 0;
+//  width: 100%;
+//  box-sizing: border-box;
+//  background-color: transparent;
+//  border: none;
+//
+//  &:focus {
+//    outline: none;
+//    @include placeholder {
+//      color: color(hig-cool-gray-50);
+//      font-size: 14px;
+//      transition-delay: 5s;
+//    }
+//  }
+//}
+//
+//.hig__text-field-v1__label {
+//  @include typography-medium;
+//  position: absolute;
+//  transition-property: none !important;
+//  transition-duration: 0s, 0s, 0s;
+//  transition-delay: 5s;
+//
+//  .hig__text-field-v1--disabled & {
+//    color: color(hig-cool-gray-20);
+//    pointer-events: none;
+//  }
+//}
+//
+//.hig__text-field-v1__label--input-focused,
+//.hig__text-field-v1__label--with-value {
+//  @include typography-medium;
+//  color: color(hig-blue-60);
+//  font-size: 14px;
+//  top: 0;
+//}
+//
+
+//.hig__text-field-v1__input-wrapper {
+//  @include styled-borer(color(hig-blue-60));
+//}
 
 //hig__text-field__input-wrapper {
 //  margin-bottom: 0px;
 //}
-
+//
 //.hig__text-field__input {
 //  padding-bottom: 2px;
 //}
@@ -138,7 +194,6 @@ button.react-datepicker__navigation {
 //.hig__text-field__label {
 //  padding-bottom: 8px;
 //}
-//
 
 // The above code will override the stylesheet from react-datepicker library
 @import 'node_modules/react-datepicker/src/stylesheets/datepicker';

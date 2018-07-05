@@ -28,14 +28,23 @@ export default class FilterDate extends Component {
 
   render() {
     return (
-      <div>
-        <DatePicker
-          selected={this.state.startDate}
-          onChange={this.handleChangeStart}
-          label={this.props.label}
-          filterDate={this.isWeekday}
-        />
-      </div>
+      <DatePicker
+        locale={this.props.locale}
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
+        selected={this.state.startDate}
+        onChange={this.handleChangeStart}
+        label={this.props.label}
+        filterDate={this.isWeekday}
+        startDate={this.state.startDate}
+        showIcon={this.props.showIcon}
+        isClearable={this.props.isClearable}
+        disabled={this.props.disabled}
+        labelOn={this.props.labelOn}
+        instruction={this.props.instruction}
+        instructionOn={this.props.instructionOn}
+        fixedHeight={this.props.fixedHeight}
+      />
     );
   }
 }

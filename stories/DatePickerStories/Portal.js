@@ -27,17 +27,15 @@ export default class Portal extends Component {
 
   render() {
     return (
-      <div>
-        <DatePicker
-          selected={this.state.startDate}
-          label={this.props.label}
-          withPortal
-          dateFormatCalendar={this.props.dateFormat}
-          dateFormat={this.props.dateFormat}
-          startDate={this.state.startDate}
-          onChange={this.handleChangeStart}
-        />
-      </div>
+      <DatePicker
+        selected={this.state.startDate}
+        label={this.props.label}
+        withPortal
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
+        startDate={this.state.startDate}
+        onChange={this.handleChangeStart}
+      />
     );
   }
 }

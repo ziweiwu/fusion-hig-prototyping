@@ -180,9 +180,9 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0.tgz#f33de7287675a2b3e9b88658a2221f8e552f81b3"
 
-"@hig/styles@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.1.tgz#c79f797e9273b515a2bac2f6b2ef1fb7f0d12e2c"
+"@hig/styles@0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.2.tgz#036bbe336a7e332248e6cd3c6526ee88f7d84f62"
 
 "@hig/text-field@^0.2.0":
   version "0.2.0"
