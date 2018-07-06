@@ -43,9 +43,9 @@ export default class DisableDates extends Component {
         showIcon={this.props.showIcon}
         isClearable={this.props.isClearable}
         disabled={this.props.disabled}
-        labelOn={this.props.labelOn}
+        showLabel={this.props.showLabel}
         instruction={this.props.instruction}
-        instructionOn={this.props.instructionOn}
+        showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
       />
     );

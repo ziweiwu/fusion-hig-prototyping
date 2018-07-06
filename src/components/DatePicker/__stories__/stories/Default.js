@@ -26,9 +26,9 @@ export default class Default extends Component {
         isClearable={this.props.isClearable}
         disabled={this.props.disabled}
         label={this.props.label}
-        labelOn={this.props.labelOn}
+        showLabel={this.props.showLabel}
         instruction={this.props.instruction}
-        instructionOn={this.props.instructionOn}
+        showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
       />
     );

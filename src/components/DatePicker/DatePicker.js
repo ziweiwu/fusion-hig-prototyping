@@ -78,9 +78,9 @@ export default class DatePicker extends React.Component {
     readOnly: PropTypes.bool,
     showIcon: PropTypes.bool,
     instruction: PropTypes.string,
-    instructionOn: PropTypes.bool,
+    showInstruction: PropTypes.bool,
     label: PropTypes.string,
-    labelOn: PropTypes.bool,
+    showLabel: PropTypes.bool,
     fixedHeight: PropTypes.bool,
     placeholder:PropTypes.string
   };
@@ -90,9 +90,9 @@ export default class DatePicker extends React.Component {
     disabled: false,
     showIcon: true,
     label: undefined,
-    labelOn: true,
+    showLabel: true,
     instruction: undefined,
-    instructionOn: false,
+    showInstruction: false,
     fixedHeight: true,
   };
 
@@ -115,12 +115,10 @@ export default class DatePicker extends React.Component {
       customInput={
         <TextFieldPresenter
           readOnly
-          focusAnimation={true}
-          valueAnimation={true}
           disabled
           placeholder = {props.placeholder}
-          instructions={props.instructionOn ? props.instruction : undefined}
-          label={props.labelOn ? props.label : undefined}
+          instructions={props.showInstruction ? props.instruction : undefined}
+          label={props.showLabel ? props.label : undefined}
           icon={showIcon}
           showClearButton={props.isClearable}
           onClearButtonClick={() => {
