@@ -1,38 +1,47 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
-export default class Default extends Component {
+export default class WithClearButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: undefined,
+      startDate: this.props.selected,
+      endDate: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
+    this.handleChangeStart = this.handleChangeStart.bind(this);
+    this.handleChangeEnd = this.handleChangeEnd.bind(this);
   }
 
   handleChangeDate(date) {
     this.setState({ startDate: date });
   }
 
+  handleChangeStart(date) {
+    this.setState({ startDate: date });
+  }
+
+  handleChangeEnd(date) {
+    this.setState({ endDate: date });
+  }
+
   render() {
     return (
       <DatePicker
-        locale={this.props.locale}
-        dateFormatCalendar={this.props.dateFormat}
-        dateFormat={this.props.dateFormat}
         selected={this.state.startDate}
         startDate={this.state.startDate}
-        onChange={this.handleChangeDate}
+        onChange={this.handleChangeStart}
+        label={this.props.label}
         showIcon={this.props.showIcon}
         isClearable={this.props.isClearable}
         disabled={this.props.disabled}
-        label={this.props.label}
         labelOn={this.props.labelOn}
         instruction={this.props.instruction}
         instructionOn={this.props.instructionOn}
         fixedHeight={this.props.fixedHeight}
-      />
-    );
+        locale={this.props.locale}
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
+      />);
   }
 }
-

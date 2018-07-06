@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import '@hig/styles/build/index.css';
+import {TextFieldPresenter} from '@hig/text-field';
 import '@hig/text-field/build/index.css';
-//import {TextFieldPresenter} from '@hig/text-field';
-import {TextFieldPresenter} from '../TextField/index';
-//import '@hig/text-field/build/index.css';
+//import {TextFieldPresenter} from '../TextField/index';
 import ReactDatePicker from 'react-datepicker';
 import './datePicker.css';
 
@@ -84,6 +82,7 @@ export default class DatePicker extends React.Component {
     label: PropTypes.string,
     labelOn: PropTypes.bool,
     fixedHeight: PropTypes.bool,
+    placeholder:PropTypes.string
   };
 
   static defaultProps = {
@@ -94,7 +93,7 @@ export default class DatePicker extends React.Component {
     labelOn: true,
     instruction: undefined,
     instructionOn: false,
-    fixedHeight: true
+    fixedHeight: true,
   };
 
   render() {
@@ -102,6 +101,7 @@ export default class DatePicker extends React.Component {
     const showIcon = this.props.showIcon ? calenderIcon : undefined;
     return (<ReactDatePicker
       {...props}
+      className = "hig__text-field-v1__input"
       ref={node => this.node = node}
       readOnly
       showMonthYearDropdown={false}
@@ -109,16 +109,16 @@ export default class DatePicker extends React.Component {
       showYearDropdown={false}
       showTimeSelect={false}
       isClearable={false}
-      disabledKeyboardNavigation={false}
-
       // use TextField as inputField
       // use ref to allow the use clear button in TextField component
       // instead of the one comes with ReactDatePicker
       customInput={
         <TextFieldPresenter
           readOnly
-          focusAnimation={false}
+          focusAnimation={true}
+          valueAnimation={true}
           disabled
+          placeholder = {props.placeholder}
           instructions={props.instructionOn ? props.instruction : undefined}
           label={props.labelOn ? props.label : undefined}
           icon={showIcon}
@@ -134,7 +134,7 @@ export default class DatePicker extends React.Component {
         // adjust position of calender popper, (horizontal, vertical)
         offset: {
           enabled: true,
-          offset: '0px, -30px',
+          offset: '0px, 0px',
         },
         flip: {
           enabled: false,

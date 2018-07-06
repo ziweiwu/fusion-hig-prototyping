@@ -1,45 +1,29 @@
 import React, { Component } from 'react';
-import moment from 'moment';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
-export default class DisableDates extends Component {
+export default class Disable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: moment(),
-      error: undefined,
+      startDate: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
-    this.handleChangeStart = this.handleChangeStart.bind(this);
-    this.handleChangeEnd = this.handleChangeEnd.bind(this);
   }
 
   handleChangeDate(date) {
     this.setState({ startDate: date });
   }
 
-  handleChangeStart(date) {
-    this.setState({ startDate: date });
-  }
-
-  handleChangeEnd(date) {
-    this.setState({ endDate: date });
-  }
-
   render() {
-    const startDate = this.state.startDate;
-    const maxDate = this.props.maxDate;
     return (
       <DatePicker
         locale={this.props.locale}
         dateFormat={this.props.dateFormat}
         dateFormatCalendar={this.props.dateFormat}
-        selected={startDate}
-        onChange={this.handleChangeDate}
-        label="Select Date"
-        minDate={moment()}
-        maxDate={moment().add(maxDate, 'days')}
+        label={this.props.label}
+        selected={this.state.startDate}
         startDate={this.state.startDate}
+        onChange={this.handleChangeDate}
         showIcon={this.props.showIcon}
         isClearable={this.props.isClearable}
         disabled={this.props.disabled}
@@ -51,4 +35,3 @@ export default class DisableDates extends Component {
     );
   }
 }
-

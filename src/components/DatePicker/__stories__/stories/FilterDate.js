@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
-export default class WithClearButton extends Component {
+export default class FilterDate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: this.props.selected,
-      endDate: undefined,
+      startDate: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
-    this.handleChangeEnd = this.handleChangeEnd.bind(this);
+    this.isWeekday = this.isWeekday.bind(this);
+    this.isWeekend = this.isWeekend.bind(this);
   }
 
   handleChangeDate(date) {
@@ -21,17 +21,33 @@ export default class WithClearButton extends Component {
     this.setState({ startDate: date });
   }
 
-  handleChangeEnd(date) {
-    this.setState({ endDate: date });
+  isWeekday(date) {
+    const day = date.day();
+    return day !== 0 && day !== 6;
+  }
+
+  isWeekend(date) {
+    const day = date.day();
+    return day === 0 || day === 6;
   }
 
   render() {
+    const filterOptions = {
+      Weekdays: this.isWeekday,
+      Weekends: this.isWeekend,
+    };
+
     return (
       <DatePicker
+        preSelection={undefined}
+        filterDate={filterOptions[this.props.chooseFilter]}
+        locale={this.props.locale}
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
         selected={this.state.startDate}
-        startDate={this.state.startDate}
         onChange={this.handleChangeStart}
         label={this.props.label}
+        startDate={this.state.startDate}
         showIcon={this.props.showIcon}
         isClearable={this.props.isClearable}
         disabled={this.props.disabled}
@@ -39,10 +55,7 @@ export default class WithClearButton extends Component {
         instruction={this.props.instruction}
         instructionOn={this.props.instructionOn}
         fixedHeight={this.props.fixedHeight}
-        locale={this.props.locale}
-        dateFormatCalendar={this.props.dateFormat}
-        dateFormat={this.props.dateFormat}
-      />);
+      />
+    );
   }
 }
-
