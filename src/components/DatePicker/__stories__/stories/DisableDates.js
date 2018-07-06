@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/DatePicker/index';
+import moment from 'moment';
+import DatePicker from '../../index';
 
-export default class FilterDate extends Component {
+export default class DisableDates extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: undefined,
+      startDate: moment(),
+      error: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
-    this.isWeekday = this.isWeekday.bind(this);
+    this.handleChangeEnd = this.handleChangeEnd.bind(this);
   }
 
   handleChangeDate(date) {
@@ -20,22 +22,23 @@ export default class FilterDate extends Component {
     this.setState({ startDate: date });
   }
 
-  isWeekday(date) {
-    const day = date.day();
-    return day !== 0 && day !== 6;
+  handleChangeEnd(date) {
+    this.setState({ endDate: date });
   }
 
-
   render() {
+    const startDate = this.state.startDate;
+    const maxDate = this.props.maxDate;
     return (
       <DatePicker
         locale={this.props.locale}
-        dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
-        selected={this.state.startDate}
-        onChange={this.handleChangeStart}
-        label={this.props.label}
-        filterDate={this.isWeekday}
+        dateFormatCalendar={this.props.dateFormat}
+        selected={startDate}
+        onChange={this.handleChangeDate}
+        label="Select Date"
+        minDate={moment()}
+        maxDate={moment().add(maxDate, 'days')}
         startDate={this.state.startDate}
         showIcon={this.props.showIcon}
         isClearable={this.props.isClearable}

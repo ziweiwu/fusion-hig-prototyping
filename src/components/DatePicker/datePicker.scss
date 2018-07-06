@@ -1,14 +1,16 @@
-@import "~@hig/styles/build/index.css";
+//@import "~@hig/styles/build/index.css";
+//@import "~@hig/styles/mixins/colors.scss";
+//@import "~@hig/styles/mixins/typography.scss";
 
 /* Dimensions */
-$datepicker__border-radius: 0.2rem;
-$datepicker__day-margin: 0.166rem;
+//$datepicker__border-radius: 0.2rem;
+//$datepicker__day-margin: 0.166rem;
 $datepicker__font-family: ArtifaktElement, sans-serif;
-$datepicker__font-size: 0.8rem;
-$datepicker__item-size: 1.7rem;
-$datepicker__margin: 0.4rem;
-$datepicker__navigation-size: 0.45rem;
-$datepicker__triangle-size: 8px;
+$datepicker__font-size: 14px;
+//$datepicker__item-size: 1.7rem;
+//$datepicker__margin: 0.4rem;
+//$datepicker__navigation-size: 0.45rem;
+//$datepicker__triangle-size: 8px;
 
 /* Colors */
 $datepicker__background-color: white;
@@ -32,23 +34,25 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
   margin: 0 !important;
   width: 30px !important;
   height: 30px !important;
+  font-weight: 500;
 
   // strong emphasis on today's date with font weight
   &--today {
-    font-weight: bold !important;
+    font-weight: 700 !important;
   }
-  // hover color for calender day
-  &:hover {
+  // hover color for calender days that are not disabled
+  &:hover:not(&--disabled) {
     background-color: lighten($datepicker__selected-color, 20%) !important;
+    color: white;
   }
 
   &--disabled {
     border-right-color: $datepicker__navigation-disabled-color;
 
     // disable hover background color for disable state
-    &:hover {
-      background-color: white !important;
-    }
+    //&:hover {
+    //  background-color: white !important;
+    //}
   }
 
   // color for dates in range selection
@@ -103,36 +107,43 @@ button.react-datepicker__navigation {
 /* Hig TextField Style */
 // static set the position of label text of input to remain on top.
 // reflective set the position of label text to be dynamically positioned.
-.hig__text-field__label-v1 {
-  position: static;
+.hig__text-field-v1 {
+  min-width: 230px
 }
 
-//calender icon
-.hig__text-field__icon-v1 {
-  bottom: 3px
+.hig__text-field-v1__label {
+  //position: static !important;
+  font-size: 14px;
 }
 
+//
 .hig__icon-button {
   background-color: transparent;
   border: none;
   padding-top: 5px;
 }
 
-.hig__text-field__clear {
-  top: 15px;
-  right: 5px;
-}
-
-.hig__text-field{
-  min-width: 230px;
-  max-width: 230px
-}
-
-
-
-
-
-
+//
+//  //remove clear button focus outline
+//  .hig__text-field-v1__clear:focus{
+//    border-style: none;
+//    outline-style: none !important;
+//  }
+//  .hig__text-field-v1__clear:active{
+//    border-style: none;
+//    outline-style: none !important;
+//  }
+//
+//  input {
+//    width: 100%;
+//    box-sizing: border-box;
+//    background-color: transparent;
+//    border: none;
+//    font-weight: 400;
+//    //font-size: 14px;
+//    //line-height: 20px;
+//  }
+//}
 
 /***********************************************
 //turn off focus animation of text field

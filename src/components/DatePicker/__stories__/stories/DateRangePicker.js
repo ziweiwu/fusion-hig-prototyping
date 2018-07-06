@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
 export default class DateRangePicker extends Component {
   constructor(props) {
@@ -69,4 +69,3 @@ export default class DateRangePicker extends Component {
     );
   }
 }
-

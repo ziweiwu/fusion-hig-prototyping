@@ -159,7 +159,7 @@ const App = () => (
       <div style={{ margin: '200px' }} />
 
       <Example placement="right" content={youtubeVideo} arrow><button>my button</button></Example>
-      <TextFieldPresenter defaultValue="something" label="label"/>
+      <TextFieldPresenter defaultValue="something" label="label" showClearButton />
     </div>
   </div>
 );

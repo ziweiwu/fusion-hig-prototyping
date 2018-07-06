@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
 export default class CustomDateFormat extends Component {
   constructor(props) {
@@ -48,4 +48,3 @@ export default class CustomDateFormat extends Component {
     );
   }
 }
-
