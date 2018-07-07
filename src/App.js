@@ -14,7 +14,7 @@ import Input from './components/TextField/Input'
 import TextFieldPresenter from './components/TextField/index'
 // import 'react-tippy/dist/tippy.css';
 // import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import './App.css';
+import './App.scss';
 
 const options = [
   {

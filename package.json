@@ -29,6 +29,7 @@
     "delay": "^2.0.0",
     "dom-align": "^1.8.0",
     "emotion": "^9.2.4",
+    "enzyme-adapter-react-15": "^1.0.5",
     "global": "^4.3.2",
     "lodash": "^4.17.10",
     "moment": "^2.22.1",
@@ -36,9 +37,9 @@
     "positions": "^1.6.1",
     "prop-types": "^15.6.2",
     "rc-tooltip": "^3.7.2",
-    "react": "^15.5.0",
-    "react-datepicker": "^1.5.0",
+    "react": "^15.4.1",
     "react-dom": "^15.6.2",
+    "react-datepicker": "^1.5.0",
     "react-emotion": "^9.2.4",
     "react-grid-system": "^3.2.3",
     "react-popper": "^1.0.0-beta.6",
@@ -53,28 +54,23 @@
     "webpack": "^4.8.3"
   },
   "scripts": {
-    "build-datepicker-css": "node-sass-chokidar ./src/components/DatePicker/datePicker.scss ./src/components/DatePicker/datePicker.css",
-    "build-tooltip-css": "node-sass-chokidar ./src/components/Tooltip/tooltip.scss ./src/components/Tooltip/tooltip.css",
-    "build-css": "yarn build-datepicker-css && yarn build-tooltip-css",
-    "build-css-watch": "yarn build-datepicker-css --watch && yarn build-tooltip-css --watch",
-    "build-input-css": "node-sass-chokidar ./src/components/TextField/input.scss ./src/components/TextField/input.css",
-    "build-textfield-css": "node-sass-chokidar ./src/components/TextField/text-field.scss ./src/components/TextField/text-field.css",
-    "build-textfieldPresenter-css": "yarn build-input-css --watch && yarn build-textfield--css --watch",
-    "fix-tooltip-scss": "./node_modules/sass-lint/bin/sass-lint.js src/components/Tooltip/tooltip.scss --fix",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "yarn build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start": "yarn build-css &&  react-scripts start",
-    "build": "yarn build-css && react-scripts build",
+    "build": "yarn build-css &&  react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject --env=jsdom",
     "storybook": "yarn build-css && start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "yarn build-css && storybook-to-ghpages"
   },
   "peerDependencies": {
-    "react": "^16.3.2 || ^15.4.1"
+    "react": " ^15.4.1 || ^16.3.2 "
   },
   "devDependencies": {
     "babel-core": "~6.26.3",
     "babel-preset-jest": "~23.0.1",
-    "enzyme": "^3.3.0",
+    "enzyme": "^2.5.2",
+    "jest-enzyme": "^3.8.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-jest-enzyme": "^6.0.2",
@@ -83,7 +79,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
     "flow-bin": "^0.73.0",
-    "jest-enzyme": "^6.0.2",
     "react-scripts": "1.1.4",
     "sinon": "^4.1.2",
     "source-map": "^0.7.3"

@@ -33,7 +33,7 @@ export default class DateRangePicker extends Component {
             endDate={this.state.endDate}
             onChange={this.handleChangeStart}
             showIcon={this.props.showIcon}
-            isClearable={this.props.isClearable}
+            showClearButton={this.props.showClearButton}
             disabled={this.props.disabled}
             showLabel={this.props.showLabel}
             instruction={this.props.instruction}
@@ -54,7 +54,7 @@ export default class DateRangePicker extends Component {
             endDate={this.state.endDate}
             onChange={this.handleChangeEnd}
             showIcon={this.props.showIcon}
-            isClearable={this.props.isClearable}
+            showClearButton={this.props.showClearButton}
             disabled={this.props.disabled}
             showLabel={this.props.showLabel}
             instruction={this.props.instruction}
