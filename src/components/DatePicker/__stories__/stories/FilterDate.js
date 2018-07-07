@@ -49,7 +49,7 @@ export default class FilterDate extends Component {
         label={this.props.label}
         startDate={this.state.startDate}
         showIcon={this.props.showIcon}
-        isClearable={this.props.isClearable}
+        showClearButton={this.props.showClearButton}
         disabled={this.props.disabled}
         showLabel={this.props.showLabel}
         instruction={this.props.instruction}

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types";
 import {TextFieldPresenter} from '@hig/text-field';
 import '@hig/text-field/build/index.css';
-//import {TextFieldPresenter} from '../TextField/index';
 import ReactDatePicker from 'react-datepicker';
 import './datePicker.css';
 
@@ -47,7 +46,6 @@ export default class DatePicker extends React.Component {
     highlightDates: PropTypes.array,
     id: PropTypes.string,
     includeDates: PropTypes.array,
-    isClearable: PropTypes.bool,
     locale: PropTypes.string,
     maxDate: PropTypes.object,
     minDate: PropTypes.object,
@@ -83,6 +81,7 @@ export default class DatePicker extends React.Component {
     showLabel: PropTypes.bool,
     fixedHeight: PropTypes.bool,
     placeholder:PropTypes.string
+    showClearButton: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -94,6 +93,7 @@ export default class DatePicker extends React.Component {
     instruction: undefined,
     showInstruction: false,
     fixedHeight: true,
+    showClearButton: false,
   };
 
   render() {
@@ -102,6 +102,7 @@ export default class DatePicker extends React.Component {
     return (<ReactDatePicker
       {...props}
       className = "hig__text-field-v1__input"
+      id = "hig__date-picker"
       ref={node => this.node = node}
       readOnly
       showMonthYearDropdown={false}
@@ -120,7 +121,7 @@ export default class DatePicker extends React.Component {
           instructions={props.showInstruction ? props.instruction : undefined}
           label={props.showLabel ? props.label : undefined}
           icon={showIcon}
-          showClearButton={props.isClearable}
+          showClearButton={props.showClearButton}
           onClearButtonClick={() => {
             this.node.clear();
           }}

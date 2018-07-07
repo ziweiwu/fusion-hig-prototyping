@@ -1,16 +1,14 @@
-//@import "~@hig/styles/build/index.css";
-//@import "~@hig/styles/mixins/colors.scss";
-//@import "~@hig/styles/mixins/typography.scss";
+@import "~@hig/styles/build/index.css";
 
 /* Dimensions */
-//$datepicker__border-radius: 0.2rem;
-//$datepicker__day-margin: 0.166rem;
+$datepicker__border-radius: 0.2rem;
+$datepicker__day-margin: 0.166rem;
 $datepicker__font-family: ArtifaktElement, sans-serif;
 $datepicker__font-size: 14px;
-//$datepicker__item-size: 1.7rem;
-//$datepicker__margin: 0.4rem;
-//$datepicker__navigation-size: 0.45rem;
-//$datepicker__triangle-size: 8px;
+$datepicker__item-size: 1.7rem;
+$datepicker__margin: 0.4rem;
+$datepicker__navigation-size: 0.45rem;
+$datepicker__triangle-size: 8px;
 
 /* Colors */
 $datepicker__background-color: white;

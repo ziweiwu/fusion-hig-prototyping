@@ -33,7 +33,7 @@ export default class WithClearButton extends Component {
         onChange={this.handleChangeStart}
         label={this.props.label}
         showIcon={this.props.showIcon}
-        isClearable={this.props.isClearable}
+        showClearButton={this.props.showClearButton}
         disabled={this.props.disabled}
         showLabel={this.props.showLabel}
         instruction={this.props.instruction}

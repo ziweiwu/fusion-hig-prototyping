@@ -23,7 +23,7 @@ export default class Default extends Component {
         selected={this.state.startDate}
         onChange={this.handleChangeDate}
         showIcon={this.props.showIcon}
-        isClearable={this.props.isClearable}
+        showClearButton={this.props.showClearButton}
         disabled={this.props.disabled}
         label={this.props.label}
         showLabel={this.props.showLabel}

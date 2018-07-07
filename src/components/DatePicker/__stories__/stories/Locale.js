@@ -36,7 +36,7 @@ export default class Locale extends Component {
         startDate={this.state.startDate}
         onChange={this.handleChangeStart}
         showIcon={this.props.showIcon}
-        isClearable={this.props.isClearable}
+        showClearButton={this.props.showClearButton}
         disabled={this.props.disabled}
         showLabel={this.props.showLabel}
         instruction={this.props.instruction}
