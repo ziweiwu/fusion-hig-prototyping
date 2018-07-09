@@ -80,7 +80,7 @@ export default class DatePicker extends React.Component {
     label: PropTypes.string,
     showLabel: PropTypes.bool,
     fixedHeight: PropTypes.bool,
-    placeholder:PropTypes.string
+    placeholder:PropTypes.string,
     showClearButton: PropTypes.bool,
   };
 
