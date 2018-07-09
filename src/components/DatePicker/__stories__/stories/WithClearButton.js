@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
 export default class WithClearButton extends Component {
   constructor(props) {
@@ -27,16 +27,21 @@ export default class WithClearButton extends Component {
 
   render() {
     return (
-      <div>
-        <DatePicker
-          selected={this.state.startDate}
-          startDate={this.state.startDate}
-          onChange={this.handleChangeStart}
-          label={this.props.label}
-          isClearable={this.props.isClearable}
-        />
-      </div>
-    );
+      <DatePicker
+        selected={this.state.startDate}
+        startDate={this.state.startDate}
+        onChange={this.handleChangeStart}
+        label={this.props.label}
+        showIcon={this.props.showIcon}
+        showClearButton={this.props.showClearButton}
+        disabled={this.props.disabled}
+        showLabel={this.props.showLabel}
+        instruction={this.props.instruction}
+        showInstruction={this.props.showInstruction}
+        fixedHeight={this.props.fixedHeight}
+        locale={this.props.locale}
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
+      />);
   }
 }
-

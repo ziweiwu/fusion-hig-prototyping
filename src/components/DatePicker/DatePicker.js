@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import '@hig/styles/build/index.css';
-import '@hig/text-field/build/index.css';
 import {TextFieldPresenter} from '@hig/text-field';
+import '@hig/text-field/build/index.css';
 import ReactDatePicker from 'react-datepicker';
 import './datePicker.css';
 
@@ -43,12 +42,10 @@ export default class DatePicker extends React.Component {
     endDate: PropTypes.object,
     excludeDates: PropTypes.array,
     filterDate: PropTypes.func,
-    fixedHeight: PropTypes.bool,
     formatWeekNumber: PropTypes.func,
     highlightDates: PropTypes.array,
     id: PropTypes.string,
     includeDates: PropTypes.array,
-    isClearable: PropTypes.bool,
     locale: PropTypes.string,
     maxDate: PropTypes.object,
     minDate: PropTypes.object,
@@ -58,7 +55,6 @@ export default class DatePicker extends React.Component {
     onSelect: PropTypes.func,
     onWeekSelect: PropTypes.func,
     openToDate: PropTypes.object,
-    placeholderText: PropTypes.string,
     required: PropTypes.bool,
     selected: PropTypes.object,
     selectsEnd: PropTypes.bool,
@@ -76,14 +72,28 @@ export default class DatePicker extends React.Component {
     shouldCloseOnSelect: PropTypes.bool,
     minTime: PropTypes.object,
     maxTime: PropTypes.object,
+    ///added props
     readOnly: PropTypes.bool,
-    showIcon: PropTypes.bool
+    showIcon: PropTypes.bool,
+    instruction: PropTypes.string,
+    showInstruction: PropTypes.bool,
+    label: PropTypes.string,
+    showLabel: PropTypes.bool,
+    fixedHeight: PropTypes.bool,
+    placeholder:PropTypes.string,
+    showClearButton: PropTypes.bool,
   };
 
   static defaultProps = {
     shouldCloseOnSelect: true,
     disabled: false,
-    showIcon: true
+    showIcon: true,
+    label: undefined,
+    showLabel: true,
+    instruction: undefined,
+    showInstruction: false,
+    fixedHeight: true,
+    showClearButton: false,
   };
 
   render() {
@@ -91,25 +101,27 @@ export default class DatePicker extends React.Component {
     const showIcon = this.props.showIcon ? calenderIcon : undefined;
     return (<ReactDatePicker
       {...props}
+      className = "hig__text-field-v1__input"
+      id = "hig__date-picker"
+      ref={node => this.node = node}
       readOnly
-      fixedHeight
       showMonthYearDropdown={false}
       showMonthDropdown={false}
       showYearDropdown={false}
       showTimeSelect={false}
       isClearable={false}
-      disabledKeyboardNavigation={false}
-
       // use TextField as inputField
       // use ref to allow the use clear button in TextField component
       // instead of the one comes with ReactDatePicker
-      ref={node => this.node = node}
       customInput={
         <TextFieldPresenter
-          {...props}
+          readOnly
+          disabled
+          placeholder = {props.placeholder}
+          instructions={props.showInstruction ? props.instruction : undefined}
+          label={props.showLabel ? props.label : undefined}
           icon={showIcon}
-          placeholder={props.placeholderText}
-          showClearButton={props.isClearable}
+          showClearButton={props.showClearButton}
           onClearButtonClick={() => {
             this.node.clear();
           }}
@@ -121,7 +133,7 @@ export default class DatePicker extends React.Component {
         // adjust position of calender popper, (horizontal, vertical)
         offset: {
           enabled: true,
-          offset: '0px, -30px',
+          offset: '0px, 0px',
         },
         flip: {
           enabled: false,

@@ -10,12 +10,59 @@ ShallowWrapper {
   "length": 1,
   "node": <DatePicker
     allowSameDay={false}
+    className="hig__text-field-v1__input"
     customInput={
         <TextFieldPresenter
-            hidePopper={false}
-            id="Fri Sep 15 2017 09:30:00 GMT-0400"
+            disabled={true}
+            icon={
+                <svg
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <title>
+                        calendar-24
+                    </title>
+                    <g
+                        id="final"
+                    >
+                        <g
+                            id="calendar"
+                        >
+                            <g
+                                id="outline"
+                            >
+                                <path
+                                    d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                                    fill="#2e4258"
+                                />
+                                <path
+                                    d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                                    fill="none"
+                                />
+                                <rect
+                                    fill="none"
+                                    height="12"
+                                    width="17"
+                                    x="3"
+                                    y="9"
+                                />
+                                <path
+                                    d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+                                    fill="#2e4258"
+                                />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            }
+            id="text-field-82394"
+            instructions={undefined}
+            label={undefined}
             onClearButtonClick={[Function]}
-            selected={"2017-09-15T13:30:00.000Z"}
+            placeholder={undefined}
+            readOnly={true}
             showClearButton={undefined}
             type="text"
         />
@@ -27,7 +74,10 @@ ShallowWrapper {
     dropdownMode="scroll"
     fixedHeight={true}
     hidePopper={false}
+    id="hig__date-picker"
+    instruction={undefined}
     isClearable={false}
+    label={undefined}
     monthsShown={1}
     onBlur={[Function]}
     onChange={[Function]}
@@ -44,7 +94,7 @@ ShallowWrapper {
             },
             "offset": Object {
               "enabled": true,
-              "offset": "0px, -30px",
+              "offset": "0px, 0px",
             },
             "preventOverflow": Object {
               "enabled": true,
@@ -57,6 +107,9 @@ ShallowWrapper {
     readOnly={true}
     selected={"2017-09-15T13:30:00.000Z"}
     shouldCloseOnSelect={true}
+    showIcon={true}
+    showInstruction={false}
+    showLabel={true}
     showMonthDropdown={false}
     showMonthYearDropdown={false}
     showTimeSelect={false}
@@ -68,12 +121,59 @@ ShallowWrapper {
   "nodes": Array [
     <DatePicker
       allowSameDay={false}
+      className="hig__text-field-v1__input"
       customInput={
             <TextFieldPresenter
-                  hidePopper={false}
-                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
+                  disabled={true}
+                  icon={
+                        <svg
+                              height="24"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                        >
+                              <title>
+                                    calendar-24
+                              </title>
+                              <g
+                                    id="final"
+                              >
+                                    <g
+                                          id="calendar"
+                                    >
+                                          <g
+                                                id="outline"
+                                          >
+                                                <path
+                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                                                      fill="#2e4258"
+                                                />
+                                                <path
+                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                                                      fill="none"
+                                                />
+                                                <rect
+                                                      fill="none"
+                                                      height="12"
+                                                      width="17"
+                                                      x="3"
+                                                      y="9"
+                                                />
+                                                <path
+                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+                                                      fill="#2e4258"
+                                                />
+                                          </g>
+                                    </g>
+                              </g>
+                        </svg>
+                  }
+                  id="text-field-82394"
+                  instructions={undefined}
+                  label={undefined}
                   onClearButtonClick={[Function]}
-                  selected={"2017-09-15T13:30:00.000Z"}
+                  placeholder={undefined}
+                  readOnly={true}
                   showClearButton={undefined}
                   type="text"
             />
@@ -85,7 +185,10 @@ ShallowWrapper {
       dropdownMode="scroll"
       fixedHeight={true}
       hidePopper={false}
+      id="hig__date-picker"
+      instruction={undefined}
       isClearable={false}
+      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -102,7 +205,7 @@ ShallowWrapper {
                   },
                   "offset": Object {
                     "enabled": true,
-                    "offset": "0px, -30px",
+                    "offset": "0px, 0px",
                   },
                   "preventOverflow": Object {
                     "enabled": true,
@@ -115,6 +218,9 @@ ShallowWrapper {
       readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
+      showIcon={true}
+      showInstruction={false}
+      showLabel={true}
       showMonthDropdown={false}
       showMonthYearDropdown={false}
       showTimeSelect={false}
@@ -128,15 +234,31 @@ ShallowWrapper {
   "renderer": ReactShallowRenderer {
     "_context": Object {},
     "_element": <DatePicker
+      disabled={false}
+      fixedHeight={true}
       hidePopper={false}
+      instruction={undefined}
+      label={undefined}
       selected={"2017-09-15T13:30:00.000Z"}
+      shouldCloseOnSelect={true}
+      showIcon={true}
+      showInstruction={false}
+      showLabel={true}
 />,
     "_forcedUpdate": false,
     "_instance": DatePicker {
       "context": Object {},
       "props": Object {
+        "disabled": false,
+        "fixedHeight": true,
         "hidePopper": false,
+        "instruction": undefined,
+        "label": undefined,
         "selected": "2017-09-15T13:30:00.000Z",
+        "shouldCloseOnSelect": true,
+        "showIcon": true,
+        "showInstruction": false,
+        "showLabel": true,
       },
       "refs": Object {},
       "state": null,
@@ -148,12 +270,59 @@ ShallowWrapper {
     "_newState": null,
     "_rendered": <DatePicker
       allowSameDay={false}
+      className="hig__text-field-v1__input"
       customInput={
             <TextFieldPresenter
-                  hidePopper={false}
-                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
+                  disabled={true}
+                  icon={
+                        <svg
+                              height="24"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                        >
+                              <title>
+                                    calendar-24
+                              </title>
+                              <g
+                                    id="final"
+                              >
+                                    <g
+                                          id="calendar"
+                                    >
+                                          <g
+                                                id="outline"
+                                          >
+                                                <path
+                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                                                      fill="#2e4258"
+                                                />
+                                                <path
+                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                                                      fill="none"
+                                                />
+                                                <rect
+                                                      fill="none"
+                                                      height="12"
+                                                      width="17"
+                                                      x="3"
+                                                      y="9"
+                                                />
+                                                <path
+                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+                                                      fill="#2e4258"
+                                                />
+                                          </g>
+                                    </g>
+                              </g>
+                        </svg>
+                  }
+                  id="text-field-82394"
+                  instructions={undefined}
+                  label={undefined}
                   onClearButtonClick={[Function]}
-                  selected={"2017-09-15T13:30:00.000Z"}
+                  placeholder={undefined}
+                  readOnly={true}
                   showClearButton={undefined}
                   type="text"
             />
@@ -165,7 +334,10 @@ ShallowWrapper {
       dropdownMode="scroll"
       fixedHeight={true}
       hidePopper={false}
+      id="hig__date-picker"
+      instruction={undefined}
       isClearable={false}
+      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -182,7 +354,7 @@ ShallowWrapper {
                   },
                   "offset": Object {
                     "enabled": true,
-                    "offset": "0px, -30px",
+                    "offset": "0px, 0px",
                   },
                   "preventOverflow": Object {
                     "enabled": true,
@@ -195,6 +367,9 @@ ShallowWrapper {
       readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
+      showIcon={true}
+      showInstruction={false}
+      showLabel={true}
       showMonthDropdown={false}
       showMonthYearDropdown={false}
       showTimeSelect={false}
@@ -213,8 +388,16 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <DatePicker
+    disabled={false}
+    fixedHeight={true}
     hidePopper={false}
+    instruction={undefined}
+    label={undefined}
     selected={"2017-09-15T13:30:00.000Z"}
+    shouldCloseOnSelect={true}
+    showIcon={true}
+    showInstruction={false}
+    showLabel={true}
 />,
 }
 `;
@@ -229,12 +412,59 @@ ShallowWrapper {
   "length": 1,
   "node": <DatePicker
     allowSameDay={false}
+    className="hig__text-field-v1__input"
     customInput={
         <TextFieldPresenter
             disabled={true}
-            id="Fri Sep 15 2017 09:30:00 GMT-0400"
+            icon={
+                <svg
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <title>
+                        calendar-24
+                    </title>
+                    <g
+                        id="final"
+                    >
+                        <g
+                            id="calendar"
+                        >
+                            <g
+                                id="outline"
+                            >
+                                <path
+                                    d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                                    fill="#2e4258"
+                                />
+                                <path
+                                    d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                                    fill="none"
+                                />
+                                <rect
+                                    fill="none"
+                                    height="12"
+                                    width="17"
+                                    x="3"
+                                    y="9"
+                                />
+                                <path
+                                    d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+                                    fill="#2e4258"
+                                />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            }
+            id="text-field-82394"
+            instructions={undefined}
+            label={undefined}
             onClearButtonClick={[Function]}
-            selected={"2017-09-15T13:30:00.000Z"}
+            placeholder={undefined}
+            readOnly={true}
             showClearButton={undefined}
             type="text"
         />
@@ -245,7 +475,10 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
+    id="hig__date-picker"
+    instruction={undefined}
     isClearable={false}
+    label={undefined}
     monthsShown={1}
     onBlur={[Function]}
     onChange={[Function]}
@@ -262,7 +495,7 @@ ShallowWrapper {
             },
             "offset": Object {
               "enabled": true,
-              "offset": "0px, -30px",
+              "offset": "0px, 0px",
             },
             "preventOverflow": Object {
               "enabled": true,
@@ -275,6 +508,9 @@ ShallowWrapper {
     readOnly={true}
     selected={"2017-09-15T13:30:00.000Z"}
     shouldCloseOnSelect={true}
+    showIcon={true}
+    showInstruction={false}
+    showLabel={true}
     showMonthDropdown={false}
     showMonthYearDropdown={false}
     showTimeSelect={false}
@@ -286,12 +522,59 @@ ShallowWrapper {
   "nodes": Array [
     <DatePicker
       allowSameDay={false}
+      className="hig__text-field-v1__input"
       customInput={
             <TextFieldPresenter
                   disabled={true}
-                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
+                  icon={
+                        <svg
+                              height="24"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                        >
+                              <title>
+                                    calendar-24
+                              </title>
+                              <g
+                                    id="final"
+                              >
+                                    <g
+                                          id="calendar"
+                                    >
+                                          <g
+                                                id="outline"
+                                          >
+                                                <path
+                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                                                      fill="#2e4258"
+                                                />
+                                                <path
+                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                                                      fill="none"
+                                                />
+                                                <rect
+                                                      fill="none"
+                                                      height="12"
+                                                      width="17"
+                                                      x="3"
+                                                      y="9"
+                                                />
+                                                <path
+                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+                                                      fill="#2e4258"
+                                                />
+                                          </g>
+                                    </g>
+                              </g>
+                        </svg>
+                  }
+                  id="text-field-82394"
+                  instructions={undefined}
+                  label={undefined}
                   onClearButtonClick={[Function]}
-                  selected={"2017-09-15T13:30:00.000Z"}
+                  placeholder={undefined}
+                  readOnly={true}
                   showClearButton={undefined}
                   type="text"
             />
@@ -302,7 +585,10 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      id="hig__date-picker"
+      instruction={undefined}
       isClearable={false}
+      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -319,7 +605,7 @@ ShallowWrapper {
                   },
                   "offset": Object {
                     "enabled": true,
-                    "offset": "0px, -30px",
+                    "offset": "0px, 0px",
                   },
                   "preventOverflow": Object {
                     "enabled": true,
@@ -332,6 +618,9 @@ ShallowWrapper {
       readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
+      showIcon={true}
+      showInstruction={false}
+      showLabel={true}
       showMonthDropdown={false}
       showMonthYearDropdown={false}
       showTimeSelect={false}
@@ -346,14 +635,28 @@ ShallowWrapper {
     "_context": Object {},
     "_element": <DatePicker
       disabled={true}
+      fixedHeight={true}
+      instruction={undefined}
+      label={undefined}
       selected={"2017-09-15T13:30:00.000Z"}
+      shouldCloseOnSelect={true}
+      showIcon={true}
+      showInstruction={false}
+      showLabel={true}
 />,
     "_forcedUpdate": false,
     "_instance": DatePicker {
       "context": Object {},
       "props": Object {
         "disabled": true,
+        "fixedHeight": true,
+        "instruction": undefined,
+        "label": undefined,
         "selected": "2017-09-15T13:30:00.000Z",
+        "shouldCloseOnSelect": true,
+        "showIcon": true,
+        "showInstruction": false,
+        "showLabel": true,
       },
       "refs": Object {},
       "state": null,
@@ -365,12 +668,59 @@ ShallowWrapper {
     "_newState": null,
     "_rendered": <DatePicker
       allowSameDay={false}
+      className="hig__text-field-v1__input"
       customInput={
             <TextFieldPresenter
                   disabled={true}
-                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
+                  icon={
+                        <svg
+                              height="24"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                        >
+                              <title>
+                                    calendar-24
+                              </title>
+                              <g
+                                    id="final"
+                              >
+                                    <g
+                                          id="calendar"
+                                    >
+                                          <g
+                                                id="outline"
+                                          >
+                                                <path
+                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                                                      fill="#2e4258"
+                                                />
+                                                <path
+                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                                                      fill="none"
+                                                />
+                                                <rect
+                                                      fill="none"
+                                                      height="12"
+                                                      width="17"
+                                                      x="3"
+                                                      y="9"
+                                                />
+                                                <path
+                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+                                                      fill="#2e4258"
+                                                />
+                                          </g>
+                                    </g>
+                              </g>
+                        </svg>
+                  }
+                  id="text-field-82394"
+                  instructions={undefined}
+                  label={undefined}
                   onClearButtonClick={[Function]}
-                  selected={"2017-09-15T13:30:00.000Z"}
+                  placeholder={undefined}
+                  readOnly={true}
                   showClearButton={undefined}
                   type="text"
             />
@@ -381,7 +731,10 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      id="hig__date-picker"
+      instruction={undefined}
       isClearable={false}
+      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -398,7 +751,7 @@ ShallowWrapper {
                   },
                   "offset": Object {
                     "enabled": true,
-                    "offset": "0px, -30px",
+                    "offset": "0px, 0px",
                   },
                   "preventOverflow": Object {
                     "enabled": true,
@@ -411,6 +764,9 @@ ShallowWrapper {
       readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
+      showIcon={true}
+      showInstruction={false}
+      showLabel={true}
       showMonthDropdown={false}
       showMonthYearDropdown={false}
       showTimeSelect={false}
@@ -430,7 +786,14 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <DatePicker
     disabled={true}
+    fixedHeight={true}
+    instruction={undefined}
+    label={undefined}
     selected={"2017-09-15T13:30:00.000Z"}
+    shouldCloseOnSelect={true}
+    showIcon={true}
+    showInstruction={false}
+    showLabel={true}
 />,
 }
 `;
@@ -445,11 +808,59 @@ ShallowWrapper {
   "length": 1,
   "node": <DatePicker
     allowSameDay={false}
+    className="hig__text-field-v1__input"
     customInput={
         <TextFieldPresenter
-            id="Fri Sep 15 2017 09:30:00 GMT-0400"
+            disabled={true}
+            icon={
+                <svg
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <title>
+                        calendar-24
+                    </title>
+                    <g
+                        id="final"
+                    >
+                        <g
+                            id="calendar"
+                        >
+                            <g
+                                id="outline"
+                            >
+                                <path
+                                    d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                                    fill="#2e4258"
+                                />
+                                <path
+                                    d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                                    fill="none"
+                                />
+                                <rect
+                                    fill="none"
+                                    height="12"
+                                    width="17"
+                                    x="3"
+                                    y="9"
+                                />
+                                <path
+                                    d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+                                    fill="#2e4258"
+                                />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            }
+            id="text-field-82394"
+            instructions={undefined}
+            label={undefined}
             onClearButtonClick={[Function]}
-            selected={"2017-09-15T13:30:00.000Z"}
+            placeholder={undefined}
+            readOnly={true}
             showClearButton={undefined}
             type="text"
         />
@@ -460,7 +871,10 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
+    id="hig__date-picker"
+    instruction={undefined}
     isClearable={false}
+    label={undefined}
     monthsShown={1}
     onBlur={[Function]}
     onChange={[Function]}
@@ -477,7 +891,7 @@ ShallowWrapper {
             },
             "offset": Object {
               "enabled": true,
-              "offset": "0px, -30px",
+              "offset": "0px, 0px",
             },
             "preventOverflow": Object {
               "enabled": true,
@@ -490,6 +904,9 @@ ShallowWrapper {
     readOnly={true}
     selected={"2017-09-15T13:30:00.000Z"}
     shouldCloseOnSelect={true}
+    showIcon={true}
+    showInstruction={false}
+    showLabel={true}
     showMonthDropdown={false}
     showMonthYearDropdown={false}
     showTimeSelect={false}
@@ -501,11 +918,59 @@ ShallowWrapper {
   "nodes": Array [
     <DatePicker
       allowSameDay={false}
+      className="hig__text-field-v1__input"
       customInput={
             <TextFieldPresenter
-                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
+                  disabled={true}
+                  icon={
+                        <svg
+                              height="24"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                        >
+                              <title>
+                                    calendar-24
+                              </title>
+                              <g
+                                    id="final"
+                              >
+                                    <g
+                                          id="calendar"
+                                    >
+                                          <g
+                                                id="outline"
+                                          >
+                                                <path
+                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                                                      fill="#2e4258"
+                                                />
+                                                <path
+                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                                                      fill="none"
+                                                />
+                                                <rect
+                                                      fill="none"
+                                                      height="12"
+                                                      width="17"
+                                                      x="3"
+                                                      y="9"
+                                                />
+                                                <path
+                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+                                                      fill="#2e4258"
+                                                />
+                                          </g>
+                                    </g>
+                              </g>
+                        </svg>
+                  }
+                  id="text-field-82394"
+                  instructions={undefined}
+                  label={undefined}
                   onClearButtonClick={[Function]}
-                  selected={"2017-09-15T13:30:00.000Z"}
+                  placeholder={undefined}
+                  readOnly={true}
                   showClearButton={undefined}
                   type="text"
             />
@@ -516,7 +981,10 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      id="hig__date-picker"
+      instruction={undefined}
       isClearable={false}
+      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -533,7 +1001,7 @@ ShallowWrapper {
                   },
                   "offset": Object {
                     "enabled": true,
-                    "offset": "0px, -30px",
+                    "offset": "0px, 0px",
                   },
                   "preventOverflow": Object {
                     "enabled": true,
@@ -546,6 +1014,9 @@ ShallowWrapper {
       readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
+      showIcon={true}
+      showInstruction={false}
+      showLabel={true}
       showMonthDropdown={false}
       showMonthYearDropdown={false}
       showTimeSelect={false}
@@ -559,13 +1030,29 @@ ShallowWrapper {
   "renderer": ReactShallowRenderer {
     "_context": Object {},
     "_element": <DatePicker
+      disabled={false}
+      fixedHeight={true}
+      instruction={undefined}
+      label={undefined}
       selected={"2017-09-15T13:30:00.000Z"}
+      shouldCloseOnSelect={true}
+      showIcon={true}
+      showInstruction={false}
+      showLabel={true}
 />,
     "_forcedUpdate": false,
     "_instance": DatePicker {
       "context": Object {},
       "props": Object {
+        "disabled": false,
+        "fixedHeight": true,
+        "instruction": undefined,
+        "label": undefined,
         "selected": "2017-09-15T13:30:00.000Z",
+        "shouldCloseOnSelect": true,
+        "showIcon": true,
+        "showInstruction": false,
+        "showLabel": true,
       },
       "refs": Object {},
       "state": null,
@@ -577,11 +1064,59 @@ ShallowWrapper {
     "_newState": null,
     "_rendered": <DatePicker
       allowSameDay={false}
+      className="hig__text-field-v1__input"
       customInput={
             <TextFieldPresenter
-                  id="Fri Sep 15 2017 09:30:00 GMT-0400"
+                  disabled={true}
+                  icon={
+                        <svg
+                              height="24"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                        >
+                              <title>
+                                    calendar-24
+                              </title>
+                              <g
+                                    id="final"
+                              >
+                                    <g
+                                          id="calendar"
+                                    >
+                                          <g
+                                                id="outline"
+                                          >
+                                                <path
+                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
+                                                      fill="#2e4258"
+                                                />
+                                                <path
+                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
+                                                      fill="none"
+                                                />
+                                                <rect
+                                                      fill="none"
+                                                      height="12"
+                                                      width="17"
+                                                      x="3"
+                                                      y="9"
+                                                />
+                                                <path
+                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
+                                                      fill="#2e4258"
+                                                />
+                                          </g>
+                                    </g>
+                              </g>
+                        </svg>
+                  }
+                  id="text-field-82394"
+                  instructions={undefined}
+                  label={undefined}
                   onClearButtonClick={[Function]}
-                  selected={"2017-09-15T13:30:00.000Z"}
+                  placeholder={undefined}
+                  readOnly={true}
                   showClearButton={undefined}
                   type="text"
             />
@@ -592,7 +1127,10 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      id="hig__date-picker"
+      instruction={undefined}
       isClearable={false}
+      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -609,7 +1147,7 @@ ShallowWrapper {
                   },
                   "offset": Object {
                     "enabled": true,
-                    "offset": "0px, -30px",
+                    "offset": "0px, 0px",
                   },
                   "preventOverflow": Object {
                     "enabled": true,
@@ -622,6 +1160,9 @@ ShallowWrapper {
       readOnly={true}
       selected={"2017-09-15T13:30:00.000Z"}
       shouldCloseOnSelect={true}
+      showIcon={true}
+      showInstruction={false}
+      showLabel={true}
       showMonthDropdown={false}
       showMonthYearDropdown={false}
       showTimeSelect={false}
@@ -640,7 +1181,15 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <DatePicker
+    disabled={false}
+    fixedHeight={true}
+    instruction={undefined}
+    label={undefined}
     selected={"2017-09-15T13:30:00.000Z"}
+    shouldCloseOnSelect={true}
+    showIcon={true}
+    showInstruction={false}
+    showLabel={true}
 />,
 }
 `;

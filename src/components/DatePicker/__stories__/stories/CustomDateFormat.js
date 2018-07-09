@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
 export default class CustomDateFormat extends Component {
   constructor(props) {
@@ -30,18 +30,21 @@ export default class CustomDateFormat extends Component {
   render() {
     const startDate = this.state.startDate;
     return (
-
-      <div>
-        <DatePicker
-          selected={startDate}
-          label={this.props.label}
-          dateFormatCalendar={this.props.dateFormat}
-          dateFormat={this.props.dateFormat}
-          startDate={startDate}
-          onChange={this.handleChangeDate}
-        />
-      </div>
+      <DatePicker
+        selected={startDate}
+        label={this.props.label}
+        dateFormatCalendar={this.props.dateFormat}
+        dateFormat={this.props.dateFormat}
+        startDate={startDate}
+        onChange={this.handleChangeDate}
+        showIcon={this.props.showIcon}
+        showClearButton={this.props.showClearButton}
+        disabled={this.props.disabled}
+        showLabel={this.props.showLabel}
+        instruction={this.props.instruction}
+        showInstruction={this.props.showInstruction}
+        fixedHeight={this.props.fixedHeight}
+      />
     );
   }
 }
-

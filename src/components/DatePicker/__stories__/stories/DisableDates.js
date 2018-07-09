@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
 export default class DisableDates extends Component {
   constructor(props) {
@@ -30,17 +30,24 @@ export default class DisableDates extends Component {
     const startDate = this.state.startDate;
     const maxDate = this.props.maxDate;
     return (
-      <div>
-        <DatePicker
-          selected={startDate}
-          onChange={this.handleChangeDate}
-          label="Select Date"
-          minDate={moment()}
-          maxDate={moment().add(maxDate, 'days')}
-        />
-      </div>
-
+      <DatePicker
+        locale={this.props.locale}
+        dateFormat={this.props.dateFormat}
+        dateFormatCalendar={this.props.dateFormat}
+        selected={startDate}
+        onChange={this.handleChangeDate}
+        label="Select Date"
+        minDate={moment()}
+        maxDate={moment().add(maxDate, 'days')}
+        startDate={this.state.startDate}
+        showIcon={this.props.showIcon}
+        showClearButton={this.props.showClearButton}
+        disabled={this.props.disabled}
+        showLabel={this.props.showLabel}
+        instruction={this.props.instruction}
+        showInstruction={this.props.showInstruction}
+        fixedHeight={this.props.fixedHeight}
+      />
     );
   }
 }
-
