@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/DatePicker/index';
+import moment from 'moment';
+import DatePicker from '../../index';
 
-export default class WithClearButton extends Component {
+export default class DisableDates extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: this.props.selected,
-      endDate: undefined,
+      startDate: moment(),
+      error: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
@@ -26,23 +27,27 @@ export default class WithClearButton extends Component {
   }
 
   render() {
+    const startDate = this.state.startDate;
+    const maxDate = this.props.maxDate;
     return (
       <DatePicker
-        selected={this.state.startDate}
-        startDate={this.state.startDate}
-        onChange={this.handleChangeStart}
-        label={this.props.label}
-        showIcon={this.props.showIcon}
-        isClearable={this.props.isClearable}
-        disabled={this.props.disabled}
-        labelOn={this.props.labelOn}
-        instruction={this.props.instruction}
-        instructionOn={this.props.instructionOn}
-        fixedHeight={this.props.fixedHeight}
         locale={this.props.locale}
-        dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
-      />);
+        dateFormatCalendar={this.props.dateFormat}
+        selected={startDate}
+        onChange={this.handleChangeDate}
+        label="Select Date"
+        minDate={moment()}
+        maxDate={moment().add(maxDate, 'days')}
+        startDate={this.state.startDate}
+        showIcon={this.props.showIcon}
+        showClearButton={this.props.showClearButton}
+        disabled={this.props.disabled}
+        showLabel={this.props.showLabel}
+        instruction={this.props.instruction}
+        showInstruction={this.props.showInstruction}
+        fixedHeight={this.props.fixedHeight}
+      />
+    );
   }
 }
-

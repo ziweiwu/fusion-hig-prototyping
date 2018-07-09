@@ -10,9 +10,11 @@ import Flyout from '@hig/flyout';
 import '@hig/flyout/build/index.css';
 import '@hig/dropdown/build/index.css';
 import Example from './components/Tooltip/NewTooltip/TooltipNew';
+import Input from './components/TextField/Input'
+import TextFieldPresenter from './components/TextField/index'
 // import 'react-tippy/dist/tippy.css';
 // import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import './App.css';
+import './App.scss';
 
 const options = [
   {
@@ -157,7 +159,7 @@ const App = () => (
       <div style={{ margin: '200px' }} />
 
       <Example placement="right" content={youtubeVideo} arrow><button>my button</button></Example>
-
+      <TextFieldPresenter defaultValue="something" label="label" showClearButton />
     </div>
   </div>
 );

@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import moment from 'moment';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
-export default class CustomDateFormat extends Component {
+export default class Portal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: moment(),
-      endDate: moment(),
-      error: undefined,
+      startDate: undefined,
+      endDate: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
@@ -28,24 +26,16 @@ export default class CustomDateFormat extends Component {
   }
 
   render() {
-    const startDate = this.state.startDate;
     return (
       <DatePicker
-        selected={startDate}
+        selected={this.state.startDate}
         label={this.props.label}
+        withPortal
         dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
-        startDate={startDate}
-        onChange={this.handleChangeDate}
-        showIcon={this.props.showIcon}
-        isClearable={this.props.isClearable}
-        disabled={this.props.disabled}
-        labelOn={this.props.labelOn}
-        instruction={this.props.instruction}
-        instructionOn={this.props.instructionOn}
-        fixedHeight={this.props.fixedHeight}
+        startDate={this.state.startDate}
+        onChange={this.handleChangeStart}
       />
     );
   }
 }
-

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
 export default class DateRangePicker extends Component {
   constructor(props) {
@@ -33,11 +33,11 @@ export default class DateRangePicker extends Component {
             endDate={this.state.endDate}
             onChange={this.handleChangeStart}
             showIcon={this.props.showIcon}
-            isClearable={this.props.isClearable}
+            showClearButton={this.props.showClearButton}
             disabled={this.props.disabled}
-            labelOn={this.props.labelOn}
+            showLabel={this.props.showLabel}
             instruction={this.props.instruction}
-            instructionOn={this.props.instructionOn}
+            showInstruction={this.props.showInstruction}
             fixedHeight={this.props.fixedHeight}
             locale={this.props.locale}
             dateFormatCalendar={this.props.dateFormat}
@@ -54,11 +54,11 @@ export default class DateRangePicker extends Component {
             endDate={this.state.endDate}
             onChange={this.handleChangeEnd}
             showIcon={this.props.showIcon}
-            isClearable={this.props.isClearable}
+            showClearButton={this.props.showClearButton}
             disabled={this.props.disabled}
-            labelOn={this.props.labelOn}
+            showLabel={this.props.showLabel}
             instruction={this.props.instruction}
-            instructionOn={this.props.instructionOn}
+            showInstruction={this.props.showInstruction}
             fixedHeight={this.props.fixedHeight}
             locale={this.props.locale}
             dateFormatCalendar={this.props.dateFormat}
@@ -69,4 +69,3 @@ export default class DateRangePicker extends Component {
     );
   }
 }
-

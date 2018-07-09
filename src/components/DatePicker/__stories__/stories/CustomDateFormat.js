@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
-export default class Locale extends Component {
+export default class CustomDateFormat extends Component {
   constructor(props) {
     super(props);
     this.state = {
       startDate: moment(),
+      endDate: moment(),
+      error: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
@@ -26,24 +28,23 @@ export default class Locale extends Component {
   }
 
   render() {
+    const startDate = this.state.startDate;
     return (
       <DatePicker
-        selected={this.state.startDate}
+        selected={startDate}
         label={this.props.label}
-        locale={this.props.locale}
         dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
-        startDate={this.state.startDate}
-        onChange={this.handleChangeStart}
+        startDate={startDate}
+        onChange={this.handleChangeDate}
         showIcon={this.props.showIcon}
-        isClearable={this.props.isClearable}
+        showClearButton={this.props.showClearButton}
         disabled={this.props.disabled}
-        labelOn={this.props.labelOn}
+        showLabel={this.props.showLabel}
         instruction={this.props.instruction}
-        instructionOn={this.props.instructionOn}
+        showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
       />
     );
   }
 }
-

@@ -17,7 +17,7 @@ ShallowWrapper {
     mouseLeaveDelay={0.2}
     overlay={
         <div
-            className="hig-tooltip-inner-content"
+            className="css-d70g0l"
         >
             <div
                 className="hig-tooltip-title"
@@ -30,6 +30,7 @@ ShallowWrapper {
     prefixCls="hig-tooltip"
     title="test"
     trigger="focus"
+    width={300}
 >
     <div
         className="hig-tooltip-children-wrapper"
@@ -49,7 +50,7 @@ ShallowWrapper {
       mouseLeaveDelay={0.2}
       overlay={
             <div
-                  className="hig-tooltip-inner-content"
+                  className="css-d70g0l"
             >
                   <div
                         className="hig-tooltip-title"
@@ -62,6 +63,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="focus"
+      width={300}
 >
       <div
             className="hig-tooltip-children-wrapper"
@@ -84,6 +86,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="focus"
+      width={300}
 >
       <button>
             tooltip
@@ -104,6 +107,7 @@ ShallowWrapper {
         "prefixCls": "hig-tooltip",
         "title": "test",
         "trigger": "focus",
+        "width": 300,
       },
       "refs": Object {},
       "state": null,
@@ -122,7 +126,7 @@ ShallowWrapper {
       mouseLeaveDelay={0.2}
       overlay={
             <div
-                  className="hig-tooltip-inner-content"
+                  className="css-d70g0l"
             >
                   <div
                         className="hig-tooltip-title"
@@ -135,6 +139,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="focus"
+      width={300}
 >
       <div
             className="hig-tooltip-children-wrapper"
@@ -162,6 +167,7 @@ ShallowWrapper {
     prefixCls="hig-tooltip"
     title="test"
     trigger="focus"
+    width={300}
 >
     <button>
         tooltip
@@ -187,7 +193,7 @@ ShallowWrapper {
     mouseLeaveDelay={0.2}
     overlay={
         <div
-            className="hig-tooltip-inner-content"
+            className="css-d70g0l"
         >
             <div
                 className="hig-tooltip-title"
@@ -200,6 +206,7 @@ ShallowWrapper {
     prefixCls="hig-tooltip"
     title="test"
     trigger="hover"
+    width={300}
 >
     <div
         className="hig-tooltip-children-wrapper"
@@ -219,7 +226,7 @@ ShallowWrapper {
       mouseLeaveDelay={0.2}
       overlay={
             <div
-                  className="hig-tooltip-inner-content"
+                  className="css-d70g0l"
             >
                   <div
                         className="hig-tooltip-title"
@@ -232,6 +239,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="hover"
+      width={300}
 >
       <div
             className="hig-tooltip-children-wrapper"
@@ -254,6 +262,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="hover"
+      width={300}
 >
       <button>
             tooltip
@@ -274,6 +283,7 @@ ShallowWrapper {
         "prefixCls": "hig-tooltip",
         "title": "test",
         "trigger": "hover",
+        "width": 300,
       },
       "refs": Object {},
       "state": null,
@@ -292,7 +302,7 @@ ShallowWrapper {
       mouseLeaveDelay={0.2}
       overlay={
             <div
-                  className="hig-tooltip-inner-content"
+                  className="css-d70g0l"
             >
                   <div
                         className="hig-tooltip-title"
@@ -305,6 +315,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="hover"
+      width={300}
 >
       <div
             className="hig-tooltip-children-wrapper"
@@ -332,6 +343,7 @@ ShallowWrapper {
     prefixCls="hig-tooltip"
     title="test"
     trigger="hover"
+    width={300}
 >
     <button>
         tooltip
@@ -357,7 +369,7 @@ ShallowWrapper {
     mouseLeaveDelay={0.2}
     overlay={
         <div
-            className="hig-tooltip-inner-content"
+            className="css-d70g0l"
         >
             <div
                 className="hig-tooltip-title"
@@ -370,6 +382,7 @@ ShallowWrapper {
     prefixCls="hig-tooltip"
     title="test"
     trigger="click"
+    width={300}
 >
     <div
         className="hig-tooltip-children-wrapper"
@@ -389,7 +402,7 @@ ShallowWrapper {
       mouseLeaveDelay={0.2}
       overlay={
             <div
-                  className="hig-tooltip-inner-content"
+                  className="css-d70g0l"
             >
                   <div
                         className="hig-tooltip-title"
@@ -402,6 +415,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
+      width={300}
 >
       <div
             className="hig-tooltip-children-wrapper"
@@ -424,6 +438,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
+      width={300}
 >
       <button>
             tooltip
@@ -444,6 +459,7 @@ ShallowWrapper {
         "prefixCls": "hig-tooltip",
         "title": "test",
         "trigger": "click",
+        "width": 300,
       },
       "refs": Object {},
       "state": null,
@@ -462,7 +478,7 @@ ShallowWrapper {
       mouseLeaveDelay={0.2}
       overlay={
             <div
-                  className="hig-tooltip-inner-content"
+                  className="css-d70g0l"
             >
                   <div
                         className="hig-tooltip-title"
@@ -475,6 +491,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
+      width={300}
 >
       <div
             className="hig-tooltip-children-wrapper"
@@ -502,6 +519,7 @@ ShallowWrapper {
     prefixCls="hig-tooltip"
     title="test"
     trigger="click"
+    width={300}
 >
     <button>
         tooltip
@@ -527,7 +545,7 @@ ShallowWrapper {
     mouseLeaveDelay={0.2}
     overlay={
         <div
-            className="hig-tooltip-inner-content"
+            className="css-d70g0l"
         >
             <div
                 className="hig-tooltip-title"
@@ -540,6 +558,7 @@ ShallowWrapper {
     prefixCls="hig-tooltip"
     title="test"
     trigger="click"
+    width={300}
 >
     <div
         className="hig-tooltip-children-wrapper"
@@ -559,7 +578,7 @@ ShallowWrapper {
       mouseLeaveDelay={0.2}
       overlay={
             <div
-                  className="hig-tooltip-inner-content"
+                  className="css-d70g0l"
             >
                   <div
                         className="hig-tooltip-title"
@@ -572,6 +591,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
+      width={300}
 >
       <div
             className="hig-tooltip-children-wrapper"
@@ -594,6 +614,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
+      width={300}
 >
       <button>
             tooltip
@@ -614,6 +635,7 @@ ShallowWrapper {
         "prefixCls": "hig-tooltip",
         "title": "test",
         "trigger": "click",
+        "width": 300,
       },
       "refs": Object {},
       "state": null,
@@ -632,7 +654,7 @@ ShallowWrapper {
       mouseLeaveDelay={0.2}
       overlay={
             <div
-                  className="hig-tooltip-inner-content"
+                  className="css-d70g0l"
             >
                   <div
                         className="hig-tooltip-title"
@@ -645,6 +667,7 @@ ShallowWrapper {
       prefixCls="hig-tooltip"
       title="test"
       trigger="click"
+      width={300}
 >
       <div
             className="hig-tooltip-children-wrapper"
@@ -672,6 +695,7 @@ ShallowWrapper {
     prefixCls="hig-tooltip"
     title="test"
     trigger="click"
+    width={300}
 >
     <button>
         tooltip

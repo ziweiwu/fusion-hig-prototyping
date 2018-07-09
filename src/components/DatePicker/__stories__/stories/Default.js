@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import DatePicker from '../../src/components/DatePicker/index';
+import DatePicker from '../../index';
 
-export default class Disable extends Component {
+export default class Default extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,18 +18,17 @@ export default class Disable extends Component {
     return (
       <DatePicker
         locale={this.props.locale}
-        dateFormat={this.props.dateFormat}
         dateFormatCalendar={this.props.dateFormat}
-        label={this.props.label}
+        dateFormat={this.props.dateFormat}
         selected={this.state.startDate}
-        startDate={this.state.startDate}
         onChange={this.handleChangeDate}
         showIcon={this.props.showIcon}
-        isClearable={this.props.isClearable}
+        showClearButton={this.props.showClearButton}
         disabled={this.props.disabled}
-        labelOn={this.props.labelOn}
+        label={this.props.label}
+        showLabel={this.props.showLabel}
         instruction={this.props.instruction}
-        instructionOn={this.props.instructionOn}
+        showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
       />
     );
