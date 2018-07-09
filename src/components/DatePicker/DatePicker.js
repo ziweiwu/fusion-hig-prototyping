@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import '@hig/styles/build/index.css';
-import '@hig/text-field/build/index.css';
 import {TextFieldPresenter} from '@hig/text-field';
+import '@hig/text-field/build/index.css';
 import ReactDatePicker from 'react-datepicker';
 import './datePicker.css';
 
@@ -47,7 +46,6 @@ export default class DatePicker extends React.Component {
     highlightDates: PropTypes.array,
     id: PropTypes.string,
     includeDates: PropTypes.array,
-    isClearable: PropTypes.bool,
     locale: PropTypes.string,
     maxDate: PropTypes.object,
     minDate: PropTypes.object,
@@ -78,10 +76,12 @@ export default class DatePicker extends React.Component {
     readOnly: PropTypes.bool,
     showIcon: PropTypes.bool,
     instruction: PropTypes.string,
-    instructionOn: PropTypes.bool,
+    showInstruction: PropTypes.bool,
     label: PropTypes.string,
-    labelOn: PropTypes.bool,
+    showLabel: PropTypes.bool,
     fixedHeight: PropTypes.bool,
+    placeholder:PropTypes.string,
+    showClearButton: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -89,10 +89,11 @@ export default class DatePicker extends React.Component {
     disabled: false,
     showIcon: true,
     label: undefined,
-    labelOn: true,
+    showLabel: true,
     instruction: undefined,
-    instructionOn: false,
-    fixedHeight: true
+    showInstruction: false,
+    fixedHeight: true,
+    showClearButton: false,
   };
 
   render() {
@@ -100,6 +101,8 @@ export default class DatePicker extends React.Component {
     const showIcon = this.props.showIcon ? calenderIcon : undefined;
     return (<ReactDatePicker
       {...props}
+      className = "hig__text-field-v1__input"
+      id = "hig__date-picker"
       ref={node => this.node = node}
       readOnly
       showMonthYearDropdown={false}
@@ -107,8 +110,6 @@ export default class DatePicker extends React.Component {
       showYearDropdown={false}
       showTimeSelect={false}
       isClearable={false}
-      disabledKeyboardNavigation={false}
-
       // use TextField as inputField
       // use ref to allow the use clear button in TextField component
       // instead of the one comes with ReactDatePicker
@@ -116,10 +117,11 @@ export default class DatePicker extends React.Component {
         <TextFieldPresenter
           readOnly
           disabled
-          instructions={props.instructionOn ? props.instruction : undefined}
-          label={props.labelOn ? props.label : undefined}
+          placeholder = {props.placeholder}
+          instructions={props.showInstruction ? props.instruction : undefined}
+          label={props.showLabel ? props.label : undefined}
           icon={showIcon}
-          showClearButton={props.isClearable}
+          showClearButton={props.showClearButton}
           onClearButtonClick={() => {
             this.node.clear();
           }}
@@ -131,7 +133,7 @@ export default class DatePicker extends React.Component {
         // adjust position of calender popper, (horizontal, vertical)
         offset: {
           enabled: true,
-          offset: '0px, -30px',
+          offset: '0px, 0px',
         },
         flip: {
           enabled: false,

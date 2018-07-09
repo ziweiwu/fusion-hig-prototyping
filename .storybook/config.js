@@ -1,7 +1,7 @@
 import { configure} from '@storybook/react';
 
 function loadStories() {
-  require('../stories/DatepickerStories');
+  require('../src/components/DatePicker/__stories__/datePickerStories');
   require('../stories/TooltipStories');
 }
 
