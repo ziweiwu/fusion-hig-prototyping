@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@hig/button';
-import Tooltip from '../../src/components/Tooltip/index';
+import Tooltip from '../../index';
 import '@hig/button/build/index.css';
 
 const TooltipSmall = props => (
@@ -14,6 +14,7 @@ const TooltipSmall = props => (
         trigger={props.trigger}
         mouseLeaveDelay={props.mouseLeaveDelay}
         mouseEnterDelay={props.mouseEnterDelay}
+        width={props.width}
       >
         <Button title="Tooltip small" />
       </Tooltip>
@@ -22,4 +23,3 @@ const TooltipSmall = props => (
 );
 
 export default TooltipSmall;
-

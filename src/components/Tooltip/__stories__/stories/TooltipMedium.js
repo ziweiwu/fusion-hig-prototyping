@@ -1,15 +1,7 @@
 import React from 'react';
 import Button from '@hig/button';
-import Tooltip from '../../src/components/Tooltip/index';
+import Tooltip from '../../index';
 import '@hig/button/build/index.css';
-
-
-const description = `Create a generative design with the current parameters, 
-  note: this operation GPU intensive  
-  and may takes anywhere from few minutes up to an hour.`;
-
-const linkTitle = 'Learn more';
-const linkURL = 'https://www.autodesk.com';
 
 const TooltipMedium = props => (
   <div>
@@ -25,6 +17,7 @@ const TooltipMedium = props => (
         mouseEnterDelay={props.mouseEnterDelay}
         linkTitle={props.linkTitle}
         linkURL={props.linkURL}
+        width={props.width}
       >
         <Button title="Tooltip medium" />
       </Tooltip>

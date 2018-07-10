@@ -1,34 +1,8 @@
 import React from 'react';
 import Button from '@hig/button';
-import Tooltip from '../../src/components/Tooltip/index';
 import YouTube from 'react-youtube';
+import Tooltip from '../../index';
 import '@hig/button/build/index.css';
-
-
-const description = `Create a generative design with the current parameters, 
-  note: this operation GPU intensive  
-  and may takes anywhere from few minutes up to an hour.`;
-
-const opts = {
-  height: 'auto',
-  width: '300',
-  playerVars: { // https://developers.google.com/youtube/player_parameters
-    autoplay: 0,
-    rel: 0, // disable relevant videos after playing
-  },
-};
-
-const youtubeVideo = (
-  <div>
-    <YouTube
-      videoId="NSJwq9CVoIk"
-      opts={opts}
-    />
-  </div>
-);
-
-const linkTitle = 'Learn more';
-const linkURL = 'https://www.autodesk.com';
 
 const TooltipLarge = props => (
   <div>
@@ -44,7 +18,22 @@ const TooltipLarge = props => (
         mouseEnterDelay={props.mouseEnterDelay}
         linkTitle={props.linkTitle}
         linkURL={props.linkURL}
-        content={youtubeVideo}
+        content={(
+          <div >
+            <YouTube
+              videoId="NSJwq9CVoIk"
+              opts={{
+                width: props.width - 20,
+                height: props.width * 0.6,
+                playerVars: {
+                  autoplay: 0,
+                  rel: 0, // disable relevant videos after playing
+                },
+              }}
+            />
+          </div>
+)}
+        width={props.width}
       >
         <Button title="Tooltip large" />
       </Tooltip>

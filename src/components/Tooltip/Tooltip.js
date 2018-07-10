@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
 import {anchorPoints} from "@hig/flyout";
-import styled, {css} from 'react-emotion'
+import {css} from 'react-emotion'
 import './tooltip.css';
 
 //map the placements from the anchorPoints
@@ -71,7 +71,7 @@ export default class Tooltip extends React.Component {
       'hig-tooltip-children-wrapper': true
     });
 
-// use react emotion to create a styled wrapper with props.width
+   // use react emotion to create a styled wrapper with props.width
     const tooltipWidth = css`
       max-width: ${props.width}px;
     `;
@@ -80,10 +80,11 @@ export default class Tooltip extends React.Component {
       <ReactToolTip
         {...props}
         ref={node => this.node = node}
+        overlayClassName = {tooltipWidth}
         placement={placementsMap.get(props.anchorPoint)}
         children={<div className={tooltipChildenWrapper}>{props.children}</div>}
         overlay={
-          <div className={tooltipWidth}>
+          <div>
             {props.title && <div className={tooltipTitleClass}>{props.title}</div>}
             {props.description && <div className={tooltipDescriptionClass}>{props.description}</div>}
             {props.content && <div className={tooltipInnerContentClass}>{props.content}</div>}
