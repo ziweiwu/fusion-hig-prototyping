@@ -1,8 +1,8 @@
 import React from 'react';
 // import '@hig/styles/build/index.css';
-import ToolTipHig from '@hig/tooltip';
+//import ToolTipHig from '@hig/tooltip';
 import '@hig/tooltip/build/index.css';
-import { DatePicker, Button, Popover, Tooltip as TooltipAnt } from 'antd';
+import {DatePicker, Button, Popover, Tooltip as TooltipAnt} from 'antd';
 import YouTube from 'react-youtube';
 import Tooltip from './components/Tooltip/index';
 import Dropdown from '@hig/dropdown';
@@ -10,11 +10,16 @@ import Flyout from '@hig/flyout';
 import '@hig/flyout/build/index.css';
 import '@hig/dropdown/build/index.css';
 import Example from './components/Tooltip/NewTooltip/TooltipNew';
-import Input from './components/TextField/Input'
-import TextFieldPresenter from './components/TextField/index'
+//import Demo from './components/Tooltip/NewTooltip/TooltipPopper';
+import TextFieldPresenter from './components/TextPresenter/TextFieldPresenter.js'
+import 'react-tippy/dist/tippy.css';
+import {Tooltip as Tooltipy} from 'react-tippy';
+
+
 // import 'react-tippy/dist/tippy.css';
 // import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './App.scss';
+import './components/TextPresenter/text-field.scss';
 
 const options = [
   {
@@ -43,7 +48,6 @@ const picture = (
     />
   </div>
 );
-
 // parameters for a youtube video embeddeed
 const opts = {
   height: 'auto',
@@ -67,7 +71,9 @@ const youtubeVideo = (
 const App = () => (
   <div className="App">
     <h1>App Started </h1>
-    <Example placement="right" content={<div>tooltip</div>}><button>my button</button></Example>
+    <Example placement="right" content={<div>tooltip</div>}>
+      <button>my button</button>
+    </Example>
     {/* <TooltipAnt><Button> ToolTip Ant</Button></TooltipAnt> */}
     {/* <div> */}
     {/* <ToolTipHig anchorPoint="top-center" content="Testing"> */}
@@ -89,7 +95,7 @@ const App = () => (
         <Button>Show some text</Button>
       </Tooltip>
 
-      <div style={{ margin: '200px' }} />
+      <div style={{margin: '200px'}}/>
 
       <Tooltip
         title="This is a cat picture"
@@ -104,7 +110,7 @@ const App = () => (
         <Button>Show picture</Button>
       </Tooltip>
 
-      <div style={{ margin: '200px' }} />
+      <div style={{margin: '200px'}}/>
 
       <Tooltip
         placement="top-center"
@@ -116,7 +122,7 @@ const App = () => (
         <Button>This is tooltip with some link</Button>
       </Tooltip>
 
-      <div style={{ margin: '200px' }} />
+      <div style={{margin: '200px'}}/>
 
       <Tooltip
         title="Tooltip with video"
@@ -130,7 +136,7 @@ const App = () => (
       </Tooltip
       >
 
-      <div style={{ margin: '200px' }} />
+      <div style={{margin: '200px'}}/>
 
       {/* <Popover */}
       {/* title="prompt text" */}
@@ -156,10 +162,30 @@ const App = () => (
         <button>Fly out button</button>
       </Flyout>
 
-      <div style={{ margin: '200px' }} />
+      <Tooltipy
+        title="Welcome to React"
+        position="top"
+        trigger="click"
+        arrow="true"
+      >
+        <Button>
+          Click here to show popup
+        </Button>
+      </Tooltipy>
 
-      <Example placement="right" content={youtubeVideo} arrow><button>my button</button></Example>
-      <TextFieldPresenter defaultValue="something" label="label" showClearButton />
+      <Tooltipy
+        html={youtubeVideo}
+        arrow="true"
+        position="right"
+        trigger="click"
+      >
+        <Button>
+          Click here to show popup
+        </Button>
+      </Tooltipy>
+      <TextFieldPresenter label="true" showClearButton focused onFocus={()=>alert("focused")} onBlur={()=>alert("blurred")}/>
+      <TextFieldPresenter label="false" showClearButton focused={false} onFocus={()=>alert("focused")} onBlur={()=>alert("blurred")}/>
+      <TextFieldPresenter label="undefined" showClearButton onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
     </div>
   </div>
 );

@@ -7,8 +7,9 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 @keyframes fade-top {
   0% {
     transform: translateY(17px);
-    opacity: 0.8;
+    opacity: 0;
   }
+
   100% {
     transform: translateY(0%);
     opacity: 1;
@@ -18,7 +19,7 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 @keyframes fade-arrow-top {
   0% {
     transform: translateY(22px);
-    opacity: 0.8;
+    opacity: 0;
   }
 
   100% {
@@ -31,7 +32,7 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 @keyframes fade-bottom {
   0% {
     transform: translateY(-17px);
-    opacity: 0.8;
+    opacity: 0;
   }
   100% {
     transform: translateY(0%);
@@ -42,7 +43,7 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 @keyframes fade-arrow-bottom {
   0% {
     transform: translateY(-22px);
-    opacity: 0.8;
+    opacity: 0;
   }
 
   100% {
@@ -55,7 +56,7 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 @keyframes fade-left {
   0% {
     transform: translateX(55px);
-    opacity: 0.8;
+    opacity: 0;
   }
   100% {
     transform: translateX(0%);
@@ -66,7 +67,7 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 @keyframes fade-arrow-left {
   0% {
     transform: translateX(60px);
-    opacity: 0.8;
+    opacity: 0;
   }
 
   100% {
@@ -79,8 +80,9 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 @keyframes fade-right {
   0% {
     transform: translateX(-55px);
-    opacity: 0.8;
+    opacity: 0;
   }
+
   100% {
     transform: translateX(0%);
     opacity: 1;
@@ -90,7 +92,7 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 @keyframes fade-arrow-right {
   0% {
     transform: translateX(-60px);
-    opacity: 0.5;
+    opacity: 0;
   }
 
   100% {
@@ -135,13 +137,13 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
 
 .hig-tooltip-children-wrapper {
   display: inline-block;
-  position: fixed;
+  position: relative;
 }
 
 .hig-tooltip-arrow {
   position: absolute;
-  width: 0;
-  height: 0;
+  //width: 0px;
+  //height: 0px;
   border: solid transparent;
 }
 

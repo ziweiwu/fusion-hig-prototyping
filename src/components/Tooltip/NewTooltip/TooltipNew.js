@@ -1,9 +1,22 @@
 import React from 'react';
-import {Manager, Reference, Popper} from 'react-popper';
+import { Manager, Reference, Popper } from 'react-popper';
 import Button from '@hig/button';
 import classNames from 'classnames';
 import '@hig/button/build/index.css';
-import '../tooltip.css';
+import {
+  Main,
+  ReferenceBox,
+  ClickableReferenceBox,
+  PoppersContainer,
+  TransitionedPopperBox,
+  PopperBox,
+  Arrow,
+  PopperDot,
+} from './styles';
+
+//const placements = ['top', 'right', 'bottom', 'left'];
+
+
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +29,7 @@ export default class Example extends React.Component {
   }
 
   toggleHide() {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       hide: !prevState.hide,
     }));
   }
@@ -36,21 +49,21 @@ export default class Example extends React.Component {
   render() {
     const props = this.props;
     const tooltipTitleClass = classNames({
-      'hig-tooltip-title': true
+      'hig-tooltip-title': true,
     });
     const tooltipDescriptionClass = classNames({
-      'hig-tooltip-description': true
+      'hig-tooltip-description': true,
     });
     const tooltipInnerContentClass = classNames({
-      'hig-tooltip-inner-content': true
+      'hig-tooltip-inner-content': true,
     });
     const tooltipLink = classNames({
-      'hig-tooltip-link': true
+      'hig-tooltip-link': true,
     });
 
     const tooltipChildenWrapper = classNames({
       'hig-tooltip-children-wrapper': true,
-      'hip-tooltip': true
+      'hip-tooltip': true,
     });
 
     const tooltipArrowTop = classNames({
@@ -58,34 +71,41 @@ export default class Example extends React.Component {
       'hig-tooltip-placement-top': true,
     });
 
-   const tooltipArrowRight = classNames({
+    const tooltipArrowRight = classNames({
       'hig-tooltip-placement-right': true,
-     'hig-tooltip-arrow': true,
-   })
+      'hig-tooltip-arrow': true,
+    });
     const tooltip = classNames({
       'hig-tooltip': true,
     });
+
 
     return (
       <Manager>
         <div>
           <Reference>
-            {({ref}) => (
-              <div ref={ref} onClick={this.toggleHide}
-                   className={tooltip}/*onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}*/>
-                <Button type="primary" title="My button"/>
+            {({ ref }) => (
+              <div
+                ref={ref}
+                onClick={this.toggleHide}
+                className={tooltip}
+              >
+                <Button type="primary" title="My button" />
               </div>
             )}
           </Reference>
-          {!this.state.hide &&
+          {!this.state.hide
+          && (
           <Popper placement={props.placement}>
-            {({ref, style, placement, arrowProps}) => (
+            {({
+              ref, style, placement, arrowProps,
+            }) => (
               <div ref={ref} style={style} data-placement={placement} className={tooltipChildenWrapper}>
                 {props.content}
-                <div ref={arrowProps.ref} className={tooltipArrowRight} style={arrowProps.style} />
               </div>
             )}
           </Popper>
+          )
           }
         </div>
       </Manager>

@@ -1,10 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
-import { TooltipSmall, TooltipMedium, TooltipLarge } from './TooltipStories/index';
+import {
+  withKnobs, text, boolean, number, select,
+} from '@storybook/addon-knobs';
+import TooltipSmall from './stories/TooltipSmall';
+import TooltipMedium from './stories/TooltipMedium';
+import TooltipLarge from './stories/TooltipLarge';
 
 /*
-  Tooltip stories
+  Tooltip __stories__
  */
 const storiesOfTooltip = storiesOf('Tooltip', module);
 storiesOfTooltip.addDecorator(withKnobs);
@@ -26,14 +30,16 @@ storiesOfTooltip.add('Tooltip Small', () => {
 
   const width = number('width', 300);
 
-  return (<TooltipSmall
-    anchorPoint={anchorPoint}
-    title={title}
-    trigger={trigger}
-    mouseLeaveDelay={mouseLeaveDelay}
-    mouseEnterDelay={mouseEnterDelay}
-    width={width}
-  />);
+  return (
+    <TooltipSmall
+      anchorPoint={anchorPoint}
+      title={title}
+      trigger={trigger}
+      mouseLeaveDelay={mouseLeaveDelay}
+      mouseEnterDelay={mouseEnterDelay}
+      width={width}
+    />
+  );
 });
 
 
@@ -58,24 +64,26 @@ storiesOfTooltip.add('Tooltip Medium', () => {
   const mouseEnterDelay = number('mouseEnterDelay', 1);
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.2);
 
-  const title = text('title', 'Tooltip small');
+  const title = text('title', 'Tooltip medium');
   const description = text('description', defaultDescription);
   const linkTitle = text('link title', defaultLinkTitle);
   const linkURL = text('link URL', defaultLinkURL);
 
   const width = number('width', 300);
 
-  return (<TooltipMedium
-    anchorPoint={anchorPoint}
-    trigger={trigger}
-    mouseLeaveDelay={mouseLeaveDelay}
-    mouseEnterDelay={mouseEnterDelay}
-    title={title}
-    description={description}
-    linkTitle={linkTitle}
-    linkURL={linkURL}
-    width={width}
-  />);
+  return (
+    <TooltipMedium
+      anchorPoint={anchorPoint}
+      trigger={trigger}
+      mouseLeaveDelay={mouseLeaveDelay}
+      mouseEnterDelay={mouseEnterDelay}
+      title={title}
+      description={description}
+      linkTitle={linkTitle}
+      linkURL={linkURL}
+      width={width}
+    />
+  );
 });
 
 // Large tooltip
@@ -91,22 +99,24 @@ storiesOfTooltip.add('Tooltip Large', () => {
   const mouseEnterDelay = number('mouseEnterDelay', 1);
   const mouseLeaveDelay = number('mouseLeaveDelay', 0.2);
 
-  const title = text('title', 'Tooltip small');
+  const title = text('title', 'Tooltip large');
   const description = text('description', defaultDescription);
   const linkTitle = text('link title', defaultLinkTitle);
   const linkURL = text('link URL', defaultLinkURL);
 
   const width = number('width', 300);
 
-  return (<TooltipLarge
-    anchorPoint={anchorPoint}
-    trigger={trigger}
-    mouseLeaveDelay={mouseLeaveDelay}
-    mouseEnterDelay={mouseEnterDelay}
-    title={title}
-    description={description}
-    linkTitle={linkTitle}
-    linkURL={linkURL}
-    width={width}
-  />);
+  return (
+    <TooltipLarge
+      anchorPoint={anchorPoint}
+      trigger={trigger}
+      mouseLeaveDelay={mouseLeaveDelay}
+      mouseEnterDelay={mouseEnterDelay}
+      title={title}
+      description={description}
+      linkTitle={linkTitle}
+      linkURL={linkURL}
+      width={width}
+    />
+  );
 });
