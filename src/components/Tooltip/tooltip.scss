@@ -10,6 +10,10 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
     opacity: 0;
   }
 
+  50% {
+    opacity: 0.3;
+  }
+
   100% {
     transform: translateY(0%);
     opacity: 1;
@@ -21,7 +25,9 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
     transform: translateY(22px);
     opacity: 0;
   }
-
+  50% {
+    opacity: 0.3;
+  }
   100% {
     transform: translateY(0%);
     opacity: 1;
@@ -34,6 +40,9 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
     transform: translateY(-17px);
     opacity: 0;
   }
+  50% {
+    opacity: 0.3;
+  }
   100% {
     transform: translateY(0%);
     opacity: 1;
@@ -44,6 +53,9 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
   0% {
     transform: translateY(-22px);
     opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
   }
 
   100% {
@@ -58,6 +70,9 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
     transform: translateX(55px);
     opacity: 0;
   }
+  50% {
+    opacity: 0.3;
+  }
   100% {
     transform: translateX(0%);
     opacity: 1;
@@ -69,7 +84,9 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
     transform: translateX(60px);
     opacity: 0;
   }
-
+  50% {
+    opacity: 0.3;
+  }
   100% {
     transform: translateX(0%);
     opacity: 1;
@@ -82,7 +99,9 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
     transform: translateX(-55px);
     opacity: 0;
   }
-
+  50% {
+    opacity: 0.3;
+  }
   100% {
     transform: translateX(0%);
     opacity: 1;
@@ -94,7 +113,9 @@ $hig-font-family: ArtifaktElement, sans-serif !default;
     transform: translateX(-60px);
     opacity: 0;
   }
-
+  50% {
+    opacity: 0.3;
+  }
   100% {
     transform: translateX(0%);
     opacity: 1;

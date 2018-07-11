@@ -4,6 +4,8 @@
   0% {
     transform: translateY(17px);
     opacity: 0; }
+  50% {
+    opacity: 0.3; }
   100% {
     transform: translateY(0%);
     opacity: 1; } }
@@ -12,6 +14,8 @@
   0% {
     transform: translateY(22px);
     opacity: 0; }
+  50% {
+    opacity: 0.3; }
   100% {
     transform: translateY(0%);
     opacity: 1; } }
@@ -20,6 +24,8 @@
   0% {
     transform: translateY(-17px);
     opacity: 0; }
+  50% {
+    opacity: 0.3; }
   100% {
     transform: translateY(0%);
     opacity: 1; } }
@@ -28,6 +34,8 @@
   0% {
     transform: translateY(-22px);
     opacity: 0; }
+  50% {
+    opacity: 0.3; }
   100% {
     transform: translateY(0%);
     opacity: 1; } }
@@ -36,6 +44,8 @@
   0% {
     transform: translateX(55px);
     opacity: 0; }
+  50% {
+    opacity: 0.3; }
   100% {
     transform: translateX(0%);
     opacity: 1; } }
@@ -44,6 +54,8 @@
   0% {
     transform: translateX(60px);
     opacity: 0; }
+  50% {
+    opacity: 0.3; }
   100% {
     transform: translateX(0%);
     opacity: 1; } }
@@ -52,6 +64,8 @@
   0% {
     transform: translateX(-55px);
     opacity: 0; }
+  50% {
+    opacity: 0.3; }
   100% {
     transform: translateX(0%);
     opacity: 1; } }
@@ -60,6 +74,8 @@
   0% {
     transform: translateX(-60px);
     opacity: 0; }
+  50% {
+    opacity: 0.3; }
   100% {
     transform: translateX(0%);
     opacity: 1; } }

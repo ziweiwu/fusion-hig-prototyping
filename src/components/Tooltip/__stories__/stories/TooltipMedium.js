@@ -7,7 +7,7 @@ const TooltipMedium = props => (
   <div>
     <div style={{ margin: '180px' }} />
     <span>
-      <div style={{ margin: '180px', float: 'left' }} />
+      <div style={{ margin: '50px', float: 'left' }} />
       <Tooltip
         title={props.title}
         description={props.description}

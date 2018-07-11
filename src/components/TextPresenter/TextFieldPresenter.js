@@ -1,11 +1,8 @@
 import React, {Component} from "react";
-import {polyfill} from 'react-lifecycles-compat';
 import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton from "@hig/icon-button";
 import Input from "./presenters/Input";
-
-
 import "./text-field.css";
 
 function generatedId() {
@@ -23,7 +20,7 @@ export default class TextFieldPresenter extends Component {
      */
     errors: PropTypes.string,
     /**
-     * Allow the field to set focus or blur state manually
+     * Allows managing field's focus via prop. Setting this value overrides the internal focus state management.
      */
     focused: PropTypes.bool,
     /**
@@ -95,10 +92,10 @@ export default class TextFieldPresenter extends Component {
      */
     value: PropTypes.string
   };
+
   static defaultProps = {
     id: generatedId(),
-    type: "text",
-    focused: undefined
+    type: "text"
   };
 
   state = {
@@ -106,43 +103,14 @@ export default class TextFieldPresenter extends Component {
   };
 
   handleFocus = event => {
-    this.setState({focused: true});
+    this.setState({ focused: true });
     if (this.props.onFocus) this.props.onFocus(event);
   };
+
   handleBlur = event => {
-    this.setState({focused: false});
+    this.setState({ focused: false });
     if (this.props.onBlur) this.props.onBlur(event);
   };
-
-  componentDidMount(event) {
-    if (this.props.focused === true) {
-      this.setState({
-        focused: true
-      });
-      if (this.props.onFocus) this.props.onFocus(event);
-    }
-    else if (this.props.focused === false) {
-      this.setState({
-        focused: false
-      });
-      if (this.props.onBlur) this.props.onBlur(event);
-    }
-  }
-
-  componentDidUpdate(event) {
-    if (this.props.focused === true && this.state.focused !== this.props.focused) {
-      this.setState({
-        focused: true
-      });
-      if (this.props.onFocus) this.props.onFocus(event);
-    }
-    else if (this.props.focused === false && this.state.focused !== this.props.focused) {
-      this.setState({
-        focused: false
-      });
-      if (this.props.onBlur) this.props.onBlur(event);
-    }
-  }
 
   hasClearableInput() {
     return (
@@ -165,11 +133,15 @@ export default class TextFieldPresenter extends Component {
 
   render() {
     const hasClearableInput = this.hasClearableInput();
-    const fn = () => {
-      console.log('fn called')
-    };
+
+    const isFocused =
+      this.props.focused !== undefined
+        ? this.props.focused
+        : this.state.focused;
+
     const {
       errors,
+      focused,
       hideInstructionsOnErrors,
       icon,
       instructions,
@@ -177,7 +149,6 @@ export default class TextFieldPresenter extends Component {
       onClearButtonClick,
       required,
       showClearButton,
-      focused,
       ...inputProps
     } = this.props;
 
@@ -197,19 +168,18 @@ export default class TextFieldPresenter extends Component {
         >
           <div
             className={cx("hig__text-field-v1__input-wrapper", {
-              "hig__text-field-v1__input-wrapper--focused": this.state.focused,
+              "hig__text-field-v1__input-wrapper--focused": isFocused,
               "hig__text-field-v1__input-wrapper--with-errors": errors,
               "hig__text-field-v1__input-wrapper--disabled": inputProps.disabled
             })}
           >
-            {label && <span className="hig__text-field-v1__label-spacer"/>}
+            {label && <span className="hig__text-field-v1__label-spacer" />}
 
             {label && (
               <label
                 htmlFor={this.props.id}
                 className={cx("hig__text-field-v1__label", {
-                  "hig__text-field-v1__label--input-focused": this.state
-                    .focused,
+                  "hig__text-field-v1__label--input-focused": isFocused,
                   "hig__text-field-v1__label--required": required,
                   "hig__text-field-v1__label--with-value": this.props.value
                 })}
@@ -235,8 +205,8 @@ export default class TextFieldPresenter extends Component {
                   this.input = input;
                 }}
                 {...inputProps}
-                onBlur={this.props.focused === undefined ? this.handleBlur : fn}
-                onFocus={this.props.focused === undefined ? this.handleFocus : fn}
+                onBlur={this.handleBlur}
+                onFocus={this.handleFocus}
               />
 
               {hasClearableInput && (
@@ -267,4 +237,3 @@ export default class TextFieldPresenter extends Component {
   }
 }
 
-//polyfill(TextFieldPresenter);

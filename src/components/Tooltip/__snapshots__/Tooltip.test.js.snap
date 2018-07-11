@@ -16,9 +16,7 @@ ShallowWrapper {
     mouseEnterDelay={1}
     mouseLeaveDelay={0.2}
     overlay={
-        <div
-            className="css-d70g0l"
-        >
+        <div>
             <div
                 className="hig-tooltip-title"
             >
@@ -26,6 +24,7 @@ ShallowWrapper {
             </div>
         </div>
     }
+    overlayClassName="css-d70g0l"
     placement="right"
     prefixCls="hig-tooltip"
     title="test"
@@ -49,9 +48,7 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div
-                  className="css-d70g0l"
-            >
+            <div>
                   <div
                         className="hig-tooltip-title"
                   >
@@ -59,6 +56,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
+      overlayClassName="css-d70g0l"
       placement="right"
       prefixCls="hig-tooltip"
       title="test"
@@ -125,9 +123,7 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div
-                  className="css-d70g0l"
-            >
+            <div>
                   <div
                         className="hig-tooltip-title"
                   >
@@ -135,6 +131,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
+      overlayClassName="css-d70g0l"
       placement="right"
       prefixCls="hig-tooltip"
       title="test"
@@ -192,9 +189,7 @@ ShallowWrapper {
     mouseEnterDelay={0}
     mouseLeaveDelay={0.2}
     overlay={
-        <div
-            className="css-d70g0l"
-        >
+        <div>
             <div
                 className="hig-tooltip-title"
             >
@@ -202,6 +197,7 @@ ShallowWrapper {
             </div>
         </div>
     }
+    overlayClassName="css-d70g0l"
     placement="right"
     prefixCls="hig-tooltip"
     title="test"
@@ -225,9 +221,7 @@ ShallowWrapper {
       mouseEnterDelay={0}
       mouseLeaveDelay={0.2}
       overlay={
-            <div
-                  className="css-d70g0l"
-            >
+            <div>
                   <div
                         className="hig-tooltip-title"
                   >
@@ -235,6 +229,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
+      overlayClassName="css-d70g0l"
       placement="right"
       prefixCls="hig-tooltip"
       title="test"
@@ -301,9 +296,7 @@ ShallowWrapper {
       mouseEnterDelay={0}
       mouseLeaveDelay={0.2}
       overlay={
-            <div
-                  className="css-d70g0l"
-            >
+            <div>
                   <div
                         className="hig-tooltip-title"
                   >
@@ -311,6 +304,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
+      overlayClassName="css-d70g0l"
       placement="right"
       prefixCls="hig-tooltip"
       title="test"
@@ -368,9 +362,7 @@ ShallowWrapper {
     mouseEnterDelay={1}
     mouseLeaveDelay={0.2}
     overlay={
-        <div
-            className="css-d70g0l"
-        >
+        <div>
             <div
                 className="hig-tooltip-title"
             >
@@ -378,6 +370,7 @@ ShallowWrapper {
             </div>
         </div>
     }
+    overlayClassName="css-d70g0l"
     placement="right"
     prefixCls="hig-tooltip"
     title="test"
@@ -401,9 +394,7 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div
-                  className="css-d70g0l"
-            >
+            <div>
                   <div
                         className="hig-tooltip-title"
                   >
@@ -411,6 +402,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
+      overlayClassName="css-d70g0l"
       placement="right"
       prefixCls="hig-tooltip"
       title="test"
@@ -477,9 +469,7 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div
-                  className="css-d70g0l"
-            >
+            <div>
                   <div
                         className="hig-tooltip-title"
                   >
@@ -487,6 +477,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
+      overlayClassName="css-d70g0l"
       placement="right"
       prefixCls="hig-tooltip"
       title="test"
@@ -544,9 +535,7 @@ ShallowWrapper {
     mouseEnterDelay={1}
     mouseLeaveDelay={0.2}
     overlay={
-        <div
-            className="css-d70g0l"
-        >
+        <div>
             <div
                 className="hig-tooltip-title"
             >
@@ -554,6 +543,7 @@ ShallowWrapper {
             </div>
         </div>
     }
+    overlayClassName="css-d70g0l"
     placement="right"
     prefixCls="hig-tooltip"
     title="test"
@@ -577,9 +567,7 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div
-                  className="css-d70g0l"
-            >
+            <div>
                   <div
                         className="hig-tooltip-title"
                   >
@@ -587,6 +575,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
+      overlayClassName="css-d70g0l"
       placement="right"
       prefixCls="hig-tooltip"
       title="test"
@@ -653,9 +642,7 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div
-                  className="css-d70g0l"
-            >
+            <div>
                   <div
                         className="hig-tooltip-title"
                   >
@@ -663,6 +650,7 @@ ShallowWrapper {
                   </div>
             </div>
       }
+      overlayClassName="css-d70g0l"
       placement="right"
       prefixCls="hig-tooltip"
       title="test"

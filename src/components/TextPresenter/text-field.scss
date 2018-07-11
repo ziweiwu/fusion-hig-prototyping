@@ -54,7 +54,7 @@
   @include typography-medium;
   top: $label-height;
   color: transparentize($typography-base-color, .5);
-  position: absolute;
+  position: static;
   transition-property: top, font-size, line-height;
   transition-duration: 0.1s, 0.1s, 0.1s;
   transition-delay: 0.1s;

@@ -59,6 +59,7 @@ export default class Tooltip extends React.Component {
     const tooltipDescriptionClass = classNames({
       'hig-tooltip-description': true
     });
+
     const tooltipInnerContentClass = classNames({
       'hig-tooltip-inner-content ': true
     });
@@ -79,7 +80,7 @@ export default class Tooltip extends React.Component {
     return (
       <ReactToolTip
         {...props}
-        ref={node => this.node = node}
+        adjustX
         overlayClassName = {tooltipWidth}
         placement={placementsMap.get(props.anchorPoint)}
         children={<div className={tooltipChildenWrapper}>{props.children}</div>}
