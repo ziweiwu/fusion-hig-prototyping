@@ -2,7 +2,8 @@ import React from 'react';
 // import '@hig/styles/build/index.css';
 //import ToolTipHig from '@hig/tooltip';
 import '@hig/tooltip/build/index.css';
-import {DatePicker, Button, Popover, Tooltip as TooltipAnt} from 'antd';
+import {Button, Popover, Tooltip as TooltipAnt} from 'antd';
+import DatePicker from './components/DatePicker/index';
 import YouTube from 'react-youtube';
 import Tooltip from './components/Tooltip/index';
 import Dropdown from '@hig/dropdown';
@@ -71,6 +72,7 @@ const youtubeVideo = (
 const App = () => (
   <div className="App">
     <h1>App Started </h1>
+    <DatePicker/>
     <Example placement="right" content={<div>tooltip</div>}>
       <button>my button</button>
     </Example>
@@ -183,8 +185,8 @@ const App = () => (
           Click here to show popup
         </Button>
       </Tooltipy>
-      <TextFieldPresenter label="true" showClearButton focused onFocus={()=>alert("focused")} onBlur={()=>alert("blurred")}/>
-      <TextFieldPresenter label="false" showClearButton focused={false} onFocus={()=>alert("focused")} onBlur={()=>alert("blurred")}/>
+      <TextFieldPresenter label="true" showClearButton focused onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
+      <TextFieldPresenter label="false" showClearButton focused={false} onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
       <TextFieldPresenter label="undefined" showClearButton onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
     </div>
   </div>

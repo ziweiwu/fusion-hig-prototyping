@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!-- saved from url=(0813)http://localhost:9001/?knob-link%20URL=https%3A%2F%2Fwww.autodesk.com&knob-title=Tooltip%20large&knob-Trigger=click&knob-AnchorPoint=bottom-center&knob-description=Create%20a%20generative%20design%20with%20the%20current%20parameters%2C%20%0A%20%20note%3A%20this%20operation%20GPU%20intensive%20%20%0A%20%20and%20may%20takes%20anywhere%20from%20few%20minutes%20up%20to%20an%20hour.&knob-Show%20label=true&knob-link%20title=More%20detail&knob-Fixed%20Calender%20Height=true&knob-width=300&knob-Icon=true&knob-Locale=en-us&knob-Date%20Format=YYYY-MM-DD&knob-Instruction=Please%20choose%20a%20date%20&knob-mouseEnterDelay=1&knob-mouseLeaveDelay=0.2&knob-Label=Date%20picker%20&selectedKind=Date%20Picker&selectedStory=Default%20View&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs -->
+<html lang="en" class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="storybook-version" content="3.4.6">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Storybook</title>
+    <style>
+        /*
+          When resizing panels, the drag event breaks if the cursor
+          moves over the iframe. Add the 'dragging' class to the body
+          at drag start and remove it when the drag ends.
+         */
+        .dragging iframe {
+            pointer-events: none;
+        }
+
+        /* Styling the fuzzy search box placeholders */
+        .searchBox::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #ddd;
+            font-size: 16px;
+        }
+
+        .searchBox::-moz-placeholder { /* Firefox 19+ */
+            color: #ddd;
+            font-size: 16px;
+        }
+
+        .searchBox:focus{
+            border-color: #EEE !important;
+        }
+
+        .btn:hover{
+            background-color: #eee
+        }
+    </style>
+    
+
+<style type="text/css" data-glamor="">.css-glamorous-routedlink--1cigum0,[data-css-glamorous-routedlink--1cigum0]{display:block;color:inherit;text-decoration:none;font-size:13px;line-height:16px;padding:1px 5px 4px;margin-left:5px;position:relative;z-index:0;font-weight:bold;background-color:#EEE;}.css-glamorous-routedlink--fm288,[data-css-glamorous-routedlink--fm288]{display:block;color:#828282;text-decoration:none;font-size:13px;line-height:16px;padding:1px 5px 4px;margin-left:5px;position:relative;z-index:1;}</style><style type="text/css">
+  .rdt {
+    position: relative;
+  }
+  .rdtPicker {
+    display: none;
+    position: absolute;
+    width: 200px;
+    padding: 4px;
+    margin-top: 1px;
+    z-index: 99999 !important;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    border: 1px solid #f9f9f9;
+  }
+  .rdtOpen .rdtPicker {
+    display: block;
+  }
+  .rdtStatic .rdtPicker {
+    box-shadow: none;
+    position: static;
+  }
+
+  .rdtPicker .rdtTimeToggle {
+    text-align: center;
+    font-size:11px;
+  }
+
+  .rdtPicker table {
+    width: 100%;
+    margin: 0;
+  }
+  .rdtPicker td,
+  .rdtPicker th {
+    text-align: center;
+    height: 28px;
+  }
+  .rdtPicker td {
+    cursor: pointer;
+  }
+  .rdtPicker td.rdtDay:hover,
+  .rdtPicker td.rdtHour:hover,
+  .rdtPicker td.rdtMinute:hover,
+  .rdtPicker td.rdtSecond:hover,
+  .rdtPicker .rdtTimeToggle:hover {
+    background: #eeeeee;
+    cursor: pointer;
+  }
+  .rdtPicker td.rdtOld,
+  .rdtPicker td.rdtNew {
+    color: #999999;
+  }
+  .rdtPicker td.rdtToday {
+    position: relative;
+  }
+  .rdtPicker td.rdtToday:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid #428bca;
+    border-top-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+  }
+  .rdtPicker td.rdtActive,
+  .rdtPicker td.rdtActive:hover {
+    background-color: #428bca;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+  .rdtPicker td.rdtActive.rdtToday:before {
+    border-bottom-color: #fff;
+  }
+  .rdtPicker td.rdtDisabled,
+  .rdtPicker td.rdtDisabled:hover {
+    background: none;
+    color: #999999;
+    cursor: not-allowed;
+  }
+
+  .rdtPicker td span.rdtOld {
+    color: #999999;
+  }
+  .rdtPicker td span.rdtDisabled,
+  .rdtPicker td span.rdtDisabled:hover {
+    background: none;
+    color: #999999;
+    cursor: not-allowed;
+  }
+  .rdtPicker th {
+    border-bottom: 1px solid #f9f9f9;
+  }
+  .rdtPicker .dow {
+    width: 14.2857%;
+    font-size: 11px;
+    border-bottom: none;
+  }
+  .rdtPicker th.rdtSwitch {
+    width: 100px;
+    font-size: 11px;
+  }
+  .rdtPicker th.rdtNext,
+  .rdtPicker th.rdtPrev {
+    font-size: 11px;
+    vertical-align: top;
+  }
+
+  .rdtPrev span,
+  .rdtNext span {
+    display: block;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+  }
+
+  .rdtPicker th.rdtDisabled,
+  .rdtPicker th.rdtDisabled:hover {
+    background: none;
+    color: #999999;
+    cursor: not-allowed;
+  }
+  .rdtPicker thead tr:first-child th {
+    cursor: pointer;
+  }
+  .rdtPicker thead tr:first-child th:hover {
+    background: #eeeeee;
+  }
+
+  .rdtPicker tfoot {
+    border-top: 1px solid #f9f9f9;
+  }
+
+  .rdtPicker button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .rdtPicker button:hover {
+    background-color: #eee;
+  }
+
+  .rdtPicker thead button {
+    width: 100%;
+    height: 100%;
+  }
+
+  td.rdtMonth,
+  td.rdtYear {
+    height: 50px;
+    width: 25%;
+    cursor: pointer;
+  }
+  td.rdtMonth:hover,
+  td.rdtYear:hover {
+    background: #eee;
+  }
+
+  td.rdtDay {
+    font-size: 11px
+  }
+
+  .rdtCounters {
+    display: inline-block;
+  }
+
+  .rdtCounters > div {
+    float: left;
+  }
+
+  .rdtCounter {
+    height: 100px;
+  }
+
+  .rdtCounter {
+    width: 40px;
+  }
+
+  .rdtCounterSeparator {
+    line-height: 100px;
+  }
+
+  .rdtCounter .rdtBtn {
+    height: 40%;
+    line-height: 40px;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+  }
+  .rdtCounter .rdtBtn:hover {
+    background: #eee;
+  }
+  .rdtCounter .rdtCount {
+    height: 20%;
+    font-size: 11px;
+  }
+
+  .rdtMilli {
+    vertical-align: middle;
+    padding-left: 8px;
+    width: 48px;
+  }
+
+  .rdtMilli input {
+    width: 100%;
+    font-size: 11px;
+    margin-top: 37px;
+  }
+
+  .rdt input {
+    outline: 0;
+    width: 100%;
+    border: 1px solid #f7f4f4;
+    border-radius: 2px;
+    font-size: 11px;
+    padding: 5px;
+    color: #555;
+    display: table-cell;
+    box-sizing: border-box;
+  }
+</style></head>
+<body style="margin: 0;" data-gr-c-s-loaded="true">
+    <div id="root"><div data-reactroot=""><div style="height: 100vh; background-color: rgb(247, 247, 247);"><div class="SplitPane  vertical " style="display: flex; flex: 1 1 0%; height: 100%; position: absolute; outline: none; overflow: hidden; user-select: text; flex-direction: row; left: 0px; right: 0px;"><div class="Pane vertical Pane1  " style="flex: 0 0 auto; position: relative; outline: none; width: 251px;"><div style="width: 100%; display: flex; flex-direction: row; align-items: stretch; padding-right: 0px;"><div style="flex-grow: 1; height: 100%; width: 100%;"><div style="padding: 10px 0px 10px 10px;"><div style="background: rgb(247, 247, 247); margin-bottom: 10px; display: flex;"><a href="https://github.com/storybooks/storybook" target="_blank" rel="noopener noreferrer" style="text-decoration: none; flex-grow: 1; display: flex; align-items: center; justify-content: center; border: 1px solid rgb(193, 193, 193); border-radius: 2px;"><h3 style="font-family: -apple-system, &quot;.SFNSText-Regular&quot;, &quot;San Francisco&quot;, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, Arial, sans-serif; color: rgb(130, 130, 130); -webkit-font-smoothing: antialiased; text-transform: uppercase; letter-spacing: 1.5px; font-size: 12px; font-weight: bolder; text-align: center; cursor: pointer; padding: 5px; margin: 0px; overflow: hidden;">STORYBOOK</h3></a><button style="text-transform: uppercase; font-size: 12px; font-weight: bolder; color: rgb(130, 130, 130); border: 1px solid rgb(193, 193, 193); text-align: center; border-radius: 2px; cursor: pointer; padding: 0px; margin: 0px 0px 0px 5px; background-color: inherit; outline: 0px; width: 30px; flex-shrink: 0;">⌘</button></div><div style="font-family: -apple-system, &quot;.SFNSText-Regular&quot;, &quot;San Francisco&quot;, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, Arial, sans-serif; color: rgb(68, 68, 68); -webkit-font-smoothing: antialiased; border: 1px solid rgb(236, 236, 236); border-radius: 2px; position: relative;"><div style="background: rgb(247, 247, 247);"><input type="text" placeholder="Filter" name="filter-text" value="" style="font-size: 12px; color: rgb(130, 130, 130); padding: 5px; display: block; width: 100%; box-sizing: border-box; outline: none; border: 0px; height: 26px;"></div></div><div style="height: calc(100vh - 105px); margin-top: 10px; overflow: auto;"><div><!-- react-text: 59 --><!-- /react-text --><ul style="list-style: none; margin: 0px 0px 0px -19px; padding: 5px; font-family: -apple-system, &quot;.SFNSText-Regular&quot;, &quot;San Francisco&quot;, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, Arial, sans-serif; font-size: 15px; min-width: 200px;"><li style="position: relative;"><!-- react-empty: 62 --><div><ul class="" style="padding-left: 19px; list-style: none; display: block;"><li style="position: relative;"><div role="menuitem" tabindex="0" data-name="Date Picker" style="cursor: pointer; position: relative; overflow: hidden; padding: 0px 5px; display: block; z-index: 1;"><div data-radium="true"><div class="" style="position: relative; display: inline-block; vertical-align: top; margin-left: -5px; height: 24px; width: 24px; transform-origin: 50% 11px 0px; transform: rotateZ(90deg);"><div style="position: absolute; top: 50%; left: 50%; margin: -6px 0px 0px -5px;"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="10" width="10" viewBox="0 0 40 40" style="vertical-align: top; fill: rgb(157, 165, 171);"><g><path d="m23.3 20l-13.1-13.6c-0.3-0.3-0.3-0.9 0-1.2l2.4-2.4c0.3-0.3 0.9-0.4 1.2-0.1l16 16.7c0.1 0.1 0.2 0.4 0.2 0.6s-0.1 0.5-0.2 0.6l-16 16.7c-0.3 0.3-0.9 0.3-1.2 0l-2.4-2.5c-0.3-0.3-0.3-0.9 0-1.2z"></path></g></svg></div></div><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div style="line-height: 18px; padding: 1px 0px 5px;">Date Picker</div></div></div></div><div><ul class="" style="padding-left: 19px; list-style: none; display: block;"><li style="position: relative;"><a href="http://localhost:9001/?knob-link%20URL=https%3A%2F%2Fwww.autodesk.com&amp;knob-title=Tooltip%20large&amp;knob-Trigger=click&amp;knob-AnchorPoint=bottom-center&amp;knob-description=Create%20a%20generative%20design%20with%20the%20current%20parameters%2C%20%0A%20%20note%3A%20this%20operation%20GPU%20intensive%20%20%0A%20%20and%20may%20takes%20anywhere%20from%20few%20minutes%20up%20to%20an%20hour.&amp;knob-Show%20label=true&amp;knob-link%20title=More%20detail&amp;knob-Fixed%20Calender%20Height=true&amp;knob-width=300&amp;knob-Icon=true&amp;knob-Locale=en-us&amp;knob-Date%20Format=YYYY-MM-DD&amp;knob-Instruction=Please%20choose%20a%20date%20&amp;knob-mouseEnterDelay=1&amp;knob-mouseLeaveDelay=0.2&amp;knob-Label=Date%20picker%20&amp;selectedKind=Date%20Picker&amp;selectedStory=Default%20View&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybooks%2Fstorybook-addon-knobs" data-name="Default View" class="css-glamorous-routedlink--1cigum0"><div data-radium="true"><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div>Default View</div></div></div></a><div></div></li><li style="position: relative;"><a href="http://localhost:9001/?knob-link%20URL=https%3A%2F%2Fwww.autodesk.com&amp;knob-title=Tooltip%20large&amp;knob-Trigger=click&amp;knob-AnchorPoint=bottom-center&amp;knob-description=Create%20a%20generative%20design%20with%20the%20current%20parameters%2C%20%0A%20%20note%3A%20this%20operation%20GPU%20intensive%20%20%0A%20%20and%20may%20takes%20anywhere%20from%20few%20minutes%20up%20to%20an%20hour.&amp;knob-Show%20label=true&amp;knob-link%20title=More%20detail&amp;knob-Fixed%20Calender%20Height=true&amp;knob-width=300&amp;knob-Icon=true&amp;knob-Locale=en-us&amp;knob-Date%20Format=YYYY-MM-DD&amp;knob-Instruction=Please%20choose%20a%20date%20&amp;knob-mouseEnterDelay=1&amp;knob-mouseLeaveDelay=0.2&amp;knob-Label=Date%20picker%20&amp;selectedKind=Date%20Picker&amp;selectedStory=With%20Clear%20Button&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybooks%2Fstorybook-addon-knobs" data-name="With Clear Button" class="css-glamorous-routedlink--fm288"><div data-radium="true"><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div>With Clear Button</div></div></div></a><div></div></li><li style="position: relative;"><a href="http://localhost:9001/?knob-link%20URL=https%3A%2F%2Fwww.autodesk.com&amp;knob-title=Tooltip%20large&amp;knob-Trigger=click&amp;knob-AnchorPoint=bottom-center&amp;knob-description=Create%20a%20generative%20design%20with%20the%20current%20parameters%2C%20%0A%20%20note%3A%20this%20operation%20GPU%20intensive%20%20%0A%20%20and%20may%20takes%20anywhere%20from%20few%20minutes%20up%20to%20an%20hour.&amp;knob-Show%20label=true&amp;knob-link%20title=More%20detail&amp;knob-Fixed%20Calender%20Height=true&amp;knob-width=300&amp;knob-Icon=true&amp;knob-Locale=en-us&amp;knob-Date%20Format=YYYY-MM-DD&amp;knob-Instruction=Please%20choose%20a%20date%20&amp;knob-mouseEnterDelay=1&amp;knob-mouseLeaveDelay=0.2&amp;knob-Label=Date%20picker%20&amp;selectedKind=Date%20Picker&amp;selectedStory=Disabled&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybooks%2Fstorybook-addon-knobs" data-name="Disabled" class="css-glamorous-routedlink--fm288"><div data-radium="true"><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div>Disabled</div></div></div></a><div></div></li><li style="position: relative;"><a href="http://localhost:9001/?knob-link%20URL=https%3A%2F%2Fwww.autodesk.com&amp;knob-title=Tooltip%20large&amp;knob-Trigger=click&amp;knob-AnchorPoint=bottom-center&amp;knob-description=Create%20a%20generative%20design%20with%20the%20current%20parameters%2C%20%0A%20%20note%3A%20this%20operation%20GPU%20intensive%20%20%0A%20%20and%20may%20takes%20anywhere%20from%20few%20minutes%20up%20to%20an%20hour.&amp;knob-Show%20label=true&amp;knob-link%20title=More%20detail&amp;knob-Fixed%20Calender%20Height=true&amp;knob-width=300&amp;knob-Icon=true&amp;knob-Locale=en-us&amp;knob-Date%20Format=YYYY-MM-DD&amp;knob-Instruction=Please%20choose%20a%20date%20&amp;knob-mouseEnterDelay=1&amp;knob-mouseLeaveDelay=0.2&amp;knob-Label=Date%20picker%20&amp;selectedKind=Date%20Picker&amp;selectedStory=Select%20a%20Range%20of%20Dates&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybooks%2Fstorybook-addon-knobs" data-name="Select a Range of Dates" class="css-glamorous-routedlink--fm288"><div data-radium="true"><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div>Select a Range of Dates</div></div></div></a><div></div></li><li style="position: relative;"><a href="http://localhost:9001/?knob-link%20URL=https%3A%2F%2Fwww.autodesk.com&amp;knob-title=Tooltip%20large&amp;knob-Trigger=click&amp;knob-AnchorPoint=bottom-center&amp;knob-description=Create%20a%20generative%20design%20with%20the%20current%20parameters%2C%20%0A%20%20note%3A%20this%20operation%20GPU%20intensive%20%20%0A%20%20and%20may%20takes%20anywhere%20from%20few%20minutes%20up%20to%20an%20hour.&amp;knob-Show%20label=true&amp;knob-link%20title=More%20detail&amp;knob-Fixed%20Calender%20Height=true&amp;knob-width=300&amp;knob-Icon=true&amp;knob-Locale=en-us&amp;knob-Date%20Format=YYYY-MM-DD&amp;knob-Instruction=Please%20choose%20a%20date%20&amp;knob-mouseEnterDelay=1&amp;knob-mouseLeaveDelay=0.2&amp;knob-Label=Date%20picker%20&amp;selectedKind=Date%20Picker&amp;selectedStory=Restricted%20Date%20Range&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybooks%2Fstorybook-addon-knobs" data-name="Restricted Date Range" class="css-glamorous-routedlink--fm288"><div data-radium="true"><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div>Restricted Date Range</div></div></div></a><div></div></li><li style="position: relative;"><a href="http://localhost:9001/?knob-link%20URL=https%3A%2F%2Fwww.autodesk.com&amp;knob-title=Tooltip%20large&amp;knob-Trigger=click&amp;knob-AnchorPoint=bottom-center&amp;knob-description=Create%20a%20generative%20design%20with%20the%20current%20parameters%2C%20%0A%20%20note%3A%20this%20operation%20GPU%20intensive%20%20%0A%20%20and%20may%20takes%20anywhere%20from%20few%20minutes%20up%20to%20an%20hour.&amp;knob-Show%20label=true&amp;knob-link%20title=More%20detail&amp;knob-Fixed%20Calender%20Height=true&amp;knob-width=300&amp;knob-Icon=true&amp;knob-Locale=en-us&amp;knob-Date%20Format=YYYY-MM-DD&amp;knob-Instruction=Please%20choose%20a%20date%20&amp;knob-mouseEnterDelay=1&amp;knob-mouseLeaveDelay=0.2&amp;knob-Label=Date%20picker%20&amp;selectedKind=Date%20Picker&amp;selectedStory=Filter%20Dates&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybooks%2Fstorybook-addon-knobs" data-name="Filter Dates" class="css-glamorous-routedlink--fm288"><div data-radium="true"><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div>Filter Dates</div></div></div></a><div></div></li><li style="position: relative;"><a href="http://localhost:9001/?knob-link%20URL=https%3A%2F%2Fwww.autodesk.com&amp;knob-title=Tooltip%20large&amp;knob-Trigger=click&amp;knob-AnchorPoint=bottom-center&amp;knob-description=Create%20a%20generative%20design%20with%20the%20current%20parameters%2C%20%0A%20%20note%3A%20this%20operation%20GPU%20intensive%20%20%0A%20%20and%20may%20takes%20anywhere%20from%20few%20minutes%20up%20to%20an%20hour.&amp;knob-Show%20label=true&amp;knob-link%20title=More%20detail&amp;knob-Fixed%20Calender%20Height=true&amp;knob-width=300&amp;knob-Icon=true&amp;knob-Locale=en-us&amp;knob-Date%20Format=YYYY-MM-DD&amp;knob-Instruction=Please%20choose%20a%20date%20&amp;knob-mouseEnterDelay=1&amp;knob-mouseLeaveDelay=0.2&amp;knob-Label=Date%20picker%20&amp;selectedKind=Date%20Picker&amp;selectedStory=Locale&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybooks%2Fstorybook-addon-knobs" data-name="Locale" class="css-glamorous-routedlink--fm288"><div data-radium="true"><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div>Locale</div></div></div></a><div></div></li><li style="position: relative;"><a href="http://localhost:9001/?knob-link%20URL=https%3A%2F%2Fwww.autodesk.com&amp;knob-title=Tooltip%20large&amp;knob-Trigger=click&amp;knob-AnchorPoint=bottom-center&amp;knob-description=Create%20a%20generative%20design%20with%20the%20current%20parameters%2C%20%0A%20%20note%3A%20this%20operation%20GPU%20intensive%20%20%0A%20%20and%20may%20takes%20anywhere%20from%20few%20minutes%20up%20to%20an%20hour.&amp;knob-Show%20label=true&amp;knob-link%20title=More%20detail&amp;knob-Fixed%20Calender%20Height=true&amp;knob-width=300&amp;knob-Icon=true&amp;knob-Locale=en-us&amp;knob-Date%20Format=YYYY-MM-DD&amp;knob-Instruction=Please%20choose%20a%20date%20&amp;knob-mouseEnterDelay=1&amp;knob-mouseLeaveDelay=0.2&amp;knob-Label=Date%20picker%20&amp;selectedKind=Date%20Picker&amp;selectedStory=Custom%20Date%20Format&amp;full=0&amp;addons=1&amp;stories=1&amp;panelRight=0&amp;addonPanel=storybooks%2Fstorybook-addon-knobs" data-name="Custom Date Format" class="css-glamorous-routedlink--fm288"><div data-radium="true"><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div>Custom Date Format</div></div></div></a><div></div></li></ul></div></li><li style="position: relative;"><div role="menuitem" tabindex="0" data-name="Tooltip" style="cursor: pointer; position: relative; overflow: hidden; padding: 0px 5px; display: block; z-index: 1;"><div data-radium="true"><div class="" style="position: relative; display: inline-block; vertical-align: top; margin-left: -5px; height: 24px; width: 24px; transform-origin: 50% 11px 0px; transform: rotateZ(0deg);"><div style="position: absolute; top: 50%; left: 50%; margin: -6px 0px 0px -5px;"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="10" width="10" viewBox="0 0 40 40" style="vertical-align: top; fill: rgb(157, 165, 171);"><g><path d="m23.3 20l-13.1-13.6c-0.3-0.3-0.3-0.9 0-1.2l2.4-2.4c0.3-0.3 0.9-0.4 1.2-0.1l16 16.7c0.1 0.1 0.2 0.4 0.2 0.6s-0.1 0.5-0.2 0.6l-16 16.7c-0.3 0.3-0.9 0.3-1.2 0l-2.4-2.5c-0.3-0.3-0.3-0.9 0-1.2z"></path></g></svg></div></div><div style="display: inline-block; vertical-align: top; max-width: calc(100% - 24px);"><div style="line-height: 18px; padding: 1px 0px 5px;">Tooltip</div></div></div></div><div></div></li></ul></div></li></ul></div></div></div></div><div style="width: 10px; margin-left: 0px; margin-right: -10px; position: relative;"><span style="width: 1px; height: 20px; left: 3.5px; top: 50%; position: absolute; border-left: 1px solid rgba(0, 0, 0, 0.1); border-right: 1px solid rgba(0, 0, 0, 0.1);"></span></div></div></div><span class="Resizer vertical " style="cursor: col-resize; height: auto; width: 10px; z-index: 1;"></span><div class="Pane vertical Pane2  " style="flex: 1 1 0%; position: relative; outline: none;"><div class="SplitPane  horizontal " style="display: flex; flex: 1 1 0%; height: 100%; position: absolute; outline: none; overflow: hidden; user-select: text; bottom: 0px; flex-direction: column; min-height: 100%; top: 0px; width: 100%;"><div class="Pane horizontal Pane1  " style="overflow: auto; flex: 1 1 0%; position: relative; outline: none;"><div style="position: absolute; box-sizing: border-box; width: 100%; height: 100%; padding: 10px 10px 2px 0px;"><div style="display: none; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px;"></div><div style="width: 100%; height: 100%; background-color: rgb(255, 255, 255); border: 1px solid rgb(236, 236, 236); border-radius: 4px;"><iframe id="storybook-preview-iframe" title="preview" src="./Storybook_files/iframe.html" allowfullscreen="" style="width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px;"></iframe></div><!-- react-empty: 26 --></div></div><span class="Resizer horizontal " style="cursor: row-resize; height: 10px; width: 100%; z-index: 1;"></span><div class="Pane horizontal Pane2  " style="flex: 0 0 auto; position: relative; outline: none; height: 205px; display: flex;"><div style="display: flex; flex-direction: column; align-items: stretch; position: absolute; width: 100%; height: 100%; padding: 0px 10px 10px 0px; box-sizing: border-box;"><div style="height: 10px; margin-top: -10px; margin-bottom: 0px; position: relative;"><span style="height: 1px; width: 20px; top: 3.5px; left: 50%; position: absolute; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(0, 0, 0, 0.1);"></span></div><div style="flex: 1 1 auto; display: flex; flex-direction: column; background: white; border-radius: 4px; border: 1px solid rgb(236, 236, 236); margin-top: 5px; overflow: hidden; width: 100%;"><div role="tablist" style="display: flex; flex-flow: row wrap; justify-content: flex-start; align-items: center; border-bottom: 1px solid rgb(234, 234, 234);"><button type="button" role="tab" style="font-family: -apple-system, &quot;.SFNSText-Regular&quot;, &quot;San Francisco&quot;, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, Arial, sans-serif; color: rgb(68, 68, 68); -webkit-font-smoothing: antialiased; font-size: 11px; letter-spacing: 1px; padding: 10px 15px; text-transform: uppercase; transition: opacity 0.3s; opacity: 1; max-height: 60px; overflow: hidden; cursor: pointer; background: transparent; border: none;">Knobs</button><button type="button" role="tab" style="font-family: -apple-system, &quot;.SFNSText-Regular&quot;, &quot;San Francisco&quot;, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, Arial, sans-serif; color: rgb(68, 68, 68); -webkit-font-smoothing: antialiased; font-size: 11px; letter-spacing: 1px; padding: 10px 15px; text-transform: uppercase; transition: opacity 0.3s; opacity: 0.5; max-height: 60px; overflow: hidden; cursor: pointer; background: transparent; border: none;">Viewport</button></div><div style="flex: 1 1 0px; display: flex; overflow: auto;"><div role="tabpanel" style="display: none;"><div style="padding: 15px; width: 100%; box-sizing: border-box; font-family: -apple-system, &quot;.SFNSText-Regular&quot;, &quot;San Francisco&quot;, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, Arial, sans-serif; color: rgb(68, 68, 68); -webkit-font-smoothing: antialiased;"><div style="width: 100%; display: flex; margin-bottom: 15px;"><label for="device" style="width: 80px; margin-right: 15px;">Device</label><select id="device" style="color: rgb(85, 85, 85); width: 100%; border: 1px solid rgb(247, 247, 247); background-color: rgb(247, 247, 247); border-radius: 3px; height: 30px;"><option value="default">Default</option><option value="iphone5">iPhone 5</option><option value="iphone6">iPhone 6</option><option value="iphone6p">iPhone 6 Plus</option><option value="ipad">iPad</option><option value="galaxys5">Galaxy S5</option><option value="nexus5x">Nexus 5X</option><option value="nexus6p">Nexus 6P</option></select></div><div style="width: 100%; display: flex; margin-bottom: 15px;"><label for="rotate" style="width: 80px; margin-right: 15px;">Rotate</label><button id="rotate" disabled="" style="color: rgb(85, 85, 85); width: 100%; border: 1px solid rgb(247, 247, 247); background-color: rgb(247, 247, 247); border-radius: 3px; height: 30px; opacity: 0.5; cursor: not-allowed;">Landscape</button></div><button disabled="" style="color: rgb(85, 85, 85); width: 100%; border: 1px solid rgb(247, 247, 247); background-color: rgb(247, 247, 247); border-radius: 3px; opacity: 0.5; cursor: not-allowed; margin-top: 30px; padding: 20px;">Reset Viewport</button></div></div><div role="tabpanel" style="display: flex; flex: 1 1 0%;"><div style="width: 100%;"><div style="padding: 5px; width: auto; position: relative;"><form style="font-family: -apple-system, &quot;.SFNSText-Regular&quot;, &quot;San Francisco&quot;, Roboto, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, sans-serif; display: table; box-sizing: border-box; width: 100%; border-collapse: separate; border-spacing: 5px;"><div style="display: table-row; padding: 5px;"><label for="Label" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Label</label><textarea id="Label" style="display: table-cell; box-sizing: border-box; vertical-align: middle; height: 25px; width: 100%; outline: none; border: 1px solid rgb(247, 244, 244); border-radius: 2px; font-size: 11px; padding: 5px; color: rgb(85, 85, 85);">Date picker </textarea></div><div style="display: table-row; padding: 5px;"><label for="Show label" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Show label</label><input type="checkbox" id="Show label" value="on" style="display: table-cell; box-sizing: border-box; vertical-align: top; height: 21px; outline: none; border: 1px solid rgb(236, 236, 236); font-size: 12px; color: rgb(85, 85, 85);"></div><div style="display: table-row; padding: 5px;"><label for="Instruction" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Instruction</label><textarea id="Instruction" style="display: table-cell; box-sizing: border-box; vertical-align: middle; height: 25px; width: 100%; outline: none; border: 1px solid rgb(247, 244, 244); border-radius: 2px; font-size: 11px; padding: 5px; color: rgb(85, 85, 85);">Please choose a date </textarea></div><div style="display: table-row; padding: 5px;"><label for="Show instruction" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Show instruction</label><input type="checkbox" id="Show instruction" value="on" style="display: table-cell; box-sizing: border-box; vertical-align: top; height: 21px; outline: none; border: 1px solid rgb(236, 236, 236); font-size: 12px; color: rgb(85, 85, 85);"></div><div style="display: table-row; padding: 5px;"><label for="Icon" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Icon</label><input type="checkbox" id="Icon" value="on" style="display: table-cell; box-sizing: border-box; vertical-align: top; height: 21px; outline: none; border: 1px solid rgb(236, 236, 236); font-size: 12px; color: rgb(85, 85, 85);"></div><div style="display: table-row; padding: 5px;"><label for="Clearable" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Clearable</label><input type="checkbox" id="Clearable" value="on" style="display: table-cell; box-sizing: border-box; vertical-align: top; height: 21px; outline: none; border: 1px solid rgb(236, 236, 236); font-size: 12px; color: rgb(85, 85, 85);"></div><div style="display: table-row; padding: 5px;"><label for="Disable" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Disable</label><input type="checkbox" id="Disable" value="on" style="display: table-cell; box-sizing: border-box; vertical-align: top; height: 21px; outline: none; border: 1px solid rgb(236, 236, 236); font-size: 12px; color: rgb(85, 85, 85);"></div><div style="display: table-row; padding: 5px;"><label for="Fixed Calender Height" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Fixed Calender Height</label><input type="checkbox" id="Fixed Calender Height" value="on" style="display: table-cell; box-sizing: border-box; vertical-align: top; height: 21px; outline: none; border: 1px solid rgb(236, 236, 236); font-size: 12px; color: rgb(85, 85, 85);"></div><div style="display: table-row; padding: 5px;"><label for="Date Format" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Date Format</label><select id="Date Format" style="display: table-cell; box-sizing: border-box; vertical-align: middle; height: 26px; width: 100%; outline: none; border: 1px solid rgb(247, 244, 244); border-radius: 2px; font-size: 11px; padding: 5px; color: rgb(85, 85, 85);"><option value="ddd, MMM, YYYY">ddd, MMM, YYYY</option><option value="YYYY-MM-DD">YYYY-MM-DD</option><option value="DD-MM-YY">DD-MM-YY</option></select></div><div style="display: table-row; padding: 5px;"><label for="Locale" style="display: table-cell; box-sizing: border-box; vertical-align: top; padding-right: 5px; padding-top: 5px; text-align: right; width: 80px; font-size: 12px; color: rgb(68, 68, 68); font-weight: 600;">Locale</label><select id="Locale" style="display: table-cell; box-sizing: border-box; vertical-align: middle; height: 26px; width: 100%; outline: none; border: 1px solid rgb(247, 244, 244); border-radius: 2px; font-size: 11px; padding: 5px; color: rgb(85, 85, 85);"><option value="fr-ca">fr-ca</option><option value="en-us">en-us</option><option value="zh-cn">zh-cn</option><option value="ja">ja</option></select></div></form></div><button style="position: absolute; bottom: 11px; right: 10px; border-top: 1px solid rgba(0, 0, 0, 0.2); border-right: none; border-bottom: none; border-left: 1px solid rgba(0, 0, 0, 0.2); border-image: initial; background: rgba(255, 255, 255, 0.5); padding: 5px 10px; border-radius: 4px 0px 0px; color: rgba(0, 0, 0, 0.5); outline: none;">RESET</button></div></div></div></div></div></div></div></div></div></div><!-- react-empty: 56 --><!-- react-empty: 57 --></div></div>
+<script type="text/javascript" src="./Storybook_files/manager.bundle.js"></script><div class="ReactModalPortal"><!-- react-empty: 1 --></div><div class="ReactModalPortal"><!-- react-empty: 1 --></div>
+
+<textarea style="letter-spacing: normal; line-height: normal; font-family: system-ui; font-weight: 400; font-size: 11px; font-style: normal; tab-size: 8; text-rendering: auto; text-transform: none; width: 401px; text-indent: 0px; padding: 5px; border-width: 1px; box-sizing: border-box; min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important;"></textarea></body></html>

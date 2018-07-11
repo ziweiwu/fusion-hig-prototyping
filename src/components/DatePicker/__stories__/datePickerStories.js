@@ -185,7 +185,7 @@ storiesOfDatePicker.add('Restricted Date Range', () => {
 
 // Filter Dates
 storiesOfDatePicker.add('Filter Dates', () => {
-  const chooseFilter = select('Filter', ['Weekdays', 'Weekends'], ['Weekdays']);
+  const chooseFilter = select('Filter', ['Weekdays', 'Weekends', 'None'], ['Weekdays']);
   const label = text('Label', 'Date picker ');
   const showLabel = boolean('Show label', true);
   const instruction = text('Instruction', 'Please choose a date ');

@@ -6,9 +6,9 @@ import '@hig/button/build/index.css';
 
 const TooltipLarge = props => (
   <div>
-    <div style={{ margin: '180' }} />
+    <div style={{ margin: '180px' }} />
     <span>
-      <div style={{ margin: '180', float: 'left' }} />
+      <div style={{ margin: '50px', float: 'left' }} />
       <Tooltip
         title={props.title}
         description={props.description}
