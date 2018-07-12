@@ -25,7 +25,16 @@ export default class Locale extends Component {
     this.setState({ endDate: date });
   }
 
+
+
+
+
   render() {
+    const filterOptions = {
+      Weekdays: this.isWeekday,
+      Weekends: this.isWeekend,
+      None: null,
+    };
     return (
       <DatePicker
         selected={this.state.startDate}
@@ -42,6 +51,7 @@ export default class Locale extends Component {
         instruction={this.props.instruction}
         showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
+        filterDate={filterOptions[this.props.chooseFilter]}
       />
     );
   }

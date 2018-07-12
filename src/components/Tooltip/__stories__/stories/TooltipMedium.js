@@ -5,9 +5,9 @@ import '@hig/button/build/index.css';
 
 const TooltipMedium = props => (
   <div>
-    <div style={{ margin: '180px' }} />
+    <div style={{ margin: '200px' }} />
     <span>
-      <div style={{ margin: '50px', float: 'left' }} />
+      <div style={{ margin: '100px', float: 'left' }} />
       <Tooltip
         title={props.title}
         description={props.description}
@@ -18,6 +18,7 @@ const TooltipMedium = props => (
         linkTitle={props.linkTitle}
         linkURL={props.linkURL}
         width={props.width}
+        lightTheme={props.lightTheme}
       >
         <Button title="Tooltip medium" />
       </Tooltip>

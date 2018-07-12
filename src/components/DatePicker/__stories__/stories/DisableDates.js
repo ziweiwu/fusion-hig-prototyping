@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import moment from 'moment';
 import DatePicker from '../../index';
 
@@ -15,20 +15,35 @@ export default class DisableDates extends Component {
   }
 
   handleChangeDate(date) {
-    this.setState({ startDate: date });
+    this.setState({startDate: date});
   }
 
   handleChangeStart(date) {
-    this.setState({ startDate: date });
+    this.setState({startDate: date});
   }
 
   handleChangeEnd(date) {
-    this.setState({ endDate: date });
+    this.setState({endDate: date});
+  }
+
+  isWeekday(date) {
+    const day = date.day();
+    return day !== 0 && day !== 6;
+  }
+
+  isWeekend(date) {
+    const day = date.day();
+    return day === 0 || day === 6;
   }
 
   render() {
     const startDate = this.state.startDate;
     const maxDate = this.props.maxDate;
+    const filterOptions = {
+      Weekdays: this.isWeekday,
+      Weekends: this.isWeekend,
+      None: null,
+    };
     return (
       <DatePicker
         locale={this.props.locale}
@@ -47,6 +62,7 @@ export default class DisableDates extends Component {
         instruction={this.props.instruction}
         showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
+        filterDate={filterOptions[this.props.chooseFilter]}
       />
     );
   }

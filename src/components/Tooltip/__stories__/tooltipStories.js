@@ -30,6 +30,8 @@ storiesOfTooltip.add('Tooltip Small', () => {
 
   const width = number('width', 300);
 
+  const theme = boolean('Light theme', false);
+
   return (
     <TooltipSmall
       anchorPoint={anchorPoint}
@@ -38,6 +40,7 @@ storiesOfTooltip.add('Tooltip Small', () => {
       mouseLeaveDelay={mouseLeaveDelay}
       mouseEnterDelay={mouseEnterDelay}
       width={width}
+      lightTheme={theme}
     />
   );
 });
@@ -71,6 +74,8 @@ storiesOfTooltip.add('Tooltip Medium', () => {
 
   const width = number('width', 300);
 
+  const theme = boolean('Light theme', false);
+
   return (
     <TooltipMedium
       anchorPoint={anchorPoint}
@@ -82,6 +87,7 @@ storiesOfTooltip.add('Tooltip Medium', () => {
       linkTitle={linkTitle}
       linkURL={linkURL}
       width={width}
+      lightTheme={theme}
     />
   );
 });
@@ -106,6 +112,8 @@ storiesOfTooltip.add('Tooltip Large', () => {
 
   const width = number('width', 300);
 
+  const theme = boolean('Light theme', false);
+
   return (
     <TooltipLarge
       anchorPoint={anchorPoint}
@@ -117,6 +125,7 @@ storiesOfTooltip.add('Tooltip Large', () => {
       linkTitle={linkTitle}
       linkURL={linkURL}
       width={width}
+      lightTheme={theme}
     />
   );
 });

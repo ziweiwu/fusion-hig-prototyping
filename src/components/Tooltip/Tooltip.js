@@ -4,9 +4,10 @@ import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
 import {anchorPoints} from "@hig/flyout";
 import {css} from 'react-emotion'
+import { ThemeProvider } from 'emotion-theming'
 import './tooltip.css';
 
-//map the placements from the anchorPoints
+// Map the placements from the anchorPoints, map is used here because object only support string key
 const placementsMap = new Map([
   [anchorPoints.TOP_CENTER, "top"],
   [anchorPoints.TOP_LEFT, "topLeft"],
@@ -22,7 +23,6 @@ const placementsMap = new Map([
   [anchorPoints.RIGHT_BOTTOM, "rightBottom"],
 ]);
 
-
 export default class Tooltip extends React.Component {
   static propTypes = {
     trigger: PropTypes.string,
@@ -36,7 +36,9 @@ export default class Tooltip extends React.Component {
     linkTitle: PropTypes.string,
     linkURL: PropTypes.string,
     anchorPoint: PropTypes.string,
-    width: PropTypes.number
+    width: PropTypes.number,
+    progressive: PropTypes.bool,
+    lightTheme: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -47,49 +49,37 @@ export default class Tooltip extends React.Component {
     anchorPoint: placementsMap.get(anchorPoints.RIGHT_CENTER),
     trigger: 'click',
     arrowContent: null,
-    width: 300
+    width: 300,
+    progressive: false,
+    lightTheme: false,
   };
 
   render() {
     const props = this.props;
-
-    const tooltipTitleClass = classNames({
-      'hig-tooltip-title': true
-    });
-    const tooltipDescriptionClass = classNames({
-      'hig-tooltip-description': true
-    });
-
-    const tooltipInnerContentClass = classNames({
-      'hig-tooltip-inner-content ': true
-    });
-
-    const tooltipLink = classNames({
-      'hig-tooltip-link': true
-    });
-
-    const tooltipChildenWrapper = classNames({
-      'hig-tooltip-children-wrapper': true
-    });
-
-   // use react emotion to create a styled wrapper with props.width
+    // use react emotion to create a styled wrapper with props.width
     const tooltipWidth = css`
       max-width: ${props.width}px;
     `;
+
+    const tooltipTheme = classNames({
+      'hig-tooltip-light': this.props.lightTheme,
+      'hig-tooltip-dark': !this.props.lightTheme
+    });
 
     return (
       <ReactToolTip
         {...props}
         adjustX
-        overlayClassName = {tooltipWidth}
+        adjustY
+        overlayClassName={tooltipWidth + ' '+ tooltipTheme}
         placement={placementsMap.get(props.anchorPoint)}
-        children={<div className={tooltipChildenWrapper}>{props.children}</div>}
+        children={<div className="hig-tooltip-children-wrapper">{props.children}</div>}
         overlay={
           <div>
-            {props.title && <div className={tooltipTitleClass}>{props.title}</div>}
-            {props.description && <div className={tooltipDescriptionClass}>{props.description}</div>}
-            {props.content && <div className={tooltipInnerContentClass}>{props.content}</div>}
-            {props.linkURL && <div className={tooltipLink}>
+            {props.title && <div className="hig-tooltip-title">{props.title}</div>}
+            {props.description && <div className="hig-tooltip-description">{props.description}</div>}
+            {props.content && <div className="hig-tooltip-inner-content">{props.content}</div>}
+            {props.linkURL && <div className="hig-tooltip-link">
               <hr/>
               <a
                 href={props.linkURL}>
