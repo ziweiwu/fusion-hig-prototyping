@@ -14,7 +14,22 @@ export default class Disable extends Component {
     this.setState({ startDate: date });
   }
 
+  isWeekday(date) {
+    const day = date.day();
+    return day !== 0 && day !== 6;
+  }
+
+  isWeekend(date) {
+    const day = date.day();
+    return day === 0 || day === 6;
+  }
+
   render() {
+    const filterOptions = {
+      Weekdays: this.isWeekday,
+      Weekends: this.isWeekend,
+      None: null,
+    };
     return (
       <DatePicker
         locale={this.props.locale}
@@ -31,6 +46,7 @@ export default class Disable extends Component {
         instruction={this.props.instruction}
         showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
+        filterDate={filterOptions[this.props.chooseFilter]}
       />
     );
   }

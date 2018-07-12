@@ -35,6 +35,7 @@ export default class FilterDate extends Component {
     const filterOptions = {
       Weekdays: this.isWeekday,
       Weekends: this.isWeekend,
+      None: null,
     };
 
     return (

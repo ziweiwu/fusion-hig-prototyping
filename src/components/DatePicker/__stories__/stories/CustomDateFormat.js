@@ -29,6 +29,12 @@ export default class CustomDateFormat extends Component {
 
   render() {
     const startDate = this.state.startDate;
+    const filterOptions = {
+      Weekdays: this.isWeekday,
+      Weekends: this.isWeekend,
+      None: null,
+    };
+
     return (
       <DatePicker
         selected={startDate}
@@ -44,6 +50,7 @@ export default class CustomDateFormat extends Component {
         instruction={this.props.instruction}
         showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
+        filterDate={filterOptions[this.props.chooseFilter]}
       />
     );
   }

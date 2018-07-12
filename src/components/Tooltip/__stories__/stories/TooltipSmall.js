@@ -5,9 +5,9 @@ import '@hig/button/build/index.css';
 
 const TooltipSmall = props => (
   <div>
-    <div style={{ margin: '180px' }} />
+    <div style={{ margin: '200px' }} />
     <span>
-      <div style={{ margin: '50px', float: 'left' }} />
+      <div style={{ margin: '100px', float: 'left' }} />
       <Tooltip
         title={props.title}
         anchorPoint={props.anchorPoint}
@@ -15,6 +15,7 @@ const TooltipSmall = props => (
         mouseLeaveDelay={props.mouseLeaveDelay}
         mouseEnterDelay={props.mouseEnterDelay}
         width={props.width}
+        lightTheme={props.lightTheme}
       >
         <Button title="Tooltip small" />
       </Tooltip>
