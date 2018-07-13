@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
 import {anchorPoints} from "@hig/flyout";
 import {css} from 'react-emotion'
-import {ThemeProvider} from 'emotion-theming'
 import './tooltip.css';
 
 const placements = {
