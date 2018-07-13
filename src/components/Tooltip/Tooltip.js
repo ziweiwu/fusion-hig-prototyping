@@ -69,8 +69,7 @@ export default class Tooltip extends React.Component {
     return (
       <ReactToolTip
         {...props}
-        adjustX
-        adjustY
+        transitionName = "fade"
         overlayClassName={tooltipWidth + ' '+ tooltipTheme}
         placement={placementsMap.get(props.anchorPoint)}
         children={<div className="hig-tooltip-children-wrapper">{props.children}</div>}
