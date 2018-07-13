@@ -4,24 +4,23 @@ import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
 import {anchorPoints} from "@hig/flyout";
 import {css} from 'react-emotion'
-import { ThemeProvider } from 'emotion-theming'
+import {ThemeProvider} from 'emotion-theming'
 import './tooltip.css';
 
-// Map the placements from the anchorPoints, map is used here because object only support string key
-const placementsMap = new Map([
-  [anchorPoints.TOP_CENTER, "top"],
-  [anchorPoints.TOP_LEFT, "topLeft"],
-  [anchorPoints.TOP_RIGHT, "topRight"],
-  [anchorPoints.BOTTOM_CENTER, "bottom"],
-  [anchorPoints.BOTTOM_LEFT, "bottomLeft"],
-  [anchorPoints.BOTTOM_RIGHT, "bottomRight"],
-  [anchorPoints.LEFT_CENTER, "left"],
-  [anchorPoints.LEFT_TOP, "leftTop"],
-  [anchorPoints.LEFT_BOTTOM, "leftBottom"],
-  [anchorPoints.RIGHT_CENTER, "right"],
-  [anchorPoints.RIGHT_TOP, "rightTop"],
-  [anchorPoints.RIGHT_BOTTOM, "rightBottom"],
-]);
+const placements = {
+  [anchorPoints.TOP_CENTER]: "top",
+  [anchorPoints.TOP_LEFT]: "topLeft",
+  [anchorPoints.TOP_RIGHT]: "topRight",
+  [anchorPoints.BOTTOM_CENTER]: "bottom",
+  [anchorPoints.BOTTOM_LEFT]: "bottomLeft",
+  [anchorPoints.BOTTOM_RIGHT]: "bottomRight",
+  [anchorPoints.LEFT_CENTER]: "left",
+  [anchorPoints.LEFT_TOP]: "leftTop",
+  [anchorPoints.LEFT_BOTTOM]: "leftBottom",
+  [anchorPoints.RIGHT_CENTER]: "right",
+  [anchorPoints.RIGHT_TOP]: "rightTop",
+  [anchorPoints.RIGHT_BOTTOM]: "rightBottom",
+};
 
 export default class Tooltip extends React.Component {
   static propTypes = {
@@ -46,7 +45,7 @@ export default class Tooltip extends React.Component {
     mouseEnterDelay: 1,
     destroyTooltipOnHide: true,
     mouseLeaveDelay: 0.2,
-    anchorPoint: placementsMap.get(anchorPoints.RIGHT_CENTER),
+    anchorPoint: placements[anchorPoints.RIGHT_CENTER],
     trigger: 'click',
     arrowContent: null,
     width: 300,
@@ -69,12 +68,12 @@ export default class Tooltip extends React.Component {
     return (
       <ReactToolTip
         {...props}
-        transitionName = "fade"
-        overlayClassName={tooltipWidth + ' '+ tooltipTheme}
-        placement={placementsMap.get(props.anchorPoint)}
+        transitionName="fade"
+        overlayClassName={tooltipWidth + ' ' + tooltipTheme}
+        placement={placements[props.anchorPoint]}
         children={<div className="hig-tooltip-children-wrapper">{props.children}</div>}
         overlay={
-          <div>
+          <div className="hig-tooltip-container">
             {props.title && <div className="hig-tooltip-title">{props.title}</div>}
             {props.description && <div className="hig-tooltip-description">{props.description}</div>}
             {props.content && <div className="hig-tooltip-inner-content">{props.content}</div>}
