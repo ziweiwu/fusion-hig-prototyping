@@ -1,30 +1,88 @@
 @import url(~@hig/styles/build/index.css);
-.fade-enter {
-  opacity: 0.01; }
+@keyframes fade-top {
+  0% {
+    transform: translateY(17px);
+    opacity: 0.01; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
 
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 200ms ease-in; }
+@keyframes fade-arrow-top {
+  0% {
+    transform: translateY(22px);
+    opacity: 0.01; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
 
-.fade-leave {
-  opacity: 1; }
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(-17px);
+    opacity: 0.01; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
 
-.fade-leave.fade-leave-active {
-  opacity: 0.01;
-  transition: opacity 200ms ease-in; }
+@keyframes fade-arrow-bottom {
+  0% {
+    transform: translateY(-22px);
+    opacity: 0.01; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(55px);
+    opacity: 0; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes fade-arrow-left {
+  0% {
+    transform: translateX(60px);
+    opacity: 0; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(-55px);
+    opacity: 0; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes fade-arrow-right {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1; } }
 
 /* theme variables */
 .hig-tooltip {
   font-family: ArtifaktElement, sans-serif;
   position: relative;
-  z-index: 1060;
   display: inline-block;
   list-style: none;
   visibility: visible;
   font-size: 12px;
   text-align: left;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  z-index: 9999; }
   .hig-tooltip button, .hig-tooltip select {
     font-family: ArtifaktElement, sans-serif; }
 
@@ -84,9 +142,9 @@
   padding: 6px 10px;
   text-align: left;
   text-decoration: none;
-  line-height: 12px;
-  box-shadow: none;
-  border-radius: 5px; }
+  line-height: 20px;
+  border-radius: 4px;
+  z-index: 9999; }
   .hig-tooltip-inner img {
     max-width: 300px;
     height: auto; }
@@ -113,7 +171,7 @@
 .hig-tooltip-placement-bottom .hig-tooltip-arrow, .hig-tooltip-placement-bottomLeft .hig-tooltip-arrow, .hig-tooltip-placement-bottomRight .hig-tooltip-arrow {
   top: 4px;
   margin-left: -5px;
-  border-width: 0px 5px 5px;
+  border-width: 0 5px 5px;
   border-bottom-color: #393939; }
 
 .hig-tooltip-placement-right .hig-tooltip-arrow, .hig-tooltip-placement-rightTop .hig-tooltip-arrow, .hig-tooltip-placement-rightBottom .hig-tooltip-arrow {
@@ -181,3 +239,41 @@
 .hig-tooltip-light.hig-tooltip-placement-bottom .hig-tooltip-arrow, .hig-tooltip-light.hig-tooltip-placement-bottomLeft .hig-tooltip-arrow, .hig-tooltip-light.hig-tooltip-placement-bottomRight .hig-tooltip-arrow {
   border-top: none;
   border-bottom-color: #d4dbe1; }
+
+.fade-enter {
+  opacity: 0.01; }
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in; }
+
+.fade-leave {
+  opacity: 1; }
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-in; }
+
+.hig-tooltip-placement-top .hig-tooltip-arrow, .hig-tooltip-placement-topLeft .hig-tooltip-arrow, .hig-tooltip-placement-topRight .hig-tooltip-arrow {
+  animation: fade-arrow-top 0.1s; }
+
+.hig-tooltip-placement-top .hig-tooltip-inner, .hig-tooltip-placement-topLeft .hig-tooltip-inner, .hig-tooltip-placement-topRight .hig-tooltip-inner {
+  animation: fade-top 0.1s; }
+
+.hig-tooltip-placement-bottom .hig-tooltip-arrow, .hig-tooltip-placement-bottomLeft .hig-tooltip-arrow, .hig-tooltip-placement-bottomRight .hig-tooltip-arrow {
+  animation: fade-arrow-bottom 0.1s; }
+
+.hig-tooltip-placement-bottom .hig-tooltip-inner, .hig-tooltip-placement-bottomLeft .hig-tooltip-inner, .hig-tooltip-placement-bottomRight .hig-tooltip-inner {
+  animation: fade-bottom 0.1s; }
+
+.hig-tooltip-placement-right .hig-tooltip-arrow, .hig-tooltip-placement-rightTop .hig-tooltip-arrow, .hig-tooltip-placement-rightBottom .hig-tooltip-arrow {
+  animation: fade-arrow-right 0.1s; }
+
+.hig-tooltip-placement-right .hig-tooltip-inner, .hig-tooltip-placement-rightTop .hig-tooltip-inner, .hig-tooltip-placement-rightBottom .hig-tooltip-inner {
+  animation: fade-right 0.1s; }
+
+.hig-tooltip-placement-left .hig-tooltip-arrow, .hig-tooltip-placement-leftTop .hig-tooltip-arrow, .hig-tooltip-placement-leftBottom .hig-tooltip-arrow {
+  animation: fade-arrow-left 0.1s; }
+
+.hig-tooltip-placement-left .hig-tooltip-inner, .hig-tooltip-placement-leftTop .hig-tooltip-inner, .hig-tooltip-placement-leftBottom .hig-tooltip-inner {
+  animation: fade-left 0.1s; }
