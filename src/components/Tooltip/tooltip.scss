@@ -4,109 +4,6 @@
 @import "../../../node_modules/@hig/styles/tokens/layers.scss";
 @import "tokens.scss";
 
-@keyframes fade-top {
-  0% {
-    transform: translateY(17px);
-    opacity: 0.01;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-arrow-top {
-  0% {
-    transform: translateY(22px);
-    opacity: 0.01;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-//bottom
-@keyframes fade-bottom {
-  0% {
-    transform: translateY(-17px);
-    opacity: 0.01;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-arrow-bottom {
-  0% {
-    transform: translateY(-22px);
-    opacity: 0.01;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-//left
-@keyframes fade-left {
-  0% {
-    transform: translateX(55px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-arrow-left {
-  0% {
-    transform: translateX(60px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-//right
-@keyframes fade-right {
-  0% {
-    transform: translateX(-55px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-arrow-right {
-  0% {
-    transform: translateX(-60px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
 $hig-font-family: ArtifaktElement, sans-serif !default;
 /* theme variables */
 $light-color: white;
@@ -128,7 +25,6 @@ $dark-color: #393939;
   //transition-duration: $container-transition-duration;
   // Bounce effect
   //transition-timing-function: $container-transition-easing;
-
 
   // to override user-agent styling for inputs
   button, select {
@@ -212,9 +108,11 @@ $dark-color: #393939;
   padding: 6px 10px;
   text-align: left;
   text-decoration: none;
-  line-height: 20px;
+  line-height: 16px;
   border-radius: 4px;
   z-index: $flyout-container-layer;
+  box-shadow: 0 0 10px 1px rgba(34,41,52,0.25);
+
 
   img {
     max-width: 300px;
@@ -394,5 +292,110 @@ $dark-color: #393939;
 
 .hig-tooltip-placement-left .hig-tooltip-inner, .hig-tooltip-placement-leftTop .hig-tooltip-inner, .hig-tooltip-placement-leftBottom .hig-tooltip-inner {
   animation: fade-left 0.1s;
+}
+
+/* Animation */
+//top
+@keyframes fade-top {
+  0% {
+    transform: translateY(17px);
+    opacity: 0.01;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-arrow-top {
+  0% {
+    transform: translateY(22px);
+    opacity: 0.01;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+//bottom
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(-17px);
+    opacity: 0.01;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-arrow-bottom {
+  0% {
+    transform: translateY(-22px);
+    opacity: 0.01;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+//left
+@keyframes fade-left {
+  0% {
+    transform: translateX(55px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-arrow-left {
+  0% {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+//right
+@keyframes fade-right {
+  0% {
+    transform: translateX(-55px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-arrow-right {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 
