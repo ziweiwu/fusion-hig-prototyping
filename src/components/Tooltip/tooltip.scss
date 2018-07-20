@@ -12,19 +12,15 @@ $dark-color: #393939;
 .hig-tooltip {
   font-family: $hig-font-family;
   position: relative;
-  //z-index: 1060;
   display: inline-block;
   list-style: none;
   visibility: visible;
   font-size: 12px;
+  line-height: 16px;
   text-align: left;
   margin: 0;
   padding: 0;
   z-index: $flyout-container-layer;
-  //transition-property: opacity, transform;
-  //transition-duration: $container-transition-duration;
-  // Bounce effect
-  //transition-timing-function: $container-transition-easing;
 
   // to override user-agent styling for inputs
   button, select {
@@ -108,10 +104,10 @@ $dark-color: #393939;
   padding: 6px 10px;
   text-align: left;
   text-decoration: none;
-  line-height: 16px;
+  line-height: 24px;
   border-radius: 4px;
   z-index: $flyout-container-layer;
-  box-shadow: 0 0 10px 1px rgba(34,41,52,0.25);
+  box-shadow: 0 0 5px 1px rgba(34,41,52,0.25);
 
 
   img {
@@ -120,8 +116,6 @@ $dark-color: #393939;
   }
   .hig-tooltip-link {
     text-align: right;
-
-    // To keep color change for hr across browsers
   }
 }
 
@@ -136,6 +130,7 @@ $dark-color: #393939;
   padding-top: 8px;
   padding-bottom: 8px;
 }
+
 
 /* inner arrow and animations */
 // top
@@ -224,19 +219,23 @@ $dark-color: #393939;
 .hig-tooltip-light {
   &.hig-tooltip-placement-top .hig-tooltip-arrow, &.hig-tooltip-placement-topLeft .hig-tooltip-arrow, &.hig-tooltip-placement-topRight .hig-tooltip-arrow {
     border-bottom: none;
-    border-top-color: #d4dbe1;
+    //border-top-color: #d4dbe1;
+    border-top-color: #ffffff
   }
   &.hig-tooltip-placement-right .hig-tooltip-arrow, &.hig-tooltip-placement-rightTop .hig-tooltip-arrow, &.hig-tooltip-placement-rightBottom .hig-tooltip-arrow {
     border-left: none;
-    border-right-color: #d4dbe1;
+    //border-right-color: #d4dbe1;
+    border-right-color: #ffffff
   }
   &.hig-tooltip-placement-left .hig-tooltip-arrow, &.hig-tooltip-placement-leftTop .hig-tooltip-arrow, &.hig-tooltip-placement-leftBottom .hig-tooltip-arrow {
     border-right: none;
-    border-left-color: #d4dbe1;
+    //border-left-color: #d4dbe1;
+    border-left-color: #ffffff
   }
   &.hig-tooltip-placement-bottom .hig-tooltip-arrow, &.hig-tooltip-placement-bottomLeft .hig-tooltip-arrow, &.hig-tooltip-placement-bottomRight .hig-tooltip-arrow {
     border-top: none;
-    border-bottom-color: #d4dbe1;
+    //border-bottom-color: #d4dbe1;
+    border-bottom-color: white
   }
 }
 

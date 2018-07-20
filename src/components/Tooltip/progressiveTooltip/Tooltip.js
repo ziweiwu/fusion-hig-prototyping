@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
 import {anchorPoints} from "@hig/flyout";
 import {css} from 'react-emotion'
-import './tooltip.css';
+import '../tooltip.css';
 
 const placements = {
   [anchorPoints.TOP_CENTER]: "top",
@@ -51,18 +51,6 @@ export default class Tooltip extends React.Component {
     progressive: false,
     lightTheme: false,
   };
-
-  // progressive tooltip feature
-  state = {
-    duration: 0,
-    showDecription: false,
-    showContent: false
-  }
-
-  hoverDuration =()=>{
-
-
-  }
 
   render() {
     const props = this.props;

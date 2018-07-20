@@ -34,7 +34,6 @@ export default class Disable extends Component {
       <DatePicker
         locale={this.props.locale}
         dateFormat={this.props.dateFormat}
-        dateFormatCalendar={this.props.dateFormat}
         label={this.props.label}
         selected={this.state.startDate}
         startDate={this.state.startDate}

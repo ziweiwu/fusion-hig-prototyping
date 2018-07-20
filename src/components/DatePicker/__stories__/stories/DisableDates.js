@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import moment from 'moment';
 import DatePicker from '../../index';
 
@@ -15,15 +15,15 @@ export default class DisableDates extends Component {
   }
 
   handleChangeDate(date) {
-    this.setState({startDate: date});
+    this.setState({ startDate: date });
   }
 
   handleChangeStart(date) {
-    this.setState({startDate: date});
+    this.setState({ startDate: date });
   }
 
   handleChangeEnd(date) {
-    this.setState({endDate: date});
+    this.setState({ endDate: date });
   }
 
   isWeekday(date) {
@@ -48,7 +48,6 @@ export default class DisableDates extends Component {
       <DatePicker
         locale={this.props.locale}
         dateFormat={this.props.dateFormat}
-        dateFormatCalendar={this.props.dateFormat}
         selected={startDate}
         onChange={this.handleChangeDate}
         label="Select Date"

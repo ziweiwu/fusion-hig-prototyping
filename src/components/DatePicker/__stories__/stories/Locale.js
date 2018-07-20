@@ -26,9 +26,6 @@ export default class Locale extends Component {
   }
 
 
-
-
-
   render() {
     const filterOptions = {
       Weekdays: this.isWeekday,
@@ -40,7 +37,6 @@ export default class Locale extends Component {
         selected={this.state.startDate}
         label={this.props.label}
         locale={this.props.locale}
-        dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
         startDate={this.state.startDate}
         onChange={this.handleChangeStart}

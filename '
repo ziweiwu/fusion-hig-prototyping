@@ -87,10 +87,10 @@ button.react-datepicker__close-icon::after {
   margin: -10px auto 0;
 }
 
-g{
-  fill:orange;
+span.hig__text-field-v1__clear{
+  //background-color:black;
+fill: green!important;
 }
-
 //day name
 .react-datepicker__day-names {
   color: $datepicker__text-color;
