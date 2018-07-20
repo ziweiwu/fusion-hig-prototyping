@@ -11,8 +11,9 @@ import Flyout from '@hig/flyout';
 import '@hig/flyout/build/index.css';
 import '@hig/dropdown/build/index.css';
 import Example from './components/Tooltip/NewTooltip/TooltipNew';
+import TextFieldPresenter from '@hig/text-field';
 //import Demo from './components/Tooltip/NewTooltip/TooltipPopper';
-import TextFieldPresenter from './components/TextPresenter/TextFieldPresenter.js'
+// import TextFieldPresenter from './components/TextPresenter/TextFieldPresenter.js'
 import 'react-tippy/dist/tippy.css';
 import {Tooltip as Tooltipy} from 'react-tippy';
 
@@ -188,6 +189,7 @@ const App = () => (
       <TextFieldPresenter label="true" showClearButton focused onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
       <TextFieldPresenter label="false" showClearButton focused={false} onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
       <TextFieldPresenter label="undefined" showClearButton onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
+      <TextFieldPresenter label="undefined" showClearButton />
     </div>
   </div>
 );

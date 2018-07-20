@@ -34,7 +34,6 @@ export default class Default extends Component {
     return (
       <DatePicker
         locale={this.props.locale}
-        dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
         selected={this.state.startDate}
         onChange={this.handleChangeDate}

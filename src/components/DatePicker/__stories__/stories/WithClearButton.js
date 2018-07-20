@@ -55,7 +55,6 @@ export default class WithClearButton extends Component {
         showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
         locale={this.props.locale}
-        dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
         filterDate={filterOptions[this.props.chooseFilter]}
       />);

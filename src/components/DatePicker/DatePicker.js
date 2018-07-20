@@ -68,6 +68,7 @@ export default class DatePicker extends React.Component {
       id="hig__date-picker"
       ref={node => this.node = node}
       readOnly
+      calender
       showMonthYearDropdown={false}
       showMonthDropdown={false}
       showYearDropdown={false}

@@ -31,7 +31,6 @@ export default class Portal extends Component {
         selected={this.state.startDate}
         label={this.props.label}
         withPortal
-        dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
         startDate={this.state.startDate}
         onChange={this.handleChangeStart}

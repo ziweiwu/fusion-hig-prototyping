@@ -143,7 +143,7 @@
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
-"@hig/icon-button@^0.1.0", "@hig/icon-button@^0.1.1":
+"@hig/icon-button@^0.1.0":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.1.tgz#1d53bc52c91aaffd0fcf0b915199d391213969b6"
   dependencies:
@@ -151,11 +151,11 @@
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
-"@hig/icon-button@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.2.tgz#b05b4ad7e347fbe1712f0271e865e1ef3df64923"
+"@hig/icon-button@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.3.tgz#d77690d86c11c1718f4ef82e4942754a3f32614e"
   dependencies:
-    "@hig/icon" "^0.1.1"
+    "@hig/icon" "^0.1.3"
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
@@ -203,15 +203,15 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0.tgz#f33de7287675a2b3e9b88658a2221f8e552f81b3"
 
-"@hig/styles@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.2.tgz#036bbe336a7e332248e6cd3c6526ee88f7d84f62"
+"@hig/styles@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.3.tgz#675631d008c1861921d6148ecf15b140c04cc5b4"
 
-"@hig/text-field@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.3.1.tgz#2241a4840c1adf9e4f1e7b6f8953cfbe335e9c2b"
+"@hig/text-field@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.4.0.tgz#f33fc8050b15dbba3c62e70edba90eaf9831cf8d"
   dependencies:
-    "@hig/icon-button" "^0.1.1"
+    "@hig/icon-button" "^0.1.3"
     classnames "^2.2.5"
     hig-react "^0.29.0"
     prop-types "^15.6.1"

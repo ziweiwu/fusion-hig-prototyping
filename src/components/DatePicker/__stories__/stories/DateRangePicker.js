@@ -56,7 +56,6 @@ export default class DateRangePicker extends Component {
             showInstruction={this.props.showInstruction}
             fixedHeight={this.props.fixedHeight}
             locale={this.props.locale}
-            dateFormatCalendar={this.props.dateFormat}
             dateFormat={this.props.dateFormat}
             filterDate={filterOptions[this.props.chooseFilter]}
           />
@@ -78,7 +77,6 @@ export default class DateRangePicker extends Component {
             showInstruction={this.props.showInstruction}
             fixedHeight={this.props.fixedHeight}
             locale={this.props.locale}
-            dateFormatCalendar={this.props.dateFormat}
             dateFormat={this.props.dateFormat}
             filterDate={filterOptions[this.props.chooseFilter]}
           />
