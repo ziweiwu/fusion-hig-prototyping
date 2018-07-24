@@ -1,38 +1,46 @@
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import Tooltip from './index';
 
 describe('DatePicker', () => {
   // snapshot testing
   test('Snapshot tests right replacement', () => {
     const wrapper = shallow(<Tooltip title="test" anchorPoint="right" trigger="click">
-      <button>tooltip</button>
+      <button>
+tooltip
+      </button>
     </Tooltip>);
-    wrapper.simulate("click");
+    wrapper.simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
 
   test('Snapshot tests left replacement', () => {
     const wrapper = shallow(<Tooltip title="test" anchorPoint="left" trigger="click">
-      <button>tooltip</button>
+      <button>
+tooltip
+      </button>
     </Tooltip>);
-    wrapper.simulate("click");
+    wrapper.simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
 
   test('Snapshot tests hover', () => {
     const wrapper = shallow(<Tooltip title="test" anchorPoint="left" trigger="hover" mouseEnterDelay={0}>
-      <button>tooltip</button>
+      <button>
+tooltip
+      </button>
     </Tooltip>);
-    wrapper.simulate("hover");
+    wrapper.simulate('hover');
     expect(wrapper).toMatchSnapshot();
   });
 
   test('Snapshot tests focus', () => {
     const wrapper = shallow(<Tooltip title="test" anchorPoint="left" trigger="focus">
-      <button>tooltip</button>
+      <button>
+tooltip
+      </button>
     </Tooltip>);
-    wrapper.simulate("hover");
+    wrapper.simulate('hover');
     expect(wrapper).toMatchSnapshot();
   });
 

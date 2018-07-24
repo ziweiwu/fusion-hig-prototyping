@@ -20,7 +20,23 @@ export default class DateRangePicker extends Component {
     this.setState({ endDate: date });
   }
 
+  isWeekday(date) {
+    const day = date.day();
+    return day !== 0 && day !== 6;
+  }
+
+  isWeekend(date) {
+    const day = date.day();
+    return day === 0 || day === 6;
+  }
+
   render() {
+    const filterOptions = {
+      Weekdays: this.isWeekday,
+      Weekends: this.isWeekend,
+      None: null,
+    };
+
     return (
       <div>
         <span style={{ float: 'left' }}>
@@ -40,14 +56,14 @@ export default class DateRangePicker extends Component {
             showInstruction={this.props.showInstruction}
             fixedHeight={this.props.fixedHeight}
             locale={this.props.locale}
-            dateFormatCalendar={this.props.dateFormat}
             dateFormat={this.props.dateFormat}
+            filterDate={filterOptions[this.props.chooseFilter]}
           />
           <span style={{ paddingLeft: '270px', float: 'left' }} />
         </span>
         <span style={{ float: 'left' }}>
           <DatePicker
-            selected={this.state.endDate}
+            selected={this.state.endDate || this.state.startDate}
             label="To"
             selectsEnd
             startDate={this.state.startDate}
@@ -61,8 +77,8 @@ export default class DateRangePicker extends Component {
             showInstruction={this.props.showInstruction}
             fixedHeight={this.props.fixedHeight}
             locale={this.props.locale}
-            dateFormatCalendar={this.props.dateFormat}
             dateFormat={this.props.dateFormat}
+            filterDate={filterOptions[this.props.chooseFilter]}
           />
         </span>
       </div>

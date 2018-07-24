@@ -25,7 +25,22 @@ export default class WithClearButton extends Component {
     this.setState({ endDate: date });
   }
 
+  isWeekday(date) {
+    const day = date.day();
+    return day !== 0 && day !== 6;
+  }
+
+  isWeekend(date) {
+    const day = date.day();
+    return day === 0 || day === 6;
+  }
+
   render() {
+    const filterOptions = {
+      Weekdays: this.isWeekday,
+      Weekends: this.isWeekend,
+      None: null,
+    };
     return (
       <DatePicker
         selected={this.state.startDate}
@@ -40,8 +55,8 @@ export default class WithClearButton extends Component {
         showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
         locale={this.props.locale}
-        dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
+        filterDate={filterOptions[this.props.chooseFilter]}
       />);
   }
 }

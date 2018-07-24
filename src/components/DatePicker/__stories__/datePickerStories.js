@@ -31,8 +31,9 @@ storiesOfDatePicker.add('Default View', () => {
   const showClearButton = boolean('Clearable', false);
   const disabled = boolean('Disable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
-  const dateFormat = select('Date Format', ['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'YYYY-MM-DD');
+  const dateFormat = select('Date Format', ['MM/DD/YYYY', 'ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'MM/DD/YYYY');
   const locale = select('Locale', ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+  const chooseFilter = select('Filter', ['Weekdays', 'Weekends', 'None'], 'None');
 
   return (
     (
@@ -41,12 +42,14 @@ storiesOfDatePicker.add('Default View', () => {
         showLabel={showLabel}
         instruction={instruction}
         showInstruction={showInstruction}
+        dateFormat={dateFormat}
         showIcon={showIcon}
         showClearButton={showClearButton}
         disabled={disabled}
         fixedHeight={fixedHeight}
-        dateFormat={dateFormat}
+        // dateFormat={dateFormat}
         locale={locale}
+        chooseFilter={chooseFilter}
       />
     )
   );
@@ -62,8 +65,9 @@ storiesOfDatePicker.add('With Clear Button', () => {
   const showIcon = boolean('Icon', true);
   const disabled = boolean('disable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
-  const dateFormat = select('Date Format', ['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'YYYY-MM-DD');
+  const dateFormat = select('Date Format', ['MM/DD/YYYY', 'ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'MM/DD/YYYY');
   const locale = select('Locale', ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+  const chooseFilter = select('Filter', ['Weekdays', 'Weekends', 'None'], 'None');
 
   return (
     (
@@ -79,6 +83,7 @@ storiesOfDatePicker.add('With Clear Button', () => {
         fixedHeight={fixedHeight}
         dateFormat={dateFormat}
         locale={locale}
+        chooseFilter={chooseFilter}
       />
     )
   );
@@ -94,8 +99,9 @@ storiesOfDatePicker.add('Disabled', () => {
   const showIcon = boolean('Icon', true);
   const showClearButton = boolean('Clearable', true);
   const fixedHeight = boolean('Fixed Calender Height', true);
-  const dateFormat = select('Date Format', ['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'YYYY-MM-DD');
+  const dateFormat = select('Date Format', ['MM/DD/YYYY', 'ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'MM/DD/YYYY');
   const locale = select('Locale', ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+  const chooseFilter = select('Filter', ['Weekdays', 'Weekends', 'None'], 'None');
 
   return (
     (
@@ -111,6 +117,7 @@ storiesOfDatePicker.add('Disabled', () => {
         fixedHeight={fixedHeight}
         dateFormat={dateFormat}
         locale={locale}
+        chooseFilter={chooseFilter}
       />
     )
   );
@@ -126,8 +133,9 @@ storiesOfDatePicker.add('Select a Range of Dates', () => {
   const showClearButton = boolean('Clearable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
   const disabled = boolean('disable', false);
-  const dateFormat = select('Date Format', ['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'YYYY-MM-DD');
+  const dateFormat = select('Date Format', ['MM/DD/YYYY', 'ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'MM/DD/YYYY');
   const locale = select('Locale', ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+  const chooseFilter = select('Filter', ['Weekdays', 'Weekends', 'None'], 'None');
 
   return (
     (
@@ -143,6 +151,7 @@ storiesOfDatePicker.add('Select a Range of Dates', () => {
         fixedHeight={fixedHeight}
         dateFormat={dateFormat}
         locale={locale}
+        chooseFilter={chooseFilter}
       />
     )
   );
@@ -160,8 +169,9 @@ storiesOfDatePicker.add('Restricted Date Range', () => {
   const showClearButton = boolean('Clearable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
   const disabled = boolean('disable', false);
-  const dateFormat = select('Date Format', ['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'YYYY-MM-DD');
+  const dateFormat = select('Date Format', ['MM/DD/YYYY', 'ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'MM/DD/YYYY');
   const locale = select('Locale', ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
+  const chooseFilter = select('Filter', ['Weekdays', 'Weekends', 'None'], 'None');
 
   return (
     (
@@ -178,6 +188,7 @@ storiesOfDatePicker.add('Restricted Date Range', () => {
         fixedHeight={fixedHeight}
         dateFormat={dateFormat}
         locale={locale}
+        chooseFilter={chooseFilter}
       />
     )
   );
@@ -185,7 +196,7 @@ storiesOfDatePicker.add('Restricted Date Range', () => {
 
 // Filter Dates
 storiesOfDatePicker.add('Filter Dates', () => {
-  const chooseFilter = select('Filter', ['Weekdays', 'Weekends'], ['Weekdays']);
+  const chooseFilter = select('Filter', ['Weekdays', 'Weekends', 'None'], ['Weekdays']);
   const label = text('Label', 'Date picker ');
   const showLabel = boolean('Show label', true);
   const instruction = text('Instruction', 'Please choose a date ');
@@ -194,7 +205,7 @@ storiesOfDatePicker.add('Filter Dates', () => {
   const showClearButton = boolean('Clearable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
   const disabled = boolean('disable', false);
-  const dateFormat = select('Date Format', ['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'YYYY-MM-DD');
+  const dateFormat = select('Date Format', ['MM/DD/YYYY', 'ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'MM/DD/YYYY');
   const locale = select('Locale', ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
 
   return (
@@ -225,8 +236,9 @@ storiesOfDatePicker.add('Locale', () => {
   const showIcon = boolean('Icon', true);
   const showClearButton = boolean('Clearable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
-  const dateFormat = select('Date Format', ['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'YYYY-MM-DD');
+  const dateFormat = select('Date Format', ['MM/DD/YYYY', 'ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'MM/DD/YYYY');
   const disabled = boolean('disable', false);
+  const chooseFilter = select('Filter', ['Weekdays', 'Weekends', 'None'], 'None');
 
   return (
     <Locale
@@ -241,13 +253,14 @@ storiesOfDatePicker.add('Locale', () => {
       fixedHeight={fixedHeight}
       dateFormat={dateFormat}
       locale={locale}
+      chooseFilter={chooseFilter}
     />
   );
 });
 
 // customize date format
 storiesOfDatePicker.add('Custom Date Format', () => {
-  const dateFormat = select('Date Format', ['ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'YYYY-MM-DD');
+  const dateFormat = select('Date Format', ['MM/DD/YYYY', 'ddd, MMM, YYYY', 'YYYY-MM-DD', 'DD-MM-YY'], 'MM/DD/YYYY');
   const locale = select('Locale', ['fr-ca', 'en-us', 'zh-cn', 'ja'], 'en-us');
   const label = text('Label', 'Date picker ');
   const showLabel = boolean('Show label', true);
@@ -257,6 +270,7 @@ storiesOfDatePicker.add('Custom Date Format', () => {
   const showClearButton = boolean('Clearable', false);
   const fixedHeight = boolean('Fixed Calender Height', true);
   const disabled = boolean('disable', false);
+  const chooseFilter = select('Filter', ['Weekdays', 'Weekends', 'None'], 'None');
 
   return (
     <CustomDateFormat
@@ -271,6 +285,7 @@ storiesOfDatePicker.add('Custom Date Format', () => {
       instruction={instruction}
       showInstruction={showInstruction}
       fixedHeight={fixedHeight}
+      chooseFilter={chooseFilter}
     />
   );
 });
