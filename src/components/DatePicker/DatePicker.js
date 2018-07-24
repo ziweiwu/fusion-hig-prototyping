@@ -16,6 +16,7 @@ export default class DatePicker extends React.Component {
     dayClassName: PropTypes.func,
     disabled: PropTypes.bool,
     endDate: PropTypes.object,
+    focused: PropTypes.bool,
     formatWeekNumber: PropTypes.func,
     highlightDates: PropTypes.array,
     id: PropTypes.string,
@@ -44,9 +45,11 @@ export default class DatePicker extends React.Component {
     filterDate: PropTypes.func,
     dateFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
     includeDates: PropTypes.array,
+    closeOnSelect: PropTypes.bool
   };
 
   static defaultProps = {
+    focused: true,
     shouldCloseOnSelect: true,
     disabled: false,
     showIcon: true,
@@ -56,6 +59,8 @@ export default class DatePicker extends React.Component {
     showInstruction: false,
     fixedHeight: true,
     showClearButton: false,
+    today: true,
+    closeOnSelect:true,
   };
 
   render() {
@@ -69,18 +74,19 @@ export default class DatePicker extends React.Component {
       ref={node => this.node = node}
       readOnly
       calender
+      shouldCloseOnSelect={props.closeOnSelect}
       showMonthYearDropdown={false}
       showMonthDropdown={false}
       showYearDropdown={false}
       showTimeSelect={false}
       withPortal={false}
       isClearable={false}
-      // use TextField as inputField
-      // use ref to allow the use clear button in TextField component
-      // instead of the one comes with ReactDatePicker
+      // use hig text field as inputField
+      // use ref to allow the use clear button in text field component
       customInput={
         <TextFieldPresenter
           id={props.id}
+          focused={props.focused}
           readOnly
           disabled
           placeholder={props.placeholder}
