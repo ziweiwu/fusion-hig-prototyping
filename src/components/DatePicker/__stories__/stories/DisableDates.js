@@ -26,14 +26,28 @@ export default class DisableDates extends Component {
     this.setState({ endDate: date });
   }
 
+  isWeekday(date) {
+    const day = date.day();
+    return day !== 0 && day !== 6;
+  }
+
+  isWeekend(date) {
+    const day = date.day();
+    return day === 0 || day === 6;
+  }
+
   render() {
     const startDate = this.state.startDate;
     const maxDate = this.props.maxDate;
+    const filterOptions = {
+      Weekdays: this.isWeekday,
+      Weekends: this.isWeekend,
+      None: null,
+    };
     return (
       <DatePicker
         locale={this.props.locale}
         dateFormat={this.props.dateFormat}
-        dateFormatCalendar={this.props.dateFormat}
         selected={startDate}
         onChange={this.handleChangeDate}
         label="Select Date"
@@ -47,6 +61,7 @@ export default class DisableDates extends Component {
         instruction={this.props.instruction}
         showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
+        filterDate={filterOptions[this.props.chooseFilter]}
       />
     );
   }

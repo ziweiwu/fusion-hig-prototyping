@@ -35,6 +35,7 @@ export default class FilterDate extends Component {
     const filterOptions = {
       Weekdays: this.isWeekday,
       Weekends: this.isWeekend,
+      None: null,
     };
 
     return (
@@ -42,7 +43,6 @@ export default class FilterDate extends Component {
         preSelection={undefined}
         filterDate={filterOptions[this.props.chooseFilter]}
         locale={this.props.locale}
-        dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
         selected={this.state.startDate}
         onChange={this.handleChangeStart}

@@ -26,14 +26,28 @@ export default class CustomDateFormat extends Component {
   handleChangeEnd(date) {
     this.setState({ endDate: date });
   }
+  isWeekday(date) {
+    const day = date.day();
+    return day !== 0 && day !== 6;
+  }
+
+  isWeekend(date) {
+    const day = date.day();
+    return day === 0 || day === 6;
+  }
 
   render() {
     const startDate = this.state.startDate;
+    const filterOptions = {
+      Weekdays: this.isWeekday,
+      Weekends: this.isWeekend,
+      None: null,
+    };
+
     return (
       <DatePicker
         selected={startDate}
         label={this.props.label}
-        dateFormatCalendar={this.props.dateFormat}
         dateFormat={this.props.dateFormat}
         startDate={startDate}
         onChange={this.handleChangeDate}
@@ -44,6 +58,7 @@ export default class CustomDateFormat extends Component {
         instruction={this.props.instruction}
         showInstruction={this.props.showInstruction}
         fixedHeight={this.props.fixedHeight}
+        filterDate={filterOptions[this.props.chooseFilter]}
       />
     );
   }
