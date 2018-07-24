@@ -25,6 +25,16 @@ export default class Locale extends Component {
     this.setState({ endDate: date });
   }
 
+  isWeekday(date) {
+    const day = date.day();
+    return day !== 0 && day !== 6;
+  }
+
+  isWeekend(date) {
+    const day = date.day();
+    return day === 0 || day === 6;
+  }
+
 
   render() {
     const filterOptions = {

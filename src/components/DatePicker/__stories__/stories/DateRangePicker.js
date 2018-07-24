@@ -63,7 +63,7 @@ export default class DateRangePicker extends Component {
         </span>
         <span style={{ float: 'left' }}>
           <DatePicker
-            selected={this.state.endDate}
+            selected={this.state.endDate || this.state.startDate}
             label="To"
             selectsEnd
             startDate={this.state.startDate}
