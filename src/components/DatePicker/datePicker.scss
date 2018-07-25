@@ -53,9 +53,9 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
   height: 30px !important;
 
   // today's date in hig blue color and bold when not hovered or selected
-  &--today:not(&--selected):not(:hover):not(&--disabled){
-    font-weight: bold !important;
-    color: #0696D7 !important;
+  &--today:not(&--selected):not(:hover):not(&--disabled):not(&--in-range):not(&--in-selecting-range):not(&--keyboard-selected) {
+    font-weight: bold;
+    color: #0696D7
   }
 
   // hover background and font color for calender days that are not disabled

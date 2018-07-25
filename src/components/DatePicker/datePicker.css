@@ -28,9 +28,9 @@
   margin: 0 !important;
   width: 30px !important;
   height: 30px !important; }
-  .react-datepicker__day--today:not(.react-datepicker__day--selected):not(:hover):not(.react-datepicker__day--disabled) {
-    font-weight: bold !important;
-    color: #0696D7 !important; }
+  .react-datepicker__day--today:not(.react-datepicker__day--selected):not(:hover):not(.react-datepicker__day--disabled):not(.react-datepicker__day--in-range):not(.react-datepicker__day--in-selecting-range):not(.react-datepicker__day--keyboard-selected) {
+    font-weight: bold;
+    color: #0696D7; }
   .react-datepicker__day:hover:not(.react-datepicker__day--disabled) {
     background-color: #49c3fa !important;
     color: white; }
