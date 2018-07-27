@@ -110,7 +110,7 @@ $dark-font-color: color("hig-cool-grey-70");
   padding: 6px 10px;
   text-align: left;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 2px;
   z-index: $flyout-container-layer;
 
   img {
@@ -129,6 +129,12 @@ $dark-font-color: color("hig-cool-grey-70");
 }
 
 .hig-tooltip-description {
+  font-weight: normal;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.hig-tooltip-link {
   font-weight: normal;
   padding-top: 8px;
   padding-bottom: 8px;
