@@ -35,7 +35,6 @@ export default class Tooltip extends React.Component {
     linkURL: PropTypes.string,
     anchorPoint: PropTypes.string,
     width: PropTypes.number,
-    progressive: PropTypes.bool,
     lightTheme: PropTypes.bool,
   };
 
@@ -48,21 +47,8 @@ export default class Tooltip extends React.Component {
     trigger: 'click',
     arrowContent: null,
     width: 300,
-    progressive: false,
     lightTheme: false,
   };
-
-  // progressive tooltip feature
-  state = {
-    duration: 0,
-    showDecription: false,
-    showContent: false
-  }
-
-  hoverDuration =()=>{
-
-
-  }
 
   render() {
     const props = this.props;
@@ -79,7 +65,6 @@ export default class Tooltip extends React.Component {
     return (
       <ReactToolTip
         {...props}
-        onVisibleChange={this.hoverDuration()}
         transitionName="fade"
         overlayClassName={tooltipWidth + ' ' + tooltipTheme}
         placement={placements[props.anchorPoint]}
@@ -90,7 +75,7 @@ export default class Tooltip extends React.Component {
             {props.description && <div className="hig-tooltip-description">{props.description}</div>}
             {props.content && <div className="hig-tooltip-inner-content">{props.content}</div>}
             {props.linkURL && <div className="hig-tooltip-link">
-              <hr/>
+              {!props.content && <hr/>}
               <a
                 href={props.linkURL}>
                 {props.linkTitle || props.linkURL}

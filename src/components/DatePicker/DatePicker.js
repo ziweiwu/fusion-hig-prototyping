@@ -9,15 +9,11 @@ import './datePicker.css';
 export default class DatePicker extends React.Component {
   static propTypes = {
     adjustDateOnChange: PropTypes.bool,
-    allowSameDay: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
     dateFormatCalendar: PropTypes.string,
     dayClassName: PropTypes.func,
     disabled: PropTypes.bool,
     endDate: PropTypes.object,
     focused: PropTypes.bool,
-    formatWeekNumber: PropTypes.func,
     highlightDates: PropTypes.array,
     id: PropTypes.string,
     locale: PropTypes.string,
