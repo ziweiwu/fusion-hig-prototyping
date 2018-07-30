@@ -85,7 +85,7 @@
       <scope name="Project Files" level="ERROR" enabled="true" />
     </inspection_tool>
     <inspection_tool class="CssInvalidPropertyValue" enabled="true" level="ERROR" enabled_by_default="false">
-      <scope name="Project Files" level="ERROR" enabled="true" />
+      <scope name="Project Files" level="ERROR" enabled="false" />
     </inspection_tool>
     <inspection_tool class="CssInvalidPseudoSelector" enabled="true" level="ERROR" enabled_by_default="false">
       <scope name="Project Files" level="ERROR" enabled="true" />

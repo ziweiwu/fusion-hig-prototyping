@@ -4,17 +4,15 @@
 @import "../../../node_modules/@hig/styles/mixins/typography.scss";
 @import "../../../node_modules/@hig/styles/tokens/layers.scss";
 
-/* Dimensions */
-//$datepicker__border-radius: 0.2rem;
-//$datepicker__day-margin: 0.166rem;
+$datepicker__border-radius: 0.2rem;
+$datepicker__day-margin: 0.166rem;
 $datepicker__font-family: ArtifaktElement, sans-serif;
 $datepicker__font-size: 14px;
-//$datepicker__item-size: 1.7rem;
-//$datepicker__margin: 0.4rem;
-//$datepicker__navigation-size: 0.45rem;
-//$datepicker__triangle-size: 8px;
+$datepicker__item-size: 1.7rem;
+$datepicker__margin: 0.4rem;
+$datepicker__navigation-size: 0.45rem;
+$datepicker__triangle-size: 8px;
 
-/* Colors */
 $datepicker__background-color: #ffffff;
 $datepicker__border-color: #D4DBE1;
 $datepicker__highlighted-color: #87BC40;

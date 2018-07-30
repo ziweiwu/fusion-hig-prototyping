@@ -35,6 +35,7 @@ export default class Tooltip extends React.Component {
     linkURL: PropTypes.string,
     anchorPoint: PropTypes.string,
     width: PropTypes.number,
+    lightTheme: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -46,19 +47,26 @@ export default class Tooltip extends React.Component {
     trigger: 'click',
     arrowContent: null,
     width: 300,
+    lightTheme: false,
   };
 
   render() {
     const props = this.props;
+    // use react emotion to create a styled wrapper with props.width
     const tooltipWidth = css`
       max-width: ${props.width}px;
     `;
+
+    const tooltipTheme = classNames({
+      'hig__tooltip-light-theme': this.props.lightTheme,
+      'hig__tooltip-dark-theme': !this.props.lightTheme
+    });
 
     return (
       <ReactToolTip
         {...props}
         transitionName="fade"
-        overlayClassName={tooltipWidth}
+        overlayClassName={tooltipWidth + ' ' + tooltipTheme}
         placement={placements[props.anchorPoint]}
         children={<div className="hig__tooltip-children-wrapper">{props.children}</div>}
         overlay={

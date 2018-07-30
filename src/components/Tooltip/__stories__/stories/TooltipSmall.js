@@ -5,7 +5,7 @@ import '@hig/button/build/index.css';
 
 const TooltipSmall = props => (
   <div>
-    <div style={{ margin: '200px' }} />
+    <div style={{ margin: '100px' }} />
     <span>
       <div style={{ margin: '100px', float: 'left' }} />
       <Tooltip
