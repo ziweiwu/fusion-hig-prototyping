@@ -1,33 +1,113 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import Tooltip from './index';
 
-describe('DatePicker', () => {
+describe('Tooltip', () => {
   // snapshot testing
-  test('Snapshot tests right replacement', () => {
-    const wrapper = shallow(<Tooltip title="test" anchorPoint="right" trigger="click">
-      <button>
-tooltip
-      </button>
-    </Tooltip>);
+  test('Snapshot tests right placement', () => {
+    const wrapper = shallow(
+      <Tooltip title="test" anchorPoint="right" trigger="click">
+        <button>
+          tooltip
+        </button>
+      </Tooltip>,
+    );
     wrapper.simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
 
-  test('Snapshot tests left replacement', () => {
-    const wrapper = shallow(<Tooltip title="test" anchorPoint="left" trigger="click">
-      <button>
-tooltip
-      </button>
-    </Tooltip>);
+  test('Snapshot tests left placement', () => {
+    const wrapper = shallow(
+      <Tooltip title="test" anchorPoint="left" trigger="click">
+        <button>
+          tooltip
+        </button>
+      </Tooltip>,
+    );
+    wrapper.simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('Snapshot tests top placement', () => {
+    const wrapper = shallow(
+      <Tooltip title="test" anchorPoint="top" trigger="click">
+        <button>
+          tooltip
+        </button>
+      </Tooltip>,
+    );
+    wrapper.simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('Snapshot tests bottom placement', () => {
+    const wrapper = shallow(
+      <Tooltip title="test" anchorPoint="bottom" trigger="click">
+        <button>
+          tooltip
+        </button>
+      </Tooltip>,
+    );
+    wrapper.simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('Snapshot tests tooltip with description', () => {
+    const wrapper = shallow(
+      <Tooltip title="test" description="test" anchorPoint="bottom" trigger="click">
+        <button>
+          tooltip
+        </button>
+      </Tooltip>,
+    );
+    wrapper.simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('Snapshot tests tooltip with link', () => {
+    const wrapper = shallow(
+      <Tooltip
+        title="test"
+        description="test"
+        linkTitle="link"
+        linkURL="www.google.com"
+        anchorPoint="bottom"
+        trigger="click"
+      >
+        <button>
+          tooltip
+        </button>
+      </Tooltip>,
+    );
+    wrapper.simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('Snapshot tests tooltip with html content', () => {
+    const wrapper = shallow(
+      <Tooltip
+        title="test"
+        content={(
+          <div>
+            test
+          </div>
+        )}
+        anchorPoint="bottom"
+        trigger="click"
+      >
+        <button>
+          tooltip
+        </button>
+      </Tooltip>,
+    );
     wrapper.simulate('click');
     expect(wrapper).toMatchSnapshot();
   });
 
   test('Snapshot tests hover', () => {
-    const wrapper = shallow(<Tooltip title="test" anchorPoint="left" trigger="hover" mouseEnterDelay={0}>
+    const wrapper = shallow(<Tooltip title="test" anchorPoint="bottom" trigger="hover" mouseEnterDelay={0}>
       <button>
-tooltip
+        tooltip
       </button>
     </Tooltip>);
     wrapper.simulate('hover');
@@ -37,12 +117,10 @@ tooltip
   test('Snapshot tests focus', () => {
     const wrapper = shallow(<Tooltip title="test" anchorPoint="left" trigger="focus">
       <button>
-tooltip
+        tooltip
       </button>
     </Tooltip>);
-    wrapper.simulate('hover');
+    wrapper.simulate('focus');
     expect(wrapper).toMatchSnapshot();
   });
-
-  // test interactions
 });
