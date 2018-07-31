@@ -2,19 +2,16 @@
 @import "../../../node_modules/@hig/styles/mixins/spacing.scss";
 
 $tooltip-transition-duration: 200ms;
-$tooltip-initial-opacity: 0.01;
-
 $tooltip-border-radius: 2px;
 $tooltip-padding: spacing("xxxs");
 
-// animations
 .fade-enter {
-  opacity: $tooltip-initial-opacity;
+  opacity: 0.01;
 }
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity $tooltip-transition-duration ease-in;
+  transition: opacity 200ms ease-in;
 }
 
 .fade-leave {
@@ -22,97 +19,6 @@ $tooltip-padding: spacing("xxxs");
 }
 
 .fade-leave.fade-leave-active {
-  opacity: $tooltip-initial-opacity;
-  transition: opacity $tooltip-transition-duration ease-out;
+  opacity: 0.01;
+  transition: opacity 200ms ease-in;
 }
-
-@keyframes fade-top {
-  0% {
-    transform: translateY(17px);
-    opacity: $tooltip-initial-opacity;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-arrow-top {
-  0% {
-    transform: translateY(22px);
-    opacity: $tooltip-initial-opacity;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-bottom {
-  0% {
-    transform: translateY(-17px);
-    opacity: $tooltip-initial-opacity;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-arrow-bottom {
-  0% {
-    transform: translateY(-22px);
-    opacity: $tooltip-initial-opacity;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-left {
-  0% {
-    transform: translateX(55px);
-    opacity: $tooltip-initial-opacity;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-arrow-left {
-  0% {
-    transform: translateX(60px);
-    opacity: $tooltip-initial-opacity;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-right {
-  0% {
-    transform: translateX(-55px);
-    opacity: $tooltip-initial-opacity;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-arrow-right {
-  0% {
-    transform: translateX(-60px);
-    opacity: $tooltip-initial-opacity;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-
-  }
-}
-
-
