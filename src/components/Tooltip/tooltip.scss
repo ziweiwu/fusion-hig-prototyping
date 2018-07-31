@@ -75,7 +75,7 @@ $hig-tooltip-font-color: #ffffff;
   .hig__tooltip-link {
     line-height: 24px;
     text-align: right;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
   }
 
   .hig__tooltip-title {
@@ -86,8 +86,12 @@ $hig-tooltip-font-color: #ffffff;
 
   .hig__tooltip-description {
     font-weight: normal;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 12px;
+  }
+
+  .hig__tooltip-inner-content {
+    padding-top: 11px;
   }
 }
 
