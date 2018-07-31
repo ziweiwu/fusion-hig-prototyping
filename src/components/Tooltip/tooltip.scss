@@ -10,14 +10,13 @@ $hig-tooltip-font-color: #ffffff;
 
 .hig__tooltip {
   font-family: $hig-font-family;
+  font-size: 12px;
   position: relative;
   display: inline-block;
   list-style: none;
   visibility: visible;
-  font-size: 12px;
   line-height: 16px;
   text-align: left;
-  margin: 0;
   padding: 0;
   z-index: $flyout-container-layer;
   // to override user-agent styling for inputs
@@ -28,26 +27,20 @@ $hig-tooltip-font-color: #ffffff;
 
 .hig__tooltip-placement-top,
 .hig__tooltip-placement-topLeft,
-.hig__tooltip-placement-topRight {
-  padding: 8px 0 8px 0
-}
-
-.hig__tooltip-placement-right,
-.hig__tooltip-placement-rightTop,
-.hig__tooltip-placement-rightBottom {
-  padding: 0 8px 0 8px
-}
-
+.hig__tooltip-placement-topRight,
 .hig__tooltip-placement-bottom,
 .hig__tooltip-placement-bottomLeft,
 .hig__tooltip-placement-bottomRight {
   padding: 8px 0 8px 0
 }
 
+.hig__tooltip-placement-right,
+.hig__tooltip-placement-rightTop,
+.hig__tooltip-placement-rightBottom,
 .hig__tooltip-placement-left,
 .hig__tooltip-placement-leftTop,
 .hig__tooltip-placement-leftBottom {
-  padding: 0 8px 0 8px;
+  padding: 0 8px 0 8px
 }
 
 .hig__tooltip-children-wrapper {
@@ -58,15 +51,41 @@ $hig-tooltip-font-color: #ffffff;
 .hig__tooltip-inner {
   color: $hig-tooltip-font-color;
   background-color: $hig-tooltip-background-color;
-  box-shadow: 0 0 4px color(hig-cool-gray-40);
-  border: 1px solid black;
+  padding: 4px 10px;
+  text-align: left;
+  border-radius: 2px;
+  z-index: $flyout-container-layer;
+  @include shadow($shadow-type: "common");
+
   a {
     color: $hig-tooltip-font-color;
   }
+
   hr {
     background-color: black;
     color: black;
     border-color: black;
+  }
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .hig__tooltip-link {
+    text-align: right;
+  }
+
+  .hig__tooltip-title {
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .hig__tooltip-description {
+    font-weight: normal;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 
@@ -75,35 +94,11 @@ $hig-tooltip-font-color: #ffffff;
   border: 0 solid transparent;
 }
 
-.hig__tooltip-inner {
-  padding: 4px 10px;
-  text-align: left;
-  border-radius: 2px;
-  z-index: $flyout-container-layer;
-  img {
-    max-width: 300px;
-    height: auto;
-  }
-  .hig__tooltip-link {
-    text-align: right;
-  }
-}
-
-.hig__tooltip-title {
-  font-weight: bold;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.hig__tooltip-description {
-  font-weight: normal;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-/* inner arrow and animations */
+/* arrow styles */
 // top
-.hig__tooltip-placement-top .hig__tooltip-arrow, .hig__tooltip-placement-topLeft .hig__tooltip-arrow, .hig__tooltip-placement-topRight .hig__tooltip-arrow {
+.hig__tooltip-placement-top .hig__tooltip-arrow,
+.hig__tooltip-placement-topLeft .hig__tooltip-arrow,
+.hig__tooltip-placement-topRight .hig__tooltip-arrow {
   bottom: 3px;
   margin-left: -5px;
   border-width: 5px 5px 0;
@@ -111,7 +106,9 @@ $hig-tooltip-font-color: #ffffff;
 }
 
 // bottom
-.hig__tooltip-placement-bottom .hig__tooltip-arrow, .hig__tooltip-placement-bottomLeft .hig__tooltip-arrow, .hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
+.hig__tooltip-placement-bottom .hig__tooltip-arrow,
+.hig__tooltip-placement-bottomLeft .hig__tooltip-arrow,
+.hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
   top: 3px;
   margin-left: -5px;
   border-width: 0 5px 5px;
@@ -119,7 +116,9 @@ $hig-tooltip-font-color: #ffffff;
 }
 
 // right
-.hig__tooltip-placement-right .hig__tooltip-arrow, .hig__tooltip-placement-rightTop .hig__tooltip-arrow, .hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
+.hig__tooltip-placement-right .hig__tooltip-arrow,
+.hig__tooltip-placement-rightTop .hig__tooltip-arrow,
+.hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
   left: 3px;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
@@ -127,13 +126,16 @@ $hig-tooltip-font-color: #ffffff;
 }
 
 // left
-.hig__tooltip-placement-left .hig__tooltip-arrow, .hig__tooltip-placement-leftTop .hig__tooltip-arrow, .hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
+.hig__tooltip-placement-left .hig__tooltip-arrow,
+.hig__tooltip-placement-leftTop .hig__tooltip-arrow,
+.hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
   right: 3px;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
   border-left-color: $hig-tooltip-background-color;
 }
 
+/* arrow positions */
 .hig__tooltip-placement-top .hig__tooltip-arrow,
 .hig__tooltip-placement-bottom .hig__tooltip-arrow {
   left: 50%;
@@ -165,6 +167,8 @@ $hig-tooltip-font-color: #ffffff;
   bottom: 15%;
 }
 
+/* arrow animations */
+// top
 .hig__tooltip-placement-top .hig__tooltip-arrow,
 .hig__tooltip-placement-topLeft .hig__tooltip-arrow,
 .hig__tooltip-placement-topRight .hig__tooltip-arrow {
@@ -215,5 +219,3 @@ $hig-tooltip-font-color: #ffffff;
 .hig__tooltip-placement-leftBottom .hig__tooltip-inner {
   animation: fade-left 0.1s;
 }
-
-
