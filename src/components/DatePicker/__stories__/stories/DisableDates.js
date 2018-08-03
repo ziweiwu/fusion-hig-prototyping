@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import DatePicker from '../../index';
+import '../../datePicker.css';
 
 export default class DisableDates extends Component {
   constructor(props) {

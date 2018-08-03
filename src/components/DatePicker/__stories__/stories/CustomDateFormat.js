@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import DatePicker from '../../index';
+import '../../datePicker.css';
 
 export default class CustomDateFormat extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ export default class CustomDateFormat extends Component {
   handleChangeEnd(date) {
     this.setState({ endDate: date });
   }
+
   isWeekday(date) {
     const day = date.day();
     return day !== 0 && day !== 6;
