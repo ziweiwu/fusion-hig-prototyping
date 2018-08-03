@@ -1,8 +1,8 @@
 @import "~@hig/styles/build/index.css";
-@import "../../../node_modules/@hig/styles/mixins/colors.scss";
-@import "../../../node_modules/@hig/styles/mixins/shadows.scss";
-@import "../../../node_modules/@hig/styles/mixins/typography.scss";
-@import "../../../node_modules/@hig/styles/tokens/layers.scss";
+@import "~@hig/styles/mixins/colors";
+@import "~@hig/styles/mixins/shadows";
+@import "~@hig/styles/mixins/typography";
+@import "~@hig/styles/tokens/layers";
 
 $datepicker__border-radius: 0.2rem;
 $datepicker__day-margin: 0.166rem;
@@ -46,7 +46,8 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
 .react-datepicker__day {
   width: 2.5em;
   border-radius: 0 !important;
-  margin: 0 !important; width: 30px !important;
+  margin: 0 !important;
+  width: 30px !important;
   height: 30px !important;
 
   // today's date in hig blue color and bold when not hovered or selected
@@ -159,13 +160,6 @@ button.react-datepicker__navigation {
     box-shadow: 0 1px 0 #28d2be;
   }
 }
-
-// hover color for calender icon
-//.hig__text-field-v1__icon:hover {
-//  path {
-//     fill: #28d2be;
-//  }
-//}
 
 .hig__text-field-v1__label {
   font-size: 14px;

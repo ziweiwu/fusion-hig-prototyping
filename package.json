@@ -55,19 +55,17 @@
     "react-youtube": "^7.6.0",
     "recompose": "^0.27.1",
     "sass-lint": "^1.12.1",
-    "sass-loader": "^7.0.1",
-    "styled-components": "^3.3.3",
-    "webpack": "^4.8.3"
+    "styled-components": "^3.3.3"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "yarn build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "start": "yarn build-css &&  react-scripts start",
-    "build": "yarn build-css &&  react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject --env=jsdom",
-    "storybook": "yarn build-css && start-storybook -p 9001 -c .storybook",
-    "deploy-storybook": "yarn build-css && storybook-to-ghpages"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "peerDependencies": {
     "react": " ^15.4.1 || ^16.3.2 "
@@ -75,6 +73,7 @@
   "devDependencies": {
     "babel-core": "~6.26.3",
     "babel-preset-jest": "~23.2.0",
+    "css-loader": "^1.0.0",
     "enzyme": "^2.5.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
@@ -85,8 +84,12 @@
     "eslint-plugin-react": "^7.9.1",
     "flow-bin": "^0.73.0",
     "jest-enzyme": "^3.8.3",
+    "node-sass": "^4.9.2",
     "react-scripts": "1.1.4",
+    "sass-loader": "^7.1.0",
     "sinon": "^4.1.2",
-    "source-map": "^0.7.3"
+    "source-map": "^0.7.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.4"
   }
 }
