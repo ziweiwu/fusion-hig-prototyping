@@ -13,7 +13,7 @@ export default class Default extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: moment(),
+      startDate: undefined,
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
   }
