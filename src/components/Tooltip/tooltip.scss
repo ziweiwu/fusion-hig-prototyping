@@ -1,12 +1,11 @@
 @import "~@hig/styles/build/index.css";
-@import "../../../node_modules/@hig/styles/mixins/colors.scss";
-@import "../../../node_modules/@hig/styles/mixins/shadows.scss";
-@import "../../../node_modules/@hig/styles/tokens/layers.scss";
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/shadows.scss";
+@import "~@hig/styles/tokens/layers.scss";
 @import "./tokens.scss";
 
 $hig-font-family: ArtifaktElement, sans-serif !default;
-$hig-tooltip-font-color: #ffffff;
-$hig-tooltip-background-color: color("hig-gray-60");
+$hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray-60");
 
 .hig__tooltip {
   font-family: $hig-font-family;
@@ -29,7 +28,7 @@ $hig-tooltip-background-color: color("hig-gray-60");
 .hig__tooltip-inner {
   color: $hig-tooltip-font-color;
   background-color: $hig-tooltip-background-color;
-  padding: 6px 10px;
+  padding: 6px 12px;
   hr {
     background-color: #000000;
     color: #000000;
@@ -43,7 +42,7 @@ $hig-tooltip-background-color: color("hig-gray-60");
 
 .hig__tooltip-arrow {
   position: absolute;
-  border: 0px solid transparent;
+  border: 0 solid transparent;
   overflow: hidden;
 }
 

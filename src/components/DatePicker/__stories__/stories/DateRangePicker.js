@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DatePicker from '../../index';
-import '../../datePicker.css';
+import '../../datePicker.scss';
 
 export default class DateRangePicker extends Component {
   constructor(props) {

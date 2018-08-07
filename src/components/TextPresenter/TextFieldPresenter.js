@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton from "@hig/icon-button";
 import Input from "./presenters/Input";
-import "./text-field.css";
+import "./text-field.scss";
 
 function generatedId() {
   return `text-field-${Math.floor(Math.random() * 100000, 5)}`;

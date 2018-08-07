@@ -1,26 +1,14 @@
 import React from 'react';
-// import '@hig/styles/build/index.css';
-// import ToolTipHig from '@hig/tooltip';
 import '@hig/tooltip/build/index.css';
-import { Button, Popover, Tooltip as TooltipAnt } from 'antd';
 import YouTube from 'react-youtube';
 import Dropdown from '@hig/dropdown';
 import Flyout from '@hig/flyout';
 import '@hig/flyout/build/index.css';
 import '@hig/dropdown/build/index.css';
 import TextFieldPresenter from '@hig/text-field';
-// import Demo from './components/Tooltip/NewTooltip/TooltipPopper';
-// import TextFieldPresenter from './components/TextPresenter/TextFieldPresenter.js'
-import 'react-tippy/dist/tippy.css';
-import { Tooltip as Tooltipy } from 'react-tippy';
-import Example from './components/Tooltip/NewTooltip/TooltipNew';
 import Tooltip from './components/Tooltip/index';
 import DatePicker from './components/DatePicker/index';
-import './components/DatePicker/datePicker.css';
-
-
-// import 'react-tippy/dist/tippy.css';
-// import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import './components/DatePicker/datePicker.scss';
 import './App.scss';
 import './components/TextPresenter/text-field.scss';
 
@@ -75,42 +63,15 @@ const App = () => (
   <div className="App">
     <h1>
       App Started
-      {' '}
     </h1>
     <DatePicker />
-    <Example
-      placement="right"
-      content={(
-        <div>
-          tooltip
-        </div>
-      )}
-    >
-      <button>
-        my button
-      </button>
-    </Example>
-    {/* <TooltipAnt><Button> ToolTip Ant</Button></TooltipAnt> */}
-    {/* <div> */}
-    {/* <ToolTipHig anchorPoint="top-center" content="Testing"> */}
-    {/* <Button>hig tooltip</Button> */}
-    {/* </ToolTipHig> */}
-    {/* </div> */}
-    {/* <div> */}
-    {/* <TooltipAnt title="prompt text" placement="right" mouseLeaveDelay={300}> */}
-    {/* <Button>Ant Tooltip</Button> */}
-    {/* </TooltipAnt> */}
-    {/* <TooltipAnt title="prompt text" placement="right" mouseLeaveDelay={300} overlay={youtubeVideo}> */}
-    {/* <Button>Ant Tooltip</Button> */}
-    {/* </TooltipAnt> */}
-    {/* </div> */}
     <div>
       <Tooltip
         title="Tooltip title"
       >
-        <Button>
+        <button>
           Show some text
-        </Button>
+        </button>
       </Tooltip>
 
       <div style={{ margin: '200px' }} />
@@ -125,9 +86,9 @@ const App = () => (
         linkTitle="Learn more"
         linkURL="https://www.autodesk.com"
       >
-        <Button>
+        <button>
           Show picture
-        </Button>
+        </button>
       </Tooltip>
 
       <div style={{ margin: '200px' }} />
@@ -139,9 +100,9 @@ const App = () => (
         linkTitle="Learn more"
         linkURL="https://www.autodesk.com"
       >
-        <Button>
+        <button>
           This is tooltip with some link
-        </Button>
+        </button>
       </Tooltip>
 
       <div style={{ margin: '200px' }} />
@@ -154,22 +115,14 @@ const App = () => (
         linkTitle="Learn more"
         linkURL="https://www.autodesk.com"
       >
-        <Button>
+        <button>
           This is tooltip with a video
-        </Button>
+        </button>
       </Tooltip
       >
 
       <div style={{ margin: '200px' }} />
 
-      {/* <Popover */}
-      {/* title="prompt text" */}
-      {/* placement="right" */}
-      {/* content={youtubeVideo} */}
-      {/* mouseLeaveDelay={1} */}
-      {/* > */}
-      {/* <Button>Ant Popover</Button> */}
-      {/* </Popover> */}
 
       <Dropdown
         label="dropdown menu"
@@ -187,28 +140,9 @@ const App = () => (
           Fly out button
         </button>
       </Flyout>
-
-      <Tooltipy
-        title="Welcome to React"
-        position="top"
-        trigger="click"
-        arrow="true"
-      >
-        <Button>
+        <button>
           Click here to show popup
-        </Button>
-      </Tooltipy>
-
-      <Tooltipy
-        html={youtubeVideo}
-        arrow="true"
-        position="right"
-        trigger="click"
-      >
-        <Button>
-          Click here to show popup
-        </Button>
-      </Tooltipy>
+        </button>
       <TextFieldPresenter
         label="true"
         showClearButton

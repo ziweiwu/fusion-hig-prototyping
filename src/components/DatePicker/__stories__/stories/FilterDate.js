@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DatePicker from '../../index';
-import '../../datePicker.css';
+import '../../datePicker.scss';
 
 export default class FilterDate extends Component {
   constructor(props) {

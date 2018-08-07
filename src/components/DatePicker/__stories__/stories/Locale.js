@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import DatePicker from '../../index';
-import '../../datePicker.css';
+import '../../datePicker.scss';
 
 export default class Locale extends Component {
   constructor(props) {

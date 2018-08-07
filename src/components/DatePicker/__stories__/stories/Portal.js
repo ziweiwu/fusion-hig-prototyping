@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DatePicker from '../../index';
-import '../../datePicker.css';
+import '../../datePicker.scss';
 
 export default class Portal extends Component {
   constructor(props) {

@@ -10,57 +10,25 @@ ShallowWrapper {
   "length": 1,
   "node": <DatePicker
     allowSameDay={false}
+    calender={true}
     className="hig__text-field-v1__input"
+    closeOnSelect={true}
     customInput={
         <TextFieldPresenter
             disabled={true}
+            focused={true}
             icon={
-                <svg
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <title>
-                        calendar-24
-                    </title>
-                    <g
-                        id="final"
-                    >
-                        <g
-                            id="calendar"
-                        >
-                            <g
-                                id="outline"
-                            >
-                                <path
-                                    d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
-                                    fill="#2e4258"
-                                />
-                                <path
-                                    d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
-                                    fill="none"
-                                />
-                                <rect
-                                    fill="none"
-                                    height="12"
-                                    width="17"
-                                    x="3"
-                                    y="9"
-                                />
-                                <path
-                                    d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
-                                    fill="#2e4258"
-                                />
-                            </g>
-                        </g>
-                    </g>
-                </svg>
+                <Icon
+                    nameOrSVG="calendar"
+                    size="24"
+                />
             }
-            id="text-field-88157"
+            id="text-field-7284"
             instructions={undefined}
             label={undefined}
+            onBlur={null}
             onClearButtonClick={[Function]}
+            onFocus={null}
             placeholder={undefined}
             readOnly={true}
             showClearButton={false}
@@ -73,11 +41,10 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
+    focused={true}
     hidePopper={false}
     id="hig__date-picker"
-    instruction={undefined}
     isClearable={false}
-    label={undefined}
     monthsShown={1}
     onBlur={[Function]}
     onChange={[Function]}
@@ -122,57 +89,25 @@ ShallowWrapper {
   "nodes": Array [
     <DatePicker
       allowSameDay={false}
+      calender={true}
       className="hig__text-field-v1__input"
+      closeOnSelect={true}
       customInput={
             <TextFieldPresenter
                   disabled={true}
+                  focused={true}
                   icon={
-                        <svg
-                              height="24"
-                              viewBox="0 0 24 24"
-                              width="24"
-                              xmlns="http://www.w3.org/2000/svg"
-                        >
-                              <title>
-                                    calendar-24
-                              </title>
-                              <g
-                                    id="final"
-                              >
-                                    <g
-                                          id="calendar"
-                                    >
-                                          <g
-                                                id="outline"
-                                          >
-                                                <path
-                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
-                                                      fill="#2e4258"
-                                                />
-                                                <path
-                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
-                                                      fill="none"
-                                                />
-                                                <rect
-                                                      fill="none"
-                                                      height="12"
-                                                      width="17"
-                                                      x="3"
-                                                      y="9"
-                                                />
-                                                <path
-                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
-                                                      fill="#2e4258"
-                                                />
-                                          </g>
-                                    </g>
-                              </g>
-                        </svg>
+                        <Icon
+                              nameOrSVG="calendar"
+                              size="24"
+                        />
                   }
-                  id="text-field-88157"
+                  id="text-field-7284"
                   instructions={undefined}
                   label={undefined}
+                  onBlur={null}
                   onClearButtonClick={[Function]}
+                  onFocus={null}
                   placeholder={undefined}
                   readOnly={true}
                   showClearButton={false}
@@ -185,11 +120,10 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      focused={true}
       hidePopper={false}
       id="hig__date-picker"
-      instruction={undefined}
       isClearable={false}
-      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -236,13 +170,12 @@ ShallowWrapper {
   "renderer": ReactShallowRenderer {
     "_context": Object {},
     "_element": <DatePicker
+      closeOnSelect={true}
       disabled={false}
       fixedHeight={true}
+      focused={true}
       hidePopper={false}
-      instruction={undefined}
-      label={undefined}
       selected={"2017-09-15T13:30:00.000Z"}
-      shouldCloseOnSelect={true}
       showClearButton={false}
       showIcon={true}
       showInstruction={false}
@@ -252,13 +185,12 @@ ShallowWrapper {
     "_instance": DatePicker {
       "context": Object {},
       "props": Object {
+        "closeOnSelect": true,
         "disabled": false,
         "fixedHeight": true,
+        "focused": true,
         "hidePopper": false,
-        "instruction": undefined,
-        "label": undefined,
         "selected": "2017-09-15T13:30:00.000Z",
-        "shouldCloseOnSelect": true,
         "showClearButton": false,
         "showIcon": true,
         "showInstruction": false,
@@ -274,57 +206,25 @@ ShallowWrapper {
     "_newState": null,
     "_rendered": <DatePicker
       allowSameDay={false}
+      calender={true}
       className="hig__text-field-v1__input"
+      closeOnSelect={true}
       customInput={
             <TextFieldPresenter
                   disabled={true}
+                  focused={true}
                   icon={
-                        <svg
-                              height="24"
-                              viewBox="0 0 24 24"
-                              width="24"
-                              xmlns="http://www.w3.org/2000/svg"
-                        >
-                              <title>
-                                    calendar-24
-                              </title>
-                              <g
-                                    id="final"
-                              >
-                                    <g
-                                          id="calendar"
-                                    >
-                                          <g
-                                                id="outline"
-                                          >
-                                                <path
-                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
-                                                      fill="#2e4258"
-                                                />
-                                                <path
-                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
-                                                      fill="none"
-                                                />
-                                                <rect
-                                                      fill="none"
-                                                      height="12"
-                                                      width="17"
-                                                      x="3"
-                                                      y="9"
-                                                />
-                                                <path
-                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
-                                                      fill="#2e4258"
-                                                />
-                                          </g>
-                                    </g>
-                              </g>
-                        </svg>
+                        <Icon
+                              nameOrSVG="calendar"
+                              size="24"
+                        />
                   }
-                  id="text-field-88157"
+                  id="text-field-7284"
                   instructions={undefined}
                   label={undefined}
+                  onBlur={null}
                   onClearButtonClick={[Function]}
+                  onFocus={null}
                   placeholder={undefined}
                   readOnly={true}
                   showClearButton={false}
@@ -337,11 +237,10 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      focused={true}
       hidePopper={false}
       id="hig__date-picker"
-      instruction={undefined}
       isClearable={false}
-      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -393,13 +292,12 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <DatePicker
+    closeOnSelect={true}
     disabled={false}
     fixedHeight={true}
+    focused={true}
     hidePopper={false}
-    instruction={undefined}
-    label={undefined}
     selected={"2017-09-15T13:30:00.000Z"}
-    shouldCloseOnSelect={true}
     showClearButton={false}
     showIcon={true}
     showInstruction={false}
@@ -418,57 +316,25 @@ ShallowWrapper {
   "length": 1,
   "node": <DatePicker
     allowSameDay={false}
+    calender={true}
     className="hig__text-field-v1__input"
+    closeOnSelect={true}
     customInput={
         <TextFieldPresenter
             disabled={true}
+            focused={true}
             icon={
-                <svg
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <title>
-                        calendar-24
-                    </title>
-                    <g
-                        id="final"
-                    >
-                        <g
-                            id="calendar"
-                        >
-                            <g
-                                id="outline"
-                            >
-                                <path
-                                    d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
-                                    fill="#2e4258"
-                                />
-                                <path
-                                    d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
-                                    fill="none"
-                                />
-                                <rect
-                                    fill="none"
-                                    height="12"
-                                    width="17"
-                                    x="3"
-                                    y="9"
-                                />
-                                <path
-                                    d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
-                                    fill="#2e4258"
-                                />
-                            </g>
-                        </g>
-                    </g>
-                </svg>
+                <Icon
+                    nameOrSVG="calendar"
+                    size="24"
+                />
             }
-            id="text-field-88157"
+            id="text-field-7284"
             instructions={undefined}
             label={undefined}
+            onBlur={null}
             onClearButtonClick={[Function]}
+            onFocus={null}
             placeholder={undefined}
             readOnly={true}
             showClearButton={false}
@@ -481,10 +347,9 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
+    focused={true}
     id="hig__date-picker"
-    instruction={undefined}
     isClearable={false}
-    label={undefined}
     monthsShown={1}
     onBlur={[Function]}
     onChange={[Function]}
@@ -529,57 +394,25 @@ ShallowWrapper {
   "nodes": Array [
     <DatePicker
       allowSameDay={false}
+      calender={true}
       className="hig__text-field-v1__input"
+      closeOnSelect={true}
       customInput={
             <TextFieldPresenter
                   disabled={true}
+                  focused={true}
                   icon={
-                        <svg
-                              height="24"
-                              viewBox="0 0 24 24"
-                              width="24"
-                              xmlns="http://www.w3.org/2000/svg"
-                        >
-                              <title>
-                                    calendar-24
-                              </title>
-                              <g
-                                    id="final"
-                              >
-                                    <g
-                                          id="calendar"
-                                    >
-                                          <g
-                                                id="outline"
-                                          >
-                                                <path
-                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
-                                                      fill="#2e4258"
-                                                />
-                                                <path
-                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
-                                                      fill="none"
-                                                />
-                                                <rect
-                                                      fill="none"
-                                                      height="12"
-                                                      width="17"
-                                                      x="3"
-                                                      y="9"
-                                                />
-                                                <path
-                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
-                                                      fill="#2e4258"
-                                                />
-                                          </g>
-                                    </g>
-                              </g>
-                        </svg>
+                        <Icon
+                              nameOrSVG="calendar"
+                              size="24"
+                        />
                   }
-                  id="text-field-88157"
+                  id="text-field-7284"
                   instructions={undefined}
                   label={undefined}
+                  onBlur={null}
                   onClearButtonClick={[Function]}
+                  onFocus={null}
                   placeholder={undefined}
                   readOnly={true}
                   showClearButton={false}
@@ -592,10 +425,9 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      focused={true}
       id="hig__date-picker"
-      instruction={undefined}
       isClearable={false}
-      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -642,12 +474,11 @@ ShallowWrapper {
   "renderer": ReactShallowRenderer {
     "_context": Object {},
     "_element": <DatePicker
+      closeOnSelect={true}
       disabled={true}
       fixedHeight={true}
-      instruction={undefined}
-      label={undefined}
+      focused={true}
       selected={"2017-09-15T13:30:00.000Z"}
-      shouldCloseOnSelect={true}
       showClearButton={false}
       showIcon={true}
       showInstruction={false}
@@ -657,12 +488,11 @@ ShallowWrapper {
     "_instance": DatePicker {
       "context": Object {},
       "props": Object {
+        "closeOnSelect": true,
         "disabled": true,
         "fixedHeight": true,
-        "instruction": undefined,
-        "label": undefined,
+        "focused": true,
         "selected": "2017-09-15T13:30:00.000Z",
-        "shouldCloseOnSelect": true,
         "showClearButton": false,
         "showIcon": true,
         "showInstruction": false,
@@ -678,57 +508,25 @@ ShallowWrapper {
     "_newState": null,
     "_rendered": <DatePicker
       allowSameDay={false}
+      calender={true}
       className="hig__text-field-v1__input"
+      closeOnSelect={true}
       customInput={
             <TextFieldPresenter
                   disabled={true}
+                  focused={true}
                   icon={
-                        <svg
-                              height="24"
-                              viewBox="0 0 24 24"
-                              width="24"
-                              xmlns="http://www.w3.org/2000/svg"
-                        >
-                              <title>
-                                    calendar-24
-                              </title>
-                              <g
-                                    id="final"
-                              >
-                                    <g
-                                          id="calendar"
-                                    >
-                                          <g
-                                                id="outline"
-                                          >
-                                                <path
-                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
-                                                      fill="#2e4258"
-                                                />
-                                                <path
-                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
-                                                      fill="none"
-                                                />
-                                                <rect
-                                                      fill="none"
-                                                      height="12"
-                                                      width="17"
-                                                      x="3"
-                                                      y="9"
-                                                />
-                                                <path
-                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
-                                                      fill="#2e4258"
-                                                />
-                                          </g>
-                                    </g>
-                              </g>
-                        </svg>
+                        <Icon
+                              nameOrSVG="calendar"
+                              size="24"
+                        />
                   }
-                  id="text-field-88157"
+                  id="text-field-7284"
                   instructions={undefined}
                   label={undefined}
+                  onBlur={null}
                   onClearButtonClick={[Function]}
+                  onFocus={null}
                   placeholder={undefined}
                   readOnly={true}
                   showClearButton={false}
@@ -741,10 +539,9 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      focused={true}
       id="hig__date-picker"
-      instruction={undefined}
       isClearable={false}
-      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -796,12 +593,11 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <DatePicker
+    closeOnSelect={true}
     disabled={true}
     fixedHeight={true}
-    instruction={undefined}
-    label={undefined}
+    focused={true}
     selected={"2017-09-15T13:30:00.000Z"}
-    shouldCloseOnSelect={true}
     showClearButton={false}
     showIcon={true}
     showInstruction={false}
@@ -820,57 +616,25 @@ ShallowWrapper {
   "length": 1,
   "node": <DatePicker
     allowSameDay={false}
+    calender={true}
     className="hig__text-field-v1__input"
+    closeOnSelect={true}
     customInput={
         <TextFieldPresenter
             disabled={true}
+            focused={true}
             icon={
-                <svg
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <title>
-                        calendar-24
-                    </title>
-                    <g
-                        id="final"
-                    >
-                        <g
-                            id="calendar"
-                        >
-                            <g
-                                id="outline"
-                            >
-                                <path
-                                    d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
-                                    fill="#2e4258"
-                                />
-                                <path
-                                    d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
-                                    fill="none"
-                                />
-                                <rect
-                                    fill="none"
-                                    height="12"
-                                    width="17"
-                                    x="3"
-                                    y="9"
-                                />
-                                <path
-                                    d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
-                                    fill="#2e4258"
-                                />
-                            </g>
-                        </g>
-                    </g>
-                </svg>
+                <Icon
+                    nameOrSVG="calendar"
+                    size="24"
+                />
             }
-            id="text-field-88157"
+            id="text-field-7284"
             instructions={undefined}
             label={undefined}
+            onBlur={null}
             onClearButtonClick={[Function]}
+            onFocus={null}
             placeholder={undefined}
             readOnly={true}
             showClearButton={false}
@@ -883,10 +647,9 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
+    focused={true}
     id="hig__date-picker"
-    instruction={undefined}
     isClearable={false}
-    label={undefined}
     monthsShown={1}
     onBlur={[Function]}
     onChange={[Function]}
@@ -931,57 +694,25 @@ ShallowWrapper {
   "nodes": Array [
     <DatePicker
       allowSameDay={false}
+      calender={true}
       className="hig__text-field-v1__input"
+      closeOnSelect={true}
       customInput={
             <TextFieldPresenter
                   disabled={true}
+                  focused={true}
                   icon={
-                        <svg
-                              height="24"
-                              viewBox="0 0 24 24"
-                              width="24"
-                              xmlns="http://www.w3.org/2000/svg"
-                        >
-                              <title>
-                                    calendar-24
-                              </title>
-                              <g
-                                    id="final"
-                              >
-                                    <g
-                                          id="calendar"
-                                    >
-                                          <g
-                                                id="outline"
-                                          >
-                                                <path
-                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
-                                                      fill="#2e4258"
-                                                />
-                                                <path
-                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
-                                                      fill="none"
-                                                />
-                                                <rect
-                                                      fill="none"
-                                                      height="12"
-                                                      width="17"
-                                                      x="3"
-                                                      y="9"
-                                                />
-                                                <path
-                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
-                                                      fill="#2e4258"
-                                                />
-                                          </g>
-                                    </g>
-                              </g>
-                        </svg>
+                        <Icon
+                              nameOrSVG="calendar"
+                              size="24"
+                        />
                   }
-                  id="text-field-88157"
+                  id="text-field-7284"
                   instructions={undefined}
                   label={undefined}
+                  onBlur={null}
                   onClearButtonClick={[Function]}
+                  onFocus={null}
                   placeholder={undefined}
                   readOnly={true}
                   showClearButton={false}
@@ -994,10 +725,9 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      focused={true}
       id="hig__date-picker"
-      instruction={undefined}
       isClearable={false}
-      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -1044,12 +774,11 @@ ShallowWrapper {
   "renderer": ReactShallowRenderer {
     "_context": Object {},
     "_element": <DatePicker
+      closeOnSelect={true}
       disabled={false}
       fixedHeight={true}
-      instruction={undefined}
-      label={undefined}
+      focused={true}
       selected={"2017-09-15T13:30:00.000Z"}
-      shouldCloseOnSelect={true}
       showClearButton={false}
       showIcon={true}
       showInstruction={false}
@@ -1059,12 +788,11 @@ ShallowWrapper {
     "_instance": DatePicker {
       "context": Object {},
       "props": Object {
+        "closeOnSelect": true,
         "disabled": false,
         "fixedHeight": true,
-        "instruction": undefined,
-        "label": undefined,
+        "focused": true,
         "selected": "2017-09-15T13:30:00.000Z",
-        "shouldCloseOnSelect": true,
         "showClearButton": false,
         "showIcon": true,
         "showInstruction": false,
@@ -1080,57 +808,25 @@ ShallowWrapper {
     "_newState": null,
     "_rendered": <DatePicker
       allowSameDay={false}
+      calender={true}
       className="hig__text-field-v1__input"
+      closeOnSelect={true}
       customInput={
             <TextFieldPresenter
                   disabled={true}
+                  focused={true}
                   icon={
-                        <svg
-                              height="24"
-                              viewBox="0 0 24 24"
-                              width="24"
-                              xmlns="http://www.w3.org/2000/svg"
-                        >
-                              <title>
-                                    calendar-24
-                              </title>
-                              <g
-                                    id="final"
-                              >
-                                    <g
-                                          id="calendar"
-                                    >
-                                          <g
-                                                id="outline"
-                                          >
-                                                <path
-                                                      d="M15,10.08H14V12H9V10.08H8V12H4.23v1H8v3H4.23v1H8v2H9V17h5v2h1V17h4V16H15V13h4V12H15ZM14,16H9V13h5Z"
-                                                      fill="#2e4258"
-                                                />
-                                                <path
-                                                      d="M18,6a1,1,0,0,1-1,1H16a1,1,0,0,1-1-1V5H8V6A1,1,0,0,1,7,7H6A1,1,0,0,1,5,6V5H3V8H20V5H18Z"
-                                                      fill="none"
-                                                />
-                                                <rect
-                                                      fill="none"
-                                                      height="12"
-                                                      width="17"
-                                                      x="3"
-                                                      y="9"
-                                                />
-                                                <path
-                                                      d="M20,4H18V3a1,1,0,0,0-1-1H16a1,1,0,0,0-1,1V4H8V3A1,1,0,0,0,7,2H6A1,1,0,0,0,5,3V4H3A1,1,0,0,0,2,5V21a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V5A1,1,0,0,0,20,4ZM16,3h1V6H16ZM6,3H7V6H6ZM20,21H3V9H20ZM20,8H3V5H5V6A1,1,0,0,0,6,7H7A1,1,0,0,0,8,6V5h7V6a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V5h2Z"
-                                                      fill="#2e4258"
-                                                />
-                                          </g>
-                                    </g>
-                              </g>
-                        </svg>
+                        <Icon
+                              nameOrSVG="calendar"
+                              size="24"
+                        />
                   }
-                  id="text-field-88157"
+                  id="text-field-7284"
                   instructions={undefined}
                   label={undefined}
+                  onBlur={null}
                   onClearButtonClick={[Function]}
+                  onFocus={null}
                   placeholder={undefined}
                   readOnly={true}
                   showClearButton={false}
@@ -1143,10 +839,9 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
+      focused={true}
       id="hig__date-picker"
-      instruction={undefined}
       isClearable={false}
-      label={undefined}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -1198,12 +893,11 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <DatePicker
+    closeOnSelect={true}
     disabled={false}
     fixedHeight={true}
-    instruction={undefined}
-    label={undefined}
+    focused={true}
     selected={"2017-09-15T13:30:00.000Z"}
-    shouldCloseOnSelect={true}
     showClearButton={false}
     showIcon={true}
     showInstruction={false}

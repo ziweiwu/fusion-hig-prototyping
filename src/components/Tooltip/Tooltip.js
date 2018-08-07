@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import ReactToolTip from 'rc-tooltip';
 import {anchorPoints} from "@hig/flyout";
 import {css} from 'react-emotion';
-import "./tooltip.css";
+import "./tooltip.scss";
 
 const placements = {
   [anchorPoints.TOP_CENTER]: "top",
