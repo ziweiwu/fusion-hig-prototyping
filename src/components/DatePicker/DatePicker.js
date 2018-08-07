@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import Icon from "@hig/icon";
+import ReactDatePicker from 'react-datepicker';
 import {TextFieldPresenter} from '@hig/text-field';
 import '@hig/text-field/build/index.css';
-import ReactDatePicker from 'react-datepicker';
 
 export default class DatePicker extends React.Component {
   static propTypes = {

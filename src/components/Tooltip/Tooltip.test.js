@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import Tooltip from './index';
 
 describe('DatePicker', () => {
@@ -7,7 +7,7 @@ describe('DatePicker', () => {
   test('Snapshot tests right replacement', () => {
     const wrapper = shallow(<Tooltip title="test" anchorPoint="right" trigger="click">
       <button>
-tooltip
+        tooltip
       </button>
     </Tooltip>);
     wrapper.simulate('click');
@@ -17,7 +17,7 @@ tooltip
   test('Snapshot tests left replacement', () => {
     const wrapper = shallow(<Tooltip title="test" anchorPoint="left" trigger="click">
       <button>
-tooltip
+        tooltip
       </button>
     </Tooltip>);
     wrapper.simulate('click');
@@ -27,7 +27,7 @@ tooltip
   test('Snapshot tests hover', () => {
     const wrapper = shallow(<Tooltip title="test" anchorPoint="left" trigger="hover" mouseEnterDelay={0}>
       <button>
-tooltip
+        tooltip
       </button>
     </Tooltip>);
     wrapper.simulate('hover');
@@ -37,7 +37,7 @@ tooltip
   test('Snapshot tests focus', () => {
     const wrapper = shallow(<Tooltip title="test" anchorPoint="left" trigger="focus">
       <button>
-tooltip
+        tooltip
       </button>
     </Tooltip>);
     wrapper.simulate('hover');

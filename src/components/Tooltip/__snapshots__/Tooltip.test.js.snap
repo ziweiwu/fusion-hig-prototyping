@@ -16,9 +16,11 @@ ShallowWrapper {
     mouseEnterDelay={1}
     mouseLeaveDelay={0.2}
     overlay={
-        <div>
+        <div
+            className="hig__tooltip-container"
+        >
             <div
-                className="hig-tooltip-title"
+                className="hig__tooltip-title"
             >
                 test
             </div>
@@ -26,13 +28,14 @@ ShallowWrapper {
     }
     overlayClassName="css-d70g0l"
     placement="right"
-    prefixCls="hig-tooltip"
+    prefixCls="hig__tooltip"
     title="test"
+    transitionName="fade"
     trigger="focus"
     width={300}
 >
     <div
-        className="hig-tooltip-children-wrapper"
+        className="hig__tooltip-children-wrapper"
     >
         <button>
             tooltip
@@ -48,9 +51,11 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div>
+            <div
+                  className="hig__tooltip-container"
+            >
                   <div
-                        className="hig-tooltip-title"
+                        className="hig__tooltip-title"
                   >
                         test
                   </div>
@@ -58,13 +63,14 @@ ShallowWrapper {
       }
       overlayClassName="css-d70g0l"
       placement="right"
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
+      transitionName="fade"
       trigger="focus"
       width={300}
 >
       <div
-            className="hig-tooltip-children-wrapper"
+            className="hig__tooltip-children-wrapper"
       >
             <button>
                   tooltip
@@ -81,7 +87,7 @@ ShallowWrapper {
       destroyTooltipOnHide={true}
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
       trigger="focus"
       width={300}
@@ -102,7 +108,7 @@ ShallowWrapper {
         "destroyTooltipOnHide": true,
         "mouseEnterDelay": 1,
         "mouseLeaveDelay": 0.2,
-        "prefixCls": "hig-tooltip",
+        "prefixCls": "hig__tooltip",
         "title": "test",
         "trigger": "focus",
         "width": 300,
@@ -123,9 +129,11 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div>
+            <div
+                  className="hig__tooltip-container"
+            >
                   <div
-                        className="hig-tooltip-title"
+                        className="hig__tooltip-title"
                   >
                         test
                   </div>
@@ -133,13 +141,14 @@ ShallowWrapper {
       }
       overlayClassName="css-d70g0l"
       placement="right"
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
+      transitionName="fade"
       trigger="focus"
       width={300}
 >
       <div
-            className="hig-tooltip-children-wrapper"
+            className="hig__tooltip-children-wrapper"
       >
             <button>
                   tooltip
@@ -161,7 +170,7 @@ ShallowWrapper {
     destroyTooltipOnHide={true}
     mouseEnterDelay={1}
     mouseLeaveDelay={0.2}
-    prefixCls="hig-tooltip"
+    prefixCls="hig__tooltip"
     title="test"
     trigger="focus"
     width={300}
@@ -189,9 +198,11 @@ ShallowWrapper {
     mouseEnterDelay={0}
     mouseLeaveDelay={0.2}
     overlay={
-        <div>
+        <div
+            className="hig__tooltip-container"
+        >
             <div
-                className="hig-tooltip-title"
+                className="hig__tooltip-title"
             >
                 test
             </div>
@@ -199,13 +210,14 @@ ShallowWrapper {
     }
     overlayClassName="css-d70g0l"
     placement="right"
-    prefixCls="hig-tooltip"
+    prefixCls="hig__tooltip"
     title="test"
+    transitionName="fade"
     trigger="hover"
     width={300}
 >
     <div
-        className="hig-tooltip-children-wrapper"
+        className="hig__tooltip-children-wrapper"
     >
         <button>
             tooltip
@@ -221,9 +233,11 @@ ShallowWrapper {
       mouseEnterDelay={0}
       mouseLeaveDelay={0.2}
       overlay={
-            <div>
+            <div
+                  className="hig__tooltip-container"
+            >
                   <div
-                        className="hig-tooltip-title"
+                        className="hig__tooltip-title"
                   >
                         test
                   </div>
@@ -231,13 +245,14 @@ ShallowWrapper {
       }
       overlayClassName="css-d70g0l"
       placement="right"
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
+      transitionName="fade"
       trigger="hover"
       width={300}
 >
       <div
-            className="hig-tooltip-children-wrapper"
+            className="hig__tooltip-children-wrapper"
       >
             <button>
                   tooltip
@@ -254,7 +269,7 @@ ShallowWrapper {
       destroyTooltipOnHide={true}
       mouseEnterDelay={0}
       mouseLeaveDelay={0.2}
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
       trigger="hover"
       width={300}
@@ -275,7 +290,7 @@ ShallowWrapper {
         "destroyTooltipOnHide": true,
         "mouseEnterDelay": 0,
         "mouseLeaveDelay": 0.2,
-        "prefixCls": "hig-tooltip",
+        "prefixCls": "hig__tooltip",
         "title": "test",
         "trigger": "hover",
         "width": 300,
@@ -296,9 +311,11 @@ ShallowWrapper {
       mouseEnterDelay={0}
       mouseLeaveDelay={0.2}
       overlay={
-            <div>
+            <div
+                  className="hig__tooltip-container"
+            >
                   <div
-                        className="hig-tooltip-title"
+                        className="hig__tooltip-title"
                   >
                         test
                   </div>
@@ -306,13 +323,14 @@ ShallowWrapper {
       }
       overlayClassName="css-d70g0l"
       placement="right"
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
+      transitionName="fade"
       trigger="hover"
       width={300}
 >
       <div
-            className="hig-tooltip-children-wrapper"
+            className="hig__tooltip-children-wrapper"
       >
             <button>
                   tooltip
@@ -334,7 +352,7 @@ ShallowWrapper {
     destroyTooltipOnHide={true}
     mouseEnterDelay={0}
     mouseLeaveDelay={0.2}
-    prefixCls="hig-tooltip"
+    prefixCls="hig__tooltip"
     title="test"
     trigger="hover"
     width={300}
@@ -362,9 +380,11 @@ ShallowWrapper {
     mouseEnterDelay={1}
     mouseLeaveDelay={0.2}
     overlay={
-        <div>
+        <div
+            className="hig__tooltip-container"
+        >
             <div
-                className="hig-tooltip-title"
+                className="hig__tooltip-title"
             >
                 test
             </div>
@@ -372,13 +392,14 @@ ShallowWrapper {
     }
     overlayClassName="css-d70g0l"
     placement="right"
-    prefixCls="hig-tooltip"
+    prefixCls="hig__tooltip"
     title="test"
+    transitionName="fade"
     trigger="click"
     width={300}
 >
     <div
-        className="hig-tooltip-children-wrapper"
+        className="hig__tooltip-children-wrapper"
     >
         <button>
             tooltip
@@ -394,9 +415,11 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div>
+            <div
+                  className="hig__tooltip-container"
+            >
                   <div
-                        className="hig-tooltip-title"
+                        className="hig__tooltip-title"
                   >
                         test
                   </div>
@@ -404,13 +427,14 @@ ShallowWrapper {
       }
       overlayClassName="css-d70g0l"
       placement="right"
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
+      transitionName="fade"
       trigger="click"
       width={300}
 >
       <div
-            className="hig-tooltip-children-wrapper"
+            className="hig__tooltip-children-wrapper"
       >
             <button>
                   tooltip
@@ -427,7 +451,7 @@ ShallowWrapper {
       destroyTooltipOnHide={true}
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
       trigger="click"
       width={300}
@@ -448,7 +472,7 @@ ShallowWrapper {
         "destroyTooltipOnHide": true,
         "mouseEnterDelay": 1,
         "mouseLeaveDelay": 0.2,
-        "prefixCls": "hig-tooltip",
+        "prefixCls": "hig__tooltip",
         "title": "test",
         "trigger": "click",
         "width": 300,
@@ -469,9 +493,11 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div>
+            <div
+                  className="hig__tooltip-container"
+            >
                   <div
-                        className="hig-tooltip-title"
+                        className="hig__tooltip-title"
                   >
                         test
                   </div>
@@ -479,13 +505,14 @@ ShallowWrapper {
       }
       overlayClassName="css-d70g0l"
       placement="right"
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
+      transitionName="fade"
       trigger="click"
       width={300}
 >
       <div
-            className="hig-tooltip-children-wrapper"
+            className="hig__tooltip-children-wrapper"
       >
             <button>
                   tooltip
@@ -507,7 +534,7 @@ ShallowWrapper {
     destroyTooltipOnHide={true}
     mouseEnterDelay={1}
     mouseLeaveDelay={0.2}
-    prefixCls="hig-tooltip"
+    prefixCls="hig__tooltip"
     title="test"
     trigger="click"
     width={300}
@@ -535,9 +562,11 @@ ShallowWrapper {
     mouseEnterDelay={1}
     mouseLeaveDelay={0.2}
     overlay={
-        <div>
+        <div
+            className="hig__tooltip-container"
+        >
             <div
-                className="hig-tooltip-title"
+                className="hig__tooltip-title"
             >
                 test
             </div>
@@ -545,13 +574,14 @@ ShallowWrapper {
     }
     overlayClassName="css-d70g0l"
     placement="right"
-    prefixCls="hig-tooltip"
+    prefixCls="hig__tooltip"
     title="test"
+    transitionName="fade"
     trigger="click"
     width={300}
 >
     <div
-        className="hig-tooltip-children-wrapper"
+        className="hig__tooltip-children-wrapper"
     >
         <button>
             tooltip
@@ -567,9 +597,11 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div>
+            <div
+                  className="hig__tooltip-container"
+            >
                   <div
-                        className="hig-tooltip-title"
+                        className="hig__tooltip-title"
                   >
                         test
                   </div>
@@ -577,13 +609,14 @@ ShallowWrapper {
       }
       overlayClassName="css-d70g0l"
       placement="right"
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
+      transitionName="fade"
       trigger="click"
       width={300}
 >
       <div
-            className="hig-tooltip-children-wrapper"
+            className="hig__tooltip-children-wrapper"
       >
             <button>
                   tooltip
@@ -600,7 +633,7 @@ ShallowWrapper {
       destroyTooltipOnHide={true}
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
       trigger="click"
       width={300}
@@ -621,7 +654,7 @@ ShallowWrapper {
         "destroyTooltipOnHide": true,
         "mouseEnterDelay": 1,
         "mouseLeaveDelay": 0.2,
-        "prefixCls": "hig-tooltip",
+        "prefixCls": "hig__tooltip",
         "title": "test",
         "trigger": "click",
         "width": 300,
@@ -642,9 +675,11 @@ ShallowWrapper {
       mouseEnterDelay={1}
       mouseLeaveDelay={0.2}
       overlay={
-            <div>
+            <div
+                  className="hig__tooltip-container"
+            >
                   <div
-                        className="hig-tooltip-title"
+                        className="hig__tooltip-title"
                   >
                         test
                   </div>
@@ -652,13 +687,14 @@ ShallowWrapper {
       }
       overlayClassName="css-d70g0l"
       placement="right"
-      prefixCls="hig-tooltip"
+      prefixCls="hig__tooltip"
       title="test"
+      transitionName="fade"
       trigger="click"
       width={300}
 >
       <div
-            className="hig-tooltip-children-wrapper"
+            className="hig__tooltip-children-wrapper"
       >
             <button>
                   tooltip
@@ -680,7 +716,7 @@ ShallowWrapper {
     destroyTooltipOnHide={true}
     mouseEnterDelay={1}
     mouseLeaveDelay={0.2}
-    prefixCls="hig-tooltip"
+    prefixCls="hig__tooltip"
     title="test"
     trigger="click"
     width={300}

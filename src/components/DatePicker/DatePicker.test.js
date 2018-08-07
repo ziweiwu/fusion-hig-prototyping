@@ -19,6 +19,4 @@ describe('DatePicker', () => {
     const wrapper = shallow(<DatePicker selected={moment('2017-09-15 09:30:00')} hidePopper={false} />);
     expect(wrapper).toMatchSnapshot();
   });
-
-  // test interactions
 });

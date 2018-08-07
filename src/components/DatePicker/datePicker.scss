@@ -1,8 +1,8 @@
 @import "~@hig/styles/build/index.css";
-@import "~@hig/styles/mixins/colors";
-@import "~@hig/styles/mixins/shadows";
-@import "~@hig/styles/mixins/typography";
-@import "~@hig/styles/tokens/layers";
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/shadows.scss";
+@import "~@hig/styles/mixins/typography.scss";
+@import "~@hig/styles/tokens/layers.scss";
 
 $datepicker__border-radius: 0.2rem;
 $datepicker__day-margin: 0.166rem;
@@ -26,14 +26,7 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
 // disable selection highlighting for calender
 // https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
 .react-datepicker {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   line-height: 16px;
   box-shadow: 0 0 4px color(hig-cool-gray-30);
 }
@@ -172,4 +165,4 @@ button.hig__icon-button {
 }
 
 // Overrides the stylesheet for react-datepicker library below
-@import 'react-datepicker/src/stylesheets/datepicker';
+@import '~react-datepicker/src/stylesheets/datepicker';
