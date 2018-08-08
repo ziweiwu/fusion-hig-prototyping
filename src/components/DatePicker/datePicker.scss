@@ -29,6 +29,7 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
   line-height: 16px;
   box-shadow: 0 0 4px color(hig-cool-gray-30);
+  border-radius: 2px;
 }
 
 // hide the days from prev and next month in current month
@@ -74,16 +75,6 @@ $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 20%);
   color: #222934 !important;
 }
 
-//set the hover cover of close button icons
-svg:hover {
-  polygon {
-    fill: #28d2be;
-  }
-  circle {
-    stroke: #28d2be;
-  }
-}
-
 //day name
 .react-datepicker__day-names {
   opacity: 0.5;
@@ -102,7 +93,6 @@ svg:hover {
 // used svg uri converter to convert svg to background images
 button.react-datepicker__navigation {
   text-align: center;
-  cursor: pointer;
   position: absolute;
   top: 15px;
   width: 15px;
@@ -145,23 +135,31 @@ button.react-datepicker__navigation {
 /* Hig TextField Style */
 .hig__text-field-v1 {
   min-width: 230px;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
 
-.hig__text-field-v1__input-wrapper {
-  &:hover {
-    border-color: #28d2be;
-    box-shadow: 0 1px 0 #28d2be;
+//set the hover color of close button icons
+.hig__text-field-v1__clear {
+  svg:hover {
+    polygon {
+      fill: #28d2be;
+    }
+    path {
+      fill: #28d2be;
+    }
   }
 }
 
-.hig__text-field-v1__label {
-  font-size: 14px;
-}
-
+// set style for close button
 button.hig__icon-button {
   background-color: transparent;
   border: none;
-  padding-top: 5px;
+  padding: 0;
+  cursor: pointer;
 }
 
 // Overrides the stylesheet for react-datepicker library below
