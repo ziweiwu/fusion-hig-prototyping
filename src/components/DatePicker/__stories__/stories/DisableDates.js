@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import moment from 'moment';
-import DatePicker from '../../index';
-import '../../datePicker.scss';
+import React, { Component } from "react";
+import moment from "moment";
+import DatePicker from "../../index";
+import "../../datePicker.scss";
 
 export default class DisableDates extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: moment(),
-      error: undefined,
+      startDate: undefined,
+      error: undefined
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
@@ -43,7 +43,7 @@ export default class DisableDates extends Component {
     const filterOptions = {
       Weekdays: this.isWeekday,
       Weekends: this.isWeekend,
-      None: null,
+      None: null
     };
     return (
       <DatePicker
@@ -53,7 +53,7 @@ export default class DisableDates extends Component {
         onChange={this.handleChangeDate}
         label="Select Date"
         minDate={moment()}
-        maxDate={moment().add(maxDate, 'days')}
+        maxDate={moment().add(maxDate, "days")}
         startDate={this.state.startDate}
         showIcon={this.props.showIcon}
         showClearButton={this.props.showClearButton}

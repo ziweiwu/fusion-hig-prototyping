@@ -14,26 +14,26 @@ ShallowWrapper {
     className="hig__text-field-v1__input"
     closeOnSelect={true}
     customInput={
-        <TextFieldPresenter
-            disabled={true}
-            focused={true}
-            icon={
-                <Icon
-                    nameOrSVG="calendar"
-                    size="24"
-                />
-            }
-            id="text-field-7284"
-            instructions={undefined}
-            label={undefined}
-            onBlur={null}
-            onClearButtonClick={[Function]}
-            onFocus={null}
-            placeholder={undefined}
-            readOnly={true}
-            showClearButton={false}
-            type="text"
-        />
+      <TextFieldPresenter
+        disabled={true}
+        focused={undefined}
+        icon={
+          <Icon
+            nameOrSVG="calendar"
+            size="24"
+          />
+        }
+        id="text-field-83542"
+        instructions={undefined}
+        label={undefined}
+        onBlur={null}
+        onClearButtonClick={[Function]}
+        onFocus={null}
+        placeholder={undefined}
+        readOnly={true}
+        showClearButton={false}
+        type="text"
+      />
     }
     dateFormat="L"
     dateFormatCalendar="MMMM YYYY"
@@ -41,7 +41,7 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
-    focused={true}
+    focused={undefined}
     hidePopper={false}
     id="hig__date-picker"
     isClearable={false}
@@ -55,19 +55,19 @@ ShallowWrapper {
     onSelect={[Function]}
     onYearChange={[Function]}
     popperModifiers={
-        Object {
-            "flip": Object {
-              "enabled": false,
-            },
-            "offset": Object {
-              "enabled": true,
-              "offset": "0px, 0px",
-            },
-            "preventOverflow": Object {
-              "enabled": true,
-              "escapeWithReference": false,
-            },
-          }
+      Object {
+        "flip": Object {
+          "enabled": false,
+        },
+        "offset": Object {
+          "enabled": true,
+          "offset": "0px, 0px",
+        },
+        "preventOverflow": Object {
+          "enabled": true,
+          "escapeWithReference": false,
+        },
+      }
     }
     popperPlacement="bottom-start"
     preventOpenOnFocus={false}
@@ -85,7 +85,7 @@ ShallowWrapper {
     timeCaption="Time"
     timeIntervals={30}
     withPortal={false}
-/>,
+  />,
   "nodes": Array [
     <DatePicker
       allowSameDay={false}
@@ -93,26 +93,26 @@ ShallowWrapper {
       className="hig__text-field-v1__input"
       closeOnSelect={true}
       customInput={
-            <TextFieldPresenter
-                  disabled={true}
-                  focused={true}
-                  icon={
-                        <Icon
-                              nameOrSVG="calendar"
-                              size="24"
-                        />
-                  }
-                  id="text-field-7284"
-                  instructions={undefined}
-                  label={undefined}
-                  onBlur={null}
-                  onClearButtonClick={[Function]}
-                  onFocus={null}
-                  placeholder={undefined}
-                  readOnly={true}
-                  showClearButton={false}
-                  type="text"
+        <TextFieldPresenter
+          disabled={true}
+          focused={undefined}
+          icon={
+            <Icon
+              nameOrSVG="calendar"
+              size="24"
             />
+          }
+          id="text-field-83542"
+          instructions={undefined}
+          label={undefined}
+          onBlur={null}
+          onClearButtonClick={[Function]}
+          onFocus={null}
+          placeholder={undefined}
+          readOnly={true}
+          showClearButton={false}
+          type="text"
+        />
       }
       dateFormat="L"
       dateFormatCalendar="MMMM YYYY"
@@ -120,7 +120,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
-      focused={true}
+      focused={undefined}
       hidePopper={false}
       id="hig__date-picker"
       isClearable={false}
@@ -134,19 +134,19 @@ ShallowWrapper {
       onSelect={[Function]}
       onYearChange={[Function]}
       popperModifiers={
-            Object {
-                  "flip": Object {
-                    "enabled": false,
-                  },
-                  "offset": Object {
-                    "enabled": true,
-                    "offset": "0px, 0px",
-                  },
-                  "preventOverflow": Object {
-                    "enabled": true,
-                    "escapeWithReference": false,
-                  },
-                }
+        Object {
+          "flip": Object {
+            "enabled": false,
+          },
+          "offset": Object {
+            "enabled": true,
+            "offset": "0px, 0px",
+          },
+          "preventOverflow": Object {
+            "enabled": true,
+            "escapeWithReference": false,
+          },
+        }
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
@@ -164,7 +164,7 @@ ShallowWrapper {
       timeCaption="Time"
       timeIntervals={30}
       withPortal={false}
-/>,
+    />,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -173,14 +173,14 @@ ShallowWrapper {
       closeOnSelect={true}
       disabled={false}
       fixedHeight={true}
-      focused={true}
+      focused={undefined}
       hidePopper={false}
       selected={"2017-09-15T13:30:00.000Z"}
       showClearButton={false}
       showIcon={true}
       showInstruction={false}
       showLabel={true}
-/>,
+    />,
     "_forcedUpdate": false,
     "_instance": DatePicker {
       "context": Object {},
@@ -188,7 +188,7 @@ ShallowWrapper {
         "closeOnSelect": true,
         "disabled": false,
         "fixedHeight": true,
-        "focused": true,
+        "focused": undefined,
         "hidePopper": false,
         "selected": "2017-09-15T13:30:00.000Z",
         "showClearButton": false,
@@ -210,26 +210,26 @@ ShallowWrapper {
       className="hig__text-field-v1__input"
       closeOnSelect={true}
       customInput={
-            <TextFieldPresenter
-                  disabled={true}
-                  focused={true}
-                  icon={
-                        <Icon
-                              nameOrSVG="calendar"
-                              size="24"
-                        />
-                  }
-                  id="text-field-7284"
-                  instructions={undefined}
-                  label={undefined}
-                  onBlur={null}
-                  onClearButtonClick={[Function]}
-                  onFocus={null}
-                  placeholder={undefined}
-                  readOnly={true}
-                  showClearButton={false}
-                  type="text"
+        <TextFieldPresenter
+          disabled={true}
+          focused={undefined}
+          icon={
+            <Icon
+              nameOrSVG="calendar"
+              size="24"
             />
+          }
+          id="text-field-83542"
+          instructions={undefined}
+          label={undefined}
+          onBlur={null}
+          onClearButtonClick={[Function]}
+          onFocus={null}
+          placeholder={undefined}
+          readOnly={true}
+          showClearButton={false}
+          type="text"
+        />
       }
       dateFormat="L"
       dateFormatCalendar="MMMM YYYY"
@@ -237,7 +237,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
-      focused={true}
+      focused={undefined}
       hidePopper={false}
       id="hig__date-picker"
       isClearable={false}
@@ -251,19 +251,19 @@ ShallowWrapper {
       onSelect={[Function]}
       onYearChange={[Function]}
       popperModifiers={
-            Object {
-                  "flip": Object {
-                    "enabled": false,
-                  },
-                  "offset": Object {
-                    "enabled": true,
-                    "offset": "0px, 0px",
-                  },
-                  "preventOverflow": Object {
-                    "enabled": true,
-                    "escapeWithReference": false,
-                  },
-                }
+        Object {
+          "flip": Object {
+            "enabled": false,
+          },
+          "offset": Object {
+            "enabled": true,
+            "offset": "0px, 0px",
+          },
+          "preventOverflow": Object {
+            "enabled": true,
+            "escapeWithReference": false,
+          },
+        }
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
@@ -281,7 +281,7 @@ ShallowWrapper {
       timeCaption="Time"
       timeIntervals={30}
       withPortal={false}
-/>,
+    />,
     "_rendering": false,
     "_updater": Updater {
       "_callbacks": Array [],
@@ -295,14 +295,14 @@ ShallowWrapper {
     closeOnSelect={true}
     disabled={false}
     fixedHeight={true}
-    focused={true}
+    focused={undefined}
     hidePopper={false}
     selected={"2017-09-15T13:30:00.000Z"}
     showClearButton={false}
     showIcon={true}
     showInstruction={false}
     showLabel={true}
-/>,
+  />,
 }
 `;
 
@@ -320,26 +320,26 @@ ShallowWrapper {
     className="hig__text-field-v1__input"
     closeOnSelect={true}
     customInput={
-        <TextFieldPresenter
-            disabled={true}
-            focused={true}
-            icon={
-                <Icon
-                    nameOrSVG="calendar"
-                    size="24"
-                />
-            }
-            id="text-field-7284"
-            instructions={undefined}
-            label={undefined}
-            onBlur={null}
-            onClearButtonClick={[Function]}
-            onFocus={null}
-            placeholder={undefined}
-            readOnly={true}
-            showClearButton={false}
-            type="text"
-        />
+      <TextFieldPresenter
+        disabled={true}
+        focused={undefined}
+        icon={
+          <Icon
+            nameOrSVG="calendar"
+            size="24"
+          />
+        }
+        id="text-field-83542"
+        instructions={undefined}
+        label={undefined}
+        onBlur={null}
+        onClearButtonClick={[Function]}
+        onFocus={null}
+        placeholder={undefined}
+        readOnly={true}
+        showClearButton={false}
+        type="text"
+      />
     }
     dateFormat="L"
     dateFormatCalendar="MMMM YYYY"
@@ -347,7 +347,7 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
-    focused={true}
+    focused={undefined}
     id="hig__date-picker"
     isClearable={false}
     monthsShown={1}
@@ -360,19 +360,19 @@ ShallowWrapper {
     onSelect={[Function]}
     onYearChange={[Function]}
     popperModifiers={
-        Object {
-            "flip": Object {
-              "enabled": false,
-            },
-            "offset": Object {
-              "enabled": true,
-              "offset": "0px, 0px",
-            },
-            "preventOverflow": Object {
-              "enabled": true,
-              "escapeWithReference": false,
-            },
-          }
+      Object {
+        "flip": Object {
+          "enabled": false,
+        },
+        "offset": Object {
+          "enabled": true,
+          "offset": "0px, 0px",
+        },
+        "preventOverflow": Object {
+          "enabled": true,
+          "escapeWithReference": false,
+        },
+      }
     }
     popperPlacement="bottom-start"
     preventOpenOnFocus={false}
@@ -390,7 +390,7 @@ ShallowWrapper {
     timeCaption="Time"
     timeIntervals={30}
     withPortal={false}
-/>,
+  />,
   "nodes": Array [
     <DatePicker
       allowSameDay={false}
@@ -398,26 +398,26 @@ ShallowWrapper {
       className="hig__text-field-v1__input"
       closeOnSelect={true}
       customInput={
-            <TextFieldPresenter
-                  disabled={true}
-                  focused={true}
-                  icon={
-                        <Icon
-                              nameOrSVG="calendar"
-                              size="24"
-                        />
-                  }
-                  id="text-field-7284"
-                  instructions={undefined}
-                  label={undefined}
-                  onBlur={null}
-                  onClearButtonClick={[Function]}
-                  onFocus={null}
-                  placeholder={undefined}
-                  readOnly={true}
-                  showClearButton={false}
-                  type="text"
+        <TextFieldPresenter
+          disabled={true}
+          focused={undefined}
+          icon={
+            <Icon
+              nameOrSVG="calendar"
+              size="24"
             />
+          }
+          id="text-field-83542"
+          instructions={undefined}
+          label={undefined}
+          onBlur={null}
+          onClearButtonClick={[Function]}
+          onFocus={null}
+          placeholder={undefined}
+          readOnly={true}
+          showClearButton={false}
+          type="text"
+        />
       }
       dateFormat="L"
       dateFormatCalendar="MMMM YYYY"
@@ -425,7 +425,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
-      focused={true}
+      focused={undefined}
       id="hig__date-picker"
       isClearable={false}
       monthsShown={1}
@@ -438,19 +438,19 @@ ShallowWrapper {
       onSelect={[Function]}
       onYearChange={[Function]}
       popperModifiers={
-            Object {
-                  "flip": Object {
-                    "enabled": false,
-                  },
-                  "offset": Object {
-                    "enabled": true,
-                    "offset": "0px, 0px",
-                  },
-                  "preventOverflow": Object {
-                    "enabled": true,
-                    "escapeWithReference": false,
-                  },
-                }
+        Object {
+          "flip": Object {
+            "enabled": false,
+          },
+          "offset": Object {
+            "enabled": true,
+            "offset": "0px, 0px",
+          },
+          "preventOverflow": Object {
+            "enabled": true,
+            "escapeWithReference": false,
+          },
+        }
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
@@ -468,7 +468,7 @@ ShallowWrapper {
       timeCaption="Time"
       timeIntervals={30}
       withPortal={false}
-/>,
+    />,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -477,13 +477,13 @@ ShallowWrapper {
       closeOnSelect={true}
       disabled={true}
       fixedHeight={true}
-      focused={true}
+      focused={undefined}
       selected={"2017-09-15T13:30:00.000Z"}
       showClearButton={false}
       showIcon={true}
       showInstruction={false}
       showLabel={true}
-/>,
+    />,
     "_forcedUpdate": false,
     "_instance": DatePicker {
       "context": Object {},
@@ -491,7 +491,7 @@ ShallowWrapper {
         "closeOnSelect": true,
         "disabled": true,
         "fixedHeight": true,
-        "focused": true,
+        "focused": undefined,
         "selected": "2017-09-15T13:30:00.000Z",
         "showClearButton": false,
         "showIcon": true,
@@ -512,26 +512,26 @@ ShallowWrapper {
       className="hig__text-field-v1__input"
       closeOnSelect={true}
       customInput={
-            <TextFieldPresenter
-                  disabled={true}
-                  focused={true}
-                  icon={
-                        <Icon
-                              nameOrSVG="calendar"
-                              size="24"
-                        />
-                  }
-                  id="text-field-7284"
-                  instructions={undefined}
-                  label={undefined}
-                  onBlur={null}
-                  onClearButtonClick={[Function]}
-                  onFocus={null}
-                  placeholder={undefined}
-                  readOnly={true}
-                  showClearButton={false}
-                  type="text"
+        <TextFieldPresenter
+          disabled={true}
+          focused={undefined}
+          icon={
+            <Icon
+              nameOrSVG="calendar"
+              size="24"
             />
+          }
+          id="text-field-83542"
+          instructions={undefined}
+          label={undefined}
+          onBlur={null}
+          onClearButtonClick={[Function]}
+          onFocus={null}
+          placeholder={undefined}
+          readOnly={true}
+          showClearButton={false}
+          type="text"
+        />
       }
       dateFormat="L"
       dateFormatCalendar="MMMM YYYY"
@@ -539,7 +539,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
-      focused={true}
+      focused={undefined}
       id="hig__date-picker"
       isClearable={false}
       monthsShown={1}
@@ -552,19 +552,19 @@ ShallowWrapper {
       onSelect={[Function]}
       onYearChange={[Function]}
       popperModifiers={
-            Object {
-                  "flip": Object {
-                    "enabled": false,
-                  },
-                  "offset": Object {
-                    "enabled": true,
-                    "offset": "0px, 0px",
-                  },
-                  "preventOverflow": Object {
-                    "enabled": true,
-                    "escapeWithReference": false,
-                  },
-                }
+        Object {
+          "flip": Object {
+            "enabled": false,
+          },
+          "offset": Object {
+            "enabled": true,
+            "offset": "0px, 0px",
+          },
+          "preventOverflow": Object {
+            "enabled": true,
+            "escapeWithReference": false,
+          },
+        }
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
@@ -582,7 +582,7 @@ ShallowWrapper {
       timeCaption="Time"
       timeIntervals={30}
       withPortal={false}
-/>,
+    />,
     "_rendering": false,
     "_updater": Updater {
       "_callbacks": Array [],
@@ -596,13 +596,13 @@ ShallowWrapper {
     closeOnSelect={true}
     disabled={true}
     fixedHeight={true}
-    focused={true}
+    focused={undefined}
     selected={"2017-09-15T13:30:00.000Z"}
     showClearButton={false}
     showIcon={true}
     showInstruction={false}
     showLabel={true}
-/>,
+  />,
 }
 `;
 
@@ -620,26 +620,26 @@ ShallowWrapper {
     className="hig__text-field-v1__input"
     closeOnSelect={true}
     customInput={
-        <TextFieldPresenter
-            disabled={true}
-            focused={true}
-            icon={
-                <Icon
-                    nameOrSVG="calendar"
-                    size="24"
-                />
-            }
-            id="text-field-7284"
-            instructions={undefined}
-            label={undefined}
-            onBlur={null}
-            onClearButtonClick={[Function]}
-            onFocus={null}
-            placeholder={undefined}
-            readOnly={true}
-            showClearButton={false}
-            type="text"
-        />
+      <TextFieldPresenter
+        disabled={true}
+        focused={undefined}
+        icon={
+          <Icon
+            nameOrSVG="calendar"
+            size="24"
+          />
+        }
+        id="text-field-83542"
+        instructions={undefined}
+        label={undefined}
+        onBlur={null}
+        onClearButtonClick={[Function]}
+        onFocus={null}
+        placeholder={undefined}
+        readOnly={true}
+        showClearButton={false}
+        type="text"
+      />
     }
     dateFormat="L"
     dateFormatCalendar="MMMM YYYY"
@@ -647,7 +647,7 @@ ShallowWrapper {
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
     fixedHeight={true}
-    focused={true}
+    focused={undefined}
     id="hig__date-picker"
     isClearable={false}
     monthsShown={1}
@@ -660,19 +660,19 @@ ShallowWrapper {
     onSelect={[Function]}
     onYearChange={[Function]}
     popperModifiers={
-        Object {
-            "flip": Object {
-              "enabled": false,
-            },
-            "offset": Object {
-              "enabled": true,
-              "offset": "0px, 0px",
-            },
-            "preventOverflow": Object {
-              "enabled": true,
-              "escapeWithReference": false,
-            },
-          }
+      Object {
+        "flip": Object {
+          "enabled": false,
+        },
+        "offset": Object {
+          "enabled": true,
+          "offset": "0px, 0px",
+        },
+        "preventOverflow": Object {
+          "enabled": true,
+          "escapeWithReference": false,
+        },
+      }
     }
     popperPlacement="bottom-start"
     preventOpenOnFocus={false}
@@ -690,7 +690,7 @@ ShallowWrapper {
     timeCaption="Time"
     timeIntervals={30}
     withPortal={false}
-/>,
+  />,
   "nodes": Array [
     <DatePicker
       allowSameDay={false}
@@ -698,26 +698,26 @@ ShallowWrapper {
       className="hig__text-field-v1__input"
       closeOnSelect={true}
       customInput={
-            <TextFieldPresenter
-                  disabled={true}
-                  focused={true}
-                  icon={
-                        <Icon
-                              nameOrSVG="calendar"
-                              size="24"
-                        />
-                  }
-                  id="text-field-7284"
-                  instructions={undefined}
-                  label={undefined}
-                  onBlur={null}
-                  onClearButtonClick={[Function]}
-                  onFocus={null}
-                  placeholder={undefined}
-                  readOnly={true}
-                  showClearButton={false}
-                  type="text"
+        <TextFieldPresenter
+          disabled={true}
+          focused={undefined}
+          icon={
+            <Icon
+              nameOrSVG="calendar"
+              size="24"
             />
+          }
+          id="text-field-83542"
+          instructions={undefined}
+          label={undefined}
+          onBlur={null}
+          onClearButtonClick={[Function]}
+          onFocus={null}
+          placeholder={undefined}
+          readOnly={true}
+          showClearButton={false}
+          type="text"
+        />
       }
       dateFormat="L"
       dateFormatCalendar="MMMM YYYY"
@@ -725,7 +725,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
-      focused={true}
+      focused={undefined}
       id="hig__date-picker"
       isClearable={false}
       monthsShown={1}
@@ -738,19 +738,19 @@ ShallowWrapper {
       onSelect={[Function]}
       onYearChange={[Function]}
       popperModifiers={
-            Object {
-                  "flip": Object {
-                    "enabled": false,
-                  },
-                  "offset": Object {
-                    "enabled": true,
-                    "offset": "0px, 0px",
-                  },
-                  "preventOverflow": Object {
-                    "enabled": true,
-                    "escapeWithReference": false,
-                  },
-                }
+        Object {
+          "flip": Object {
+            "enabled": false,
+          },
+          "offset": Object {
+            "enabled": true,
+            "offset": "0px, 0px",
+          },
+          "preventOverflow": Object {
+            "enabled": true,
+            "escapeWithReference": false,
+          },
+        }
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
@@ -768,7 +768,7 @@ ShallowWrapper {
       timeCaption="Time"
       timeIntervals={30}
       withPortal={false}
-/>,
+    />,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -777,13 +777,13 @@ ShallowWrapper {
       closeOnSelect={true}
       disabled={false}
       fixedHeight={true}
-      focused={true}
+      focused={undefined}
       selected={"2017-09-15T13:30:00.000Z"}
       showClearButton={false}
       showIcon={true}
       showInstruction={false}
       showLabel={true}
-/>,
+    />,
     "_forcedUpdate": false,
     "_instance": DatePicker {
       "context": Object {},
@@ -791,7 +791,7 @@ ShallowWrapper {
         "closeOnSelect": true,
         "disabled": false,
         "fixedHeight": true,
-        "focused": true,
+        "focused": undefined,
         "selected": "2017-09-15T13:30:00.000Z",
         "showClearButton": false,
         "showIcon": true,
@@ -812,26 +812,26 @@ ShallowWrapper {
       className="hig__text-field-v1__input"
       closeOnSelect={true}
       customInput={
-            <TextFieldPresenter
-                  disabled={true}
-                  focused={true}
-                  icon={
-                        <Icon
-                              nameOrSVG="calendar"
-                              size="24"
-                        />
-                  }
-                  id="text-field-7284"
-                  instructions={undefined}
-                  label={undefined}
-                  onBlur={null}
-                  onClearButtonClick={[Function]}
-                  onFocus={null}
-                  placeholder={undefined}
-                  readOnly={true}
-                  showClearButton={false}
-                  type="text"
+        <TextFieldPresenter
+          disabled={true}
+          focused={undefined}
+          icon={
+            <Icon
+              nameOrSVG="calendar"
+              size="24"
             />
+          }
+          id="text-field-83542"
+          instructions={undefined}
+          label={undefined}
+          onBlur={null}
+          onClearButtonClick={[Function]}
+          onFocus={null}
+          placeholder={undefined}
+          readOnly={true}
+          showClearButton={false}
+          type="text"
+        />
       }
       dateFormat="L"
       dateFormatCalendar="MMMM YYYY"
@@ -839,7 +839,7 @@ ShallowWrapper {
       disabledKeyboardNavigation={false}
       dropdownMode="scroll"
       fixedHeight={true}
-      focused={true}
+      focused={undefined}
       id="hig__date-picker"
       isClearable={false}
       monthsShown={1}
@@ -852,19 +852,19 @@ ShallowWrapper {
       onSelect={[Function]}
       onYearChange={[Function]}
       popperModifiers={
-            Object {
-                  "flip": Object {
-                    "enabled": false,
-                  },
-                  "offset": Object {
-                    "enabled": true,
-                    "offset": "0px, 0px",
-                  },
-                  "preventOverflow": Object {
-                    "enabled": true,
-                    "escapeWithReference": false,
-                  },
-                }
+        Object {
+          "flip": Object {
+            "enabled": false,
+          },
+          "offset": Object {
+            "enabled": true,
+            "offset": "0px, 0px",
+          },
+          "preventOverflow": Object {
+            "enabled": true,
+            "escapeWithReference": false,
+          },
+        }
       }
       popperPlacement="bottom-start"
       preventOpenOnFocus={false}
@@ -882,7 +882,7 @@ ShallowWrapper {
       timeCaption="Time"
       timeIntervals={30}
       withPortal={false}
-/>,
+    />,
     "_rendering": false,
     "_updater": Updater {
       "_callbacks": Array [],
@@ -896,12 +896,12 @@ ShallowWrapper {
     closeOnSelect={true}
     disabled={false}
     fixedHeight={true}
-    focused={true}
+    focused={undefined}
     selected={"2017-09-15T13:30:00.000Z"}
     showClearButton={false}
     showIcon={true}
     showInstruction={false}
     showLabel={true}
-/>,
+  />,
 }
 `;

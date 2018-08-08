@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import DatePicker from '../../index';
-import '../../datePicker.scss';
+import React, { Component } from "react";
+import DatePicker from "../../index";
+import "../../datePicker.scss";
 
 export default class Disable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: undefined,
+      startDate: undefined
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
   }
@@ -29,7 +29,7 @@ export default class Disable extends Component {
     const filterOptions = {
       Weekdays: this.isWeekday,
       Weekends: this.isWeekend,
-      None: null,
+      None: null
     };
     return (
       <DatePicker
