@@ -51,7 +51,7 @@ export default class DisableDates extends Component {
         dateFormat={this.props.dateFormat}
         selected={startDate}
         onChange={this.handleChangeDate}
-        label="Select Date"
+        label={this.props.label}
         minDate={moment()}
         maxDate={moment().add(maxDate, "days")}
         startDate={this.state.startDate}
