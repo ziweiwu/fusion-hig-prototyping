@@ -37,7 +37,7 @@ storiesOfDatePicker.add("Default View", () => {
   const fixedHeight = boolean("Fixed Calender Height", true);
   const dateFormat = select(
     "Date Format",
-    ["MM/DD/YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
+    ["MM/DD/YYYY", "MMMM Do, YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
     "MM/DD/YYYY"
   );
   const locale = select("Locale", ["fr-ca", "en-us", "zh-cn", "ja"], "en-us");
@@ -77,7 +77,7 @@ storiesOfDatePicker.add("With Clear Button", () => {
   const fixedHeight = boolean("Fixed Calender Height", true);
   const dateFormat = select(
     "Date Format",
-    ["MM/DD/YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
+    ["MM/DD/YYYY", "MMMM Do, YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
     "MM/DD/YYYY"
   );
   const locale = select("Locale", ["fr-ca", "en-us", "zh-cn", "ja"], "en-us");
@@ -117,7 +117,7 @@ storiesOfDatePicker.add("Disabled", () => {
   const fixedHeight = boolean("Fixed Calender Height", true);
   const dateFormat = select(
     "Date Format",
-    ["MM/DD/YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
+    ["MM/DD/YYYY", "MMMM Do, YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
     "MM/DD/YYYY"
   );
   const locale = select("Locale", ["fr-ca", "en-us", "zh-cn", "ja"], "en-us");
@@ -157,7 +157,7 @@ storiesOfDatePicker.add("Select a Range of Dates", () => {
   const disabled = boolean("disable", false);
   const dateFormat = select(
     "Date Format",
-    ["MM/DD/YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
+    ["MM/DD/YYYY", "MMMM Do, YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
     "MM/DD/YYYY"
   );
   const locale = select("Locale", ["fr-ca", "en-us", "zh-cn", "ja"], "en-us");
@@ -199,7 +199,7 @@ storiesOfDatePicker.add("Restricted Date Range", () => {
   const disabled = boolean("disable", false);
   const dateFormat = select(
     "Date Format",
-    ["MM/DD/YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
+    ["MM/DD/YYYY", "MMMM Do, YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
     "MM/DD/YYYY"
   );
   const locale = select("Locale", ["fr-ca", "en-us", "zh-cn", "ja"], "en-us");
@@ -245,7 +245,7 @@ storiesOfDatePicker.add("Filter Dates", () => {
   const disabled = boolean("disable", false);
   const dateFormat = select(
     "Date Format",
-    ["MM/DD/YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
+    ["MM/DD/YYYY", "MMMM Do, YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
     "MM/DD/YYYY"
   );
   const locale = select("Locale", ["fr-ca", "en-us", "zh-cn", "ja"], "en-us");
@@ -280,7 +280,7 @@ storiesOfDatePicker.add("Locale", () => {
   const fixedHeight = boolean("Fixed Calender Height", true);
   const dateFormat = select(
     "Date Format",
-    ["MM/DD/YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
+    ["MM/DD/YYYY", "MMMM Do, YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
     "MM/DD/YYYY"
   );
   const disabled = boolean("disable", false);
@@ -312,7 +312,7 @@ storiesOfDatePicker.add("Locale", () => {
 storiesOfDatePicker.add("Custom Date Format", () => {
   const dateFormat = select(
     "Date Format",
-    ["MM/DD/YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
+    ["MM/DD/YYYY", "MMMM Do, YYYY", "ddd, MMM, YYYY", "YYYY-MM-DD", "DD-MM-YY"],
     "MM/DD/YYYY"
   );
   const locale = select("Locale", ["fr-ca", "en-us", "zh-cn", "ja"], "en-us");
