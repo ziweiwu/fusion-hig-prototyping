@@ -54,6 +54,12 @@ class Tooltip extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.visibilityOn = this.visibilityOn.bind(this);
     this.visibilityOff = this.visibilityOff.bind(this);
+    this.renderTitle = this.renderTitle.bind(this);
+    this.renderDescription = this.renderDescription.bind(this);
+    this.renderContent = this.renderContent.bind(this);
+    this.renderURL = this.renderURL.bind(this);
+    this.renderContainer = this.renderContainer.bind(this);
+    this.renderChildren = this.renderChildren.bind(this);
   }
 
   componentDidMount() {
@@ -66,13 +72,11 @@ class Tooltip extends React.Component {
 
   handleClick(e) {
     if (this.childrenRef && this.childrenRef.contains(e.target)) {
-      console.log("clicked inside");
       this.visibilityOn();
     } else if (
       !this.childrenRef.contains(e.target) &&
       !this.containerRef.contains(e.target)
     ) {
-      console.log("clicked outside");
       this.visibilityOff();
     }
   }
@@ -82,23 +86,67 @@ class Tooltip extends React.Component {
       isVisible: true
     });
   }
+
   visibilityOff() {
     this.setState({
       isVisible: false
     });
   }
 
+  renderTitle() {
+    return <div className="hig__tooltip-title">{this.props.title}</div>;
+  }
+
+  renderDescription() {
+    return (
+      <div className="hig__tooltip-description">{this.props.description}</div>
+    );
+  }
+
+  renderContent() {
+    return (
+      <div className="hig__tooltip-inner-content">{this.props.content}</div>
+    );
+  }
+
+  renderURL() {
+    return (
+      <div className="hig__tooltip-link">
+        {!this.props.content && <hr />}
+        <a href={this.props.linkURL}>
+          {this.props.linkTitle || this.props.linkURL}
+        </a>
+      </div>
+    );
+  }
+
+  renderContainer() {
+    return (
+      <div
+        className="hig__tooltip-container"
+        ref={containerRef => (this.containerRef = containerRef)}
+      >
+        {this.props.title && this.renderTitle()}
+        {this.props.description && this.renderDescription()}
+        {this.props.content && this.renderContent()}
+        {this.props.linkURL && this.renderURL()}
+      </div>
+    );
+  }
+
+  renderChildren() {
+    return (
+      <div
+        className="hig__tooltip-children-wrapper"
+        ref={childrenRef => (this.childrenRef = childrenRef)}
+      >
+        {this.props.children}
+      </div>
+    );
+  }
+
   render() {
-    const {
-      title,
-      description,
-      content,
-      anchorPoint,
-      linkURL,
-      linkTitle,
-      children,
-      ...otherProps
-    } = this.props;
+    const { anchorPoint, children, ...otherProps } = this.props;
 
     const tooltipWidth = css`
       max-width: ${this.props.width}px;
@@ -118,33 +166,9 @@ class Tooltip extends React.Component {
         destroyTooltipOnHide
         overlayClassName={tooltipWidth}
         placement={placements[anchorPoint]}
-        overlay={
-          <div
-            ref={containerRef => (this.containerRef = containerRef)}
-            className="hig__tooltip-container"
-          >
-            {title && <div className="hig__tooltip-title">{title}</div>}
-            {description && (
-              <div className="hig__tooltip-description">{description}</div>
-            )}
-            {content && (
-              <div className="hig__tooltip-inner-content">{content}</div>
-            )}
-            {linkURL && (
-              <div className="hig__tooltip-link">
-                {!content && <hr />}
-                <a href={linkURL}>{linkTitle || linkURL}</a>
-              </div>
-            )}
-          </div>
-        }
+        overlay={this.renderContainer}
       >
-        <div
-          ref={childrenRef => (this.childrenRef = childrenRef)}
-          className="hig__tooltip-children-wrapper"
-        >
-          {children}
-        </div>
+        {this.renderChildren()}
       </ReactToolTip>
     );
   }
