@@ -4,9 +4,6 @@
 @import "~@hig/styles/tokens/layers.scss";
 @import "./tokens.scss";
 
-$hig-font-family: ArtifaktElement, sans-serif !default;
-$hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray-60");
-
 .hig__tooltip {
   font-family: $hig-font-family;
   position: relative;
@@ -107,7 +104,7 @@ $hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray
 .hig__tooltip-placement-top .hig__tooltip-arrow,
 .hig__tooltip-placement-topLeft .hig__tooltip-arrow,
 .hig__tooltip-placement-topRight .hig__tooltip-arrow {
-  bottom: 4px;
+  bottom: 3px;
   margin-left: -5px;
   border-width: 5px 5px 0;
   border-top-color: $hig-tooltip-background-color;
@@ -116,7 +113,7 @@ $hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray
 .hig__tooltip-placement-bottom .hig__tooltip-arrow,
 .hig__tooltip-placement-bottomLeft .hig__tooltip-arrow,
 .hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
-  top: 4px;
+  top: 3px;
   margin-left: -5px;
   border-width: 0 5px 5px;
   border-bottom-color: $hig-tooltip-background-color;
@@ -125,7 +122,7 @@ $hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray
 .hig__tooltip-placement-right .hig__tooltip-arrow,
 .hig__tooltip-placement-rightTop .hig__tooltip-arrow,
 .hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
-  left: 4px;
+  left: 3px;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
   border-right-color: $hig-tooltip-background-color;
@@ -134,7 +131,7 @@ $hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray
 .hig__tooltip-placement-left .hig__tooltip-arrow,
 .hig__tooltip-placement-leftTop .hig__tooltip-arrow,
 .hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
-  right: 4px;
+  right: 3px;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
   border-left-color: $hig-tooltip-background-color;
@@ -154,11 +151,12 @@ $hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray
 }
 
 .hig__tooltip-placement-right .hig__tooltip-arrow {
-  bottom: 50%;
+  top: 50%;
 }
 
 .hig__tooltip-placement-rightTop .hig__tooltip-arrow {
   top: 15%;
+  margin-top: 0
 }
 
 .hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
@@ -171,6 +169,7 @@ $hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray
 
 .hig__tooltip-placement-leftTop .hig__tooltip-arrow {
   top: 15%;
+  margin-top: 0
 }
 
 .hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
@@ -188,54 +187,4 @@ $hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray
 .hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
   right: 15%;
 }
-
-// arrow animation
-//.hig__tooltip-placement-top .hig__tooltip-arrow,
-//.hig__tooltip-placement-topLeft .hig__tooltip-arrow,
-//.hig__tooltip-placement-topRight .hig__tooltip-arrow {
-//  animation: fade-arrow-top 0.01s;
-//}
-//
-//.hig__tooltip-placement-bottom .hig__tooltip-arrow,
-//.hig__tooltip-placement-bottomLeft .hig__tooltip-arrow,
-//.hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
-//  animation: fade-arrow-bottom 0.01s;
-//}
-//
-//.hig__tooltip-placement-right .hig__tooltip-arrow,
-//.hig__tooltip-placement-rightTop .hig__tooltip-arrow,
-//.hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
-//  animation: fade-arrow-right 0.01s;
-//}
-//
-//.hig__tooltip-placement-left .hig__tooltip-arrow,
-//.hig__tooltip-placement-leftTop .hig__tooltip-arrow,
-//.hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
-//  animation: fade-arrow-left 0.1s;
-//}
-//
-//// tooltip inner animation
-//.hig__tooltip-placement-top .hig__tooltip-inner,
-//.hig__tooltip-placement-topLeft .hig__tooltip-inner,
-//.hig__tooltip-placement-topRight .hig__tooltip-inner {
-//  animation: fade-top 0.1s;
-//}
-//
-//.hig__tooltip-placement-bottom .hig__tooltip-inner,
-//.hig__tooltip-placement-bottomLeft .hig__tooltip-inner,
-//.hig__tooltip-placement-bottomRight .hig__tooltip-inner {
-//  animation: fade-bottom 0.1s;
-//}
-//
-//.hig__tooltip-placement-right .hig__tooltip-inner,
-//.hig__tooltip-placement-rightTop .hig__tooltip-inner,
-//.hig__tooltip-placement-rightBottom .hig__tooltip-inner {
-//  animation: fade-right 0.1s;
-//}
-//
-//.hig__tooltip-placement-left .hig__tooltip-inner,
-//.hig__tooltip-placement-leftTop .hig__tooltip-inner,
-//.hig__tooltip-placement-leftBottom .hig__tooltip-inner {
-//  animation: fade-left 0.1s;
-//}
 

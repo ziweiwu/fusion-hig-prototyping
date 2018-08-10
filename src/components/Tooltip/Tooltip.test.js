@@ -2,35 +2,54 @@ import React from "react";
 import { shallow } from "enzyme";
 import Tooltip from "./index";
 
-describe("DatePicker", () => {
+describe("Tooltip", () => {
   // snapshot testing
-  test("Snapshot tests right replacement", () => {
-    const wrapper = shallow(
-      <Tooltip title="test" anchorPoint="right" trigger="click">
-        <button>tooltip</button>
-      </Tooltip>
-    );
-    wrapper.simulate("click");
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  test("Snapshot tests left replacement", () => {
-    const wrapper = shallow(
-      <Tooltip title="test" anchorPoint="left" trigger="click">
-        <button>tooltip</button>
-      </Tooltip>
-    );
-    wrapper.simulate("click");
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  test("Snapshot tests hover", () => {
+  test("Snapshot tests tooltip with full content", () => {
     const wrapper = shallow(
       <Tooltip
         title="test"
+        description="test"
+        linkTitle="test"
+        linkURL="www.test.com"
+        content={<div>test</div>}
         anchorPoint="left"
-        trigger="hover"
-        mouseEnterDelay={0}
+        trigger="click"
+      >
+        <button>tooltip</button>
+      </Tooltip>
+    );
+    wrapper.simulate("click");
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test("Snapshot tests tooltip with click", () => {
+    const wrapper = shallow(
+      <Tooltip
+        title="test"
+        description="test"
+        linkTitle="test"
+        linkURL="www.test.com"
+        content={<div>test</div>}
+        anchorPoint="left"
+        trigger="click"
+      >
+        <button>tooltip</button>
+      </Tooltip>
+    );
+    wrapper.simulate("click");
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test("Snapshot tests tooltip with hover", () => {
+    const wrapper = shallow(
+      <Tooltip
+        title="test"
+        description="test"
+        linkTitle="test"
+        linkURL="www.test.com"
+        content={<div>test</div>}
+        anchorPoint="left"
+        trigger="click"
       >
         <button>tooltip</button>
       </Tooltip>
@@ -39,15 +58,13 @@ describe("DatePicker", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  test("Snapshot tests focus", () => {
+  test("Snapshot tests tooltip with focus", () => {
     const wrapper = shallow(
       <Tooltip title="test" anchorPoint="left" trigger="focus">
         <button>tooltip</button>
       </Tooltip>
     );
-    wrapper.simulate("hover");
+    wrapper.simulate("focus");
     expect(wrapper).toMatchSnapshot();
   });
-
-  // test interactions
 });
