@@ -147,7 +147,7 @@ class Tooltip extends React.Component {
   }
 
   render() {
-    const { anchorPoint, children, ...otherProps } = this.props;
+    const { anchorPoint, ...otherProps } = this.props;
 
     const tooltipWidth = css`
       max-width: ${this.props.width}px;
