@@ -74,6 +74,7 @@ class Tooltip extends React.Component {
     if (this.childrenRef && this.childrenRef.contains(e.target)) {
       this.visibilityOn();
     } else if (
+      this.containerRef &&
       !this.childrenRef.contains(e.target) &&
       !this.containerRef.contains(e.target)
     ) {
