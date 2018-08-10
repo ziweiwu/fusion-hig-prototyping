@@ -1,13 +1,13 @@
-import React from 'react';
-import Button from '@hig/button';
-import Tooltip from '../../index';
-import '@hig/button/build/index.css';
+import React from "react";
+import Button from "@hig/button";
+import Tooltip from "../../index";
+import "@hig/button/build/index.css";
 
 const TooltipMedium = props => (
   <div>
-    <div style={{ margin: '100px' }} />
+    <div style={{ margin: "100px" }} />
     <span>
-      <div style={{ margin: '100px', float: 'left' }} />
+      <div style={{ margin: "100px", float: "left" }} />
       <Tooltip
         title={props.title}
         description={props.description}
@@ -18,7 +18,7 @@ const TooltipMedium = props => (
         linkTitle={props.linkTitle}
         linkURL={props.linkURL}
         width={props.width}
-        lightTheme={props.lightTheme}
+        isVisible={props.isVisible}
       >
         <Button title="Tooltip medium" />
       </Tooltip>

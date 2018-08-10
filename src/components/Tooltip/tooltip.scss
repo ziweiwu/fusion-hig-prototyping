@@ -190,52 +190,52 @@ $hig-tooltip-font-color: #ffffff; $hig-tooltip-background-color: color("hig-gray
 }
 
 // arrow animation
-.hig__tooltip-placement-top .hig__tooltip-arrow,
-.hig__tooltip-placement-topLeft .hig__tooltip-arrow,
-.hig__tooltip-placement-topRight .hig__tooltip-arrow {
-  animation: fade-arrow-top 0.01s;
-}
-
-.hig__tooltip-placement-bottom .hig__tooltip-arrow,
-.hig__tooltip-placement-bottomLeft .hig__tooltip-arrow,
-.hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
-  animation: fade-arrow-bottom 0.01s;
-}
-
-.hig__tooltip-placement-right .hig__tooltip-arrow,
-.hig__tooltip-placement-rightTop .hig__tooltip-arrow,
-.hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
-  animation: fade-arrow-right 0.01s;
-}
-
-.hig__tooltip-placement-left .hig__tooltip-arrow,
-.hig__tooltip-placement-leftTop .hig__tooltip-arrow,
-.hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
-  animation: fade-arrow-left 0.1s;
-}
-
-// tooltip inner animation
-.hig__tooltip-placement-top .hig__tooltip-inner,
-.hig__tooltip-placement-topLeft .hig__tooltip-inner,
-.hig__tooltip-placement-topRight .hig__tooltip-inner {
-  animation: fade-top 0.1s;
-}
-
-.hig__tooltip-placement-bottom .hig__tooltip-inner,
-.hig__tooltip-placement-bottomLeft .hig__tooltip-inner,
-.hig__tooltip-placement-bottomRight .hig__tooltip-inner {
-  animation: fade-bottom 0.1s;
-}
-
-.hig__tooltip-placement-right .hig__tooltip-inner,
-.hig__tooltip-placement-rightTop .hig__tooltip-inner,
-.hig__tooltip-placement-rightBottom .hig__tooltip-inner {
-  animation: fade-right 0.1s;
-}
-
-.hig__tooltip-placement-left .hig__tooltip-inner,
-.hig__tooltip-placement-leftTop .hig__tooltip-inner,
-.hig__tooltip-placement-leftBottom .hig__tooltip-inner {
-  animation: fade-left 0.1s;
-}
+//.hig__tooltip-placement-top .hig__tooltip-arrow,
+//.hig__tooltip-placement-topLeft .hig__tooltip-arrow,
+//.hig__tooltip-placement-topRight .hig__tooltip-arrow {
+//  animation: fade-arrow-top 0.01s;
+//}
+//
+//.hig__tooltip-placement-bottom .hig__tooltip-arrow,
+//.hig__tooltip-placement-bottomLeft .hig__tooltip-arrow,
+//.hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
+//  animation: fade-arrow-bottom 0.01s;
+//}
+//
+//.hig__tooltip-placement-right .hig__tooltip-arrow,
+//.hig__tooltip-placement-rightTop .hig__tooltip-arrow,
+//.hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
+//  animation: fade-arrow-right 0.01s;
+//}
+//
+//.hig__tooltip-placement-left .hig__tooltip-arrow,
+//.hig__tooltip-placement-leftTop .hig__tooltip-arrow,
+//.hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
+//  animation: fade-arrow-left 0.1s;
+//}
+//
+//// tooltip inner animation
+//.hig__tooltip-placement-top .hig__tooltip-inner,
+//.hig__tooltip-placement-topLeft .hig__tooltip-inner,
+//.hig__tooltip-placement-topRight .hig__tooltip-inner {
+//  animation: fade-top 0.1s;
+//}
+//
+//.hig__tooltip-placement-bottom .hig__tooltip-inner,
+//.hig__tooltip-placement-bottomLeft .hig__tooltip-inner,
+//.hig__tooltip-placement-bottomRight .hig__tooltip-inner {
+//  animation: fade-bottom 0.1s;
+//}
+//
+//.hig__tooltip-placement-right .hig__tooltip-inner,
+//.hig__tooltip-placement-rightTop .hig__tooltip-inner,
+//.hig__tooltip-placement-rightBottom .hig__tooltip-inner {
+//  animation: fade-right 0.1s;
+//}
+//
+//.hig__tooltip-placement-left .hig__tooltip-inner,
+//.hig__tooltip-placement-leftTop .hig__tooltip-inner,
+//.hig__tooltip-placement-leftBottom .hig__tooltip-inner {
+//  animation: fade-left 0.1s;
+//}
 
