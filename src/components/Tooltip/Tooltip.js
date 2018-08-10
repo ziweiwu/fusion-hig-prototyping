@@ -23,25 +23,25 @@ const placements = {
 
 class Tooltip extends React.Component {
   static propTypes = {
-    trigger: PropTypes.string,
+    anchorPoint: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
     content: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-    mouseEnterDelay: PropTypes.number,
-    mouseLeaveDelay: PropTypes.number,
-    id: PropTypes.string,
-    title: PropTypes.string,
     description: PropTypes.string,
+    id: PropTypes.string,
+    isVisible: PropTypes.bool,
     linkTitle: PropTypes.string,
     linkURL: PropTypes.string,
-    anchorPoint: PropTypes.string,
-    width: PropTypes.number,
-    isVisible: PropTypes.bool
+    mouseEnterDelay: PropTypes.number,
+    mouseLeaveDelay: PropTypes.number,
+    title: PropTypes.string,
+    trigger: PropTypes.string,
+    width: PropTypes.number
   };
 
   static defaultProps = {
+    anchorPoint: placements[anchorPoints.BOTTOM_CENTER],
     mouseEnterDelay: 1,
     mouseLeaveDelay: 0.2,
-    anchorPoint: placements[anchorPoints.BOTTOM_CENTER],
     trigger: "click",
     width: 300
   };
@@ -160,13 +160,13 @@ class Tooltip extends React.Component {
     return (
       <ReactToolTip
         {...otherProps}
+        destroyTooltipOnHide
+        overlay={this.renderContainer}
+        overlayClassName={tooltipWidth}
+        placement={placements[anchorPoint]}
         prefixCls="hig__tooltip"
         transitionName="fade"
         visible={isVisible}
-        destroyTooltipOnHide
-        overlayClassName={tooltipWidth}
-        placement={placements[anchorPoint]}
-        overlay={this.renderContainer}
       >
         {this.renderChildren()}
       </ReactToolTip>
