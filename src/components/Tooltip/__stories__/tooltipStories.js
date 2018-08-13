@@ -39,8 +39,8 @@ storiesOfTooltip.add("Tooltip Small", () => {
   const triggerOptions = ["click", "hover", "focus"];
   const trigger = select("Trigger", triggerOptions, "click");
 
-  const mouseEnterDelay = number("mouseEnterDelay", 1);
-  const mouseLeaveDelay = number("mouseLeaveDelay", 0.2);
+  const mouseEnterDelay = number("mouseEnterDelay", 0.5);
+  const mouseLeaveDelay = number("mouseLeaveDelay", 0.1);
 
   const title = text("title", "Tooltip small");
 
@@ -92,8 +92,8 @@ storiesOfTooltip.add("Tooltip Medium", () => {
   const triggerOptions = ["click", "hover", "focus"];
   const trigger = select("Trigger", triggerOptions, "click");
 
-  const mouseEnterDelay = number("mouseEnterDelay", 1);
-  const mouseLeaveDelay = number("mouseLeaveDelay", 0.2);
+  const mouseEnterDelay = number("mouseEnterDelay", 0.5);
+  const mouseLeaveDelay = number("mouseLeaveDelay", 0.1);
 
   const title = text("title", "Tooltip medium");
   const description = text("description", defaultDescription);
@@ -145,8 +145,8 @@ storiesOfTooltip.add("Tooltip Large", () => {
   const triggerOptions = ["click", "hover", "focus"];
   const trigger = select("Trigger", triggerOptions, "click");
 
-  const mouseEnterDelay = number("mouseEnterDelay", 1);
-  const mouseLeaveDelay = number("mouseLeaveDelay", 0.2);
+  const mouseEnterDelay = number("mouseEnterDelay", 0.5);
+  const mouseLeaveDelay = number("mouseLeaveDelay", 0.1);
 
   const title = text("title", "Tooltip large");
   const description = text("description", defaultDescription);
