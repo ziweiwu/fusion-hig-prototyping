@@ -66,7 +66,7 @@ storiesOfTooltip.add("Tooltip Small", () => {
 // some default fields
 const defaultDescription = `Create a generative design with the current parameters, 
   note: this operation GPU intensive  
-  and may takes anywhere from few minutes up to an hour.`;
+  and may take anywhere from a few minutes up to an hour.`;
 const defaultLinkTitle = "More detail";
 const defaultLinkURL = "https://www.autodesk.com";
 
