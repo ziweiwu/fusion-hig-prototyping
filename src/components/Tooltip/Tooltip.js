@@ -46,45 +46,6 @@ class Tooltip extends React.Component {
     width: 300
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isVisible: false
-    };
-  }
-
-  componentDidMount = () => {
-    document.addEventListener("mousedown", this.handleClick, false);
-  };
-
-  componentWillUnmount = () => {
-    document.removeEventListener("mousedown", this.handleClick, false);
-  };
-
-  handleClick = e => {
-    if (this.childrenRef && this.childrenRef.contains(e.target)) {
-      this.visibilityOn();
-    } else if (
-      this.containerRef &&
-      !this.childrenRef.contains(e.target) &&
-      !this.containerRef.contains(e.target)
-    ) {
-      this.visibilityOff();
-    }
-  };
-
-  visibilityOn = () => {
-    this.setState({
-      isVisible: true
-    });
-  };
-
-  visibilityOff = () => {
-    this.setState({
-      isVisible: false
-    });
-  };
-
   renderTitle = () => (
     <div className="hig__tooltip-title">{this.props.title}</div>
   );
@@ -99,7 +60,7 @@ class Tooltip extends React.Component {
 
   renderURL = () => (
     <div className="hig__tooltip-link">
-      {!this.props.content && <hr />}
+      {!this.props.content && <div className="line" />}
       <a href={this.props.linkURL}>
         {this.props.linkTitle || this.props.linkURL}
       </a>
@@ -107,10 +68,7 @@ class Tooltip extends React.Component {
   );
 
   renderContainer = () => (
-    <div
-      className="hig__tooltip-container"
-      ref={containerRef => (this.containerRef = containerRef)}
-    >
+    <div className="hig__tooltip-container">
       {this.props.title ? this.renderTitle() : null}
       {this.props.description ? this.renderDescription() : null}
       {this.props.content ? this.renderContent() : null}
@@ -119,25 +77,15 @@ class Tooltip extends React.Component {
   );
 
   renderChildren = () => (
-    <div
-      className="hig__tooltip-children-wrapper"
-      ref={childrenRef => (this.childrenRef = childrenRef)}
-    >
-      {this.props.children}
-    </div>
+    <div className="hig__tooltip-children-wrapper">{this.props.children}</div>
   );
 
   render() {
-    const { anchorPoint, trigger, ...otherProps } = this.props;
+    const { anchorPoint, trigger, isVisible, ...otherProps } = this.props;
 
     const tooltipWidth = css`
       max-width: ${this.props.width}px;
     `;
-
-    const isVisible =
-      this.props.isVisible !== undefined
-        ? this.props.isVisible
-        : this.state.isVisible;
 
     return (
       <ReactToolTip
