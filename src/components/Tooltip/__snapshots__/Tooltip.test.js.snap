@@ -480,10 +480,11 @@ ShallowWrapper {
     }
     description="test"
     destroyTooltipOnHide={true}
+    isVisible={undefined}
     linkTitle="test"
-    linkURL="www.test.com"
-    mouseEnterDelay={1}
-    mouseLeaveDelay={0.2}
+    linkURL="www.autodesk.com"
+    mouseEnterDelay={0.5}
+    mouseLeaveDelay={0.1}
     overlay={[Function]}
     overlayClassName="css-d70g0l"
     placement="right"
@@ -491,7 +492,6 @@ ShallowWrapper {
     title="test"
     transitionName="fade"
     trigger="click"
-    visible={false}
     width={300}
   >
     <div
@@ -513,10 +513,11 @@ ShallowWrapper {
       }
       description="test"
       destroyTooltipOnHide={true}
+      isVisible={undefined}
       linkTitle="test"
-      linkURL="www.test.com"
-      mouseEnterDelay={1}
-      mouseLeaveDelay={0.2}
+      linkURL="www.autodesk.com"
+      mouseEnterDelay={0.5}
+      mouseLeaveDelay={0.1}
       overlay={[Function]}
       overlayClassName="css-d70g0l"
       placement="right"
@@ -524,7 +525,6 @@ ShallowWrapper {
       title="test"
       transitionName="fade"
       trigger="click"
-      visible={false}
       width={300}
     >
       <div
@@ -548,9 +548,9 @@ ShallowWrapper {
       }
       description="test"
       linkTitle="test"
-      linkURL="www.test.com"
-      mouseEnterDelay={1}
-      mouseLeaveDelay={0.2}
+      linkURL="www.autodesk.com"
+      mouseEnterDelay={0.5}
+      mouseLeaveDelay={0.1}
       title="test"
       trigger="click"
       width={300}
@@ -562,7 +562,6 @@ ShallowWrapper {
     "_forcedUpdate": false,
     "_instance": Tooltip {
       "context": Object {},
-      "handleClick": [Function],
       "props": Object {
         "anchorPoint": "left",
         "children": <button>
@@ -573,9 +572,9 @@ ShallowWrapper {
         </div>,
         "description": "test",
         "linkTitle": "test",
-        "linkURL": "www.test.com",
-        "mouseEnterDelay": 1,
-        "mouseLeaveDelay": 0.2,
+        "linkURL": "www.autodesk.com",
+        "mouseEnterDelay": 0.5,
+        "mouseLeaveDelay": 0.1,
         "title": "test",
         "trigger": "click",
         "width": 300,
@@ -587,15 +586,11 @@ ShallowWrapper {
       "renderDescription": [Function],
       "renderTitle": [Function],
       "renderURL": [Function],
-      "state": Object {
-        "isVisible": false,
-      },
+      "state": null,
       "updater": Updater {
         "_callbacks": Array [],
         "_renderer": [Circular],
       },
-      "visibilityOff": [Function],
-      "visibilityOn": [Function],
     },
     "_newState": null,
     "_rendered": <Tooltip
@@ -608,10 +603,11 @@ ShallowWrapper {
       }
       description="test"
       destroyTooltipOnHide={true}
+      isVisible={undefined}
       linkTitle="test"
-      linkURL="www.test.com"
-      mouseEnterDelay={1}
-      mouseLeaveDelay={0.2}
+      linkURL="www.autodesk.com"
+      mouseEnterDelay={0.5}
+      mouseLeaveDelay={0.1}
       overlay={[Function]}
       overlayClassName="css-d70g0l"
       placement="right"
@@ -619,7 +615,6 @@ ShallowWrapper {
       title="test"
       transitionName="fade"
       trigger="click"
-      visible={false}
       width={300}
     >
       <div
@@ -648,9 +643,9 @@ ShallowWrapper {
     }
     description="test"
     linkTitle="test"
-    linkURL="www.test.com"
-    mouseEnterDelay={1}
-    mouseLeaveDelay={0.2}
+    linkURL="www.autodesk.com"
+    mouseEnterDelay={0.5}
+    mouseLeaveDelay={0.1}
     title="test"
     trigger="click"
     width={300}
