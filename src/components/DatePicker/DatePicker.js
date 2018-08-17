@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import Icon from "@hig/icon";
 import ReactDatePicker from "react-datepicker";
+import { polyfill } from "react-lifecycles-compat";
 import { TextFieldPresenter } from "@hig/text-field";
 import "@hig/text-field/build/index.css";
 
-export default class DatePicker extends React.Component {
+class DatePicker extends React.Component {
   static propTypes = {
     adjustDateOnChange: PropTypes.bool,
     closeOnSelect: PropTypes.bool,
@@ -111,3 +112,5 @@ export default class DatePicker extends React.Component {
     );
   }
 }
+
+export default polyfill(DatePicker);

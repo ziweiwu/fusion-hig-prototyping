@@ -123,7 +123,7 @@ button.react-datepicker__navigation {
 
   .react-datepicker__header--time {
     height: 55.281px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   .react-datepicker__time-list {
@@ -137,7 +137,6 @@ button.react-datepicker__navigation {
   min-width: 230px;
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer */
-  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
   -webkit-user-select: none; /* Chrome, Safari, and Opera */
   -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
