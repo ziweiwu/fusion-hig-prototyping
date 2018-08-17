@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import DatePicker from '../../index';
+import React, { Component } from "react";
+import DatePicker from "../../index";
+import "../../datePicker.scss";
 
 export default class WithClearButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
       startDate: this.props.selected,
-      endDate: undefined,
+      endDate: undefined
     };
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
@@ -39,7 +40,7 @@ export default class WithClearButton extends Component {
     const filterOptions = {
       Weekdays: this.isWeekday,
       Weekends: this.isWeekend,
-      None: null,
+      None: null
     };
     return (
       <DatePicker
@@ -57,6 +58,7 @@ export default class WithClearButton extends Component {
         locale={this.props.locale}
         dateFormat={this.props.dateFormat}
         filterDate={filterOptions[this.props.chooseFilter]}
-      />);
+      />
+    );
   }
 }

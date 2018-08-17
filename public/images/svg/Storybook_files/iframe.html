@@ -1080,27 +1080,27 @@ button.react-datepicker__navigation {
   .hig-tooltip-content button, .hig-tooltip-content select {
     font-family: ArtifaktElement, sans-serif; }
 
-.hig-tooltip-placement-top, .hig-tooltip-placement-topLeft, .hig-tooltip-placement-topRight {
+.hig__tooltip-placement-top, .hig__tooltip-placement-topLeft, .hig__tooltip-placement-topRight {
   padding: 8px 0 8px 0; }
 
-.hig-tooltip-placement-right, .hig-tooltip-placement-rightTop, .hig-tooltip-placement-rightBottom {
+.hig__tooltip-placement-right, .hig__tooltip-placement-rightTop, .hig__tooltip-placement-rightBottom {
   padding: 0 8px 0 8px; }
 
-.hig-tooltip-placement-bottom, .hig-tooltip-placement-bottomLeft, .hig-tooltip-placement-bottomRight {
+.hig__tooltip-placement-bottom, .hig__tooltip-placement-bottomLeft, .hig__tooltip-placement-bottomRight {
   padding: 8px 0 8px 0; }
 
-.hig-tooltip-placement-left, .hig-tooltip-placement-leftTop, .hig-tooltip-placement-leftBottom {
+.hig__tooltip-placement-left, .hig__tooltip-placement-leftTop, .hig__tooltip-placement-leftBottom {
   padding: 0 8px 0 8px; }
 
 .hig-tooltip-children-wrapper {
   display: inline-block;
   position: relative; }
 
-.hig-tooltip-arrow {
+.hig__tooltip-arrow {
   position: absolute;
   border: solid transparent; }
 
-.hig-tooltip-inner {
+.hig__tooltip-inner {
   padding: 6px 10px;
   color: #FFFFFF;
   text-align: left;
@@ -1110,14 +1110,14 @@ button.react-datepicker__navigation {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 5px; }
-  .hig-tooltip-inner img {
+  .hig__tooltip-inner img {
     max-width: 300px;
     height: auto; }
-  .hig-tooltip-inner .hig-tooltip-link {
+  .hig__tooltip-inner .hig-tooltip-link {
     text-align: right; }
-    .hig-tooltip-inner .hig-tooltip-link a {
+    .hig__tooltip-inner .hig-tooltip-link a {
       color: #fff; }
-    .hig-tooltip-inner .hig-tooltip-link hr {
+    .hig__tooltip-inner .hig-tooltip-link hr {
       background-color: black;
       color: black;
       border-color: black; }
@@ -1133,7 +1133,7 @@ button.react-datepicker__navigation {
   padding-bottom: 8px; }
 
 /* inner arrow and animations */
-.hig-tooltip-placement-top .hig-tooltip-arrow, .hig-tooltip-placement-topLeft .hig-tooltip-arrow, .hig-tooltip-placement-topRight .hig-tooltip-arrow {
+.hig__tooltip-placement-top .hig__tooltip-arrow, .hig__tooltip-placement-topLeft .hig__tooltip-arrow, .hig__tooltip-placement-topRight .hig__tooltip-arrow {
   bottom: 4px;
   margin-left: -5px;
   border-width: 5px 5px 0;
@@ -1141,11 +1141,11 @@ button.react-datepicker__navigation {
   -webkit-animation: fade-arrow-top 0.1s;
           animation: fade-arrow-top 0.1s; }
 
-.hig-tooltip-placement-top .hig-tooltip-inner, .hig-tooltip-placement-topLeft .hig-tooltip-inner, .hig-tooltip-placement-topRight .hig-tooltip-inner {
+.hig__tooltip-placement-top .hig__tooltip-inner, .hig__tooltip-placement-topLeft .hig__tooltip-inner, .hig__tooltip-placement-topRight .hig__tooltip-inner {
   -webkit-animation: fade-top 0.1s;
           animation: fade-top 0.1s; }
 
-.hig-tooltip-placement-bottom .hig-tooltip-arrow, .hig-tooltip-placement-bottomLeft .hig-tooltip-arrow, .hig-tooltip-placement-bottomRight .hig-tooltip-arrow {
+.hig__tooltip-placement-bottom .hig__tooltip-arrow, .hig__tooltip-placement-bottomLeft .hig__tooltip-arrow, .hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
   top: 4px;
   margin-left: -5px;
   border-width: 0px 5px 5px;
@@ -1153,11 +1153,11 @@ button.react-datepicker__navigation {
   -webkit-animation: fade-arrow-bottom 0.1s;
           animation: fade-arrow-bottom 0.1s; }
 
-.hig-tooltip-placement-bottom .hig-tooltip-inner, .hig-tooltip-placement-bottomLeft .hig-tooltip-inner, .hig-tooltip-placement-bottomRight .hig-tooltip-inner {
+.hig__tooltip-placement-bottom .hig__tooltip-inner, .hig__tooltip-placement-bottomLeft .hig__tooltip-inner, .hig__tooltip-placement-bottomRight .hig__tooltip-inner {
   -webkit-animation: fade-bottom 0.1s;
           animation: fade-bottom 0.1s; }
 
-.hig-tooltip-placement-right .hig-tooltip-arrow, .hig-tooltip-placement-rightTop .hig-tooltip-arrow, .hig-tooltip-placement-rightBottom .hig-tooltip-arrow {
+.hig__tooltip-placement-right .hig__tooltip-arrow, .hig__tooltip-placement-rightTop .hig__tooltip-arrow, .hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
   left: 4px;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
@@ -1165,11 +1165,11 @@ button.react-datepicker__navigation {
   -webkit-animation: fade-arrow-right 0.1s;
           animation: fade-arrow-right 0.1s; }
 
-.hig-tooltip-placement-right .hig-tooltip-inner, .hig-tooltip-placement-rightTop .hig-tooltip-inner, .hig-tooltip-placement-rightBottom .hig-tooltip-inner {
+.hig__tooltip-placement-right .hig__tooltip-inner, .hig__tooltip-placement-rightTop .hig__tooltip-inner, .hig__tooltip-placement-rightBottom .hig__tooltip-inner {
   -webkit-animation: fade-right 0.1s;
           animation: fade-right 0.1s; }
 
-.hig-tooltip-placement-left .hig-tooltip-arrow, .hig-tooltip-placement-leftTop .hig-tooltip-arrow, .hig-tooltip-placement-leftBottom .hig-tooltip-arrow {
+.hig__tooltip-placement-left .hig__tooltip-arrow, .hig__tooltip-placement-leftTop .hig__tooltip-arrow, .hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
   right: 4px;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
@@ -1177,46 +1177,46 @@ button.react-datepicker__navigation {
   -webkit-animation: fade-arrow-left 0.1s;
           animation: fade-arrow-left 0.1s; }
 
-.hig-tooltip-placement-left .hig-tooltip-inner, .hig-tooltip-placement-leftTop .hig-tooltip-inner, .hig-tooltip-placement-leftBottom .hig-tooltip-inner {
+.hig__tooltip-placement-left .hig__tooltip-inner, .hig__tooltip-placement-leftTop .hig__tooltip-inner, .hig__tooltip-placement-leftBottom .hig__tooltip-inner {
   -webkit-animation: fade-left 0.1s;
           animation: fade-left 0.1s; }
 
-.hig-tooltip-placement-top .hig-tooltip-arrow {
+.hig__tooltip-placement-top .hig__tooltip-arrow {
   left: 50%; }
 
-.hig-tooltip-placement-topLeft .hig-tooltip-arrow {
+.hig__tooltip-placement-topLeft .hig__tooltip-arrow {
   left: 15%; }
 
-.hig-tooltip-placement-topRight .hig-tooltip-arrow {
+.hig__tooltip-placement-topRight .hig__tooltip-arrow {
   right: 15%; }
 
-.hig-tooltip-placement-right .hig-tooltip-arrow {
+.hig__tooltip-placement-right .hig__tooltip-arrow {
   top: 50%; }
 
-.hig-tooltip-placement-rightTop .hig-tooltip-arrow {
+.hig__tooltip-placement-rightTop .hig__tooltip-arrow {
   top: 15%;
   margin-top: 0; }
 
-.hig-tooltip-placement-rightBottom .hig-tooltip-arrow {
+.hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
   bottom: 15%; }
 
-.hig-tooltip-placement-left .hig-tooltip-arrow {
+.hig__tooltip-placement-left .hig__tooltip-arrow {
   top: 50%; }
 
-.hig-tooltip-placement-leftTop .hig-tooltip-arrow {
+.hig__tooltip-placement-leftTop .hig__tooltip-arrow {
   top: 15%;
   margin-top: 0; }
 
-.hig-tooltip-placement-leftBottom .hig-tooltip-arrow {
+.hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
   bottom: 15%; }
 
-.hig-tooltip-placement-bottom .hig-tooltip-arrow {
+.hig__tooltip-placement-bottom .hig__tooltip-arrow {
   left: 50%; }
 
-.hig-tooltip-placement-bottomLeft .hig-tooltip-arrow {
+.hig__tooltip-placement-bottomLeft .hig__tooltip-arrow {
   left: 15%; }
 
-.hig-tooltip-placement-bottomRight .hig-tooltip-arrow {
+.hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
   right: 15%; }
 </style><style type="text/css">@font-face {
   font-family: 'ArtifaktElement';

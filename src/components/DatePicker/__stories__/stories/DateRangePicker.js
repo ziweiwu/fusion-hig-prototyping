@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import DatePicker from '../../index';
+import React, { Component } from "react";
+import DatePicker from "../../index";
+import "../../datePicker.scss";
 
 export default class DateRangePicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
       startDate: undefined,
-      endDate: undefined,
+      endDate: undefined
     };
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
@@ -34,12 +35,12 @@ export default class DateRangePicker extends Component {
     const filterOptions = {
       Weekdays: this.isWeekday,
       Weekends: this.isWeekend,
-      None: null,
+      None: null
     };
 
     return (
       <div>
-        <span style={{ float: 'left' }}>
+        <span style={{ float: "left" }}>
           <DatePicker
             selected={this.state.startDate}
             shouldCloseOnSelect
@@ -59,9 +60,9 @@ export default class DateRangePicker extends Component {
             dateFormat={this.props.dateFormat}
             filterDate={filterOptions[this.props.chooseFilter]}
           />
-          <span style={{ paddingLeft: '270px', float: 'left' }} />
+          <span style={{ paddingLeft: "270px", float: "left" }} />
         </span>
-        <span style={{ float: 'left' }}>
+        <span style={{ float: "left" }}>
           <DatePicker
             selected={this.state.endDate || this.state.startDate}
             label="To"

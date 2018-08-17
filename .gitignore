@@ -196,6 +196,7 @@ $RECYCLE.BIN/
 
 # css build file
 src/**/*.css
+src/**/**/**.css
 
 # misc
 .DS_Store
