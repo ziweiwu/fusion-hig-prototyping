@@ -1,45 +1,35 @@
-import React from 'react';
-// import '@hig/styles/build/index.css';
-//import ToolTipHig from '@hig/tooltip';
-import '@hig/tooltip/build/index.css';
-import {Button, Popover, Tooltip as TooltipAnt} from 'antd';
-import DatePicker from './components/DatePicker/index';
-import YouTube from 'react-youtube';
-import Tooltip from './components/Tooltip/index';
-import Dropdown from '@hig/dropdown';
-import Flyout from '@hig/flyout';
-import '@hig/flyout/build/index.css';
-import '@hig/dropdown/build/index.css';
-import Example from './components/Tooltip/NewTooltip/TooltipNew';
-import TextFieldPresenter from '@hig/text-field';
-//import Demo from './components/Tooltip/NewTooltip/TooltipPopper';
-// import TextFieldPresenter from './components/TextPresenter/TextFieldPresenter.js'
-import 'react-tippy/dist/tippy.css';
-import {Tooltip as Tooltipy} from 'react-tippy';
-
-
-// import 'react-tippy/dist/tippy.css';
-// import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import './App.scss';
-import './components/TextPresenter/text-field.scss';
+import React from "react";
+import "@hig/tooltip/build/index.css";
+import YouTube from "react-youtube";
+import Dropdown from "@hig/dropdown";
+import Flyout from "@hig/flyout";
+import "@hig/flyout/build/index.css";
+import "@hig/dropdown/build/index.css";
+import TextFieldPresenter from "@hig/text-field";
+import Tooltip from "./components/Tooltip/index";
+import DatePicker from "./components/DatePicker/index";
+import Example from "./components/Tooltip/popper/reactPopper";
+import "./components/DatePicker/datePicker.scss";
+import "./App.scss";
+import "./components/TextPresenter/text-field.scss";
 
 const options = [
   {
-    label: 'apple',
-    value: 'apple value',
+    label: "apple",
+    value: "apple value"
   },
   {
-    label: 'orange',
-    value: 'orange value',
+    label: "orange",
+    value: "orange value"
   },
   {
-    label: 'pineapple',
-    value: 'pineapple value',
+    label: "pineapple",
+    value: "pineapple value"
   },
   {
-    label: 'lemon',
-    value: 'lemon value',
-  },
+    label: "lemon",
+    value: "lemon value"
+  }
 ];
 
 const picture = (
@@ -52,53 +42,31 @@ const picture = (
 );
 // parameters for a youtube video embeddeed
 const opts = {
-  height: 'auto',
-  width: '300',
-  playerVars: { // https://developers.google.com/youtube/player_parameters
+  height: "auto",
+  width: "300",
+  playerVars: {
+    // https://developers.google.com/youtube/player_parameters
     autoplay: 0,
-    rel: 0, // disable relevant videos after playing
-  },
+    rel: 0 // disable relevant videos after playing
+  }
 };
-
 
 const youtubeVideo = (
   <div>
-    <YouTube
-      videoId="NSJwq9CVoIk"
-      opts={opts}
-    />
+    <YouTube videoId="NSJwq9CVoIk" opts={opts} />
   </div>
 );
 
 const App = () => (
   <div className="App">
-    <h1>App Started </h1>
-    <DatePicker/>
-    <Example placement="right" content={<div>tooltip</div>}>
-      <button>my button</button>
-    </Example>
-    {/* <TooltipAnt><Button> ToolTip Ant</Button></TooltipAnt> */}
-    {/* <div> */}
-    {/* <ToolTipHig anchorPoint="top-center" content="Testing"> */}
-    {/* <Button>hig tooltip</Button> */}
-    {/* </ToolTipHig> */}
-    {/* </div> */}
-    {/* <div> */}
-    {/* <TooltipAnt title="prompt text" placement="right" mouseLeaveDelay={300}> */}
-    {/* <Button>Ant Tooltip</Button> */}
-    {/* </TooltipAnt> */}
-    {/* <TooltipAnt title="prompt text" placement="right" mouseLeaveDelay={300} overlay={youtubeVideo}> */}
-    {/* <Button>Ant Tooltip</Button> */}
-    {/* </TooltipAnt> */}
-    {/* </div> */}
+    <h1>App Started</h1>
+    <DatePicker />
     <div>
-      <Tooltip
-        title="Tooltip title"
-      >
-        <Button>Show some text</Button>
+      <Tooltip title="Tooltip title">
+        <button>Show some text</button>
       </Tooltip>
 
-      <div style={{margin: '200px'}}/>
+      <div style={{ margin: "200px" }} />
 
       <Tooltip
         title="This is a cat picture"
@@ -110,10 +78,10 @@ const App = () => (
         linkTitle="Learn more"
         linkURL="https://www.autodesk.com"
       >
-        <Button>Show picture</Button>
+        <button>Show picture</button>
       </Tooltip>
 
-      <div style={{margin: '200px'}}/>
+      <div style={{ margin: "200px" }} />
 
       <Tooltip
         placement="top-center"
@@ -122,10 +90,10 @@ const App = () => (
         linkTitle="Learn more"
         linkURL="https://www.autodesk.com"
       >
-        <Button>This is tooltip with some link</Button>
+        <button>This is tooltip with some link</button>
       </Tooltip>
 
-      <div style={{margin: '200px'}}/>
+      <div style={{ margin: "200px" }} />
 
       <Tooltip
         title="Tooltip with video"
@@ -135,25 +103,12 @@ const App = () => (
         linkTitle="Learn more"
         linkURL="https://www.autodesk.com"
       >
-        <Button>This is tooltip with a video</Button>
-      </Tooltip
-      >
+        <button>This is tooltip with a video</button>
+      </Tooltip>
 
-      <div style={{margin: '200px'}}/>
+      <div style={{ margin: "200px" }} />
 
-      {/* <Popover */}
-      {/* title="prompt text" */}
-      {/* placement="right" */}
-      {/* content={youtubeVideo} */}
-      {/* mouseLeaveDelay={1} */}
-      {/* > */}
-      {/* <Button>Ant Popover</Button> */}
-      {/* </Popover> */}
-
-      <Dropdown
-        label="dropdown menu"
-        options={options}
-      />
+      <Dropdown label="dropdown menu" options={options} />
 
       <Flyout
         mountOnEnter
@@ -164,32 +119,29 @@ const App = () => (
       >
         <button>Fly out button</button>
       </Flyout>
-
-      <Tooltipy
-        title="Welcome to React"
-        position="top"
-        trigger="click"
-        arrow="true"
-      >
-        <Button>
-          Click here to show popup
-        </Button>
-      </Tooltipy>
-
-      <Tooltipy
-        html={youtubeVideo}
-        arrow="true"
-        position="right"
-        trigger="click"
-      >
-        <Button>
-          Click here to show popup
-        </Button>
-      </Tooltipy>
-      <TextFieldPresenter label="true" showClearButton focused onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
-      <TextFieldPresenter label="false" showClearButton focused={false} onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
-      <TextFieldPresenter label="undefined" showClearButton onFocus={()=>console.log("focused")} onBlur={()=>console.log("blurred")}/>
+      <button>Click here to show popup</button>
+      <TextFieldPresenter
+        label="true"
+        showClearButton
+        focused
+        onFocus={() => console.log("focused")}
+        onBlur={() => console.log("blurred")}
+      />
+      <TextFieldPresenter
+        label="false"
+        showClearButton
+        focused={false}
+        onFocus={() => console.log("focused")}
+        onBlur={() => console.log("blurred")}
+      />
+      <TextFieldPresenter
+        label="undefined"
+        showClearButton
+        onFocus={() => console.log("focused")}
+        onBlur={() => console.log("blurred")}
+      />
       <TextFieldPresenter label="undefined" showClearButton />
+      <Example />
     </div>
   </div>
 );

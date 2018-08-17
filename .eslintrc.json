@@ -1,7 +1,0 @@
-{
-  "extends": [
-    "airbnb",
-    "jest-enzyme",
-    "plugin:jest/recommended"
-  ]
-}

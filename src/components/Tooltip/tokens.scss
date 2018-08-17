@@ -1,20 +1,87 @@
-@import "../../../node_modules/@hig/styles/mixins/colors.scss";
-@import "../../../node_modules/@hig/styles/mixins/spacing.scss";
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/spacing.scss";
 
-$container-transition-distance: 4px;
-$container-transition-duration: 1000ms;
-// Bounce effect
-$container-transition-easing: cubic-bezier(0.77, 0, 0.265, 2);
+// style variables
+$hig-font-family: ArtifaktElement, sans-serif !default;
+$hig-tooltip-background-color: color("hig-gray-60");
+$hig-tooltip-font-color: #ffffff;
+$hig-tooltip-border-radius: 2px;
+$hig-tooltip-padding: spacing("xxxs");
 
-$panel-background-color: color("hig-white");
-$panel-border-radius: 4px;
-$panel-border-width: 1px;
-$panel-padding: spacing("s");
+// animation variables
+$hig-tooltip-animation-distance: 3px;
+$hig-tooltip-animation-timing: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+$hig-tooltip-animation-duration: 0.3s;
+$hig-tooltip-initial-opacity: 0.1;
 
-$chevron-size: 14px;
-$chevron-centering-position: calc(50% - #{$chevron-size / 2});
-$chevron-shadow-color: color("hig-cool-gray-20");
-$chevron-shadow-offset: 2px;
-$chevron-side-position: -(14px / 2 - $panel-border-width);
-$chevron-spacing: 14px;
+@keyframes fade-bottom {
+  0% {
+    opacity: $hig-tooltip-initial-opacity;
+    transform: translate3d(0, -$hig-tooltip-animation-distance, 0)
 
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px)
+  }
+}
+
+@keyframes fade-top {
+  0% {
+    opacity: $hig-tooltip-initial-opacity;
+    transform: translate3d(0, $hig-tooltip-animation-distance, 0)
+
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px)
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: $hig-tooltip-initial-opacity;
+    transform: translate3d($hig-tooltip-animation-distance, 0, 0)
+
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px)
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: $hig-tooltip-initial-opacity;
+    transform: translate3d(-$hig-tooltip-animation-distance, 0, 0)
+
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px)
+  }
+}
+
+@mixin fade_bottom_animation {
+  animation-timing-function: $hig-tooltip-animation-timing;
+  animation-fill-mode: both;
+  animation: fade-bottom $hig-tooltip-animation-duration;
+}
+
+@mixin fade_top_animation {
+  animation-timing-function: $hig-tooltip-animation-timing;
+  animation-fill-mode: both;
+  animation: fade-top $hig-tooltip-animation-duration;
+}
+
+@mixin fade_left_animation {
+  animation-timing-function: $hig-tooltip-animation-timing;
+  animation-fill-mode: both;
+  animation: fade-left $hig-tooltip-animation-duration;
+}
+
+@mixin fade_right_animation {
+  animation-timing-function: $hig-tooltip-animation-timing;
+  animation-fill-mode: both;
+  animation: fade-right $hig-tooltip-animation-duration;
+}
